@@ -54,7 +54,7 @@
         "a": "Лесно почистване и периодичен реглаж на обковката."
       }
     ],
-    "image": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80"
+    "image": "/assets/images/services/pvc-dograma.jpg"
   },
   {
     "slug": "aluminiumieva-dograma",
@@ -111,7 +111,7 @@
         "a": "Зависи от обема — уточнява се след оглед."
       }
     ],
-    "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80"
+    "image": "/assets/images/services/aluminiumieva-dograma.jpg"
   },
   {
     "slug": "vrati",
@@ -165,7 +165,7 @@
         "a": "Да."
       }
     ],
-    "image": "https://images.unsplash.com/photo-1506377295352-e3154d43ea9e?w=900&q=80"
+    "image": "/assets/images/services/vrati.png"
   },
   {
     "slug": "plazgashti-sistemi",
@@ -219,7 +219,7 @@
         "a": "Оценяваме при огледа."
       }
     ],
-    "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80"
+    "image": "/assets/images/services/plazgashti-sistemi.jpg"
   },
   {
     "slug": "shtori",
@@ -271,7 +271,7 @@
         "a": "По питане — според модела."
       }
     ],
-    "image": "https://images.unsplash.com/photo-1615873968403-89e068629265?w=900&q=80"
+    "image": "/assets/images/services/shtori.jpg"
   },
   {
     "slug": "komarnitsi",
@@ -323,7 +323,7 @@
         "a": "Обикновено бързо — в рамките на посещението."
       }
     ],
-    "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=900&q=80"
+    "image": "/assets/images/services/komarnitsi.jpg"
   },
   {
     "slug": "dush-kabini",
@@ -375,7 +375,7 @@
         "a": "Обикновено в рамките на деня."
       }
     ],
-    "image": "https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=900&q=80"
+    "image": "/assets/images/services/dush-kabini.jpg"
   },
   {
     "slug": "aluminiumievi-navesi",
@@ -428,7 +428,7 @@
         "a": "Уточнява се след оглед."
       }
     ],
-    "image": "https://images.unsplash.com/photo-1600047509807-ba8f99d367e5?w=900&q=80"
+    "image": "/assets/images/services/aluminiumievi-navesi.jpg"
   },
   {
     "slug": "zimni-gradini",
@@ -481,7 +481,7 @@
         "a": "Да — от идея до монтаж."
       }
     ],
-    "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=900&q=80"
+    "image": "/assets/images/services/zimni-gradini.webp"
   },
   {
     "slug": "obrashtane-s-pvc-profili",
@@ -537,7 +537,7 @@
         "a": "Имаме отделна страница за обръщане на дограма с профили."
       }
     ],
-    "image": "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=80",
+    "image": "/assets/images/services/obrashtane-s-pvc-profili.png",
     "relatedPage": "/obrashtane-na-dograma-s-pvc-profili/"
   }
 ]

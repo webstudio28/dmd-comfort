@@ -23,7 +23,7 @@
               {% if item.url == '/uslugi/' %}
                 {% for s in services %}
                   <a class="flex items-center gap-3 rounded-lg px-2 py-2 text-sm text-ink-muted no-underline transition hover:bg-brand-soft hover:text-brand" href="{{ ('/uslugi/' + s.slug + '/') | url }}">
-                    <img class="h-10 w-10 shrink-0 rounded-md object-cover bg-brand-mist" src="{{ s.image }}" alt="" width="40" height="40" loading="lazy" decoding="async" />
+                    <img class="h-10 w-10 shrink-0 rounded-md object-cover bg-brand-mist" src="{{ s.image | url }}" alt="" width="40" height="40" loading="lazy" decoding="async" />
                     <span>{{ s.title }}</span>
                   </a>
                 {% endfor %}
@@ -31,7 +31,7 @@
                 {% for child in item.children %}
                   <a class="flex items-center gap-3 rounded-lg px-2 py-2 text-sm text-ink-muted no-underline transition hover:bg-brand-soft hover:text-brand" href="{{ child.url | url }}">
                     {% if child.image %}
-                      <img class="h-10 w-10 shrink-0 rounded-md object-cover bg-brand-mist" src="{{ child.image }}" alt="" width="40" height="40" loading="lazy" decoding="async" />
+                      <img class="h-10 w-10 shrink-0 rounded-md object-cover bg-brand-mist" src="{{ child.image | url }}" alt="" width="40" height="40" loading="lazy" decoding="async" />
                     {% endif %}
                     <span>{{ child.label }}</span>
                   </a>
@@ -78,7 +78,7 @@
             {% if item.url == '/uslugi/' %}
               {% for s in services %}
                 <a class="flex items-center gap-3 rounded-lg px-2 py-2 text-sm text-ink-muted no-underline hover:bg-brand-mist hover:text-brand" href="{{ ('/uslugi/' + s.slug + '/') | url }}">
-                  <img class="h-10 w-10 shrink-0 rounded-md object-cover bg-brand-mist" src="{{ s.image }}" alt="" width="40" height="40" loading="lazy" decoding="async" />
+                  <img class="h-10 w-10 shrink-0 rounded-md object-cover bg-brand-mist" src="{{ s.image | url }}" alt="" width="40" height="40" loading="lazy" decoding="async" />
                   <span>{{ s.title }}</span>
                 </a>
               {% endfor %}
@@ -86,7 +86,7 @@
               {% for child in item.children %}
                 <a class="flex items-center gap-3 rounded-lg px-2 py-2 text-sm text-ink-muted no-underline hover:bg-brand-mist hover:text-brand" href="{{ child.url | url }}">
                   {% if child.image %}
-                    <img class="h-10 w-10 shrink-0 rounded-md object-cover bg-brand-mist" src="{{ child.image }}" alt="" width="40" height="40" loading="lazy" decoding="async" />
+                    <img class="h-10 w-10 shrink-0 rounded-md object-cover bg-brand-mist" src="{{ child.image | url }}" alt="" width="40" height="40" loading="lazy" decoding="async" />
                   {% endif %}
                   <span>{{ child.label }}</span>
                 </a>

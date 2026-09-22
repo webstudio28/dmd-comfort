@@ -15,7 +15,7 @@
       {% for s in services %}
         <article class="card">
           <div class="relative m-3 aspect-[4/3] overflow-hidden rounded-lg">
-            <img class="image-cover" src="{{ s.image }}" alt="{{ s.title }}" loading="lazy" />
+            <img class="image-cover" src="{{ s.image | url }}" alt="{{ s.title }}" loading="lazy" />
             <span class="absolute left-3 top-3 grid h-9 w-9 place-items-center rounded-lg bg-brand font-display text-[13px] font-extrabold text-white">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
           </div>
           <div class="border-t border-ink/10 px-5 pb-6 pt-4">

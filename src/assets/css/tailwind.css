@@ -123,6 +123,15 @@
     @apply w-[min(72vw,280px)] shrink-0 snap-start md:w-auto md:max-w-none md:shrink;
   }
 
+  /* Step strip: fixed-width items, room to scroll, gutter-aligned start */
+  .h-scroll-steps {
+    @apply gap-8 lg:gap-0;
+  }
+
+  .h-scroll-steps > * {
+    @apply w-[8.75rem] text-center lg:w-auto lg:text-left;
+  }
+
   @media (min-width: 768px) {
     .h-scroll {
       scroll-snap-type: none;

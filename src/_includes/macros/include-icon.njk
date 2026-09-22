@@ -1,0 +1,32 @@
+{# Picks a modern stroke icon from Bulgarian include labels #}
+{% macro includeIcon(label) %}
+  {% set t = label %}
+  {% if "змер" in t or "Оглед" in t or "оглед" in t %}
+    {# measure / inspection #}
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21.3 8.7 8.7 21.3a1 1 0 0 1-1.4 0L2.7 16.7a1 1 0 0 1 0-1.4L15.3 2.7a1 1 0 0 1 1.4 0l4.6 4.6a1 1 0 0 1 0 1.4ZM7.5 12.5l4 4M10.5 9.5l4 4M13.5 6.5l4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  {% elif "збор" in t or "одбор" in t or "одел" in t or "рофил" in t or "тъкло" in t %}
+    {# selection / model #}
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3 4 7.5v9L12 21l8-4.5v-9L12 3ZM12 12 4 7.5M12 12l8-4.5M12 12v9" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  {% elif "онсулт" in t or "нструк" in t %}
+    {# consultation / briefing #}
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  {% elif "роект" in t or "онцеп" in t or "онфиг" in t %}
+    {# design / planning #}
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.5 4.5 19.5 9.5M4 20l4.5-1.2L19.4 8a1.7 1.7 0 0 0 0-2.4L18.4 4.6a1.7 1.7 0 0 0-2.4 0L5.2 15.5 4 20Z" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  {% elif "зработ" in t or "роизвод" in t %}
+    {# fabrication #}
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-2.5 2.5-2.5ZM18 2l4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  {% elif "остав" in t %}
+    {# delivery #}
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M17 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-2.56-3.28A1 1 0 0 0 16.44 9H14M7 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4ZM17 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  {% elif "онтаж" in t %}
+    {# install #}
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6M10 11h4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  {% elif "аранц" in t or "ервиз" in t or "еглаж" in t or "иниш" in t %}
+    {# warranty / adjust / finish #}
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  {% else %}
+    {# default check #}
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z M8.5 12.5l2.5 2.5 4.5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  {% endif %}
+{% endmacro %}
