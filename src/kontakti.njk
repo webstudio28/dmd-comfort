@@ -5,12 +5,18 @@ title: Контакти
 description: Свържете се с ДМД Комфорт — телефон, имейл и заявка за безплатен оглед.
 ---
 {% from "macros/page-banner.njk" import pageBanner %}
+{% from "macros/breadcrumbs.njk" import breadcrumbs %}
 
 {% call pageBanner() %}
   <div class="eyebrow text-brand before:bg-brand">Контакти</div>
   <h1 class="mt-3 max-w-3xl font-display text-[clamp(2.5rem,5vw,3.75rem)] font-black leading-none">Говорим за вашия обект</h1>
   <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/70">Обадете се или оставете запитване — ще ви върнем бърз и ясен отговор.</p>
 {% endcall %}
+
+{{ breadcrumbs([
+  { label: "Начало", url: "/" },
+  { label: "Контакти" }
+]) }}
 
 <section class="section-pad bg-white">
   <div class="container-site grid gap-8 lg:grid-cols-2">

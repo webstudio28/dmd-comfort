@@ -5,12 +5,18 @@ title: Блог
 description: Полезни статии за дограма, монтаж, обръщане на прозорци и избор на системи.
 ---
 {% from "macros/page-banner.njk" import pageBanner %}
+{% from "macros/breadcrumbs.njk" import breadcrumbs %}
 
 {% call pageBanner() %}
   <div class="eyebrow text-brand before:bg-brand">Полезно</div>
   <h1 class="mt-3 max-w-3xl font-display text-[clamp(2.5rem,5vw,3.75rem)] font-black leading-none">Блог</h1>
   <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/70">Съвети и разяснения, които помагат преди да изберете дограма.</p>
 {% endcall %}
+
+{{ breadcrumbs([
+  { label: "Начало", url: "/" },
+  { label: "Блог" }
+]) }}
 
 <section class="section-pad bg-brand-mist">
   <div class="container-site grid gap-5 md:grid-cols-2">

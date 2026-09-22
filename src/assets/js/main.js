@@ -118,4 +118,23 @@
     { threshold: 0.12 },
   );
   document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+  document.querySelectorAll("[data-video-embed]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const src = btn.getAttribute("data-video-embed");
+      if (!src) return;
+      const host = btn.parentElement;
+      if (!host) return;
+      const iframe = document.createElement("iframe");
+      iframe.className = "h-full w-full";
+      iframe.src = src;
+      iframe.title = btn.getAttribute("data-video-title") || "Видео";
+      iframe.setAttribute(
+        "allow",
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture",
+      );
+      iframe.allowFullscreen = true;
+      host.replaceChildren(iframe);
+    });
+  });
 })();

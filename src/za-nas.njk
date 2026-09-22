@@ -5,12 +5,18 @@ title: За нас
 description: Запознайте се с ДМД Комфорт — опит, подход и ценности в работата с дограма и комфорт за дома.
 ---
 {% from "macros/page-banner.njk" import pageBanner %}
+{% from "macros/breadcrumbs.njk" import breadcrumbs %}
 
 {% call pageBanner() %}
   <div class="eyebrow text-brand before:bg-brand">ДМД Комфорт</div>
   <h1 class="mt-3 max-w-3xl font-display text-[clamp(2.5rem,5vw,3.75rem)] font-black leading-none">Кои сме ние</h1>
   <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/70">Помагаме на клиентите да изберат и монтират правилната дограма — с внимание към детайла и към комфорта след това.</p>
 {% endcall %}
+
+{{ breadcrumbs([
+  { label: "Начало", url: "/" },
+  { label: "За нас" }
+]) }}
 
 <section class="section-pad bg-white">
   <div class="container-site grid gap-10 lg:grid-cols-2 lg:gap-14">

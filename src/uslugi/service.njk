@@ -11,12 +11,12 @@ eleventyComputed:
 ---
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/include-icon.njk" import includeIcon %}
+{% from "macros/breadcrumbs.njk" import breadcrumbs %}
 
 {% call pageBanner() %}
   <div class="grid items-end gap-8 lg:grid-cols-2">
     <div>
-      <a class="text-sm text-white/50 no-underline hover:text-brand" href="{{ '/uslugi/' | url }}">← Всички услуги</a>
-      <h1 class="mt-4 font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-black leading-none">{{ service.title }}</h1>
+      <h1 class="font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-black leading-none">{{ service.title }}</h1>
       <p class="mt-4 max-w-xl text-lg leading-relaxed text-white/70">{{ service.shortDescription }}</p>
       <div class="mt-6 flex flex-wrap gap-3">
         <button class="btn btn-primary open-inquiry" type="button">Заяви оглед</button>
@@ -28,6 +28,12 @@ eleventyComputed:
     </div>
   </div>
 {% endcall %}
+
+{{ breadcrumbs([
+  { label: "Начало", url: "/" },
+  { label: "Услуги", url: "/uslugi/" },
+  { label: service.title }
+]) }}
 
 <section class="relative section-pad overflow-hidden bg-white">
   <div class="pointer-events-none absolute -right-20 top-10 h-64 w-64 rounded-full bg-brand/5 blur-3xl" aria-hidden="true"></div>

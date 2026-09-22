@@ -1,0 +1,15 @@
+{# items: [{ label, url? }] — last item is the current page (no link) #}
+{% macro breadcrumbs(items) %}
+<nav class="border-b border-ink/10 bg-white" aria-label="Път до страницата">
+  <div class="container-site flex flex-wrap items-center gap-2.5 py-3.5 text-[13px] text-ink-muted">
+    {% for item in items %}
+      {% if not loop.first %}<span aria-hidden="true">/</span>{% endif %}
+      {% if item.url and not loop.last %}
+        <a class="no-underline transition hover:text-brand" href="{{ item.url | url }}">{{ item.label }}</a>
+      {% else %}
+        <span class="text-ink"{% if loop.last %} aria-current="page"{% endif %}>{{ item.label }}</span>
+      {% endif %}
+    {% endfor %}
+  </div>
+</nav>
+{% endmacro %}

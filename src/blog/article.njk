@@ -10,11 +10,11 @@ eleventyComputed:
   description: "{{ article.excerpt }}"
 ---
 {% from "macros/page-banner.njk" import pageBanner %}
+{% from "macros/breadcrumbs.njk" import breadcrumbs %}
 
 <article>
-  {% call pageBanner("container-site max-w-3xl") %}
-    <a class="text-sm text-white/50 no-underline hover:text-brand" href="{{ '/blog/' | url }}">← Блог</a>
-    <div class="mt-4 flex flex-wrap gap-3 text-xs font-bold uppercase tracking-[0.14em] text-brand">
+  {% call pageBanner() %}
+    <div class="flex flex-wrap gap-3 text-xs font-bold uppercase tracking-[0.14em] text-brand">
       <span>{{ article.category }}</span>
       <span class="text-white/40">{{ article.date }}</span>
     </div>
@@ -22,9 +22,15 @@ eleventyComputed:
     <p class="mt-4 text-lg leading-relaxed text-white/70">{{ article.excerpt }}</p>
   {% endcall %}
 
+  {{ breadcrumbs([
+    { label: "Начало", url: "/" },
+    { label: "Блог", url: "/blog/" },
+    { label: article.title }
+  ]) }}
+
   <section class="section-pad bg-white">
-    <div class="container-site max-w-3xl">
-      <img class="mb-10 aspect-[16/9] w-full rounded-2xl object-cover shadow-card reveal" src="{{ article.image }}" alt="{{ article.title }}" />
+    <div class="container-site">
+      <img class="mb-10 aspect-[16/9] w-full rounded-2xl object-cover shadow-card reveal md:max-w-3xl" src="{{ article.image }}" alt="{{ article.title }}" />
       <div class="space-y-5 reveal">
         {% for p in article.content %}
           <p class="text-[17px] leading-relaxed text-ink-muted">{{ p }}</p>
