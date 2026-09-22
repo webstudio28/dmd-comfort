@@ -18,7 +18,7 @@
       <div class="flex flex-col items-center md:items-start">
         <h3 class="mb-5 inline-block border-b-2 border-brand pb-2 font-display text-[15px] font-extrabold uppercase tracking-[0.12em] text-white/90">Услуги</h3>
         <ul class="flex flex-col items-center gap-2.5 md:items-start">
-          {% for s in services.slice(0, 5) %}
+          {% for s in services %}
             <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ ('/uslugi/' + s.slug + '/') | url }}">{{ s.title }}</a></li>
           {% endfor %}
           <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/uslugi/' | url }}">Всички услуги</a></li>
@@ -32,7 +32,7 @@
           <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/proekti/' | url }}">Проекти</a></li>
           <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/blog/' | url }}">Блог</a></li>
           <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/videa/' | url }}">Видеа</a></li>
-          <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/obrashtane-na-dograma/' | url }}">Обръщане на дограма</a></li>
+            <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/obrashtane-na-dograma-s-pvc-profili/' | url }}">Обръщане с PVC профили</a></li>
           <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/kontakti/' | url }}">Контакти</a></li>
         </ul>
       </div>

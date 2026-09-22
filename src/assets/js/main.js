@@ -30,8 +30,10 @@
       if (el.closest(".group > div")) return;
       el.classList.toggle("text-white/85", !scrolled);
       el.classList.toggle("hover:text-white", !scrolled);
+      el.classList.toggle("group-hover:text-white", !scrolled);
       el.classList.toggle("text-ink", scrolled);
-      el.classList.toggle("hover:text-brand", scrolled);
+      el.classList.toggle("hover:text-ink-muted", scrolled);
+      el.classList.toggle("group-hover:text-ink-muted", scrolled);
     });
   }
 

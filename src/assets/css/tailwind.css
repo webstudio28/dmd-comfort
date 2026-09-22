@@ -132,6 +132,14 @@
   .page-banner {
     @apply pb-10 pt-28 md:pb-14 md:pt-32;
   }
+
+  .nav-dropdown {
+    scrollbar-width: none;
+  }
+
+  .nav-dropdown::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

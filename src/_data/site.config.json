@@ -33,7 +33,7 @@
     "header": [
       { "label": "Начало", "url": "/" },
       { "label": "Услуги", "url": "/uslugi/", "childrenFrom": "services" },
-      { "label": "Обръщане", "url": "/obrashtane-na-dograma/" },
+      { "label": "Обръщане с PVC профили", "url": "/obrashtane-na-dograma-s-pvc-profili/" },
       { "label": "Проекти", "url": "/proekti/" },
       { "label": "Блог", "url": "/blog/" },
       { "label": "Видеа", "url": "/videa/" },

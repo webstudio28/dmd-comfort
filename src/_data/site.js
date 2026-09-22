@@ -1,15 +1,17 @@
 const path = require("path");
-
-const config = require(path.join(__dirname, "site.config.json"));
+const fs = require("fs");
 
 function loadJson(name) {
   try {
-    return require(path.join(__dirname, name));
+    const full = path.join(__dirname, name);
+    // Read fresh each build so nav/config edits aren't stuck in require cache
+    return JSON.parse(fs.readFileSync(full, "utf8"));
   } catch {
     return null;
   }
 }
 
+const config = loadJson("site.config.json") || {};
 const services = loadJson("services.json") || [];
 
 function resolveChildrenFrom(type) {
@@ -17,6 +19,7 @@ function resolveChildrenFrom(type) {
     return services.map((s) => ({
       label: s.title,
       url: `/uslugi/${s.slug}/`,
+      image: s.image || null,
     }));
   }
   return [];
