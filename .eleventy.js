@@ -6,6 +6,24 @@ module.exports = function (eleventyConfig) {
     new Date().toISOString().slice(0, 10),
   );
 
+  eleventyConfig.addFilter("youtubeEmbed", (url) => {
+    if (!url) return "";
+    try {
+      const u = new URL(url);
+      if (u.pathname.startsWith("/embed/")) return url;
+      let id = u.searchParams.get("v");
+      if (!id && u.hostname.includes("youtu.be")) {
+        id = u.pathname.replace(/^\//, "").split("/")[0];
+      }
+      if (!id && u.pathname.startsWith("/shorts/")) {
+        id = u.pathname.split("/")[2];
+      }
+      return id ? `https://www.youtube.com/embed/${id}` : url;
+    } catch {
+      return url;
+    }
+  });
+
   const pathPrefix = process.env.PATH_PREFIX || "/";
 
   return {
