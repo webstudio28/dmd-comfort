@@ -36,8 +36,8 @@ eleventyComputed:
           {% endfor %}
         </ul>
       </div>
-      {% if video.serviceSlug %}
-        <a class="btn btn-primary w-full" href="{{ ('/uslugi/' + video.serviceSlug + '/') | url }}">Към свързаната услуга</a>
+      {% if video.serviceUrl or video.serviceSlug %}
+        <a class="btn btn-primary w-full" href="{{ (video.serviceUrl or ('/uslugi/' + video.serviceSlug + '/')) | url }}">Към свързаната услуга</a>
       {% endif %}
     </aside>
   </div>

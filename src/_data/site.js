@@ -9,11 +9,15 @@ function loadJson(name) {
   }
 }
 
+function serviceUrl(service) {
+  return service.href || `/uslugi/${service.slug}/`;
+}
+
 function resolveChildrenFrom(services, type) {
   if (type === "services") {
     return services.map((s) => ({
       label: s.title,
-      url: `/uslugi/${s.slug}/`,
+      url: serviceUrl(s),
       image: s.image || null,
     }));
   }

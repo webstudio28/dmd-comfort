@@ -21,7 +21,7 @@
           <div class="border-t border-ink/10 px-5 pb-6 pt-4">
             <h3 class="mb-2 font-display text-[22px] font-extrabold tracking-wide">{{ s.title }}</h3>
             <p class="mb-4 min-h-[4.5rem] text-[15px] leading-relaxed text-ink-muted">{{ s.shortDescription }}</p>
-            <a class="font-display text-sm font-extrabold uppercase tracking-[0.08em] text-brand underline underline-offset-4" href="{{ ('/uslugi/' + s.slug + '/') | url }}">Разгледай →</a>
+            <a class="font-display text-sm font-extrabold uppercase tracking-[0.08em] text-brand underline underline-offset-4" href="{{ (s.href or ('/uslugi/' + s.slug + '/')) | url }}">Разгледай →</a>
           </div>
         </article>
       {% endfor %}

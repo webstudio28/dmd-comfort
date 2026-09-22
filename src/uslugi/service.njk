@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 pagination:
-  data: services
+  data: servicePages
   size: 1
   alias: service
 permalink: "/uslugi/{{ service.slug }}/"
@@ -20,9 +20,6 @@ eleventyComputed:
       <p class="mt-4 max-w-xl text-lg leading-relaxed text-white/70">{{ service.shortDescription }}</p>
       <div class="mt-6 flex flex-wrap gap-3">
         <button class="btn btn-primary open-inquiry" type="button">Заяви оглед</button>
-        {% if service.relatedPage %}
-          <a class="btn btn-light" href="{{ service.relatedPage | url }}">Повече за обръщането</a>
-        {% endif %}
       </div>
     </div>
     <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-lift">
