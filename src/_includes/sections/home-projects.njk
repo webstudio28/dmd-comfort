@@ -11,9 +11,9 @@
       </a>
     </div>
 
-    <div class="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+    <div class="h-scroll reveal md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4">
       {% for p in projects %}
-        <a class="project-tile reveal group relative block min-h-[280px] overflow-hidden rounded-xl text-white no-underline" href="{{ ('/proekti/' + p.slug + '/') | url }}">
+        <a class="project-tile group relative block min-h-[280px] overflow-hidden rounded-xl text-white no-underline" href="{{ ('/proekti/' + p.slug + '/') | url }}">
           <img class="image-cover absolute inset-0" src="{{ p.images[0] }}" alt="{{ p.title }}" loading="lazy" />
           <div class="absolute inset-0 bg-gradient-to-t from-[#121516]/90 via-[#121516]/25 to-transparent"></div>
           <div class="absolute inset-x-6 bottom-5 z-[2]">

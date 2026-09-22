@@ -105,10 +105,10 @@
     transform: scale(1.055);
   }
 
-  /* Mobile horizontal carousels: lock to X-axis and keep a next-card peek */
+  /* Mobile horizontal carousels: swipe sideways, still allow vertical page scroll */
   .h-scroll {
     @apply -mx-4 flex gap-4 overflow-x-auto overflow-y-hidden px-4 pb-2 md:mx-0 md:overflow-visible md:px-0 md:pb-0;
-    touch-action: pan-x;
+    touch-action: pan-x pan-y;
     overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x proximity;
