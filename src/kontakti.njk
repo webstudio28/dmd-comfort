@@ -1,0 +1,56 @@
+---
+layout: base.njk
+permalink: /kontakti/
+title: Контакти
+description: Свържете се с ДМД Комфорт — телефон, имейл и заявка за безплатен оглед.
+---
+
+<section class="bg-gradient-to-br from-brand-deeper via-ink to-brand-dark pb-16 pt-32 text-white">
+  <div class="container-site">
+    <div class="eyebrow text-brand before:bg-brand">Контакти</div>
+    <h1 class="mt-3 max-w-3xl font-display text-[clamp(2.75rem,6vw,4.5rem)] font-black leading-none">Говорим за вашия обект</h1>
+    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/70">Обадете се или оставете запитване — ще ви върнем бърз и ясен отговор.</p>
+  </div>
+</section>
+
+<section class="section-pad bg-white">
+  <div class="container-site grid gap-8 lg:grid-cols-2">
+    <div class="space-y-4 reveal">
+      {% set rows = [
+        { "label": "Телефон", "value": site.contact.phone, "href": site.contact.phoneHref },
+        { "label": "Имейл", "value": site.contact.email, "href": "mailto:" + site.contact.email },
+        { "label": "Адрес / район", "value": site.contact.address },
+        { "label": "Работно време", "value": site.contact.hours }
+      ] %}
+      {% for r in rows %}
+        <div class="rounded-xl border border-ink/10 bg-brand-mist p-5">
+          <div class="font-display text-xs font-bold uppercase tracking-[0.12em] text-brand">{{ r.label }}</div>
+          {% if r.href %}
+            <a class="mt-2 block font-display text-xl font-extrabold text-ink no-underline hover:text-brand" href="{{ r.href }}">{{ r.value }}</a>
+          {% else %}
+            <div class="mt-2 font-display text-xl font-extrabold text-ink">{{ r.value }}</div>
+          {% endif %}
+        </div>
+      {% endfor %}
+      <div class="flex flex-wrap gap-3 pt-2">
+        <a class="btn btn-outline" href="{{ site.contact.facebook }}">Facebook</a>
+        <a class="btn btn-outline" href="{{ site.contact.tiktok }}">TikTok</a>
+        <a class="btn btn-outline" href="{{ site.contact.viber }}">Viber</a>
+        <a class="btn btn-outline" href="{{ site.contact.whatsapp }}">WhatsApp</a>
+      </div>
+    </div>
+
+    <div class="card reveal p-6 md:p-8">
+      <div class="eyebrow">Запитване</div>
+      <h2 class="mt-2 font-display text-3xl font-extrabold">Заявете оглед</h2>
+      <p class="mt-2 text-ink-muted">Попълнете формата и ще се свържем с вас.</p>
+      <form class="mt-6 grid gap-3.5" onsubmit="event.preventDefault(); this.querySelector('[data-ok]').classList.remove('hidden');">
+        <input class="rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" placeholder="Име" required />
+        <input class="rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" placeholder="Телефон" required />
+        <textarea class="rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" rows="4" placeholder="Кратко описание на обекта"></textarea>
+        <button class="btn btn-primary" type="submit">Изпрати</button>
+        <p class="hidden text-sm font-medium text-brand" data-ok>Благодарим! В реалния сайт формата ще праща към имейл.</p>
+      </form>
+    </div>
+  </div>
+</section>

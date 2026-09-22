@@ -1,0 +1,20 @@
+<section class="relative overflow-hidden bg-gradient-to-r from-[#303b41] via-ink to-brand-deeper py-20 text-white">
+  <div class="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_100%,rgba(61,122,92,0.18),transparent_62%)]"></div>
+  <div class="container-site relative z-[1] flex flex-col items-start justify-between gap-10 lg:flex-row lg:items-end">
+    <div class="reveal">
+      <div class="eyebrow text-brand before:bg-brand">{{ site.brand.name }}</div>
+      <h2 class="mt-3 max-w-3xl font-display text-[clamp(2.5rem,6vw,4.5rem)] font-extrabold leading-none">
+        Нуждаете се от <span class="text-brand">нова дограма?</span>
+      </h2>
+      <p class="mt-4 max-w-xl text-lg leading-relaxed text-white/70">Заявете оглед и ще ви помогнем да изберете подходящата система според размерите, нуждите и бюджета ви.</p>
+    </div>
+    <div class="flex w-full max-w-sm flex-col gap-3 reveal">
+      <button class="btn btn-primary open-inquiry" type="button">Заяви безплатен оглед</button>
+      <a class="flex items-center justify-center gap-2 font-display text-lg font-bold text-white no-underline" href="{{ site.contact.phoneHref }}">
+        <svg class="text-brand" width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M5 3h3l2 5-2 1.5a15 15 0 0 0 6.5 6.5l1.5-2 5 2v3a2 2 0 0 1-2 2C10.2 21 3 13.8 3 5a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+        {{ site.contact.phone }}
+      </a>
+      <span class="text-center text-xs text-white/50">{{ site.contact.hours }}</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,41 @@
+---
+layout: base.njk
+pagination:
+  data: blog
+  size: 1
+  alias: article
+permalink: "/blog/{{ article.slug }}/"
+eleventyComputed:
+  title: "{{ article.title }}"
+  description: "{{ article.excerpt }}"
+---
+
+<article>
+  <section class="bg-gradient-to-br from-brand-deeper via-ink to-brand-dark pb-16 pt-32 text-white">
+    <div class="container-site max-w-3xl">
+      <a class="text-sm text-white/50 no-underline hover:text-brand" href="{{ '/blog/' | url }}">← Блог</a>
+      <div class="mt-4 flex flex-wrap gap-3 text-xs font-bold uppercase tracking-[0.14em] text-brand">
+        <span>{{ article.category }}</span>
+        <span class="text-white/40">{{ article.date }}</span>
+      </div>
+      <h1 class="mt-3 font-display text-[clamp(2.25rem,5vw,3.75rem)] font-black leading-none">{{ article.title }}</h1>
+      <p class="mt-5 text-lg leading-relaxed text-white/70">{{ article.excerpt }}</p>
+    </div>
+  </section>
+
+  <section class="section-pad bg-white">
+    <div class="container-site max-w-3xl">
+      <img class="mb-10 aspect-[16/9] w-full rounded-2xl object-cover shadow-card reveal" src="{{ article.image }}" alt="{{ article.title }}" />
+      <div class="space-y-5 reveal">
+        {% for p in article.content %}
+          <p class="text-[17px] leading-relaxed text-ink-muted">{{ p }}</p>
+        {% endfor %}
+      </div>
+      <div class="mt-12 rounded-2xl bg-brand-mist p-6 reveal">
+        <h2 class="font-display text-2xl font-extrabold">Имате въпрос за вашия обект?</h2>
+        <p class="mt-2 text-ink-muted">Заявете оглед и ще ви дадем конкретна препоръка.</p>
+        <button class="btn btn-primary mt-5 open-inquiry" type="button">Заяви оглед</button>
+      </div>
+    </div>
+  </section>
+</article>

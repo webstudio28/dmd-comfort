@@ -1,0 +1,52 @@
+<footer class="bg-brand-deeper text-white">
+  <div class="container-site">
+    <div class="grid gap-10 border-b border-white/10 py-14 md:grid-cols-2 lg:grid-cols-4">
+      <div class="lg:col-span-1">
+        <a class="mb-4 flex items-center gap-2.5 text-white no-underline" href="{{ '/' | url }}">
+          <span class="grid h-10 w-10 place-items-center rounded-[10px] bg-brand text-white">
+            <svg width="22" height="22" viewBox="0 0 28 28" fill="none"><rect x="4" y="3" width="20" height="22" rx="1.5" stroke="currentColor" stroke-width="2"/><path d="M14 4v20M5 14h18" stroke="currentColor" stroke-width="2"/></svg>
+          </span>
+          <span class="font-display text-xl font-black uppercase leading-none">{{ site.brand.name }}</span>
+        </a>
+        <p class="max-w-xs text-[15px] leading-relaxed text-white/50">{{ site.seo.defaultDescription }}</p>
+      </div>
+
+      <div>
+        <h3 class="mb-5 inline-block border-b-2 border-brand pb-2 font-display text-[15px] font-extrabold uppercase tracking-[0.12em] text-white/90">Услуги</h3>
+        <ul class="flex flex-col gap-2.5">
+          {% for s in services.slice(0, 5) %}
+            <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ ('/uslugi/' + s.slug + '/') | url }}">{{ s.title }}</a></li>
+          {% endfor %}
+          <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/uslugi/' | url }}">Всички услуги</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="mb-5 inline-block border-b-2 border-brand pb-2 font-display text-[15px] font-extrabold uppercase tracking-[0.12em] text-white/90">Компания</h3>
+        <ul class="flex flex-col gap-2.5">
+          <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/za-nas/' | url }}">За нас</a></li>
+          <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/proekti/' | url }}">Проекти</a></li>
+          <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/blog/' | url }}">Блог</a></li>
+          <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/videa/' | url }}">Видеа</a></li>
+          <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/obrashtane-na-dograma/' | url }}">Обръщане на дограма</a></li>
+          <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/kontakti/' | url }}">Контакти</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="mb-5 inline-block border-b-2 border-brand pb-2 font-display text-[15px] font-extrabold uppercase tracking-[0.12em] text-white/90">Контакти</h3>
+        <ul class="flex flex-col gap-3 text-[15px] text-white/50">
+          <li><a class="text-white/50 no-underline transition hover:text-brand" href="{{ site.contact.phoneHref }}">{{ site.contact.phone }}</a></li>
+          <li><a class="text-white/50 no-underline transition hover:text-brand" href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
+          <li>{{ site.contact.address }}</li>
+          <li>{{ site.contact.hours }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-col justify-between gap-4 py-5 text-[13px] text-white/30 md:flex-row">
+      <span>© {{ site.currentYear }} {{ site.brand.name }}. Всички права запазени.</span>
+      <span>{{ site.brand.tagline }}</span>
+    </div>
+  </div>
+</footer>

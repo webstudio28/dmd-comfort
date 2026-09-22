@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ site.brand.language | default('bg') }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {% set pageTitle = title or site.seo.defaultTitle %}
+  <title>{{ pageTitle }}{% if title %} | {{ site.brand.name }}{% endif %}</title>
+  <meta name="description" content="{{ description or site.seo.defaultDescription }}" />
+  <link rel="canonical" href="{{ site.seo.siteUrl }}{{ page.url | url }}" />
+  <link rel="icon" href="{{ '/favicon.svg' | url }}" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:opsz,wght@8..144,400;8..144,500;8..144,600&family=Sofia+Sans+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}" />
+</head>
+<body class="{% if bodyClass %}{{ bodyClass }}{% endif %}" {% if transparentHeader %}data-transparent-header="true"{% endif %}>
+  {% set transparentHeader = transparentHeader or false %}
+  {% include "header.njk" %}
+  <main>
+    {{ content | safe }}
+  </main>
+  {% include "footer.njk" %}
+  {% include "modal.njk" %}
+  <script src="{{ '/assets/js/main.js' | url }}" defer></script>
+</body>
+</html>

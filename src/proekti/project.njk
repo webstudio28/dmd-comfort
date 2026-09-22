@@ -1,0 +1,58 @@
+---
+layout: base.njk
+pagination:
+  data: projects
+  size: 1
+  alias: project
+permalink: "/proekti/{{ project.slug }}/"
+eleventyComputed:
+  title: "{{ project.title }}"
+  description: "{{ project.shortDescription }}"
+---
+
+<section class="bg-gradient-to-br from-brand-deeper via-ink to-brand-dark pb-16 pt-32 text-white">
+  <div class="container-site">
+    <a class="text-sm text-white/50 no-underline hover:text-brand" href="{{ '/proekti/' | url }}">← Всички проекти</a>
+    <div class="mt-4 text-sm font-bold uppercase tracking-[0.14em] text-brand">{{ project.location }} · {{ project.objectType }}</div>
+    <h1 class="mt-3 max-w-4xl font-display text-[clamp(2.5rem,5vw,4rem)] font-black leading-none">{{ project.title }}</h1>
+    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/70">{{ project.shortDescription }}</p>
+  </div>
+</section>
+
+<section class="section-pad bg-white">
+  <div class="container-site grid gap-10 lg:grid-cols-3">
+    <div class="space-y-8 lg:col-span-2 reveal">
+      <div class="grid gap-4 sm:grid-cols-2">
+        {% for img in project.images %}
+          <img class="aspect-[4/3] w-full rounded-2xl object-cover shadow-card" src="{{ img }}" alt="{{ project.title }} — снимка {{ loop.index }}" loading="lazy" />
+        {% endfor %}
+      </div>
+      <div>
+        <h2 class="font-display text-3xl font-extrabold">Описание на проекта</h2>
+        <p class="mt-4 text-[17px] leading-relaxed text-ink-muted">{{ project.description }}</p>
+      </div>
+      {% if project.testimonial %}
+        <blockquote class="rounded-2xl border-l-4 border-brand bg-brand-mist px-6 py-5 font-display text-xl font-bold leading-snug text-ink">
+          „{{ project.testimonial }}“
+        </blockquote>
+      {% endif %}
+    </div>
+
+    <aside class="space-y-4 reveal">
+      <div class="rounded-2xl border border-ink/10 bg-brand-mist p-6">
+        <h3 class="font-display text-lg font-extrabold">Детайли</h3>
+        <dl class="mt-4 space-y-4 text-sm">
+          <div><dt class="text-ink-faint">Задание</dt><dd class="mt-1 text-ink">{{ project.assignment }}</dd></div>
+          <div><dt class="text-ink-faint">Изпълнени услуги</dt><dd class="mt-1 text-ink">{{ project.servicesDone | join(", ") }}</dd></div>
+          <div><dt class="text-ink-faint">Монтирано</dt><dd class="mt-1 text-ink">{{ project.installed }}</dd></div>
+          <div><dt class="text-ink-faint">Материали</dt><dd class="mt-1 text-ink">{{ project.materials }}</dd></div>
+          <div><dt class="text-ink-faint">Трудности</dt><dd class="mt-1 text-ink">{{ project.challenges }}</dd></div>
+          <div><dt class="text-ink-faint">Резултат</dt><dd class="mt-1 text-ink">{{ project.result }}</dd></div>
+        </dl>
+      </div>
+      <button class="btn btn-primary w-full open-inquiry" type="button">Заяви подобен проект</button>
+    </aside>
+  </div>
+</section>
+
+{% include "sections/home-cta.njk" %}

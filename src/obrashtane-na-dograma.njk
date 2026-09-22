@@ -1,0 +1,70 @@
+---
+layout: base.njk
+permalink: /obrashtane-na-dograma/
+title: Обръщане на дограма с PVC профили
+description: Обръщане на прозорци с PVC профили — чисто, бързо и трайно решение вместо класическа шпакловка.
+---
+
+<section class="bg-gradient-to-br from-brand-deeper via-ink to-brand-dark pb-16 pt-32 text-white">
+  <div class="container-site">
+    <div class="eyebrow text-brand before:bg-brand">Специализирана услуга</div>
+    <h1 class="mt-3 max-w-4xl font-display text-[clamp(2.5rem,6vw,4.25rem)] font-black leading-none">Обръщане на дограма с PVC профили</h1>
+    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/70">Чисто изпълнение, по-малко прах и изчистен завършек около прозорците — вътрешно, външно или комбинирано.</p>
+    <div class="mt-8 flex flex-wrap gap-3">
+      <button class="btn btn-primary open-inquiry" type="button">Заяви оглед</button>
+      <a class="btn btn-light" href="{{ '/uslugi/obrashtane-s-pvc-profili/' | url }}">Към услугата</a>
+    </div>
+  </div>
+</section>
+
+<section class="section-pad bg-white">
+  <div class="container-site grid gap-10 lg:grid-cols-2">
+    <div class="reveal">
+      <div class="eyebrow">Какво е това</div>
+      <h2 class="section-title">Алтернатива на класическото обръщане</h2>
+      <p class="mb-4 text-[17px] leading-relaxed text-ink-muted">Вместо мокри мазилки около дограмата използваме PVC профили и готови ъгли. Резултатът е равен, лесен за поддръжка и естетически чист.</p>
+      <p class="text-[17px] leading-relaxed text-ink-muted">Подходящо е както за нова дограма, така и за вече монтирани прозорци — PVC или алуминий.</p>
+    </div>
+    <div class="grid gap-4 reveal">
+      {% set pros = [
+        "По-малко прах и мръсотия",
+        "По-бързо изпълнение",
+        "Лесна поддръжка",
+        "Изчистен визуален завършек",
+        "Вътрешно и/или външно",
+        "Готови ъгли и профили"
+      ] %}
+      {% for p in pros %}
+        <div class="flex items-start gap-3 rounded-xl border border-ink/10 bg-brand-mist px-4 py-3">
+          <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand text-xs font-bold text-white">✓</span>
+          <span class="font-medium text-ink">{{ p }}</span>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-pad bg-brand-mist">
+  <div class="container-site">
+    <div class="mb-10 reveal">
+      <div class="eyebrow">Често задавани въпроси</div>
+      <h2 class="section-title">Какво питат клиентите</h2>
+    </div>
+    <div class="mx-auto max-w-3xl space-y-3">
+      {% set faqs = [
+        { "q": "По-добро ли е от шпакловка?", "a": "В много случаи да — по-чисто, по-бързо и по-лесно за поддръжка." },
+        { "q": "Може ли само вътрешно обръщане?", "a": "Да. Правим вътрешно, външно или комбинирано." },
+        { "q": "Има ли много прах?", "a": "Значително по-малко в сравнение с мокрите процеси." },
+        { "q": "Подходящо ли е за вече монтирана дограма?", "a": "Да — това е една от силните страни на метода." }
+      ] %}
+      {% for f in faqs %}
+        <details class="card group reveal open:shadow-lift">
+          <summary class="cursor-pointer list-none px-5 py-4 font-display text-lg font-extrabold marker:content-none">{{ f.q }}</summary>
+          <div class="border-t border-ink/10 px-5 py-4 text-ink-muted leading-relaxed">{{ f.a }}</div>
+        </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include "sections/home-cta.njk" %}

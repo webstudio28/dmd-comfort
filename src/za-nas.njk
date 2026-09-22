@@ -1,0 +1,63 @@
+---
+layout: base.njk
+permalink: /za-nas/
+title: За нас
+description: Запознайте се с ДМД Комфорт — опит, подход и ценности в работата с дограма и комфорт за дома.
+---
+
+<section class="bg-gradient-to-br from-brand-deeper via-ink to-brand-dark pb-16 pt-32 text-white">
+  <div class="container-site">
+    <div class="eyebrow text-brand before:bg-brand">ДМД Комфорт</div>
+    <h1 class="mt-3 max-w-3xl font-display text-[clamp(2.75rem,6vw,4.5rem)] font-black leading-none">Кои сме ние</h1>
+    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/70">Помагаме на клиентите да изберат и монтират правилната дограма — с внимание към детайла и към комфорта след това.</p>
+  </div>
+</section>
+
+<section class="section-pad bg-white">
+  <div class="container-site grid gap-10 lg:grid-cols-2 lg:gap-14">
+    <div class="reveal">
+      <div class="eyebrow">История</div>
+      <h2 class="section-title">Опит, който се усеща в края</h2>
+      <p class="mb-4 text-[17px] leading-relaxed text-ink-muted">От години работим с PVC и алуминиеви системи, щори, комарници и обръщане с PVC профили. Подхождаме индивидуално към всеки обект — апартамент, къща или търговско помещение.</p>
+      <p class="text-[17px] leading-relaxed text-ink-muted">Целта ни е проста: решение, което работи ежедневно — топло, тихо, надеждно и с чист завършек.</p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 reveal">
+      {% set facts = [
+        { "n": "20+", "l": "години опит" },
+        { "n": "PVC + Alu", "l": "системи" },
+        { "n": "Пълен", "l": "пакет услуги" },
+        { "n": "Гаранция", "l": "и поддръжка" }
+      ] %}
+      {% for f in facts %}
+        <div class="rounded-xl border border-ink/10 bg-brand-mist p-6">
+          <div class="font-display text-3xl font-black text-brand">{{ f.n }}</div>
+          <div class="mt-1 text-sm text-ink-muted">{{ f.l }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-pad bg-brand-mist">
+  <div class="container-site">
+    <div class="mb-10 reveal">
+      <div class="eyebrow">Силни страни</div>
+      <h2 class="section-title">В какво сме най-добри</h2>
+    </div>
+    <div class="grid gap-4 md:grid-cols-3">
+      {% set strengths = [
+        { "t": "Прецизен монтаж", "d": "Правилният монтаж е ключът към изолацията и дългия живот на системата." },
+        { "t": "Честна консултация", "d": "Предлагаме това, което реално пасва на обекта и бюджета." },
+        { "t": "Чист завършек", "d": "Обръщане с PVC профили и внимание към детайла след монтажа." }
+      ] %}
+      {% for s in strengths %}
+        <article class="card reveal p-6">
+          <h3 class="mb-2 font-display text-xl font-extrabold">{{ s.t }}</h3>
+          <p class="m-0 text-ink-muted leading-relaxed">{{ s.d }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% include "sections/home-cta.njk" %}

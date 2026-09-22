@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-brand-mist text-ink font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  body.menu-open,
+  body.modal-open {
+    @apply overflow-hidden;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-[min(80rem,calc(100%-2rem))] md:w-[min(80rem,calc(100%-4rem))];
+  }
+
+  .section-pad {
+    @apply py-16 md:py-24;
+  }
+
+  .eyebrow {
+    @apply flex items-center gap-2.5 text-brand font-display text-sm font-bold uppercase tracking-[0.18em];
+  }
+
+  .eyebrow::before {
+    content: "";
+    @apply h-px w-6 bg-brand;
+  }
+
+  .section-title {
+    @apply mt-3.5 mb-3.5 font-display text-[clamp(2.25rem,4.4vw,3.5rem)] font-extrabold leading-[1.04] tracking-wide;
+  }
+
+  .section-copy {
+    @apply max-w-xl text-lg leading-relaxed text-ink-muted;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2.5 rounded-xl border-2 px-7 py-3.5 font-display text-[15px] font-bold uppercase tracking-[0.08em] transition duration-200;
+  }
+
+  .btn:hover {
+    @apply -translate-y-0.5;
+  }
+
+  .btn-primary {
+    @apply border-brand bg-brand text-white hover:border-brand-dark hover:bg-brand-dark hover:shadow-[0_12px_28px_rgba(61,122,92,0.28)];
+  }
+
+  .btn-light {
+    @apply border-white/85 bg-white/5 text-white backdrop-blur-sm hover:bg-white/15;
+  }
+
+  .btn-outline {
+    @apply border-brand/25 bg-white text-ink hover:border-brand hover:text-brand;
+  }
+
+  .arrow-link {
+    @apply inline-flex items-center gap-2 font-display text-[15px] font-extrabold uppercase tracking-[0.08em] text-brand no-underline;
+  }
+
+  .arrow-link svg {
+    @apply transition-transform duration-200;
+  }
+
+  .arrow-link:hover svg {
+    @apply translate-x-1;
+  }
+
+  .card {
+    @apply overflow-hidden rounded-[13px] border border-ink/10 bg-white shadow-card transition duration-200;
+  }
+
+  .card:hover {
+    @apply -translate-y-1 shadow-lift;
+  }
+
+  .reveal {
+    @apply opacity-0 translate-y-6 transition duration-700 ease-out;
+  }
+
+  .reveal.visible {
+    @apply translate-y-0 opacity-100;
+  }
+
+  .image-cover {
+    @apply h-full w-full object-cover transition duration-500;
+  }
+
+  .card:hover .image-cover,
+  .project-tile:hover .image-cover {
+    transform: scale(1.055);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    @apply translate-y-0 opacity-100;
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "brand": {
+    "name": "ДМД Комфорт",
+    "shortName": "ДМД",
+    "tagline": "Дограма · Монтаж · Комфорт",
+    "language": "bg",
+    "foundedYear": 2004,
+    "slogan": "Качество и прецизност във всеки детайл"
+  },
+  "seo": {
+    "siteUrl": "https://dmdkomfort.bg",
+    "defaultTitle": "ДМД Комфорт | PVC и алуминиева дограма",
+    "defaultDescription": "PVC и алуминиева дограма, щори, комарници, обръщане с PVC профили — оглед, доставка, монтаж и гаранция."
+  },
+  "contact": {
+    "phone": "0888 000 000",
+    "phoneHref": "tel:+359888000000",
+    "email": "info@dmdkomfort.bg",
+    "address": "Пловдив и региона",
+    "hours": "Пон–Съб: 09:00–18:00",
+    "facebook": "#",
+    "tiktok": "#",
+    "viber": "#",
+    "whatsapp": "#"
+  },
+  "colors": {
+    "brand": "#3D7A5C",
+    "brandDark": "#2F5F47",
+    "ink": "#24332B",
+    "paper": "#F4F7F5"
+  },
+  "nav": {
+    "header": [
+      { "label": "Начало", "url": "/" },
+      { "label": "Услуги", "url": "/uslugi/", "childrenFrom": "services" },
+      { "label": "Обръщане", "url": "/obrashtane-na-dograma/" },
+      { "label": "Проекти", "url": "/proekti/" },
+      { "label": "Блог", "url": "/blog/" },
+      { "label": "Видеа", "url": "/videa/" },
+      { "label": "За нас", "url": "/za-nas/" },
+      { "label": "Контакти", "url": "/kontakti/" }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+<section class="section-pad bg-gradient-to-br from-[#303b41] via-ink to-brand-deeper text-white">
+  <div class="container-site">
+    <div class="reveal">
+      <div class="eyebrow text-brand before:bg-brand">Как работим</div>
+      <h2 class="section-title text-white">От огледа до готовия монтаж</h2>
+      <p class="section-copy text-white/65">Ясен процес, точна комуникация и професионално изпълнение.</p>
+    </div>
+    <div class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      {% for step in home.process %}
+        <article class="reveal relative">
+          <span class="relative z-[1] mb-6 grid h-14 w-14 place-items-center rounded-full border border-brand/65 bg-ink font-display text-[17px] font-extrabold text-brand">0{{ loop.index }}</span>
+          <h3 class="mb-2.5 font-display text-[22px] font-extrabold">{{ step.title }}</h3>
+          <p class="m-0 text-[15px] leading-relaxed text-white/60">{{ step.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+    <div class="mt-10 reveal">
+      <button class="btn btn-primary open-inquiry" type="button">Заяви оглед</button>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,47 @@
+---
+layout: base.njk
+pagination:
+  data: videos
+  size: 1
+  alias: video
+permalink: "/videa/{{ video.slug }}/"
+eleventyComputed:
+  title: "{{ video.title }}"
+  description: "{{ video.summary }}"
+---
+
+<section class="bg-gradient-to-br from-brand-deeper via-ink to-brand-dark pb-16 pt-32 text-white">
+  <div class="container-site">
+    <a class="text-sm text-white/50 no-underline hover:text-brand" href="{{ '/videa/' | url }}">← Всички видеа</a>
+    <h1 class="mt-4 max-w-3xl font-display text-[clamp(2.25rem,5vw,3.75rem)] font-black leading-none">{{ video.title }}</h1>
+    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/70">{{ video.summary }}</p>
+  </div>
+</section>
+
+<section class="section-pad bg-white">
+  <div class="container-site grid gap-10 lg:grid-cols-3">
+    <div class="lg:col-span-2 reveal">
+      <div class="aspect-video overflow-hidden rounded-2xl bg-brand-deeper shadow-lift">
+        <img class="h-full w-full object-cover opacity-90" src="{{ video.image }}" alt="{{ video.title }}" />
+      </div>
+      <p class="mt-3 text-sm text-ink-muted">Линк към видео: <a class="text-brand underline" href="{{ video.videoUrl }}" target="_blank" rel="noopener">отвори</a></p>
+      <h2 class="mt-8 font-display text-2xl font-extrabold">Какъв проблем решава</h2>
+      <p class="mt-3 text-[17px] leading-relaxed text-ink-muted">{{ video.problem }}</p>
+    </div>
+    <aside class="space-y-4 reveal">
+      <div class="rounded-2xl border border-ink/10 bg-brand-mist p-6">
+        <h3 class="font-display text-lg font-extrabold">Важни съвети</h3>
+        <ul class="mt-3 space-y-2 text-sm text-ink-muted">
+          {% for tip in video.tips %}
+            <li>• {{ tip }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% if video.serviceSlug %}
+        <a class="btn btn-primary w-full" href="{{ ('/uslugi/' + video.serviceSlug + '/') | url }}">Към свързаната услуга</a>
+      {% endif %}
+    </aside>
+  </div>
+</section>
+
+{% include "sections/home-cta.njk" %}

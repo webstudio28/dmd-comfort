@@ -1,0 +1,21 @@
+<section class="section-pad bg-brand-mist">
+  <div class="container-site">
+    <div class="mb-10 reveal md:mb-12">
+      <div class="eyebrow">Защо да изберете нас</div>
+      <h2 class="section-title">Комфортът е в детайлите</h2>
+      <p class="section-copy">От точния размер до последния реглаж — поемаме отговорност за всяка стъпка.</p>
+    </div>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+      {% for item in home.why %}
+        <article class="reveal relative min-h-[225px] overflow-hidden rounded-xl bg-gradient-to-br from-white to-brand-mist p-6 shadow-card transition hover:-translate-y-1 hover:shadow-lift md:min-h-[270px]">
+          <span class="absolute right-3 top-1 font-display text-6xl font-black text-brand/10">0{{ loop.index }}</span>
+          <span class="relative mb-6 grid h-14 w-14 place-items-center rounded-xl bg-brand-soft text-brand">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7v5c0 4.7 3.1 8 8 9 4.9-1 8-4.3 8-9V7l-8-4Z M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          <h3 class="relative mb-2 font-display text-xl font-extrabold">{{ item.title }}</h3>
+          <p class="relative m-0 text-sm leading-relaxed text-ink-muted">{{ item.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>

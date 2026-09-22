@@ -1,0 +1,25 @@
+<section class="relative flex min-h-screen items-center overflow-hidden text-white">
+  <div class="absolute inset-0 scale-[1.02] bg-cover bg-center" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1600&q=80')" aria-hidden="true"></div>
+  <div class="absolute inset-0 bg-gradient-to-r from-brand-deeper/95 via-brand-deeper/85 to-brand-deeper/45" aria-hidden="true"></div>
+  <div class="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-brand-deeper/80 to-transparent" aria-hidden="true"></div>
+
+  <div class="container-site relative z-10 pb-24 pt-36 md:pb-28 md:pt-40">
+    <div class="mb-5 flex items-center gap-2.5 font-display text-[13px] font-bold uppercase tracking-[0.18em] text-brand">
+      <span class="h-px w-6 bg-gradient-to-r from-transparent to-brand"></span>
+      {{ home.hero.eyebrow }}
+      <span class="h-px w-6 bg-gradient-to-l from-transparent to-brand"></span>
+    </div>
+    <h1 class="mb-6 max-w-4xl font-display text-[clamp(3.25rem,8vw,6.5rem)] font-black leading-[0.91] tracking-tight">
+      {{ home.hero.title }}
+      <span class="mt-1 block text-brand">{{ home.hero.titleAccent }}</span>
+    </h1>
+    <p class="mb-8 max-w-xl text-xl leading-relaxed text-white/80">{{ home.hero.copy }}</p>
+    <div class="flex flex-wrap gap-3.5">
+      <button class="btn btn-primary open-inquiry" type="button">Заяви безплатен оглед</button>
+      <a class="btn btn-light" href="{{ '/uslugi/' | url }}">Разгледай услугите</a>
+    </div>
+    <div class="mt-6 flex flex-wrap items-center gap-3 text-sm text-white/65">
+      {{ home.hero.note }}
+    </div>
+  </div>
+</section>
