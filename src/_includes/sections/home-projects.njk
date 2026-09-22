@@ -15,7 +15,7 @@
       {% for p in projects %}
         <a class="project-tile reveal group relative block min-h-[280px] overflow-hidden rounded-xl text-white no-underline" href="{{ ('/proekti/' + p.slug + '/') | url }}">
           <img class="image-cover absolute inset-0" src="{{ p.images[0] }}" alt="{{ p.title }}" loading="lazy" />
-          <div class="absolute inset-0 bg-gradient-to-t from-brand-deeper/90 via-brand-deeper/20 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-[#121516]/90 via-[#121516]/25 to-transparent"></div>
           <div class="absolute inset-x-6 bottom-5 z-[2]">
             <h3 class="mb-1 font-display text-[22px] font-extrabold">{{ p.title }}</h3>
             <p class="m-0 text-sm text-white/70">{{ p.location }} · {{ p.objectType }}</p>

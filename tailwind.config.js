@@ -11,14 +11,14 @@ module.exports = {
         brand: {
           DEFAULT: "#057230",
           dark: "#045a26",
-          deeper: "#033f1c",
+          deeper: "#121516",
           soft: "#E6F4EC",
           mist: "#F3F8F5",
         },
         ink: {
-          DEFAULT: "#24332B",
-          muted: "#5F6E66",
-          faint: "#8A9690",
+          DEFAULT: "#1a1d1f",
+          muted: "#5a6360",
+          faint: "#8a9290",
         },
       },
       maxWidth: {
