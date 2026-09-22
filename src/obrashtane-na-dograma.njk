@@ -2,68 +2,180 @@
 layout: base.njk
 permalink: /obrashtane-na-dograma-s-pvc-profili/
 title: Обръщане на дограма с PVC профили
-description: Обръщане на прозорци с PVC профили — чисто, бързо и трайно решение вместо класическа шпакловка.
+description: Обръщане на дограма с PVC профили за чист интериорен завършек. Разгледайте материалите, стъпките на монтаж и как се определя цената. Поискайте оферта.
+bodyClass: window-finishing
+pageStyles: /assets/css/window-finishing.css
+pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
+inquiryService: Обръщане с PVC профили
+inquiryEyebrow: Индивидуална оферта
+inquiryDescription: Посочете населеното място, броя прозорци и състоянието около дограмата.
+inquiryPlaceholder: Населено място, брой прозорци, нова или вече монтирана дограма...
 ---
-{% from "macros/page-banner.njk" import pageBanner %}
+{% from "macros/include-icon.njk" import includeIcon %}
+{% macro arrow() %}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endmacro %}
+{% macro check() %}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endmacro %}
 
-{% call pageBanner() %}
-  <div class="eyebrow text-brand before:bg-brand">Специализирана услуга</div>
-  <h1 class="mt-3 max-w-4xl font-display text-[clamp(2.25rem,5vw,3.5rem)] font-black leading-none">Обръщане на дограма с PVC профили</h1>
-  <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/70">Чисто изпълнение, по-малко прах и изчистен завършек около прозорците — вътрешно, външно или комбинирано.</p>
-  <div class="mt-6 flex flex-wrap gap-3">
-    <button class="btn btn-primary open-inquiry" type="button">Заяви оглед</button>
-    <a class="btn btn-light" href="{{ '/uslugi/obrashtane-s-pvc-profili/' | url }}">Към услугата</a>
-  </div>
-{% endcall %}
-
-<section class="section-pad bg-white">
-  <div class="container-site grid gap-10 lg:grid-cols-2">
-    <div class="reveal">
-      <div class="eyebrow">Какво е това</div>
-      <h2 class="section-title">Алтернатива на класическото обръщане</h2>
-      <p class="mb-4 text-[17px] leading-relaxed text-ink-muted">Вместо мокри мазилки около дограмата използваме PVC профили и готови ъгли. Резултатът е равен, лесен за поддръжка и естетически чист.</p>
-      <p class="text-[17px] leading-relaxed text-ink-muted">Подходящо е както за нова дограма, така и за вече монтирани прозорци — PVC или алуминий.</p>
-    </div>
-    <div class="grid gap-4 reveal">
-      {% set pros = [
-        "По-малко прах и мръсотия",
-        "По-бързо изпълнение",
-        "Лесна поддръжка",
-        "Изчистен визуален завършек",
-        "Вътрешно и/или външно",
-        "Готови ъгли и профили"
-      ] %}
-      {% for p in pros %}
-        <div class="flex items-start gap-3 rounded-xl border border-ink/10 bg-brand-mist px-4 py-3">
-          <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-brand text-xs font-bold text-white">✓</span>
-          <span class="font-medium text-ink">{{ p }}</span>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
-<section class="section-pad bg-brand-mist">
+<section class="trim-hero" aria-labelledby="trim-title">
   <div class="container-site">
-    <div class="mb-10 reveal">
-      <div class="eyebrow">Често задавани въпроси</div>
-      <h2 class="section-title">Какво питат клиентите</h2>
-    </div>
-    <div class="mx-auto max-w-3xl space-y-3">
-      {% set faqs = [
-        { "q": "По-добро ли е от шпакловка?", "a": "В много случаи да — по-чисто, по-бързо и по-лесно за поддръжка." },
-        { "q": "Може ли само вътрешно обръщане?", "a": "Да. Правим вътрешно, външно или комбинирано." },
-        { "q": "Има ли много прах?", "a": "Значително по-малко в сравнение с мокрите процеси." },
-        { "q": "Подходящо ли е за вече монтирана дограма?", "a": "Да — това е една от силните страни на метода." }
-      ] %}
-      {% for f in faqs %}
-        <details class="card group reveal open:shadow-lift">
-          <summary class="cursor-pointer list-none px-5 py-4 font-display text-lg font-extrabold marker:content-none">{{ f.q }}</summary>
-          <div class="border-t border-ink/10 px-5 py-4 text-ink-muted leading-relaxed">{{ f.a }}</div>
-        </details>
-      {% endfor %}
+    <nav class="trim-breadcrumb" aria-label="Път до страницата">
+      <a href="{{ '/' | url }}">Начало</a><span aria-hidden="true">/</span><a href="{{ '/uslugi/' | url }}">Услуги</a><span aria-hidden="true">/</span><span aria-current="page">Обръщане с PVC профили</span>
+    </nav>
+    <div class="trim-hero-grid">
+      <div class="trim-hero-copy">
+        <p class="trim-kicker trim-kicker-light">Основната ни услуга</p>
+        <h1 id="trim-title">Обръщане на дограма <span>с PVC профили</span></h1>
+        <p class="trim-hero-lead">Чистите линии завършват дома.</p>
+        <p class="trim-hero-description">Прецизно оформени страници и ъгли около прозорците. Готова повърхност, съобразена с дограмата и интериора ви.</p>
+        <div class="trim-actions"><button class="btn btn-primary open-inquiry" type="button">Поискайте оферта {{ arrow() }}</button><a class="trim-text-link trim-text-link-light" href="#kakvo-predstavlyava">Разгледайте решението <span aria-hidden="true">↓</span></a></div>
+        <p class="trim-hero-note">За нова и вече монтирана дограма · Вътрешно обръщане</p>
+      </div>
+      <figure class="trim-hero-figure">
+        <div class="trim-image-wrap"><img src="{{ pageImage | url }}" alt="Илюстрация на бял прозорец с изчистени PVC профили по целия вътрешен отвор" width="1536" height="1024" fetchpriority="high" decoding="async" /></div>
+        <figcaption><span>Детайлът прави завършека.</span><span>Илюстративна визуализация</span></figcaption>
+      </figure>
     </div>
   </div>
 </section>
 
-{% include "sections/home-cta.njk" %}
+<div class="trim-benefits"><div class="container-site trim-benefits-grid">
+  <div>{{ check() }}<span>Профили според отвора</span></div><div>{{ check() }}<span>Прецизно оформени ъгли</span></div><div>{{ check() }}<span>Лесна поддръжка</span></div>
+</div></div>
+
+<nav class="trim-page-nav" aria-label="Съдържание на страницата"><div class="container-site trim-page-nav-inner">
+  <span>На тази страница</span><a href="#kakvo-predstavlyava">Решението</a><a href="#materiali">Материали</a><a href="#sravnenie">Сравнение</a><a href="#montazh">Монтаж</a><a href="#cena">Цена</a><a href="#vaprosi">Въпроси</a>
+</div></nav>
+
+<section class="trim-section" id="kakvo-predstavlyava" aria-labelledby="trim-intro-title">
+  <div class="container-site trim-intro-grid">
+    <div>
+      <p class="trim-kicker">От монтиран прозорец до завършен интериор</p>
+      <h2 class="trim-heading" id="trim-intro-title">Какво представлява обръщането с PVC профили?</h2>
+      <div class="trim-prose">
+        <p>След смяната на дограмата често остават нарушени ръбове, открити фуги и незавършени участъци. Обръщането оформя прехода между рамката и стената и завършва страничните и горната част на прозоречния отвор.</p>
+        <p>При този метод използваме <strong>готови профили за обръщане на прозорци</strong>, разкроени според конкретните размери. Те създават равна облицовъчна повърхност и ясно очертан контур около прозореца.</p>
+        <p>Това са довършителни елементи около дограмата — различни от самата рамка и подпрозоречния перваз. Решението се подбира според дълбочината на отвора, основата и желания вид.</p>
+      </div>
+    </div>
+    <aside class="trim-result-panel" aria-labelledby="trim-result-title">
+      <span class="trim-icon">{{ includeIcon("Финишен вид") }}</span><h3 id="trim-result-title">Завършек, обмислен до детайла</h3>
+      <ul class="trim-detail-list">
+        <li><span>01</span><div><strong>Подреден контур</strong><p>Прави линии и съобразена ширина на видимите профили.</p></div></li>
+        <li><span>02</span><div><strong>Готова повърхност</strong><p>Самите профили не изискват шпакловане и боядисване като стената.</p></div></li>
+        <li><span>03</span><div><strong>Практичен всеки ден</strong><p>Гладък завършек с поддръжка според указанията на производителя.</p></div></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="trim-section trim-section-soft" aria-labelledby="trim-suitable-title"><div class="container-site">
+  <div class="trim-section-head"><div><p class="trim-kicker">Кога да изберете този метод</p><h2 class="trim-heading" id="trim-suitable-title">Нова дограма или нов завършек.</h2></div><p>Решението започва с условията във вашия дом. Преценяваме отвора, преди да предложим изпълнение.</p></div>
+  <div class="trim-situations">
+    {% set situations = [
+      { title: "След смяна на дограмата", text: "За оформяне на отвори с нарушена мазилка и незавършени участъци след демонтажа на старите прозорци.", icon: "Монтаж" },
+      { title: "При съществуващи прозорци", text: "Когато дограмата е запазена, но пространството около нея се нуждае от обновяване. Възможността зависи от състоянието на отвора.", icon: "Финишен вид" },
+      { title: "В обитавано жилище", text: "Когато търсите готова довършителна повърхност и по-малко последващи операции около прозорците.", icon: "Консултация" }
+    ] %}
+    {% for item in situations %}<article class="trim-situation"><span class="trim-icon">{{ includeIcon(item.icon) }}</span><h3>{{ item.title }}</h3><p>{{ item.text }}</p></article>{% endfor %}
+  </div>
+  <div class="trim-inline-note"><strong>Първо проверяваме основата.</strong><p>Ронеща се мазилка, следи от теч или проблем с монтажната фуга трябва да бъдат оценени преди облицоване. Профилите оформят завършека; причината за повредата се решава отделно.</p></div>
+</div></section>
+
+<section class="trim-section" id="materiali" aria-labelledby="trim-materials-title"><div class="container-site">
+  <div class="trim-section-head"><div><p class="trim-kicker">Профил · Ъгъл · Повърхност</p><h2 class="trim-heading" id="trim-materials-title">Материали за обръщане на прозорци</h2></div><p>Правилният размер и добрата сглобка са толкова важни, колкото и цветът. Уточняваме ги като част от цялото решение.</p></div>
+  <div class="trim-material-grid">
+    <article class="trim-material"><span class="trim-material-index">01 / ПРОФИЛЪТ</span><h3>PVC профил за обръщане на прозорци</h3><p>Облицова вътрешната страна на отвора и оформя прехода към стената. Избира се според необходимата дълбочина, покритие и видима ширина.</p><span class="trim-material-tag">Размер според обекта</span></article>
+    <article class="trim-material"><span class="trim-material-index">02 / СЪЕДИНЕНИЯТА</span><h3>Готови ъгли и прецизни сглобки</h3><p>Ъглите могат да се оформят с готови елементи или с разкроени съединения според системата. Предварително уточняваме как ще изглежда видимият детайл.</p><span class="trim-material-tag">Внимание към всеки ръб</span></article>
+    <article class="trim-material"><span class="trim-material-index">03 / ЗАВЪРШЕКЪТ</span><h3>Цвят, съобразен с интериора</h3><p>Подбираме наличния вариант спрямо рамката, перваза и стената. При цветна дограма съчетанието се проверява по мостра, когато такава е налична.</p><span class="trim-material-tag">Съгласуван визуален резултат</span></article>
+  </div>
+</div></section>
+
+<section class="trim-section trim-comparison-section" id="sravnenie" aria-labelledby="trim-compare-title"><div class="container-site trim-comparison-grid">
+  <div><p class="trim-kicker">Информиран избор</p><h2 class="trim-heading" id="trim-compare-title">PVC профили или класическо обръщане?</h2><p class="trim-copy">Двата метода дават различен завършек. Изборът зависи от основата и от това дали искате отделна рамка около отвора или повърхност, която се слива със стената.</p><a class="trim-text-link" href="#zapitvane">Обсъдете вашия прозорец {{ arrow() }}</a></div>
+  <div class="trim-table-wrap"><table class="trim-comparison">
+    <caption class="sr-only">Сравнение между готови PVC профили и обръщане с мазилка и шпакловка</caption>
+    <thead><tr><th scope="col">Какво сравняваме</th><th scope="col">PVC профили</th><th scope="col">Мазилка и шпакловка</th></tr></thead>
+    <tbody>
+      <tr><th scope="row">Външен вид</th><td>Ясно оформен контур около прозореца</td><td>Преход, боядисан като стената</td></tr>
+      <tr><th scope="row">Завършване</th><td>Готова повърхност на профила</td><td>Полагане на слоеве и последващо боядисване</td></tr>
+      <tr><th scope="row">Подготовка</th><td>Основа, подходяща за избраната монтажна система</td><td>Основа, подходяща за избраните разтвори</td></tr>
+      <tr><th scope="row">Съчетаване</th><td>С цвета на дограмата и перваза</td><td>С боята и текстурата на стената</td></tr>
+    </tbody>
+  </table><p class="trim-table-note">Обхватът и срокът се определят за конкретния отвор, независимо от метода.</p></div>
+</div></section>
+
+<section class="trim-section" id="montazh" aria-labelledby="trim-process-title"><div class="container-site">
+  <div class="trim-section-head"><div><p class="trim-kicker">Ясна последователност</p><h2 class="trim-heading" id="trim-process-title">От първото измерване до последния детайл.</h2></div><p>Лесното обръщане на прозорци започва с добра подготовка. Ето как организираме работата.</p></div>
+  <ol class="trim-process">
+    {% set steps = [
+      { title: "Оглед и измерване", text: "Проверяваме отвора, дограмата и перваза. Уточняваме какво е нужно за подготовката." },
+      { title: "Решение и оферта", text: "Съгласуваме профили, цвят, съединения, обхват на работата и срок за изпълнение." },
+      { title: "Подготовка и монтаж", text: "Подготвяме работната зона и основата, разкрояваме и поставяме елементите според системата." },
+      { title: "Финална проверка", text: "Оглеждаме линиите, ъглите и връзката с перваза. Проверяваме свободното отваряне на крилата." }
+    ] %}
+    {% for step in steps %}<li><span class="trim-step-number">0{{ loop.index }}</span><h3>{{ step.title }}</h3><p>{{ step.text }}</p></li>{% endfor %}
+  </ol>
+  <div class="trim-timing"><span class="trim-icon">{{ includeIcon("Консултация") }}</span><div><h3>Колко време отнема?</h3><p>Броят прозорци, размерите и състоянието на основата определят срока. Уточняваме подготовката и последователността предварително, за да знаете какво да очаквате.</p></div></div>
+</div></section>
+
+<section class="trim-section trim-price-section" id="cena" aria-labelledby="trim-price-title"><div class="container-site trim-price-grid">
+  <div><p class="trim-kicker">Оферта според вашия обект</p><h2 class="trim-heading" id="trim-price-title">Цена за обръщане на дограма с PVC профили</h2><p class="trim-copy">За точна цена са нужни повече от броя прозорци. Значение имат дълбочината на отвора, количеството профили и работата по основата.</p>
+    <dl class="trim-price-factors"><div><dt>Размери и количество</dt><dd>Брой отвори, височина, ширина и дълбочина на страниците.</dd></div><div><dt>Материали и детайли</dt><dd>Избран профил, цвят, оформление на ъглите и връзка с перваза.</dd></div><div><dt>Подготовка и достъп</dt><dd>Състояние на основата, нужни допълнителни дейности и местоположение.</dd></div></dl>
+  </div>
+  <aside class="trim-quote-card" aria-labelledby="trim-quote-title"><span class="trim-icon">{{ includeIcon("Измерване") }}</span><h3 id="trim-quote-title">Какво да подготвите за оферта</h3><p>Няколко детайла помагат за първоначалната преценка:</p><ul class="trim-check-list"><li>{{ check() }}Населено място и тип обект</li><li>{{ check() }}Брой прозорци и приблизителни размери</li><li>{{ check() }}Нова или вече монтирана дограма</li><li>{{ check() }}Описание на състоянието около рамките</li></ul><button class="btn btn-primary open-inquiry" type="button">Поискайте оферта {{ arrow() }}</button><p class="trim-quote-note">Материали, монтаж и допълнителни дейности се уточняват в конкретната оферта.</p></aside>
+</div></section>
+
+<section class="trim-section" aria-labelledby="trim-quality-title"><div class="container-site trim-quality-grid">
+  <div><p class="trim-kicker">Нашият фокус</p><h2 class="trim-heading" id="trim-quality-title">Добрата работа се вижда отблизо.</h2><p class="trim-copy">Обръщането с PVC профили е основна услуга на ДМД Комфорт. Вниманието ни е в детайлите, които остават видими всеки ден.</p></div>
+  <div class="trim-quality-list"><div><span>01</span><h3>Равни линии и чисти съединения</h3><p>Профилите следват отвора, а ъглите се оформят според съгласуваното решение.</p></div><div><span>02</span><h3>Съобразяване с дограмата</h3><p>Завършекът се проверява спрямо перваза, дръжките и отварянето на крилата.</p></div><div><span>03</span><h3>Яснота преди изпълнението</h3><p>Уточняваме материалите, подготовката, сроковете и условията за изпълнение за вашия обект.</p></div></div>
+</div></section>
+
+<section class="trim-section trim-section-soft" id="vaprosi" aria-labelledby="trim-faq-title"><div class="container-site trim-faq-grid">
+  <div class="trim-faq-intro"><p class="trim-kicker">Полезно преди решението</p><h2 class="trim-heading" id="trim-faq-title">Вашите въпроси.<br>Ясни отговори.</h2><p class="trim-copy">Всеки прозоречен отвор е различен. Тук са отговорите на основните въпроси за метода.</p><a class="trim-text-link" href="#zapitvane">Обсъдете вашия случай {{ arrow() }}</a></div>
+  <div class="trim-faq-list">
+    {% set faqs = [
+      { q: "Може ли обръщане без смяна на дограмата?", a: "Възможно е при подходящо състояние на съществуващите прозорци и отвора. Проверяват се размерите, основата и възможността профилите да бъдат монтирани, без да пречат на крилата и обкова." },
+      { q: "Подходящо ли е за PVC и алуминиева дограма?", a: "Съществуват системи за завършване около двата вида дограма. Подходящият вариант се уточнява според избраните профили, размерите на отвора и начина на монтаж." },
+      { q: "Трябва ли да се боядисва след монтажа?", a: "Готовите профили имат завършена повърхност. Ако стената извън покритата зона е повредена, за нея може да бъде нужна отделна обработка и боядисване. Този обхват се уточнява предварително." },
+      { q: "Има ли прах и разчистване?", a: "При подготовката и разкрояването може да има прах и отпадъци. Количеството зависи от състоянието на отвора. Готовите профили ограничават довършителните операции върху самата облицована повърхност, но не отменят подготовката." },
+      { q: "Може ли да остане съществуващият перваз?", a: "Това зависи от състоянието, размерите и закрепването му. При огледа се проверява как новите профили ще се свържат с перваза и дали е необходимо допълнително оформяне." },
+      { q: "Подходящи ли са профилите за външно обръщане на прозорци?", a: "На тази страница представяме вътрешно обръщане. За външно приложение са необходими продукти и монтажни детайли, изрично предназначени за атмосферно въздействие. Интериорният профил не е автоматично подходящ за фасада — решението се проверява по документацията на конкретната система." },
+      { q: "Обръщането ще реши ли проблем с теч или конденз?", a: "Самото покриване на отвора не е диагноза или решение на причината. Ако има влага, теч или повреда около дограмата, първо трябва да се установи източникът и да се уточнят необходимите действия." },
+      { q: "Как се поддържат PVC профилите?", a: "Следвайте указанията на производителя за конкретното покритие. Избягвайте абразиви и агресивни препарати, които не са предназначени за тази повърхност." },
+      { q: "Какви са срокът и гаранционните условия?", a: "Срокът зависи от обхвата и необходимата подготовка. Условията за материала и изпълнението се уточняват в конкретната оферта преди започване на работата." }
+    ] %}
+    {% for faq in faqs %}<details class="trim-faq"><summary>{{ faq.q }}<span class="trim-faq-toggle" aria-hidden="true"></span></summary><div><p>{{ faq.a }}</p></div></details>{% endfor %}
+  </div>
+</div></section>
+
+<section class="trim-contact" id="zapitvane" aria-labelledby="trim-contact-title"><div class="container-site trim-contact-grid">
+  <div><p class="trim-kicker trim-kicker-light">ДМД Комфорт · Обръщане с PVC профили</p><h2 id="trim-contact-title">Дайте завършен вид<br>на вашите прозорци.</h2><p>Разкажете ни за обекта. Ще обсъдим подходящите профили, детайлите и обхвата на изпълнението.</p></div>
+  <div class="trim-contact-actions"><button class="btn btn-primary open-inquiry" type="button">Поискайте оферта {{ arrow() }}</button><a class="trim-text-link trim-text-link-light" href="{{ '/kontakti/' | url }}">Контакти с екипа {{ arrow() }}</a><span>Нова или съществуваща дограма</span></div>
+</div></section>
+
+{% set serviceUrl = site.seo.siteUrl + (page.url | url) %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "@id": {{ (serviceUrl + '#service') | dump | safe }},
+      "name": "Обръщане на дограма с PVC профили",
+      "serviceType": "Вътрешно обръщане на прозорци с PVC профили",
+      "description": {{ description | dump | safe }},
+      "url": {{ serviceUrl | dump | safe }},
+      "image": {{ (site.seo.siteUrl + (pageImage | url)) | dump | safe }},
+      "provider": { "@type": "Organization", "name": {{ site.brand.name | dump | safe }}, "url": {{ site.seo.siteUrl | dump | safe }} }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Начало", "item": {{ (site.seo.siteUrl + ('/' | url)) | dump | safe }} },
+        { "@type": "ListItem", "position": 2, "name": "Услуги", "item": {{ (site.seo.siteUrl + ('/uslugi/' | url)) | dump | safe }} },
+        { "@type": "ListItem", "position": 3, "name": "Обръщане с PVC профили", "item": {{ serviceUrl | dump | safe }} }
+      ]
+    }
+  ]
+}
+</script>
+

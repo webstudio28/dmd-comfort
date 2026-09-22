@@ -5,9 +5,9 @@
       <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="m5 5 14 14M19 5 5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
     </button>
     <div id="formContent">
-      <div class="eyebrow">Безплатен оглед</div>
+      <div class="eyebrow">{{ inquiryEyebrow or 'Безплатен оглед' }}</div>
       <h2 id="modalTitle" class="mt-2 pr-10 font-display text-[2rem] font-extrabold leading-tight">Разкажете ни за вашия обект</h2>
-      <p class="mt-2 text-ink-muted leading-relaxed">Оставете контакт и ще се свържем с вас за удобен ден и час.</p>
+      <p class="mt-2 text-ink-muted leading-relaxed">{{ inquiryDescription or 'Оставете контакт и ще се свържем с вас за удобен ден и час.' }}</p>
       <form id="inquiryForm" class="mt-6">
         <div class="grid gap-3.5 sm:grid-cols-2">
           <div class="flex flex-col gap-1.5">
@@ -22,14 +22,14 @@
             <label class="font-display text-[13px] font-bold uppercase tracking-wide" for="interest">Интересувам се от</label>
             <select class="rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="interest" name="interest">
               {% for s in services %}
-                <option>{{ s.title }}</option>
+                <option{% if inquiryService and s.title == inquiryService %} selected{% endif %}>{{ s.title }}</option>
               {% endfor %}
               <option>Друго</option>
             </select>
           </div>
           <div class="flex flex-col gap-1.5 sm:col-span-2">
             <label class="font-display text-[13px] font-bold uppercase tracking-wide" for="message">Кратко описание</label>
-            <textarea class="rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="message" name="message" rows="3" placeholder="Тип обект, приблизителен брой прозорци..."></textarea>
+            <textarea class="rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="message" name="message" rows="3" placeholder="{{ inquiryPlaceholder or 'Тип обект, приблизителен брой прозорци...' }}"></textarea>
           </div>
         </div>
         <button class="btn btn-primary mt-4 w-full" type="submit">Изпрати запитване</button>
