@@ -57,7 +57,7 @@
   }
 
   .btn-primary {
-    @apply border-brand bg-brand text-white hover:border-brand-dark hover:bg-brand-dark hover:shadow-[0_12px_28px_rgba(61,122,92,0.28)];
+    @apply border-brand bg-brand text-white hover:border-brand-dark hover:bg-brand-dark hover:shadow-[0_12px_28px_rgba(5,114,48,0.28)];
   }
 
   .btn-light {
@@ -103,6 +103,34 @@
   .card:hover .image-cover,
   .project-tile:hover .image-cover {
     transform: scale(1.055);
+  }
+
+  /* Mobile horizontal carousels: lock to X-axis and keep a next-card peek */
+  .h-scroll {
+    @apply -mx-4 flex gap-4 overflow-x-auto overflow-y-hidden px-4 pb-2 md:mx-0 md:overflow-visible md:px-0 md:pb-0;
+    touch-action: pan-x;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  .h-scroll::-webkit-scrollbar {
+    display: none;
+  }
+
+  .h-scroll > * {
+    @apply w-[min(72vw,280px)] shrink-0 snap-start md:w-auto md:max-w-none md:shrink;
+  }
+
+  @media (min-width: 768px) {
+    .h-scroll {
+      scroll-snap-type: none;
+    }
+  }
+
+  .page-banner {
+    @apply pb-10 pt-28 md:pb-14 md:pt-32;
   }
 }
 

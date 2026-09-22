@@ -9,14 +9,15 @@ eleventyComputed:
   title: "{{ service.title }}"
   description: "{{ service.shortDescription }}"
 ---
+{% from "macros/page-banner.njk" import pageBanner %}
 
-<section class="bg-gradient-to-br from-brand-deeper via-ink to-brand-dark pb-16 pt-32 text-white">
-  <div class="container-site grid items-end gap-8 lg:grid-cols-2">
+{% call pageBanner() %}
+  <div class="grid items-end gap-8 lg:grid-cols-2">
     <div>
       <a class="text-sm text-white/50 no-underline hover:text-brand" href="{{ '/uslugi/' | url }}">← Всички услуги</a>
-      <h1 class="mt-4 font-display text-[clamp(2.5rem,5vw,4rem)] font-black leading-none">{{ service.title }}</h1>
-      <p class="mt-5 max-w-xl text-lg leading-relaxed text-white/70">{{ service.shortDescription }}</p>
-      <div class="mt-8 flex flex-wrap gap-3">
+      <h1 class="mt-4 font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-black leading-none">{{ service.title }}</h1>
+      <p class="mt-4 max-w-xl text-lg leading-relaxed text-white/70">{{ service.shortDescription }}</p>
+      <div class="mt-6 flex flex-wrap gap-3">
         <button class="btn btn-primary open-inquiry" type="button">Заяви оглед</button>
         {% if service.relatedPage %}
           <a class="btn btn-light" href="{{ service.relatedPage | url }}">Повече за обръщането</a>
@@ -27,7 +28,7 @@ eleventyComputed:
       <img class="aspect-[4/3] w-full object-cover" src="{{ service.image }}" alt="{{ service.title }}" />
     </div>
   </div>
-</section>
+{% endcall %}
 
 <section class="section-pad bg-white">
   <div class="container-site grid gap-10 lg:grid-cols-3">

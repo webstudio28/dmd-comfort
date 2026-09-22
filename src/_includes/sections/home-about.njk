@@ -1,11 +1,25 @@
 <section class="section-pad bg-white">
   <div class="container-site grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
     <div class="relative min-h-[390px] reveal md:min-h-[540px]">
-      <img class="h-[350px] w-[88%] rounded-[13px] object-cover shadow-lift md:h-[500px]" src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1000&q=80" alt="Професионална работа по дограма" loading="lazy" />
-      <img class="absolute bottom-0 right-0 h-40 w-[45%] rounded-[13px] border-[6px] border-white object-cover shadow-lift md:h-[220px] md:border-8" src="https://images.unsplash.com/photo-1600607687644-c7171b42498b?w=800&q=80" alt="Детайл от монтаж" loading="lazy" />
-      <div class="absolute right-0 top-6 w-[108px] rounded-xl bg-brand px-3.5 py-4 text-center text-white shadow-[0_10px_28px_rgba(61,122,92,0.28)] md:top-8 md:w-[130px] md:px-3.5 md:py-4">
-        <strong class="block font-display text-3xl font-black leading-none md:text-[34px]">{{ site.brand.foundedYear }}</strong>
-        <span class="mt-1 block font-display text-[11px] font-bold uppercase tracking-[0.12em]">Заедно с вас от</span>
+      <img
+        class="h-[350px] w-[88%] rounded-[13px] object-cover shadow-lift md:h-[500px]"
+        src="{{ '/assets/images/about-main.jpg' | url }}"
+        alt="Модерен дом с качествена дограма"
+        width="1200"
+        height="800"
+        loading="lazy"
+      />
+      <img
+        class="absolute bottom-0 right-0 h-40 w-[45%] rounded-[13px] border-[6px] border-white object-cover shadow-lift md:h-[220px] md:border-8"
+        src="{{ '/assets/images/about-detail.jpg' | url }}"
+        alt="Детайл от алуминиева дограма"
+        width="800"
+        height="600"
+        loading="lazy"
+      />
+      <div class="absolute right-0 top-6 w-[108px] rounded-xl bg-brand px-3.5 py-4 text-center text-white shadow-[0_10px_28px_rgba(5,114,48,0.28)] md:top-8 md:w-[130px] md:px-3.5 md:py-4">
+        <span class="block font-display text-[11px] font-bold uppercase tracking-[0.12em]">Заедно с вас от</span>
+        <strong class="mt-1 block font-display text-3xl font-black leading-none md:text-[34px]">{{ site.brand.foundedYear }}</strong>
       </div>
     </div>
     <div class="reveal">

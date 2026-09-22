@@ -4,18 +4,17 @@ permalink: /obrashtane-na-dograma/
 title: Обръщане на дограма с PVC профили
 description: Обръщане на прозорци с PVC профили — чисто, бързо и трайно решение вместо класическа шпакловка.
 ---
+{% from "macros/page-banner.njk" import pageBanner %}
 
-<section class="bg-gradient-to-br from-brand-deeper via-ink to-brand-dark pb-16 pt-32 text-white">
-  <div class="container-site">
-    <div class="eyebrow text-brand before:bg-brand">Специализирана услуга</div>
-    <h1 class="mt-3 max-w-4xl font-display text-[clamp(2.5rem,6vw,4.25rem)] font-black leading-none">Обръщане на дограма с PVC профили</h1>
-    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/70">Чисто изпълнение, по-малко прах и изчистен завършек около прозорците — вътрешно, външно или комбинирано.</p>
-    <div class="mt-8 flex flex-wrap gap-3">
-      <button class="btn btn-primary open-inquiry" type="button">Заяви оглед</button>
-      <a class="btn btn-light" href="{{ '/uslugi/obrashtane-s-pvc-profili/' | url }}">Към услугата</a>
-    </div>
+{% call pageBanner() %}
+  <div class="eyebrow text-brand before:bg-brand">Специализирана услуга</div>
+  <h1 class="mt-3 max-w-4xl font-display text-[clamp(2.25rem,5vw,3.5rem)] font-black leading-none">Обръщане на дограма с PVC профили</h1>
+  <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/70">Чисто изпълнение, по-малко прах и изчистен завършек около прозорците — вътрешно, външно или комбинирано.</p>
+  <div class="mt-6 flex flex-wrap gap-3">
+    <button class="btn btn-primary open-inquiry" type="button">Заяви оглед</button>
+    <a class="btn btn-light" href="{{ '/uslugi/obrashtane-s-pvc-profili/' | url }}">Към услугата</a>
   </div>
-</section>
+{% endcall %}
 
 <section class="section-pad bg-white">
   <div class="container-site grid gap-10 lg:grid-cols-2">

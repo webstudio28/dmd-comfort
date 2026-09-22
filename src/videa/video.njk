@@ -9,14 +9,13 @@ eleventyComputed:
   title: "{{ video.title }}"
   description: "{{ video.summary }}"
 ---
+{% from "macros/page-banner.njk" import pageBanner %}
 
-<section class="bg-gradient-to-br from-brand-deeper via-ink to-brand-dark pb-16 pt-32 text-white">
-  <div class="container-site">
-    <a class="text-sm text-white/50 no-underline hover:text-brand" href="{{ '/videa/' | url }}">← Всички видеа</a>
-    <h1 class="mt-4 max-w-3xl font-display text-[clamp(2.25rem,5vw,3.75rem)] font-black leading-none">{{ video.title }}</h1>
-    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/70">{{ video.summary }}</p>
-  </div>
-</section>
+{% call pageBanner() %}
+  <a class="text-sm text-white/50 no-underline hover:text-brand" href="{{ '/videa/' | url }}">← Всички видеа</a>
+  <h1 class="mt-4 max-w-3xl font-display text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-none">{{ video.title }}</h1>
+  <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/70">{{ video.summary }}</p>
+{% endcall %}
 
 <section class="section-pad bg-white">
   <div class="container-site grid gap-10 lg:grid-cols-3">

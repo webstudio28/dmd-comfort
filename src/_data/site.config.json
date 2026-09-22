@@ -24,10 +24,10 @@
     "whatsapp": "#"
   },
   "colors": {
-    "brand": "#3D7A5C",
-    "brandDark": "#2F5F47",
+    "brand": "#057230",
+    "brandDark": "#045a26",
     "ink": "#24332B",
-    "paper": "#F4F7F5"
+    "paper": "#F3F8F5"
   },
   "nav": {
     "header": [

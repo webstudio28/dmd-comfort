@@ -9,19 +9,18 @@ eleventyComputed:
   title: "{{ article.title }}"
   description: "{{ article.excerpt }}"
 ---
+{% from "macros/page-banner.njk" import pageBanner %}
 
 <article>
-  <section class="bg-gradient-to-br from-brand-deeper via-ink to-brand-dark pb-16 pt-32 text-white">
-    <div class="container-site max-w-3xl">
-      <a class="text-sm text-white/50 no-underline hover:text-brand" href="{{ '/blog/' | url }}">← Блог</a>
-      <div class="mt-4 flex flex-wrap gap-3 text-xs font-bold uppercase tracking-[0.14em] text-brand">
-        <span>{{ article.category }}</span>
-        <span class="text-white/40">{{ article.date }}</span>
-      </div>
-      <h1 class="mt-3 font-display text-[clamp(2.25rem,5vw,3.75rem)] font-black leading-none">{{ article.title }}</h1>
-      <p class="mt-5 text-lg leading-relaxed text-white/70">{{ article.excerpt }}</p>
+  {% call pageBanner("container-site max-w-3xl") %}
+    <a class="text-sm text-white/50 no-underline hover:text-brand" href="{{ '/blog/' | url }}">← Блог</a>
+    <div class="mt-4 flex flex-wrap gap-3 text-xs font-bold uppercase tracking-[0.14em] text-brand">
+      <span>{{ article.category }}</span>
+      <span class="text-white/40">{{ article.date }}</span>
     </div>
-  </section>
+    <h1 class="mt-3 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-none">{{ article.title }}</h1>
+    <p class="mt-4 text-lg leading-relaxed text-white/70">{{ article.excerpt }}</p>
+  {% endcall %}
 
   <section class="section-pad bg-white">
     <div class="container-site max-w-3xl">

@@ -1,0 +1,13 @@
+{% macro pageBanner(containerClass="container-site") %}
+<section class="page-banner relative overflow-hidden text-white">
+  <div class="absolute inset-0 bg-gradient-to-br from-[#1a1d1f] via-[#161a1c] to-[#121516]" aria-hidden="true"></div>
+  <div
+    class="absolute inset-0 scale-[1.02] bg-cover bg-center opacity-15"
+    style="background-image:url('{{ '/assets/images/pages-bg.png' | url }}')"
+    aria-hidden="true"
+  ></div>
+  <div class="{{ containerClass }} relative z-10">
+    {{ caller() }}
+  </div>
+</section>
+{% endmacro %}

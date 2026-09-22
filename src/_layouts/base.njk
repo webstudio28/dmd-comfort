@@ -7,14 +7,15 @@
   <title>{{ pageTitle }}{% if title %} | {{ site.brand.name }}{% endif %}</title>
   <meta name="description" content="{{ description or site.seo.defaultDescription }}" />
   <link rel="canonical" href="{{ site.seo.siteUrl }}{{ page.url | url }}" />
-  <link rel="icon" href="{{ '/favicon.svg' | url }}" type="image/svg+xml" />
+  <link rel="icon" href="{{ '/favicon.png' | url }}" type="image/png" />
+  <link rel="apple-touch-icon" href="{{ '/favicon.png' | url }}" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:opsz,wght@8..144,400;8..144,500;8..144,600&family=Sofia+Sans+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}" />
 </head>
-<body class="{% if bodyClass %}{{ bodyClass }}{% endif %}" {% if transparentHeader %}data-transparent-header="true"{% endif %}>
-  {% set transparentHeader = transparentHeader or false %}
+<body class="{% if bodyClass %}{{ bodyClass }}{% endif %}" data-transparent-header="true">
+  {% set transparentHeader = true %}
   {% include "header.njk" %}
   <main>
     {{ content | safe }}

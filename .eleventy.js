@@ -1,6 +1,6 @@
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
-  eleventyConfig.addPassthroughCopy({ "src/favicon.svg": "favicon.svg" });
+  eleventyConfig.addPassthroughCopy({ "src/favicon.png": "favicon.png" });
 
   eleventyConfig.addGlobalData("buildDate", () =>
     new Date().toISOString().slice(0, 10),

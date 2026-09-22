@@ -9,11 +9,11 @@ module.exports = {
       },
       colors: {
         brand: {
-          DEFAULT: "#3D7A5C",
-          dark: "#2F5F47",
-          deeper: "#1F3F30",
-          soft: "#E8F2EC",
-          mist: "#F4F7F5",
+          DEFAULT: "#057230",
+          dark: "#045a26",
+          deeper: "#033f1c",
+          soft: "#E6F4EC",
+          mist: "#F3F8F5",
         },
         ink: {
           DEFAULT: "#24332B",

@@ -4,14 +4,13 @@ permalink: /uslugi/
 title: Услуги
 description: PVC и алуминиева дограма, врати, щори, комарници, обръщане с PVC профили и още услуги от ДМД Комфорт.
 ---
+{% from "macros/page-banner.njk" import pageBanner %}
 
-<section class="bg-gradient-to-br from-brand-deeper via-ink to-brand-dark pb-16 pt-32 text-white">
-  <div class="container-site">
-    <div class="eyebrow text-brand before:bg-brand">Каталог услуги</div>
-    <h1 class="mt-3 max-w-3xl font-display text-[clamp(2.75rem,6vw,4.5rem)] font-black leading-none">Всички услуги</h1>
-    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/70">От дограма и щори до обръщане с PVC профили — пълни решения за комфорт.</p>
-  </div>
-</section>
+{% call pageBanner() %}
+  <div class="eyebrow text-brand before:bg-brand">Каталог услуги</div>
+  <h1 class="mt-3 max-w-3xl font-display text-[clamp(2.5rem,5vw,3.75rem)] font-black leading-none">Всички услуги</h1>
+  <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/70">От дограма и щори до обръщане с PVC профили — пълни решения за комфорт.</p>
+{% endcall %}
 
 <section class="section-pad bg-brand-mist">
   <div class="container-site grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

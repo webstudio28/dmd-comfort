@@ -5,12 +5,20 @@
       <h2 class="section-title">Комфортът е в детайлите</h2>
       <p class="section-copy">От точния размер до последния реглаж — поемаме отговорност за всяка стъпка.</p>
     </div>
-    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {% for item in home.why %}
         <article class="reveal relative min-h-[225px] overflow-hidden rounded-xl bg-gradient-to-br from-white to-brand-mist p-6 shadow-card transition hover:-translate-y-1 hover:shadow-lift md:min-h-[270px]">
           <span class="absolute right-3 top-1 font-display text-6xl font-black text-brand/10">0{{ loop.index }}</span>
-          <span class="relative mb-6 grid h-14 w-14 place-items-center rounded-xl bg-brand-soft text-brand">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3 4 7v5c0 4.7 3.1 8 8 9 4.9-1 8-4.3 8-9V7l-8-4Z M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="relative mb-6 grid h-14 w-14 place-items-center rounded-xl bg-brand-soft text-brand" aria-hidden="true">
+            {% if item.icon == "approach" %}
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M11.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM20 8v6M23 11h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            {% elif item.icon == "quality" %}
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="m12 3 2.1 4.3 4.7.7-3.4 3.3.8 4.7L12 13.8 7.8 16l.8-4.7L5.2 8l4.7-.7L12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            {% elif item.icon == "install" %}
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18v3h3l6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.5-2.5 2.5-2.5Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            {% else %}
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z M3.3 7 12 12l8.7-5M12 22V12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            {% endif %}
           </span>
           <h3 class="relative mb-2 font-display text-xl font-extrabold">{{ item.title }}</h3>
           <p class="relative m-0 text-sm leading-relaxed text-ink-muted">{{ item.text }}</p>

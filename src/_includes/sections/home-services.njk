@@ -11,10 +11,10 @@
       </a>
     </div>
 
-    <div class="-mx-4 flex gap-4 overflow-x-auto px-4 pb-4 md:mx-0 md:grid md:grid-cols-2 md:overflow-visible md:px-0 lg:grid-cols-4">
+    <div class="h-scroll reveal md:grid md:grid-cols-2 lg:grid-cols-4">
       {% for s in services %}
         {% if s.featured %}
-          <article class="card reveal w-[min(82vw,310px)] shrink-0 md:w-auto">
+          <article class="card">
             <div class="relative m-3 aspect-[4/3] overflow-hidden rounded-lg">
               <img class="image-cover" src="{{ s.image }}" alt="{{ s.title }}" loading="lazy" />
               <span class="absolute left-3 top-3 grid h-9 w-9 place-items-center rounded-lg bg-brand font-display text-[13px] font-extrabold text-white">0{{ loop.index }}</span>
