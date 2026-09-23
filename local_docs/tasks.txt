@@ -1,0 +1,1 @@
+a;ll carousels on mobile shoud respcet and start from the left side gutter 
