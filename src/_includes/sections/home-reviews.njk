@@ -1,0 +1,29 @@
+<section class="section-pad overflow-x-clip bg-brand-mist" aria-labelledby="home-reviews-title">
+  <div class="container-site mb-10 reveal md:mb-12">
+    <div class="eyebrow">Отзиви</div>
+    <h2 class="section-title" id="home-reviews-title">Какво казват клиентите</h2>
+    <p class="section-copy">Впечатления от клиенти за дограма, монтаж и обръщане с PVC профили в Пловдив и региона.</p>
+  </div>
+
+  <div class="h-scroll-drag reveal" data-drag-scroll tabindex="0" role="region" aria-label="Отзиви от клиенти — плъзнете хоризонтално">
+    {% for r in reviews %}
+      <figure class="flex min-h-[280px] flex-col rounded-[13px] border border-ink/10 bg-white p-6 shadow-card md:min-h-[300px] md:p-7">
+        <div class="mb-4 flex gap-1 text-brand" aria-hidden="true">
+          {% for i in [1, 2, 3, 4, 5] %}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="m12 3 2.1 4.3 4.7.7-3.4 3.3.8 4.7L12 13.8 7.8 16l.8-4.7L5.2 8l4.7-.7L12 3Z"/></svg>
+          {% endfor %}
+        </div>
+        {% if r.service %}
+          <span class="mb-3 inline-flex w-fit rounded-lg bg-brand-soft px-2.5 py-1 font-display text-[11px] font-extrabold uppercase tracking-[0.08em] text-brand">{{ r.service }}</span>
+        {% endif %}
+        <blockquote class="m-0 flex-1">
+          <p class="font-display text-[17px] font-bold leading-snug tracking-wide text-ink md:text-lg">„{{ r.quote }}“</p>
+        </blockquote>
+        <figcaption class="mt-6 border-t border-ink/10 pt-5">
+          <span class="block font-display text-sm font-extrabold uppercase tracking-[0.08em] text-ink">{{ r.name }}</span>
+          <span class="mt-1 block text-sm text-ink-muted">{{ r.meta }}</span>
+        </figcaption>
+      </figure>
+    {% endfor %}
+  </div>
+</section>

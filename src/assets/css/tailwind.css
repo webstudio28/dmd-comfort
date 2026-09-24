@@ -10,6 +10,7 @@
 
   body {
     @apply bg-brand-mist text-ink font-sans antialiased;
+    overflow-x: clip;
   }
 
   h1, h2, h3, h4 {
@@ -105,9 +106,21 @@
     transform: scale(1.055);
   }
 
-  /* Mobile horizontal carousels: swipe sideways, still allow vertical page scroll */
+  /* Mobile horizontal carousels: align to gutters, bleed past the right edge */
   .h-scroll {
-    @apply -mx-4 flex gap-4 overflow-x-auto overflow-y-hidden px-4 pb-2 md:mx-0 md:overflow-visible md:px-0 md:pb-0;
+    --site-gutter: 1rem;
+    --site-max: 80rem;
+    --site-inline: max(
+      var(--site-gutter),
+      calc((100vw - min(var(--site-max), calc(100vw - var(--site-gutter) * 2))) / 2)
+    );
+    @apply flex gap-4 overflow-x-auto overflow-y-hidden pb-2;
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: calc(50% - 50vw);
+    padding-left: var(--site-inline);
+    padding-right: var(--site-inline);
+    scroll-padding-inline: var(--site-inline);
     touch-action: pan-x pan-y;
     overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
@@ -134,8 +147,56 @@
 
   @media (min-width: 768px) {
     .h-scroll {
+      --site-gutter: 2rem;
       scroll-snap-type: none;
+      width: auto;
+      max-width: none;
+      margin-left: 0;
+      padding-left: 0;
+      padding-right: 0;
+      scroll-padding-inline: 0;
+      overflow: visible;
+      padding-bottom: 0;
     }
+  }
+
+  /* Always-horizontal strip (mobile + desktop), drag via JS — full-bleed gutters */
+  .h-scroll-drag {
+    --site-gutter: 1rem;
+    --site-max: 80rem;
+    --site-inline: max(
+      var(--site-gutter),
+      calc((100vw - min(var(--site-max), calc(100vw - var(--site-gutter) * 2))) / 2)
+    );
+    @apply flex cursor-grab gap-4 overflow-x-auto overflow-y-hidden pb-2 select-none;
+    width: 100%;
+    padding-left: var(--site-inline);
+    padding-right: var(--site-inline);
+    scroll-padding-inline: var(--site-inline);
+    touch-action: pan-x pan-y;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+  }
+
+  @media (min-width: 768px) {
+    .h-scroll-drag {
+      --site-gutter: 2rem;
+    }
+  }
+
+  .h-scroll-drag::-webkit-scrollbar {
+    display: none;
+  }
+
+  .h-scroll-drag.is-dragging {
+    @apply cursor-grabbing;
+    scroll-snap-type: none;
+  }
+
+  .h-scroll-drag > * {
+    @apply w-[min(82vw,320px)] shrink-0 snap-start md:w-[min(28vw,340px)];
   }
 
   .page-banner {

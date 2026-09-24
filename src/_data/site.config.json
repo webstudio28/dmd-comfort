@@ -10,7 +10,8 @@
   "seo": {
     "siteUrl": "https://dmdkomfort.bg",
     "defaultTitle": "ДМД Комфорт | PVC и алуминиева дограма",
-    "defaultDescription": "PVC и алуминиева дограма, щори, комарници, обръщане с PVC профили — оглед, доставка, монтаж и гаранция."
+    "defaultDescription": "PVC и алуминиева дограма, щори, комарници, обръщане с PVC профили — оглед, доставка, монтаж и гаранция.",
+    "defaultOgImage": "/assets/images/hero.jpg"
   },
   "contact": {
     "phone": "0888 000 000",

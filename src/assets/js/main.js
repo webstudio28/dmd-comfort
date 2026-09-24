@@ -137,4 +137,56 @@
       host.replaceChildren(iframe);
     });
   });
+
+  document.querySelectorAll("[data-drag-scroll]").forEach((el) => {
+    let isDown = false;
+    let startX = 0;
+    let startScroll = 0;
+    let moved = false;
+
+    el.addEventListener("pointerdown", (e) => {
+      if (e.pointerType === "touch") return;
+      isDown = true;
+      moved = false;
+      startX = e.clientX;
+      startScroll = el.scrollLeft;
+      el.setPointerCapture?.(e.pointerId);
+      el.classList.add("is-dragging");
+    });
+
+    el.addEventListener("pointermove", (e) => {
+      if (!isDown) return;
+      const dx = e.clientX - startX;
+      if (Math.abs(dx) > 3) moved = true;
+      el.scrollLeft = startScroll - dx;
+    });
+
+    function endDrag(e) {
+      if (!isDown) return;
+      isDown = false;
+      el.classList.remove("is-dragging");
+      try {
+        el.releasePointerCapture?.(e.pointerId);
+      } catch (_) {}
+    }
+
+    el.addEventListener("pointerup", endDrag);
+    el.addEventListener("pointercancel", endDrag);
+    el.addEventListener("lostpointercapture", () => {
+      isDown = false;
+      el.classList.remove("is-dragging");
+    });
+
+    el.addEventListener(
+      "click",
+      (e) => {
+        if (moved) {
+          e.preventDefault();
+          e.stopPropagation();
+          moved = false;
+        }
+      },
+      true,
+    );
+  });
 })();

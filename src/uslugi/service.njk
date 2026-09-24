@@ -9,6 +9,7 @@ eleventyComputed:
   title: "{{ service.title }}"
   description: "{{ service.shortDescription }}"
 ---
+{% from "macros/faq-schema.njk" import faqSchema %}
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/include-icon.njk" import includeIcon %}
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}
@@ -174,5 +175,7 @@ eleventyComputed:
   </div>
 </section>
 {% endif %}
+
+{{ faqSchema(service.faq) }}
 
 {% include "sections/home-cta.njk" %}

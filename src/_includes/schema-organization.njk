@@ -1,0 +1,37 @@
+{% set orgId = site.seo.siteUrl + "/#organization" %}
+{% set logoUrl = site.seo.siteUrl + ("/assets/images/logo.png" | url) %}
+{% set ogDefault = site.seo.siteUrl + ((site.seo.defaultOgImage or "/assets/images/hero.jpg") | url) %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "HomeAndConstructionBusiness", "LocalBusiness"],
+  "@id": {{ orgId | dump | safe }},
+  "name": {{ site.brand.name | dump | safe }},
+  "alternateName": {{ site.brand.shortName | dump | safe }},
+  "url": {{ site.seo.siteUrl | dump | safe }},
+  "logo": {{ logoUrl | dump | safe }},
+  "image": {{ ogDefault | dump | safe }},
+  "description": {{ site.seo.defaultDescription | dump | safe }},
+  "email": {{ site.contact.email | dump | safe }},
+  "telephone": {{ site.contact.phoneHref | replace("tel:", "") | dump | safe }},
+  "foundingDate": {{ site.brand.foundedYear | string | dump | safe }},
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": {{ site.contact.address | dump | safe }}
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Пловдив",
+    "addressRegion": "Пловдив",
+    "addressCountry": "BG"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ]
+}
+</script>

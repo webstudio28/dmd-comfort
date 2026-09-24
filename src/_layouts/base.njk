@@ -14,15 +14,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:opsz,wght@8..144,400;8..144,500;8..144,600&family=Sofia+Sans+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}" />
   {% if pageStyles %}<link rel="stylesheet" href="{{ pageStyles | url }}" />{% endif %}
-  {% if pageImage %}
+  {% set ogImage = pageImage or site.seo.defaultOgImage %}
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="bg_BG" />
-  <meta property="og:title" content="{{ pageTitle }} | {{ site.brand.name }}" />
+  <meta property="og:site_name" content="{{ site.brand.name }}" />
+  <meta property="og:title" content="{% if title %}{{ pageTitle }} | {{ site.brand.name }}{% else %}{{ site.seo.defaultTitle }}{% endif %}" />
   <meta property="og:description" content="{{ description or site.seo.defaultDescription }}" />
   <meta property="og:url" content="{{ site.seo.siteUrl }}{{ page.url | url }}" />
-  <meta property="og:image" content="{{ site.seo.siteUrl }}{{ pageImage | url }}" />
+  <meta property="og:image" content="{{ site.seo.siteUrl }}{{ ogImage | url }}" />
   <meta name="twitter:card" content="summary_large_image" />
-  {% endif %}
+  <meta name="twitter:title" content="{% if title %}{{ pageTitle }} | {{ site.brand.name }}{% else %}{{ site.seo.defaultTitle }}{% endif %}" />
+  <meta name="twitter:description" content="{{ description or site.seo.defaultDescription }}" />
+  <meta name="twitter:image" content="{{ site.seo.siteUrl }}{{ ogImage | url }}" />
 </head>
 <body class="{% if bodyClass %}{{ bodyClass }}{% endif %}" data-transparent-header="true">
   {% set transparentHeader = true %}
@@ -32,6 +35,7 @@
   </main>
   {% include "footer.njk" %}
   {% include "modal.njk" %}
+  {% include "schema-organization.njk" %}
   <script src="{{ '/assets/js/main.js' | url }}" defer></script>
 </body>
 </html>
