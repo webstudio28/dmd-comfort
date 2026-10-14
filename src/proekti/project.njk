@@ -38,13 +38,15 @@ eleventyComputed:
 ]) }}
 
 {% if project.images and project.images.length %}
-<section class="section-pad bg-white">
+<section class="section-pad overflow-x-clip bg-white">
   <div class="container-site">
     <div class="mb-10 max-w-2xl reveal md:mb-12">
       <div class="eyebrow">Галерия</div>
       <h2 class="section-title">Снимки от обекта</h2>
       <p class="section-copy">Реални кадри от изпълнението и крайния резултат.</p>
     </div>
+  </div>
+  <div class="container-site max-md:contents">
     <div class="h-scroll reveal md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4">
       {% for img in project.images %}
         <figure class="overflow-hidden rounded-xl bg-brand-mist shadow-card">
@@ -63,13 +65,15 @@ eleventyComputed:
 {% endif %}
 
 {% if project.videos and project.videos.length %}
-<section class="section-pad bg-brand-mist">
+<section class="section-pad overflow-x-clip bg-brand-mist">
   <div class="container-site">
     <div class="mb-10 max-w-2xl reveal md:mb-12">
       <div class="eyebrow">Видео</div>
       <h2 class="section-title">Видеа от обекта</h2>
       <p class="section-copy">Гледайте как протича работата и какъв е крайният резултат.</p>
     </div>
+  </div>
+  <div class="container-site max-md:contents">
     <div class="h-scroll reveal md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4">
       {% for video in project.videos %}
         {% set embedUrl = video.url | youtubeEmbed %}

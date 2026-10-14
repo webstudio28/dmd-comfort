@@ -50,13 +50,15 @@ eleventyComputed:
   </div>
 </section>
 
-<section class="section-pad bg-brand-mist">
+<section class="section-pad overflow-x-clip bg-brand-mist">
   <div class="container-site">
     <div class="mb-10 max-w-2xl reveal md:mb-12">
       <div class="eyebrow">Какво получавате</div>
       <h2 class="section-title">Какво включва</h2>
       <p class="section-copy">Пълен пакет — от първия оглед до финалния реглаж.</p>
     </div>
+  </div>
+  <div class="container-site max-md:contents">
     <ul class="h-scroll reveal md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4">
       {% for item in service.includes %}
         <li class="group relative min-h-[180px] overflow-hidden rounded-xl bg-gradient-to-br from-white to-brand-mist p-6 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
@@ -70,7 +72,7 @@ eleventyComputed:
   </div>
 </section>
 
-<section class="relative overflow-hidden section-pad text-white">
+<section class="relative overflow-x-clip section-pad text-white">
   <div class="absolute inset-0 bg-gradient-to-br from-[#1a1d1f] via-[#161a1c] to-[#121516]" aria-hidden="true"></div>
   <div class="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_80%_40%,rgba(5,114,48,0.18),transparent_55%)]" aria-hidden="true"></div>
   <div class="container-site relative z-10">
@@ -79,6 +81,8 @@ eleventyComputed:
       <h2 class="section-title text-white">Как протича процесът</h2>
       <p class="section-copy text-white/60">Ясен ред на работа без изненади по пътя.</p>
     </div>
+  </div>
+  <div class="container-site relative z-10 max-md:contents">
     <ol class="h-scroll h-scroll-steps reveal lg:mt-0 lg:grid lg:grid-cols-4 lg:gap-8">
       {% for step in service.process %}
         <li class="relative {% if not loop.last %}lg:border-r lg:border-white/10 lg:pr-8{% endif %} lg:text-left">

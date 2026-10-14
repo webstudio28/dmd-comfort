@@ -106,25 +106,25 @@
     transform: scale(1.055);
   }
 
-  /* Mobile horizontal carousels: align to gutters, bleed past the right edge */
+  /* Mobile horizontal carousels: align to gutters, bleed past the right edge, free scroll.
+     Must sit in a full-bleed parent (section + max-md:contents). Use 100% not 100vw —
+     100vw + overflow-x-clip clips the left padding and flushes the first card. */
   .h-scroll {
     --site-gutter: 1rem;
     --site-max: 80rem;
     --site-inline: max(
       var(--site-gutter),
-      calc((100vw - min(var(--site-max), calc(100vw - var(--site-gutter) * 2))) / 2)
+      calc((100% - min(var(--site-max), calc(100% - var(--site-gutter) * 2))) / 2)
     );
-    @apply flex gap-4 overflow-x-auto overflow-y-hidden pb-2;
-    width: 100vw;
-    max-width: 100vw;
-    margin-left: calc(50% - 50vw);
+    @apply flex w-full gap-4 overflow-x-auto overflow-y-hidden pb-2;
+    margin-left: 0;
     padding-left: var(--site-inline);
     padding-right: var(--site-inline);
     scroll-padding-inline: var(--site-inline);
     touch-action: pan-x pan-y;
     overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity;
+    scroll-snap-type: none;
     scrollbar-width: none;
   }
 
@@ -133,7 +133,7 @@
   }
 
   .h-scroll > * {
-    @apply w-[min(72vw,280px)] shrink-0 snap-start md:w-auto md:max-w-none md:shrink;
+    @apply w-[min(72vw,280px)] shrink-0 md:w-auto md:max-w-none md:shrink;
   }
 
   /* Step strip: fixed-width items, room to scroll, gutter-aligned start */
@@ -148,7 +148,6 @@
   @media (min-width: 768px) {
     .h-scroll {
       --site-gutter: 2rem;
-      scroll-snap-type: none;
       width: auto;
       max-width: none;
       margin-left: 0;
@@ -166,17 +165,16 @@
     --site-max: 80rem;
     --site-inline: max(
       var(--site-gutter),
-      calc((100vw - min(var(--site-max), calc(100vw - var(--site-gutter) * 2))) / 2)
+      calc((100% - min(var(--site-max), calc(100% - var(--site-gutter) * 2))) / 2)
     );
-    @apply flex cursor-grab gap-4 overflow-x-auto overflow-y-hidden pb-2 select-none;
-    width: 100%;
+    @apply flex w-full cursor-grab gap-4 overflow-x-auto overflow-y-hidden pb-2 select-none;
     padding-left: var(--site-inline);
     padding-right: var(--site-inline);
     scroll-padding-inline: var(--site-inline);
     touch-action: pan-x pan-y;
     overscroll-behavior-x: contain;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x proximity;
+    scroll-snap-type: none;
     scrollbar-width: none;
   }
 
@@ -192,11 +190,10 @@
 
   .h-scroll-drag.is-dragging {
     @apply cursor-grabbing;
-    scroll-snap-type: none;
   }
 
   .h-scroll-drag > * {
-    @apply w-[min(82vw,320px)] shrink-0 snap-start md:w-[min(28vw,340px)];
+    @apply w-[min(82vw,320px)] shrink-0 md:w-[min(28vw,340px)];
   }
 
   .page-banner {
