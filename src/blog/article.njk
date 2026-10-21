@@ -1,25 +1,31 @@
 ---
 layout: base.njk
+bodyClass: blog-article
+pageStyles: /assets/css/blog-article.css
+inquiryService: Обръщане с PVC первази
+inquiryEyebrow: Индивидуална оферта
+inquiryDescription: Посочете населеното място, броя прозорци или врати и състоянието около дограмата.
 pagination:
   data: blog
   size: 1
   alias: article
 permalink: "/blog/{{ article.slug }}/"
 eleventyComputed:
-  title: "{{ article.title }}"
+  title: "{{ article.seoTitle or article.title }}"
   description: "{{ article.excerpt }}"
+  pageImage: "{{ article.image }}"
 ---
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}
 
 <article>
   {% call pageBanner() %}
-    <div class="flex flex-wrap gap-3 text-xs font-bold uppercase tracking-[0.14em] text-brand">
+    <div class="flex flex-wrap gap-3 text-xs font-bold uppercase tracking-[0.14em] text-[#a5d7b8]">
       <span>{{ article.category }}</span>
-      <span class="text-white/40">{{ article.date }}</span>
+      <time class="text-white/60" datetime="{{ article.date }}">{{ article.displayDate }}</time>
     </div>
-    <h1 class="mt-3 font-display text-[clamp(2rem,4.5vw,3.25rem)] font-black leading-none">{{ article.title }}</h1>
-    <p class="mt-4 text-lg leading-relaxed text-white/70">{{ article.excerpt }}</p>
+    <h1 class="blog-article-title mt-3 font-display font-black">{{ article.title }}</h1>
+    <p class="blog-article-excerpt mt-4 text-lg leading-relaxed text-white/70">{{ article.excerpt }}</p>
   {% endcall %}
 
   {{ breadcrumbs([
@@ -28,19 +34,100 @@ eleventyComputed:
     { label: article.title }
   ]) }}
 
-  <section class="section-pad bg-white">
-    <div class="container-site">
-      <img class="mb-10 aspect-[16/9] w-full rounded-2xl object-cover shadow-card reveal md:max-w-3xl" src="{{ article.image }}" alt="{{ article.title }}" />
-      <div class="space-y-5 reveal">
-        {% for p in article.content %}
-          <p class="text-[17px] leading-relaxed text-ink-muted">{{ p }}</p>
+  <div class="section-pad bg-white">
+    <div class="container-site blog-article-content">
+      <figure class="blog-article-figure">
+        <img src="{{ article.image | url }}" alt="{{ article.imageAlt }}" width="1536" height="1024" decoding="async" />
+      </figure>
+
+      <div class="blog-article-intro">
+        {% for paragraph in article.intro %}<p>{{ paragraph }}</p>{% endfor %}
+      </div>
+
+      <nav class="blog-toc" aria-labelledby="article-toc-title">
+        <h2 id="article-toc-title">В тази статия</h2>
+        <ol>
+          {% for section in article.sections %}<li><a href="#{{ section.id }}">{{ section.title }}</a></li>{% endfor %}
+          <li><a href="#chesto-zadavani-vaprosi">Често задавани въпроси</a></li>
+        </ol>
+      </nav>
+
+      {% for section in article.sections %}
+        <section class="blog-section" id="{{ section.id }}" aria-labelledby="heading-{{ section.id }}">
+          <h2 id="heading-{{ section.id }}">{{ section.title }}</h2>
+          {% for paragraph in section.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+          {% if section.bullets %}<ul class="blog-bullet-list">{% for bullet in section.bullets %}<li>{{ bullet }}</li>{% endfor %}</ul>{% endif %}
+          {% if section.table %}
+            <div class="blog-comparison-wrap" role="region" aria-label="Сравнение на методите за обръщане на прозорци" tabindex="0">
+              <table class="blog-comparison">
+                <caption>Основни разлики между стандартно обръщане и PVC профили</caption>
+                <thead><tr>{% for header in section.table.headers %}<th scope="col">{{ header }}</th>{% endfor %}</tr></thead>
+                <tbody>{% for row in section.table.rows %}<tr>{% for cell in row %}{% if loop.first %}<th scope="row">{{ cell }}</th>{% else %}<td>{{ cell }}</td>{% endif %}{% endfor %}</tr>{% endfor %}</tbody>
+              </table>
+            </div>
+          {% endif %}
+          {% for subsection in section.subsections %}
+            <h3>{{ subsection.title }}</h3>
+            {% for paragraph in subsection.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+          {% endfor %}
+          {% if section.closing %}<p>{{ section.closing }}</p>{% endif %}
+          {% if section.serviceLink %}<p class="blog-service-link"><a href="{{ section.serviceLink.url | url }}">{{ section.serviceLink.text }} <span aria-hidden="true">→</span></a></p>{% endif %}
+        </section>
+      {% endfor %}
+
+      <section class="blog-section" id="chesto-zadavani-vaprosi" aria-labelledby="article-faq-title">
+        <h2 id="article-faq-title">Често задавани въпроси</h2>
+        {% for faq in article.faqs %}
+          <details class="blog-faq"><summary>{{ faq.q }}</summary><p>{{ faq.a }}</p></details>
         {% endfor %}
-      </div>
-      <div class="mt-12 rounded-2xl bg-brand-mist p-6 reveal">
-        <h2 class="font-display text-2xl font-extrabold">Имате въпрос за вашия обект?</h2>
-        <p class="mt-2 text-ink-muted">Заявете оглед и ще ви дадем конкретна препоръка.</p>
-        <button class="btn btn-primary mt-5 open-inquiry" type="button">Заяви оглед</button>
-      </div>
+      </section>
+
+      <aside class="blog-article-cta" aria-labelledby="article-cta-title">
+        <p class="blog-article-eyebrow">ДМД Комфорт · Пловдив и страната</p>
+        <h2 id="article-cta-title">Обсъдете обръщането на вашите прозорци</h2>
+        <p>Разгледайте как изпълняваме вътрешно обръщане с PVC профили и какво е необходимо за оферта. Приемаме запитвания за прозорци и врати в Пловдив и региона, както и за обекти в други населени места в България.</p>
+        <a class="btn btn-primary" href="{{ '/obrashtane-na-dograma-s-pvc-profili/' | url }}">Вижте услугата с PVC профили <span aria-hidden="true">→</span></a>
+      </aside>
+
+      <a class="blog-back-link" href="{{ '/blog/' | url }}"><span aria-hidden="true">←</span> Обратно към блога</a>
     </div>
-  </section>
+  </div>
 </article>
+
+{% set articleUrl = site.seo.siteUrl + (page.url | url) %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BlogPosting",
+      "@id": {{ (articleUrl + '#article') | dump | safe }},
+      "headline": {{ article.title | dump | safe }},
+      "description": {{ article.excerpt | dump | safe }},
+      "datePublished": {{ article.date | dump | safe }},
+      "dateModified": {{ article.date | dump | safe }},
+      "inLanguage": "bg-BG",
+      "image": {{ (site.seo.siteUrl + (article.image | url)) | dump | safe }},
+      "mainEntityOfPage": { "@type": "WebPage", "@id": {{ articleUrl | dump | safe }} },
+      "author": { "@type": "Organization", "name": {{ site.brand.name | dump | safe }}, "url": {{ site.seo.siteUrl | dump | safe }} },
+      "publisher": { "@type": "Organization", "name": {{ site.brand.name | dump | safe }}, "url": {{ site.seo.siteUrl | dump | safe }} }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Начало", "item": {{ (site.seo.siteUrl + ('/' | url)) | dump | safe }} },
+        { "@type": "ListItem", "position": 2, "name": "Блог", "item": {{ (site.seo.siteUrl + ('/blog/' | url)) | dump | safe }} },
+        { "@type": "ListItem", "position": 3, "name": {{ article.title | dump | safe }}, "item": {{ articleUrl | dump | safe }} }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {% for faq in article.faqs %}
+          { "@type": "Question", "name": {{ faq.q | dump | safe }}, "acceptedAnswer": { "@type": "Answer", "text": {{ faq.a | dump | safe }} } }{% if not loop.last %},{% endif %}
+        {% endfor %}
+      ]
+    }
+  ]
+}
+</script>

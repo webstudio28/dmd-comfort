@@ -1,6 +1,26 @@
+const fs = require("fs");
+const path = require("path");
+
+let servicesBySlugCache;
+
+function servicesBySlugMap() {
+  if (!servicesBySlugCache) {
+    const file = path.join(__dirname, "src/_data/services.json");
+    const all = JSON.parse(fs.readFileSync(file, "utf8"));
+    servicesBySlugCache = new Map(all.map((service) => [service.slug, service]));
+  }
+  return servicesBySlugCache;
+}
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/favicon.png": "favicon.png" });
+
+  eleventyConfig.addFilter("servicesBySlugs", (slugs) => {
+    if (!Array.isArray(slugs) || !slugs.length) return [];
+    const bySlug = servicesBySlugMap();
+    return slugs.map((slug) => bySlug.get(slug)).filter(Boolean);
+  });
 
   eleventyConfig.addGlobalData("buildDate", () =>
     new Date().toISOString().slice(0, 10),

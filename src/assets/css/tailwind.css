@@ -116,7 +116,8 @@
       var(--site-gutter),
       calc((100% - min(var(--site-max), calc(100% - var(--site-gutter) * 2))) / 2)
     );
-    @apply flex w-full gap-4 overflow-x-auto overflow-y-hidden pb-2;
+    @apply flex w-full gap-4 overflow-x-auto overflow-y-hidden;
+    padding-bottom: 2rem;
     margin-left: 0;
     padding-left: var(--site-inline);
     padding-right: var(--site-inline);
@@ -146,7 +147,7 @@
   }
 
   @media (min-width: 768px) {
-    .h-scroll {
+    .h-scroll:not(.h-scroll-lg) {
       --site-gutter: 2rem;
       width: auto;
       max-width: none;
@@ -156,6 +157,39 @@
       scroll-padding-inline: 0;
       overflow: visible;
       padding-bottom: 0;
+    }
+
+    .h-scroll.h-scroll-lg {
+      --site-gutter: 2rem;
+    }
+
+    .h-scroll.h-scroll-lg:not(.h-scroll-steps) > * {
+      width: min(46vw, 340px);
+      max-width: none;
+      flex-shrink: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .h-scroll.h-scroll-lg {
+      width: auto;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 0;
+      scroll-padding-inline: 0;
+      overflow: visible;
+    }
+
+    .h-scroll.h-scroll-lg > * {
+      width: auto;
+      max-width: none;
+      flex-shrink: 1;
+    }
+  }
+
+  @media (max-width: 1023px) {
+    .h-scroll-steps > * {
+      flex-shrink: 0;
     }
   }
 
@@ -167,7 +201,8 @@
       var(--site-gutter),
       calc((100% - min(var(--site-max), calc(100% - var(--site-gutter) * 2))) / 2)
     );
-    @apply flex w-full cursor-grab gap-4 overflow-x-auto overflow-y-hidden pb-2 select-none;
+    @apply flex w-full cursor-grab gap-4 overflow-x-auto overflow-y-hidden select-none;
+    padding-bottom: 2rem;
     padding-left: var(--site-inline);
     padding-right: var(--site-inline);
     scroll-padding-inline: var(--site-inline);

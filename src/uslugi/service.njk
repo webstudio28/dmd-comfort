@@ -74,7 +74,9 @@ eleventyComputed:
       <div class="eyebrow">Видове</div>
       <h2 id="subcategory-services-title" class="section-title">Изберете конкретен вариант</h2>
     </div>
-    <div class="grid gap-5 sm:grid-cols-2 {% if service.subcategoryCards.length >= 4 %}xl:grid-cols-4{% elif service.subcategoryCards.length == 3 %}lg:grid-cols-3{% endif %}">
+  </div>
+  <div class="container-site max-lg:contents">
+    <div class="h-scroll h-scroll-lg reveal lg:grid lg:gap-5 {% if service.subcategoryCards.length >= 4 %}lg:grid-cols-4{% elif service.subcategoryCards.length == 3 %}lg:grid-cols-3{% else %}lg:grid-cols-2{% endif %}" data-drag-scroll tabindex="0" role="region" aria-label="Видове — плъзнете хоризонтално">
       {% for child in service.subcategoryCards %}
         <a class="card group flex h-full flex-col no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand reveal" href="{{ ('/uslugi/' + child.slug + '/') | url }}">
           <div class="relative m-3 aspect-[4/3] overflow-hidden rounded-lg bg-brand-mist">
@@ -103,8 +105,8 @@ eleventyComputed:
       <p class="section-copy">Пълен пакет — от първия оглед до финалния реглаж.</p>
     </div>
   </div>
-  <div class="container-site max-md:contents">
-    <ul class="h-scroll reveal md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+  <div class="container-site max-lg:contents">
+    <ul class="h-scroll h-scroll-lg reveal lg:grid lg:grid-cols-2 lg:gap-4 xl:grid-cols-3" data-drag-scroll tabindex="0" role="region" aria-label="Какво включва — плъзнете хоризонтално">
       {% for item in service.includes %}
         <li class="group relative min-h-[180px] overflow-hidden rounded-xl bg-gradient-to-br from-white to-brand-mist p-6 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
           <span class="mb-5 grid h-12 w-12 place-items-center rounded-xl bg-brand-soft text-brand transition group-hover:bg-brand group-hover:text-white" aria-hidden="true">
@@ -129,8 +131,8 @@ eleventyComputed:
       <p class="section-copy text-white/60">Ясен ред на работа без изненади по пътя.</p>
     </div>
   </div>
-  <div class="container-site relative z-10 max-md:contents">
-    <ol class="h-scroll h-scroll-steps reveal lg:mt-0 lg:grid lg:grid-cols-4 lg:gap-8">
+  <div class="container-site relative z-10 max-lg:contents">
+    <ol class="h-scroll h-scroll-lg h-scroll-steps reveal lg:mt-0 lg:grid lg:grid-cols-4 lg:gap-8" data-drag-scroll tabindex="0" role="region" aria-label="Как протича процесът — плъзнете хоризонтално">
       {% for step in service.process %}
         <li class="relative {% if not loop.last %}lg:border-r lg:border-white/10 lg:pr-8{% endif %} lg:text-left">
           <span class="mx-auto mb-5 grid h-14 w-14 place-items-center rounded-full border border-brand/50 bg-white/5 font-display text-[15px] font-extrabold text-brand lg:mx-0">0{{ loop.index }}</span>

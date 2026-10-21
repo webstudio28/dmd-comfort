@@ -21,16 +21,19 @@
           <div class="flex flex-col gap-1.5 sm:col-span-2">
             <label class="font-display text-[13px] font-bold uppercase tracking-wide" for="interest">Интересувам се от</label>
             <select class="rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="interest" name="interest">
+              <option value="">Изберете услуга</option>
               {% for s in catalogServices %}
+                {% set serviceUrl = (s.href or ('/uslugi/' + s.slug + '/')) | url %}
                 {% if s.menuChildren and s.menuChildren.length %}
                   <optgroup label="{{ s.title }}">
-                    <option{% if inquiryService and s.title == inquiryService %} selected{% endif %}>{{ s.title }}</option>
+                    <option value="{{ s.title }}"{% if page.url == serviceUrl %} selected{% endif %}>{{ s.title }}</option>
                     {% for child in s.menuChildren %}
-                      <option{% if inquiryService and child.title == inquiryService %} selected{% endif %}>{{ child.title }}</option>
+                      {% set childUrl = ('/uslugi/' + child.slug + '/') | url %}
+                      <option value="{{ child.title }}"{% if page.url == childUrl %} selected{% endif %}>{{ child.title }}</option>
                     {% endfor %}
                   </optgroup>
                 {% else %}
-                  <option{% if inquiryService and s.title == inquiryService %} selected{% endif %}>{{ s.title }}</option>
+                  <option value="{{ s.title }}"{% if page.url == serviceUrl %} selected{% endif %}>{{ s.title }}</option>
                 {% endif %}
               {% endfor %}
               <option>Друго</option>

@@ -1,9 +1,16 @@
-const services = require("./services.json");
-const projects = require("./projects.json");
-const blog = require("./blog.json");
-const videos = require("./videos.json");
+const fs = require("fs");
+const path = require("path");
+
+function readJson(name) {
+  return JSON.parse(fs.readFileSync(path.join(__dirname, name), "utf8"));
+}
 
 module.exports = function () {
+  const services = readJson("services.json");
+  const projects = readJson("projects.json");
+  const projectGroups = require("./projectGroups")();
+  const blog = readJson("blog.json");
+  const videos = readJson("videos.json");
   const urls = [
     "/",
     "/za-nas/",
@@ -20,6 +27,10 @@ module.exports = function () {
 
   for (const p of projects) {
     urls.push(`/proekti/${p.slug}/`);
+  }
+
+  for (const group of projectGroups) {
+    urls.push(group.href);
   }
 
   for (const a of blog) {

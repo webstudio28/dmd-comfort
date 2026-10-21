@@ -1,0 +1,46 @@
+.blog-article main :is(h1, h2, h3) { text-wrap: balance; }
+.blog-article main :is(a, summary, [tabindex]):focus-visible { outline: 3px solid #53b97c; outline-offset: 5px; }
+.blog-article-title { font-size: clamp(2.25rem, 4.5vw, 3.5rem); line-height: 1.08; }
+.blog-article-figure { margin: 0 0 36px; }
+.blog-article-figure img { width: 100%; height: auto; max-height: 460px; object-fit: cover; border-radius: 16px; }
+.blog-article-intro p, .blog-section > p, .blog-section > ul, .blog-faq > p, .blog-article-cta > p { color: #55625a; font-size: 17px; line-height: 1.85; }
+.blog-article-intro p + p, .blog-section > p + p { margin-top: 18px; }
+.blog-toc { margin-top: 36px; padding: 28px 32px; background: #f0f6f1; border: 1px solid #d9e5dc; border-radius: 16px; }
+.blog-toc h2 { font-size: 27px; line-height: 1.2; font-weight: 800; margin-bottom: 16px; }
+.blog-toc ol { list-style: decimal; padding-left: 22px; }
+.blog-toc li { padding-left: 5px; margin-top: 9px; font-size: 16px; line-height: 1.6; }
+.blog-toc a, .blog-service-link a, .blog-back-link { color: #057230; text-decoration: underline; text-underline-offset: 4px; }
+.blog-section { margin-top: 52px; scroll-margin-top: 28px; }
+.blog-section h2 { font-size: clamp(29px, 3vw, 38px); font-weight: 800; line-height: 1.15; margin-bottom: 22px; }
+.blog-section h3 { font-size: 27px; font-weight: 700; line-height: 1.25; margin: 28px 0 12px; }
+.blog-bullet-list { list-style: disc; margin: 22px 0; padding-left: 24px; }
+.blog-bullet-list li { margin-top: 10px; padding-left: 4px; }
+.blog-service-link { margin-top: 24px; font-weight: 600; }
+.blog-comparison-wrap { max-width: 100%; overflow-x: auto; margin-top: 28px; border: 1px solid #d9e5dc; border-radius: 12px; -webkit-overflow-scrolling: touch; }
+.blog-comparison { width: 100%; min-width: 680px; border-collapse: collapse; table-layout: fixed; font-size: 15px; line-height: 1.75; }
+.blog-comparison caption { text-align: left; padding: 16px 20px; color: #55625a; font-size: 13px; }
+.blog-comparison th, .blog-comparison td { text-align: left; vertical-align: top; padding: 18px; border-top: 1px solid #d9e5dc; overflow-wrap: break-word; }
+.blog-comparison thead th { color: #fff; background: #182b20; font-weight: 700; }
+.blog-comparison thead th:first-child { width: 22%; }
+.blog-comparison tbody th { font-weight: 600; color: #263a2d; }
+.blog-comparison td { color: #55625a; }
+.blog-comparison tbody tr:nth-child(even) { background: #f5f8f5; }
+.blog-faq { border-bottom: 1px solid #d9e5dc; }
+.blog-faq:first-of-type { border-top: 1px solid #d9e5dc; }
+.blog-faq summary { padding: 20px 4px; cursor: pointer; font-size: 22px; font-weight: 700; font-family: "Sofia Sans Condensed", sans-serif; line-height: 1.35; }
+.blog-faq[open] summary { color: #057230; }
+.blog-faq > p { padding: 0 4px 22px; }
+.blog-article-cta { background: #edf4ee; border: 1px solid #d9e5dc; border-radius: 16px; padding: 32px; margin-top: 48px; }
+.blog-article-cta .blog-article-eyebrow { color: #057230; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; }
+.blog-article-cta h2 { font-size: 34px; font-weight: 800; line-height: 1.15; margin: 12px 0 18px; }
+.blog-article-cta .btn { margin-top: 24px; }
+.blog-back-link { display: inline-flex; gap: 10px; margin-top: 32px; line-height: 1.6; }
+@media (max-width: 600px) {
+  .blog-article-intro p, .blog-section > p, .blog-section > ul, .blog-faq > p, .blog-article-cta > p { font-size: 16px; }
+  .blog-toc { padding: 23px; }
+  .blog-section { margin-top: 40px; }
+  .blog-article-figure { margin-bottom: 26px; }
+  .blog-article-cta { padding: 24px; }
+  .blog-article-cta h2 { font-size: 30px; }
+  .blog-article-cta .btn { width: 100%; }
+}

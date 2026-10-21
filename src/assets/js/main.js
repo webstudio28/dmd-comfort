@@ -146,6 +146,7 @@
 
     el.addEventListener("pointerdown", (e) => {
       if (e.pointerType === "touch") return;
+      if (el.scrollWidth <= el.clientWidth + 2) return;
       isDown = true;
       moved = false;
       startX = e.clientX;
@@ -168,6 +169,16 @@
       try {
         el.releasePointerCapture?.(e.pointerId);
       } catch (_) {}
+      if (el.hasAttribute("data-drag-snap")) {
+        const card = el.firstElementChild;
+        if (!card) return;
+        const styles = getComputedStyle(el);
+        const gap = parseFloat(styles.columnGap || styles.gap) || 0;
+        const step = card.getBoundingClientRect().width + gap;
+        if (!step) return;
+        const index = Math.round(el.scrollLeft / step);
+        el.scrollTo({ left: index * step, behavior: "smooth" });
+      }
     }
 
     el.addEventListener("pointerup", endDrag);
@@ -189,4 +200,158 @@
       true,
     );
   });
+
+  const faqRoot = document.querySelector("[data-faq]");
+  if (faqRoot) {
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const duration = reducedMotion ? "0.001ms" : "0.45s";
+    const easing = "cubic-bezier(0.33, 1, 0.68, 1)";
+    const collapsedPeek = "5.25rem";
+    const items = () => [...faqRoot.querySelectorAll("details.trim-faq-item")];
+    const panelOf = (d) => d.querySelector(".trim-faq-answer");
+    const innerOf = (d) => d.querySelector(".trim-faq-answer-inner");
+
+    function finishHeight(panel, onDone) {
+      let done = false;
+      const run = () => {
+        if (done) return;
+        done = true;
+        panel.removeEventListener("transitionend", onEnd);
+        clearTimeout(fallback);
+        onDone();
+      };
+      const onEnd = (e) => {
+        if (e.target !== panel || e.propertyName !== "height") return;
+        run();
+      };
+      panel.addEventListener("transitionend", onEnd);
+      const fallback = setTimeout(run, reducedMotion ? 50 : 550);
+    }
+
+    function openItem(details) {
+      const panel = panelOf(details);
+      const inner = innerOf(details);
+      if (!panel || !inner || details.hasAttribute("data-faq-busy")) return;
+      details.setAttribute("data-faq-busy", "true");
+      panel.style.overflow = "hidden";
+      panel.style.transition = "";
+      panel.style.height = "0px";
+      details.open = true;
+      panel.getBoundingClientRect();
+      panel.style.transition = `height ${duration} ${easing}`;
+      panel.style.height = `${inner.scrollHeight}px`;
+      finishHeight(panel, () => {
+        if (!details.open) {
+          panel.style.transition = "";
+          panel.style.height = "";
+          details.removeAttribute("data-faq-busy");
+          return;
+        }
+        panel.style.transition = "";
+        panel.style.height = "auto";
+        details.removeAttribute("data-faq-busy");
+      });
+    }
+
+    function closeItem(details) {
+      if (!details.open || details.hasAttribute("data-faq-busy")) return;
+      const panel = panelOf(details);
+      const inner = innerOf(details);
+      if (!panel || !inner) {
+        details.open = false;
+        return;
+      }
+      details.setAttribute("data-faq-busy", "true");
+      panel.style.overflow = "hidden";
+      panel.style.transition = "";
+      panel.style.height = `${inner.scrollHeight}px`;
+      panel.getBoundingClientRect();
+      panel.style.transition = `height ${duration} ${easing}`;
+      panel.style.height = "0px";
+      finishHeight(panel, () => {
+        details.open = false;
+        panel.style.transition = "";
+        panel.style.height = "";
+        details.removeAttribute("data-faq-busy");
+      });
+    }
+
+    items().forEach((details) => {
+      const summary = details.querySelector("summary");
+      if (!summary) return;
+      summary.addEventListener("click", (e) => {
+        e.preventDefault();
+        if (reducedMotion) {
+          if (details.open) details.open = false;
+          else {
+            items().forEach((other) => {
+              if (other !== details) other.open = false;
+            });
+            details.open = true;
+          }
+          return;
+        }
+        if (details.hasAttribute("data-faq-busy")) return;
+        if (!details.open) {
+          items().forEach((other) => {
+            if (other !== details && other.open) closeItem(other);
+          });
+          openItem(details);
+        } else {
+          closeItem(details);
+        }
+      });
+    });
+
+    const extra = faqRoot.querySelector("[data-faq-extra]");
+    const extraBtn = faqRoot.querySelector("[data-faq-expand]");
+    const extraInner = extra?.querySelector("[data-faq-extra-inner]");
+    if (extra && extraBtn && extraInner) {
+      const collapseExtra = () => {
+        extra.classList.remove("is-expanded");
+        if (reducedMotion) {
+          extraInner.style.maxHeight = collapsedPeek;
+          return;
+        }
+        extraInner.style.maxHeight = `${extraInner.scrollHeight}px`;
+        extraInner.getBoundingClientRect();
+        extraInner.style.maxHeight = collapsedPeek;
+      };
+      const expandExtra = () => {
+        extra.classList.add("is-expanded");
+        if (reducedMotion) {
+          extraInner.style.maxHeight = "none";
+          return;
+        }
+        extraInner.style.maxHeight = `${extraInner.scrollHeight}px`;
+        extraInner.addEventListener("transitionend", function onEnd(e) {
+          if (e.propertyName !== "max-height" || !extra.classList.contains("is-expanded")) return;
+          extraInner.removeEventListener("transitionend", onEnd);
+          extraInner.style.maxHeight = "none";
+        });
+      };
+      collapseExtra();
+      extraBtn.addEventListener("click", () => {
+        const expanded = extra.classList.contains("is-expanded");
+        if (expanded) {
+          extra.querySelectorAll("details.trim-faq-item[open]").forEach((d) => {
+            d.open = false;
+            const panel = panelOf(d);
+            if (panel) {
+              panel.style.height = "";
+              panel.style.transition = "";
+            }
+            d.removeAttribute("data-faq-busy");
+          });
+          collapseExtra();
+          extraBtn.setAttribute("aria-expanded", "false");
+          extraBtn.querySelector("[data-faq-expand-label]").textContent = extraBtn.getAttribute("data-label-more");
+        } else {
+          expandExtra();
+          extraBtn.setAttribute("aria-expanded", "true");
+          extraBtn.querySelector("[data-faq-expand-label]").textContent = extraBtn.getAttribute("data-label-less");
+        }
+      });
+    }
+  }
 })();

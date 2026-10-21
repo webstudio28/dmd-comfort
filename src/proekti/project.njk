@@ -130,63 +130,33 @@ eleventyComputed:
   </div>
 </section>
 
-<section class="section-pad bg-brand-mist">
+{% set linkedServices = project.serviceSlugs | servicesBySlugs %}
+{% if linkedServices.length %}
+<section class="section-pad bg-brand-mist" aria-labelledby="project-services-title">
   <div class="container-site">
-    <div class="mb-12 max-w-2xl reveal">
-      <div class="eyebrow">Детайли</div>
-      <h2 class="section-title">Какво свършихме</h2>
-      <p class="section-copy">Заданието, материалите и резултатът — накратко.</p>
+    <div class="mb-8 max-w-2xl reveal md:mb-10">
+      <div class="eyebrow">Свързани услуги</div>
+      <h2 id="project-services-title" class="section-title">Услуги за този проект</h2>
+      <p class="section-copy">Услуги от каталога, които отговарят на работата по този обект.</p>
     </div>
-    <div class="grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 md:grid-cols-2">
-      <div class="reveal bg-white p-8 md:p-10">
-        <div class="mb-4 flex items-center gap-3">
-          <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
-          <h3 class="font-display text-xl font-extrabold md:text-2xl">Задание</h3>
-        </div>
-        <p class="text-[15px] leading-relaxed text-ink-muted">{{ project.assignment }}</p>
-      </div>
-      <div class="reveal bg-white p-8 md:p-10">
-        <div class="mb-4 flex items-center gap-3">
-          <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
-          <h3 class="font-display text-xl font-extrabold md:text-2xl">Изпълнени услуги</h3>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          {% for s in project.servicesDone %}
-            <span class="rounded-lg border border-ink/10 bg-brand-mist px-3.5 py-2 font-display text-sm font-bold text-ink">{{ s }}</span>
-          {% endfor %}
-        </div>
-      </div>
-      <div class="reveal bg-white p-8 md:p-10">
-        <div class="mb-4 flex items-center gap-3">
-          <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
-          <h3 class="font-display text-xl font-extrabold md:text-2xl">Монтирано</h3>
-        </div>
-        <p class="text-[15px] leading-relaxed text-ink-muted">{{ project.installed }}</p>
-      </div>
-      <div class="reveal bg-white p-8 md:p-10">
-        <div class="mb-4 flex items-center gap-3">
-          <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
-          <h3 class="font-display text-xl font-extrabold md:text-2xl">Материали</h3>
-        </div>
-        <p class="text-[15px] leading-relaxed text-ink-muted">{{ project.materials }}</p>
-      </div>
-      <div class="reveal bg-white p-8 md:p-10">
-        <div class="mb-4 flex items-center gap-3">
-          <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
-          <h3 class="font-display text-xl font-extrabold md:text-2xl">Трудности</h3>
-        </div>
-        <p class="text-[15px] leading-relaxed text-ink-muted">{{ project.challenges }}</p>
-      </div>
-      <div class="reveal relative overflow-hidden bg-brand-soft p-8 md:p-10">
-        <div class="mb-4 flex items-center gap-3">
-          <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
-          <h3 class="font-display text-xl font-extrabold md:text-2xl">Резултат</h3>
-        </div>
-        <p class="text-[15px] leading-relaxed text-ink-muted">{{ project.result }}</p>
-      </div>
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {% for s in linkedServices %}
+        <a class="card group flex items-center gap-3 p-3 no-underline reveal" href="{{ (s.href or ('/uslugi/' + s.slug + '/')) | url }}">
+          <span class="relative h-16 w-[5.5rem] shrink-0 overflow-hidden rounded-lg bg-brand-soft">
+            {% if s.image and not s.imageMissing %}
+              <img class="image-cover" src="{{ s.image | url }}" alt="" loading="lazy" decoding="async" />
+            {% endif %}
+          </span>
+          <span class="min-w-0 pr-1">
+            <span class="block font-display text-base font-extrabold leading-snug text-ink group-hover:text-brand">{{ s.title }}</span>
+            <span class="mt-1 block text-sm font-bold text-brand">Виж услугата</span>
+          </span>
+        </a>
+      {% endfor %}
     </div>
   </div>
 </section>
+{% endif %}
 
 {% if project.testimonial %}
 <section class="relative section-pad overflow-hidden bg-white">
