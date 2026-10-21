@@ -138,19 +138,72 @@
     });
   });
 
+  const reducedDragMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   document.querySelectorAll("[data-drag-scroll]").forEach((el) => {
     let isDown = false;
     let startX = 0;
     let startScroll = 0;
     let moved = false;
+    let samples = [];
+    let glide = 0;
+
+    const stopGlide = () => {
+      if (!glide) return;
+      cancelAnimationFrame(glide);
+      glide = 0;
+    };
+
+    const track = (x, t) => {
+      samples.push({ x, t });
+      const cutoff = t - 80;
+      while (samples.length && samples[0].t < cutoff) samples.shift();
+    };
+
+    const releaseVelocity = (t) => {
+      if (samples.length < 2) return 0;
+      const first = samples[0];
+      const last = samples[samples.length - 1];
+      const dt = last.t - first.t;
+      if (dt < 16 || t - last.t > 60) return 0;
+      return (first.x - last.x) / dt;
+    };
+
+    const startGlide = (velocity) => {
+      if (reducedDragMotion || Math.abs(velocity) < 0.05) return;
+      let last = performance.now();
+      let v = velocity;
+      const step = (now) => {
+        const dt = Math.min(32, now - last);
+        last = now;
+        const max = el.scrollWidth - el.clientWidth;
+        const next = el.scrollLeft + v * dt;
+        if (next <= 0 || next >= max) {
+          el.scrollLeft = Math.max(0, Math.min(max, next));
+          glide = 0;
+          return;
+        }
+        el.scrollLeft = next;
+        v *= Math.pow(0.95, dt / 16);
+        if (Math.abs(v) < 0.02) {
+          glide = 0;
+          return;
+        }
+        glide = requestAnimationFrame(step);
+      };
+      glide = requestAnimationFrame(step);
+    };
 
     el.addEventListener("pointerdown", (e) => {
       if (e.pointerType === "touch") return;
       if (el.scrollWidth <= el.clientWidth + 2) return;
+      stopGlide();
       isDown = true;
       moved = false;
       startX = e.clientX;
       startScroll = el.scrollLeft;
+      samples = [];
+      track(e.clientX, e.timeStamp);
       el.setPointerCapture?.(e.pointerId);
       el.classList.add("is-dragging");
     });
@@ -160,6 +213,7 @@
       const dx = e.clientX - startX;
       if (Math.abs(dx) > 3) moved = true;
       el.scrollLeft = startScroll - dx;
+      track(e.clientX, e.timeStamp);
     });
 
     function endDrag(e) {
@@ -169,16 +223,8 @@
       try {
         el.releasePointerCapture?.(e.pointerId);
       } catch (_) {}
-      if (el.hasAttribute("data-drag-snap")) {
-        const card = el.firstElementChild;
-        if (!card) return;
-        const styles = getComputedStyle(el);
-        const gap = parseFloat(styles.columnGap || styles.gap) || 0;
-        const step = card.getBoundingClientRect().width + gap;
-        if (!step) return;
-        const index = Math.round(el.scrollLeft / step);
-        el.scrollTo({ left: index * step, behavior: "smooth" });
-      }
+      if (moved) startGlide(releaseVelocity(e.timeStamp));
+      samples = [];
     }
 
     el.addEventListener("pointerup", endDrag);
