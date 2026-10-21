@@ -21,8 +21,17 @@
           <div class="flex flex-col gap-1.5 sm:col-span-2">
             <label class="font-display text-[13px] font-bold uppercase tracking-wide" for="interest">Интересувам се от</label>
             <select class="rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="interest" name="interest">
-              {% for s in services %}
-                <option{% if inquiryService and s.title == inquiryService %} selected{% endif %}>{{ s.title }}</option>
+              {% for s in catalogServices %}
+                {% if s.menuChildren and s.menuChildren.length %}
+                  <optgroup label="{{ s.title }}">
+                    <option{% if inquiryService and s.title == inquiryService %} selected{% endif %}>{{ s.title }}</option>
+                    {% for child in s.menuChildren %}
+                      <option{% if inquiryService and child.title == inquiryService %} selected{% endif %}>{{ child.title }}</option>
+                    {% endfor %}
+                  </optgroup>
+                {% else %}
+                  <option{% if inquiryService and s.title == inquiryService %} selected{% endif %}>{{ s.title }}</option>
+                {% endif %}
               {% endfor %}
               <option>Друго</option>
             </select>

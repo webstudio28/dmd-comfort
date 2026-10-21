@@ -1,4 +1,22 @@
-const services = require("./services.json");
+const fs = require("fs");
+const path = require("path");
 
-/** Services that still get a `/uslugi/{slug}/` detail page (not an external href). */
-module.exports = services.filter((s) => !s.href);
+/** Services that get a `/uslugi/{slug}/` page. External `href` entries stay on their own URL. */
+module.exports = function () {
+  const services = JSON.parse(fs.readFileSync(path.join(__dirname, "services.json"), "utf8"));
+  const bySlug = new Map(services.map((service) => [service.slug, service]));
+
+  return services
+    .filter((service) => !service.href)
+    .map((service) => {
+      const parent = service.parentSlug ? bySlug.get(service.parentSlug) : null;
+      return {
+        ...service,
+        parentTitle: parent ? parent.title : "",
+        parentUrl: parent ? `/uslugi/${parent.slug}/` : "",
+        subcategoryCards: (service.menuChildren || [])
+          .map((child) => bySlug.get(child.slug))
+          .filter(Boolean),
+      };
+    });
+};

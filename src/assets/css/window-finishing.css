@@ -63,6 +63,7 @@
 .trim-comparison td { color: var(--trim-muted); }
 .trim-comparison tbody tr:last-child :is(th, td) { border-bottom: 0; }
 .trim-process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; list-style: none; padding: 0; margin-top: 52px; }
+.trim-process--five { grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .trim-process li { position: relative; border-top: 1px solid #cbd9ce; padding-top: 24px; }
 .trim-process li::before { content: ""; position: absolute; top: -4px; left: 0; width: 7px; height: 7px; border-radius: 50%; background: #057230; }
 .trim-step-number { color: #057230; font-family: "Sofia Sans Condensed", sans-serif; font-size: 38px; font-weight: 500; line-height: 1; }

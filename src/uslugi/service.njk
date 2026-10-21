@@ -7,35 +7,51 @@ pagination:
 permalink: "/uslugi/{{ service.slug }}/"
 eleventyComputed:
   title: "{{ service.title }}"
-  description: "{{ service.shortDescription }}"
+  description: "{{ service.shortDescription or service.title }}"
+  pageImage: "{{ service.image if service.image and not service.imageMissing else '' }}"
 ---
 {% from "macros/faq-schema.njk" import faqSchema %}
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/include-icon.njk" import includeIcon %}
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}
+{% from "macros/service-image.njk" import serviceImage %}
 
 {% call pageBanner() %}
   <div class="grid items-end gap-8 lg:grid-cols-2">
     <div>
       <h1 class="font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-black leading-none">{{ service.title }}</h1>
-      <p class="mt-4 max-w-xl text-lg leading-relaxed text-white/70">{{ service.shortDescription }}</p>
+      {% if service.shortDescription %}
+        <p class="mt-4 max-w-xl text-lg leading-relaxed text-white/70">{{ service.shortDescription }}</p>
+      {% endif %}
       <div class="mt-6 flex flex-wrap gap-3">
         <button class="btn btn-primary open-inquiry" type="button">Заяви оглед</button>
       </div>
     </div>
     <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-lift">
-      <img class="aspect-[4/3] w-full object-cover" src="{{ service.image | url }}" alt="{{ service.title }}" />
-      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" aria-hidden="true"></div>
+      {{ serviceImage(service, "aspect-[4/3] w-full", true) }}
+      {% if service.image and not service.imageMissing %}
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" aria-hidden="true"></div>
+      {% endif %}
     </div>
   </div>
 {% endcall %}
 
+{% if service.parentUrl %}
+{{ breadcrumbs([
+  { label: "Начало", url: "/" },
+  { label: "Услуги", url: "/uslugi/" },
+  { label: service.parentTitle, url: service.parentUrl },
+  { label: service.title }
+]) }}
+{% else %}
 {{ breadcrumbs([
   { label: "Начало", url: "/" },
   { label: "Услуги", url: "/uslugi/" },
   { label: service.title }
 ]) }}
+{% endif %}
 
+{% if service.longDescription %}
 <section class="relative section-pad overflow-hidden bg-white">
   <div class="pointer-events-none absolute -right-20 top-10 h-64 w-64 rounded-full bg-brand/5 blur-3xl" aria-hidden="true"></div>
   <div class="container-site relative reveal">
@@ -49,7 +65,36 @@ eleventyComputed:
     </div>
   </div>
 </section>
+{% endif %}
 
+{% if service.subcategoryCards and service.subcategoryCards.length %}
+<section class="section-pad bg-brand-mist" aria-labelledby="subcategory-services-title">
+  <div class="container-site">
+    <div class="mb-10 reveal">
+      <div class="eyebrow">Видове</div>
+      <h2 id="subcategory-services-title" class="section-title">Изберете конкретен вариант</h2>
+    </div>
+    <div class="grid gap-5 sm:grid-cols-2 {% if service.subcategoryCards.length >= 4 %}xl:grid-cols-4{% elif service.subcategoryCards.length == 3 %}lg:grid-cols-3{% endif %}">
+      {% for child in service.subcategoryCards %}
+        <a class="card group flex h-full flex-col no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand reveal" href="{{ ('/uslugi/' + child.slug + '/') | url }}">
+          <div class="relative m-3 aspect-[4/3] overflow-hidden rounded-lg bg-brand-mist">
+            {{ serviceImage(child, "h-full w-full") }}
+          </div>
+          <div class="flex flex-1 flex-col border-t border-ink/10 px-5 pb-6 pt-4">
+            <h3 class="mb-3 font-display text-[22px] font-extrabold text-ink">{{ child.title }}</h3>
+            {% if child.shortDescription %}
+              <p class="mb-5 flex-1 text-[15px] leading-relaxed text-ink-muted">{{ child.shortDescription }}</p>
+            {% endif %}
+            <span class="arrow-link mt-auto">Разгледай услугата <span aria-hidden="true">→</span></span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% if service.includes and service.includes.length %}
 <section class="section-pad overflow-x-clip bg-brand-mist">
   <div class="container-site">
     <div class="mb-10 max-w-2xl reveal md:mb-12">
@@ -71,7 +116,9 @@ eleventyComputed:
     </ul>
   </div>
 </section>
+{% endif %}
 
+{% if service.process and service.process.length %}
 <section class="relative overflow-x-clip section-pad text-white">
   <div class="absolute inset-0 bg-gradient-to-br from-[#1a1d1f] via-[#161a1c] to-[#121516]" aria-hidden="true"></div>
   <div class="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_80%_40%,rgba(5,114,48,0.18),transparent_55%)]" aria-hidden="true"></div>
@@ -93,7 +140,9 @@ eleventyComputed:
     </ol>
   </div>
 </section>
+{% endif %}
 
+{% if service.advantages or service.suitableFor or service.materials or service.options or service.warranty %}
 <section class="section-pad bg-white">
   <div class="container-site">
     <div class="mb-12 max-w-2xl reveal">
@@ -102,6 +151,7 @@ eleventyComputed:
       <p class="section-copy">Ключовите точки, които помагат да вземете спокойно решение.</p>
     </div>
     <div class="grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 md:grid-cols-2">
+      {% if service.advantages %}
       <div class="reveal bg-white p-8 md:p-10">
         <div class="mb-5 flex items-center gap-3">
           <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
@@ -116,7 +166,10 @@ eleventyComputed:
           {% endfor %}
         </ul>
       </div>
+      {% endif %}
+      {% if service.suitableFor or service.materials %}
       <div class="reveal bg-brand-mist p-8 md:p-10">
+        {% if service.suitableFor %}
         <div class="mb-5 flex items-center gap-3">
           <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
           <h3 class="font-display text-2xl font-extrabold">Подходящо за</h3>
@@ -126,12 +179,17 @@ eleventyComputed:
             <span class="rounded-lg border border-ink/10 bg-white px-3.5 py-2 font-display text-sm font-bold text-ink">{{ tag }}</span>
           {% endfor %}
         </div>
-        <div class="mt-10 mb-5 flex items-center gap-3">
+        {% endif %}
+        {% if service.materials %}
+        <div class="{% if service.suitableFor %}mt-10 {% endif %}mb-5 flex items-center gap-3">
           <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
           <h3 class="font-display text-2xl font-extrabold">Материали</h3>
         </div>
         <p class="text-[15px] leading-relaxed text-ink-muted">{{ service.materials }}</p>
+        {% endif %}
       </div>
+      {% endif %}
+      {% if service.options %}
       <div class="reveal bg-brand-mist p-8 md:p-10 md:bg-white">
         <div class="mb-5 flex items-center gap-3">
           <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
@@ -139,6 +197,8 @@ eleventyComputed:
         </div>
         <p class="text-[15px] leading-relaxed text-ink-muted">{{ service.options }}</p>
       </div>
+      {% endif %}
+      {% if service.warranty %}
       <div class="reveal relative overflow-hidden bg-[#1a1d1f] p-8 text-white md:p-10">
         <div class="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-brand/20 blur-2xl" aria-hidden="true"></div>
         <div class="relative">
@@ -150,9 +210,11 @@ eleventyComputed:
           <button class="btn btn-primary mt-8 open-inquiry" type="button">Заяви оглед</button>
         </div>
       </div>
+      {% endif %}
     </div>
   </div>
 </section>
+{% endif %}
 
 {% if service.faq and service.faq.length %}
 <section class="relative section-pad overflow-hidden bg-brand-mist">

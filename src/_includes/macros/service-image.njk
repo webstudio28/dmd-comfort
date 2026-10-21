@@ -1,0 +1,15 @@
+{% macro serviceImage(item, className="", eager=false) %}
+  {% if item.image and not item.imageMissing %}
+    <img
+      class="image-cover {{ className }}"
+      src="{{ item.image | url }}"
+      alt="{{ item.imageAlt or item.title }}"
+      {% if eager %}fetchpriority="high"{% else %}loading="lazy" decoding="async"{% endif %}
+    />
+  {% else %}
+    <div class="service-image-missing {{ className }}" role="img" aria-label="Липсва снимка за {{ item.title }}">
+      <span class="service-image-missing-badge">Липсва снимка</span>
+      <span class="service-image-missing-title">{{ item.title }}</span>
+    </div>
+  {% endif %}
+{% endmacro %}

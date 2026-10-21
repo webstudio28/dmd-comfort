@@ -207,6 +207,33 @@
   .nav-dropdown::-webkit-scrollbar {
     display: none;
   }
+
+  .menu-opt {
+    @apply flex items-baseline gap-3 border-t border-ink/10 px-3 py-2 pl-14 text-[13px] leading-snug text-ink-muted no-underline transition hover:text-brand;
+  }
+
+  .menu-opt strong {
+    @apply shrink-0 font-display text-[13px] font-extrabold text-brand;
+  }
+
+  .service-image-missing {
+    @apply grid place-items-center content-center gap-2 bg-[#e7f2eb] px-4 text-center;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(5, 114, 48, 0.1) 10px,
+      rgba(5, 114, 48, 0.1) 11px
+    );
+  }
+
+  .service-image-missing-badge {
+    @apply inline-flex rounded-md bg-brand px-2.5 py-1 font-display text-[11px] font-extrabold uppercase tracking-[0.14em] text-white;
+  }
+
+  .service-image-missing-title {
+    @apply max-w-[16rem] font-display text-sm font-extrabold leading-snug text-ink;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -10,7 +10,7 @@
   "seo": {
     "siteUrl": "https://dmdkomfort.bg",
     "defaultTitle": "ДМД Комфорт | PVC и алуминиева дограма",
-    "defaultDescription": "PVC и алуминиева дограма, щори, комарници, обръщане с PVC профили — оглед, доставка, монтаж и гаранция.",
+    "defaultDescription": "PVC и алуминиева дограма, врати, плъзгащи системи, щори и метални конструкции — оглед, доставка и монтаж.",
     "defaultOgImage": "/assets/images/hero.jpg"
   },
   "contact": {
@@ -34,7 +34,7 @@
     "header": [
       { "label": "Начало", "url": "/" },
       { "label": "Услуги", "url": "/uslugi/", "childrenFrom": "services" },
-      { "label": "Обръщане с PVC профили", "url": "/obrashtane-na-dograma-s-pvc-profili/" },
+      { "label": "Обръщане с PVC первази", "url": "/obrashtane-na-dograma-s-pvc-profili/" },
       { "label": "Проекти", "url": "/proekti/" },
       { "label": "Блог", "url": "/blog/" },
       { "label": "Видеа", "url": "/videa/" },

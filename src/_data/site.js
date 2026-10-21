@@ -15,11 +15,25 @@ function serviceUrl(service) {
 
 function resolveChildrenFrom(services, type) {
   if (type === "services") {
-    return services.map((s) => ({
-      label: s.title,
-      url: serviceUrl(s),
-      image: s.image || null,
-    }));
+    const nestedSlugs = new Set(
+      services.flatMap((service) =>
+        Array.isArray(service.menuChildren) ? service.menuChildren.map((child) => child.slug) : []
+      )
+    );
+
+    return services
+      .filter((service) => !nestedSlugs.has(service.slug))
+      .map((service) => ({
+        label: service.title,
+        url: serviceUrl(service),
+        image: service.image && !service.imageMissing ? service.image : null,
+        children: Array.isArray(service.menuChildren)
+          ? service.menuChildren.map((child) => ({
+              label: child.title,
+              url: `/uslugi/${child.slug}/`,
+            }))
+          : [],
+      }));
   }
   return [];
 }
