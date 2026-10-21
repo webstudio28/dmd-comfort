@@ -1,249 +1,123 @@
 ---
 layout: base.njk
+bodyClass: window-finishing service-detail
+pageStyles: /assets/css/service-detail.css
+inquiryEyebrow: Индивидуална оферта
 pagination:
-  data: servicePages
+  data: serviceDetails
   size: 1
   alias: service
 permalink: "/uslugi/{{ service.slug }}/"
 eleventyComputed:
-  title: "{{ service.title }}"
-  description: "{{ service.shortDescription or service.title }}"
+  title: "{{ service.copy.seoTitle }}"
+  description: "{{ service.copy.description }}"
   pageImage: "{{ service.image if service.image and not service.imageMissing else '' }}"
+  inquiryDescription: "{{ service.copy.inquiry }}"
+  inquiryPlaceholder: "{{ service.copy.inquiry }}"
 ---
-{% from "macros/faq-schema.njk" import faqSchema %}
 {% from "macros/page-banner.njk" import pageBanner %}
-{% from "macros/include-icon.njk" import includeIcon %}
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}
-{% from "macros/service-image.njk" import serviceImage %}
+{% from "macros/faq-schema.njk" import faqSchema %}
+{% macro arrow() %}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endmacro %}
+{% macro check() %}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endmacro %}
+{% macro rail(items, label, ordered=false) %}
+  {% if ordered %}<ol{% else %}<ul{% endif %} class="trim-process trim-process--five trim-service-rail" data-service-carousel data-card-count="{{ items.length }}" tabindex="0" role="region" aria-label="{{ label }} — плъзнете хоризонтално">
+    {% for item in items %}
+    <li{% if not item.url %} data-step="0{{ loop.index }}"{% else %} class="trim-service-link-slide"{% endif %}>
+      {% if item.url %}<a class="trim-service-card-link" href="{{ item.url | url }}" draggable="false">
+        {% if item.image and not item.imageMissing %}<img src="{{ item.image | url }}" alt="{{ item.imageAlt or item.title }}" width="640" height="480" loading="lazy" decoding="async" draggable="false" />{% endif %}
+        <div class="trim-service-card-body">
+      {% endif %}
+      <h3>{{ item.title }}</h3><p>{{ item.text or item.summary }}</p>
+      {% if item.url %}<span class="trim-service-card-action">Разгледайте услугата {{ arrow() }}</span></div></a>{% endif %}
+    </li>
+    {% endfor %}
+  {% if ordered %}</ol>{% else %}</ul>{% endif %}
+{% endmacro %}
+{% macro faqItem(faq) %}
+<details class="trim-faq-item">
+  <summary class="trim-faq-summary"><span>{{ faq.q }}</span><span class="trim-faq-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+  <div class="trim-faq-answer"><div class="trim-faq-answer-inner"><div class="trim-faq-answer-body"><p>{{ faq.a }}</p></div></div></div>
+</details>
+{% endmacro %}
 
 {% call pageBanner() %}
-  <div class="grid items-end gap-8 lg:grid-cols-2">
+  <div class="grid items-end gap-8{% if service.image and not service.imageMissing %} lg:grid-cols-2{% endif %}">
     <div>
-      <h1 class="font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-black leading-none">{{ service.title }}</h1>
-      {% if service.shortDescription %}
-        <p class="mt-4 max-w-xl text-lg leading-relaxed text-white/70">{{ service.shortDescription }}</p>
-      {% endif %}
-      <div class="mt-6 flex flex-wrap gap-3">
-        <button class="btn btn-primary open-inquiry" type="button">Заяви оглед</button>
-      </div>
+      <h1 class="font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-black leading-none" id="trim-title">{{ service.copy.h1 }}</h1>
+      <p class="mt-4 text-lg leading-relaxed text-white/70{% if service.image and not service.imageMissing %} max-w-xl{% endif %}">{{ service.copy.description }}</p>
+      <div class="mt-6 flex flex-wrap items-center gap-5"><button class="btn btn-primary open-inquiry" type="button">Поискайте оферта {{ arrow() }}</button><a class="trim-text-link trim-text-link-light" href="#montazh">Вижте как се изпълнява <span aria-hidden="true">↓</span></a></div>
     </div>
-    <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-lift">
-      {{ serviceImage(service, "aspect-[4/3] w-full", true) }}
-      {% if service.image and not service.imageMissing %}
-        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" aria-hidden="true"></div>
-      {% endif %}
-    </div>
+    {% if service.image and not service.imageMissing %}
+    <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-lift"><img class="aspect-[4/3] w-full object-cover" src="{{ service.image | url }}" alt="{{ service.imageAlt or service.title }}" width="1536" height="1024" fetchpriority="high" decoding="async" /><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" aria-hidden="true"></div></div>
+    {% endif %}
   </div>
 {% endcall %}
-
+<div class="trim-benefits"><div class="container-site trim-benefits-grid">{% for feature in service.copy.features %}{% if loop.index0 < 3 %}<div>{{ check() }}<span>{{ feature.title }}</span></div>{% endif %}{% endfor %}</div></div>
 {% if service.parentUrl %}
-{{ breadcrumbs([
-  { label: "Начало", url: "/" },
-  { label: "Услуги", url: "/uslugi/" },
-  { label: service.parentTitle, url: service.parentUrl },
-  { label: service.title }
-]) }}
+{{ breadcrumbs([{label: "Начало", url: "/"}, {label: "Услуги", url: "/uslugi/"}, {label: service.parentTitle, url: service.parentUrl}, {label: service.title}]) }}
 {% else %}
-{{ breadcrumbs([
-  { label: "Начало", url: "/" },
-  { label: "Услуги", url: "/uslugi/" },
-  { label: service.title }
-]) }}
+{{ breadcrumbs([{label: "Начало", url: "/"}, {label: "Услуги", url: "/uslugi/"}, {label: service.title}]) }}
 {% endif %}
 
-{% if service.longDescription %}
-<section class="relative section-pad overflow-hidden bg-white">
-  <div class="pointer-events-none absolute -right-20 top-10 h-64 w-64 rounded-full bg-brand/5 blur-3xl" aria-hidden="true"></div>
-  <div class="container-site relative reveal">
-    <div class="grid gap-10 lg:grid-cols-[auto_1fr] lg:gap-14">
-      <div class="hidden w-px bg-gradient-to-b from-brand via-brand/40 to-transparent lg:block" aria-hidden="true"></div>
-      <div>
-        <div class="eyebrow">Описание</div>
-        <h2 class="section-title">Повече за услугата</h2>
-        <p class="border-l-4 border-brand pl-6 text-[17px] leading-relaxed text-ink-muted md:text-lg md:leading-8">{{ service.longDescription }}</p>
-      </div>
-    </div>
-  </div>
+<section class="trim-section" aria-labelledby="trim-intro-title"><div class="container-site"><h2 class="trim-heading" id="trim-intro-title">{{ service.copy.introTitle }}</h2><div class="trim-prose">{% for paragraph in service.copy.intro %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
+
+<section class="trim-section trim-section-soft" aria-labelledby="trim-features-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-features-title">Какво съобразяваме с вашия обект?</h2></div></div>{{ rail(service.copy.features, 'Основни детайли') }}</section>
+
+{% if service.subcategoryCards.length %}
+<section class="trim-section" aria-labelledby="trim-types-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-types-title">{{ service.copy.typesTitle }}</h2></div></div>{{ rail(service.subcategoryCards, 'Видове услуги') }}</section>
+{% endif %}
+
+<section class="trim-section" aria-labelledby="trim-suitable-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-suitable-title">Кога е подходящо това решение?</h2></div></div>{{ rail(service.copy.applications, 'Приложения') }}</section>
+
+<section class="trim-section trim-section-soft" id="materiali" aria-labelledby="trim-materials-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-materials-title">Материали, размери и детайли на изпълнението</h2></div></div>{{ rail(service.copy.materials, 'Материали и детайли') }}</section>
+
+<section class="trim-section" aria-labelledby="trim-planning-title"><div class="container-site"><h2 class="trim-heading" id="trim-planning-title">{{ service.copy.planningTitle }}</h2><div class="trim-prose">{% for paragraph in service.copy.planning %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
+
+{% for section in service.copy.sections %}
+<section class="trim-section{% if loop.index0 % 2 == 0 %} trim-section-soft{% endif %}" aria-labelledby="trim-detail-{{ loop.index }}"><div class="container-site"><h2 class="trim-heading" id="trim-detail-{{ loop.index }}">{{ section.title }}</h2><div class="trim-prose">{% for paragraph in section.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
+{% endfor %}
+
+<section class="trim-section trim-section-soft" id="montazh" aria-labelledby="trim-process-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-process-title">Как протича работата?</h2></div></div>{{ rail(service.copy.process, 'Как протича работата', true) }}</section>
+
+<section class="trim-section" aria-labelledby="trim-preparation-title"><div class="container-site"><h2 class="trim-heading" id="trim-preparation-title">Подготовка на обекта и проверка след монтажа</h2><div class="trim-prose">{% for paragraph in service.copy.preparation %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
+
+<section class="trim-section trim-price-section" id="tsena" aria-labelledby="trim-price-title">
+  <div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-price-title">Как се определя цената?</h2></div><p class="trim-copy trim-service-price-intro">{{ service.copy.priceText }}</p></div>
+  {{ rail(service.copy.priceDetails, 'Фактори за цената') }}
+  <div class="container-site"><aside class="trim-quote-card" aria-labelledby="trim-quote-title"><h3 id="trim-quote-title">Оферта според вашия обект</h3><p>{{ service.copy.inquiry }}</p><button class="btn btn-primary open-inquiry mt-6" type="button">Поискайте оферта за вашия обект {{ arrow() }}</button></aside></div>
 </section>
+
+<section class="trim-section" id="obsluzhvani-raioni" aria-labelledby="trim-area-title"><div class="container-site"><h2 class="trim-heading" id="trim-area-title">{{ service.copy.areaTitle }}</h2><div class="trim-prose"><p>{{ service.copy.areaText }}</p><p>Приемаме запитвания и за обекти в други населени места в България. Възможността за изпълнение, организацията на огледа и условията за транспорт и монтаж се уточняват според местоположението и обхвата на работата.</p></div><button class="btn btn-primary open-inquiry mt-6" type="button">Поискайте оферта {{ arrow() }}</button></div></section>
+
+{% if service.relatedServices.length %}
+<section class="trim-section trim-comparison-section" aria-labelledby="trim-related-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-related-title">{{ service.copy.relatedTitle }}</h2></div></div>{{ rail(service.relatedServices, 'Свързани услуги') }}</section>
 {% endif %}
 
-{% if service.subcategoryCards and service.subcategoryCards.length %}
-<section class="section-pad bg-brand-mist" aria-labelledby="subcategory-services-title">
-  <div class="container-site">
-    <div class="mb-10 reveal">
-      <div class="eyebrow">Видове</div>
-      <h2 id="subcategory-services-title" class="section-title">Изберете конкретен вариант</h2>
-    </div>
-  </div>
-  <div class="container-site max-lg:contents">
-    <div class="h-scroll h-scroll-lg reveal lg:grid lg:gap-5 {% if service.subcategoryCards.length >= 4 %}lg:grid-cols-4{% elif service.subcategoryCards.length == 3 %}lg:grid-cols-3{% else %}lg:grid-cols-2{% endif %}" data-drag-scroll tabindex="0" role="region" aria-label="Видове — плъзнете хоризонтално">
-      {% for child in service.subcategoryCards %}
-        <a class="card group flex h-full flex-col no-underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand reveal" href="{{ ('/uslugi/' + child.slug + '/') | url }}">
-          <div class="relative m-3 aspect-[4/3] overflow-hidden rounded-lg bg-brand-mist">
-            {{ serviceImage(child, "h-full w-full") }}
-          </div>
-          <div class="flex flex-1 flex-col border-t border-ink/10 px-5 pb-6 pt-4">
-            <h3 class="mb-3 font-display text-[22px] font-extrabold text-ink">{{ child.title }}</h3>
-            {% if child.shortDescription %}
-              <p class="mb-5 flex-1 text-[15px] leading-relaxed text-ink-muted">{{ child.shortDescription }}</p>
-            {% endif %}
-            <span class="arrow-link mt-auto">Разгледай услугата <span aria-hidden="true">→</span></span>
-          </div>
-        </a>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endif %}
-
-{% if service.includes and service.includes.length %}
-<section class="section-pad overflow-x-clip bg-brand-mist">
-  <div class="container-site">
-    <div class="mb-10 max-w-2xl reveal md:mb-12">
-      <div class="eyebrow">Какво получавате</div>
-      <h2 class="section-title">Какво включва</h2>
-      <p class="section-copy">Пълен пакет — от първия оглед до финалния реглаж.</p>
-    </div>
-  </div>
-  <div class="container-site max-lg:contents">
-    <ul class="h-scroll h-scroll-lg reveal lg:grid lg:grid-cols-2 lg:gap-4 xl:grid-cols-3" data-drag-scroll tabindex="0" role="region" aria-label="Какво включва — плъзнете хоризонтално">
-      {% for item in service.includes %}
-        <li class="group relative min-h-[180px] overflow-hidden rounded-xl bg-gradient-to-br from-white to-brand-mist p-6 shadow-card transition hover:-translate-y-1 hover:shadow-lift">
-          <span class="mb-5 grid h-12 w-12 place-items-center rounded-xl bg-brand-soft text-brand transition group-hover:bg-brand group-hover:text-white" aria-hidden="true">
-            {{ includeIcon(item) }}
-          </span>
-          <span class="font-display text-lg font-extrabold leading-snug text-ink md:text-xl">{{ item }}</span>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
-</section>
-{% endif %}
-
-{% if service.process and service.process.length %}
-<section class="relative overflow-x-clip section-pad text-white">
-  <div class="absolute inset-0 bg-gradient-to-br from-[#1a1d1f] via-[#161a1c] to-[#121516]" aria-hidden="true"></div>
-  <div class="pointer-events-none absolute inset-y-0 right-0 w-1/2 bg-[radial-gradient(circle_at_80%_40%,rgba(5,114,48,0.18),transparent_55%)]" aria-hidden="true"></div>
-  <div class="container-site relative z-10">
-    <div class="mb-12 max-w-2xl reveal">
-      <div class="eyebrow text-brand before:bg-brand">Стъпки</div>
-      <h2 class="section-title text-white">Как протича процесът</h2>
-      <p class="section-copy text-white/60">Ясен ред на работа без изненади по пътя.</p>
-    </div>
-  </div>
-  <div class="container-site relative z-10 max-lg:contents">
-    <ol class="h-scroll h-scroll-lg h-scroll-steps reveal lg:mt-0 lg:grid lg:grid-cols-4 lg:gap-8" data-drag-scroll tabindex="0" role="region" aria-label="Как протича процесът — плъзнете хоризонтално">
-      {% for step in service.process %}
-        <li class="relative {% if not loop.last %}lg:border-r lg:border-white/10 lg:pr-8{% endif %} lg:text-left">
-          <span class="mx-auto mb-5 grid h-14 w-14 place-items-center rounded-full border border-brand/50 bg-white/5 font-display text-[15px] font-extrabold text-brand lg:mx-0">0{{ loop.index }}</span>
-          <div class="font-display text-xl font-extrabold leading-snug">{{ step }}</div>
-        </li>
-      {% endfor %}
-    </ol>
-  </div>
-</section>
-{% endif %}
-
-{% if service.advantages or service.suitableFor or service.materials or service.options or service.warranty %}
-<section class="section-pad bg-white">
-  <div class="container-site">
-    <div class="mb-12 max-w-2xl reveal">
-      <div class="eyebrow">Детайли</div>
-      <h2 class="section-title">Важно за избора</h2>
-      <p class="section-copy">Ключовите точки, които помагат да вземете спокойно решение.</p>
-    </div>
-    <div class="grid gap-px overflow-hidden rounded-2xl border border-ink/10 bg-ink/10 md:grid-cols-2">
-      {% if service.advantages %}
-      <div class="reveal bg-white p-8 md:p-10">
-        <div class="mb-5 flex items-center gap-3">
-          <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
-          <h3 class="font-display text-2xl font-extrabold">Предимства</h3>
-        </div>
-        <ul class="space-y-4">
-          {% for a in service.advantages %}
-            <li class="flex gap-3 text-[15px] leading-relaxed text-ink-muted">
-              <span class="mt-1 text-brand" aria-hidden="true">▸</span>
-              {{ a }}
-            </li>
-          {% endfor %}
-        </ul>
-      </div>
-      {% endif %}
-      {% if service.suitableFor or service.materials %}
-      <div class="reveal bg-brand-mist p-8 md:p-10">
-        {% if service.suitableFor %}
-        <div class="mb-5 flex items-center gap-3">
-          <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
-          <h3 class="font-display text-2xl font-extrabold">Подходящо за</h3>
-        </div>
-        <div class="flex flex-wrap gap-2">
-          {% for tag in service.suitableFor %}
-            <span class="rounded-lg border border-ink/10 bg-white px-3.5 py-2 font-display text-sm font-bold text-ink">{{ tag }}</span>
-          {% endfor %}
-        </div>
-        {% endif %}
-        {% if service.materials %}
-        <div class="{% if service.suitableFor %}mt-10 {% endif %}mb-5 flex items-center gap-3">
-          <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
-          <h3 class="font-display text-2xl font-extrabold">Материали</h3>
-        </div>
-        <p class="text-[15px] leading-relaxed text-ink-muted">{{ service.materials }}</p>
-        {% endif %}
-      </div>
-      {% endif %}
-      {% if service.options %}
-      <div class="reveal bg-brand-mist p-8 md:p-10 md:bg-white">
-        <div class="mb-5 flex items-center gap-3">
-          <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
-          <h3 class="font-display text-2xl font-extrabold">Варианти и опции</h3>
-        </div>
-        <p class="text-[15px] leading-relaxed text-ink-muted">{{ service.options }}</p>
-      </div>
-      {% endif %}
-      {% if service.warranty %}
-      <div class="reveal relative overflow-hidden bg-[#1a1d1f] p-8 text-white md:p-10">
-        <div class="pointer-events-none absolute -right-8 -top-8 h-40 w-40 rounded-full bg-brand/20 blur-2xl" aria-hidden="true"></div>
-        <div class="relative">
-          <div class="mb-5 flex items-center gap-3">
-            <span class="h-8 w-1 rounded-full bg-brand" aria-hidden="true"></span>
-            <h3 class="font-display text-2xl font-extrabold">Гаранция</h3>
-          </div>
-          <p class="text-[15px] leading-relaxed text-white/65">{{ service.warranty }}</p>
-          <button class="btn btn-primary mt-8 open-inquiry" type="button">Заяви оглед</button>
-        </div>
-      </div>
+<section class="trim-section trim-section-soft" id="vaprosi" aria-labelledby="trim-faq-title" data-faq>
+  <div class="container-site"><div class="trim-faq-head"><h2 class="trim-heading" id="trim-faq-title">Често задавани въпроси</h2><p>Отговори за избора, подготовката и изпълнението на услугата.</p></div>
+    <div class="trim-faq-list"><div class="trim-faq-stack">{% for faq in service.copy.faq %}{% if loop.index0 < 7 %}{{ faqItem(faq) }}{% endif %}{% endfor %}</div>
+      {% if service.copy.faq.length > 7 %}
+      <div class="trim-faq-extra" data-faq-extra><div class="trim-faq-extra-inner trim-faq-stack" data-faq-extra-inner>{% for faq in service.copy.faq %}{% if loop.index0 >= 7 %}{{ faqItem(faq) }}{% endif %}{% endfor %}</div><div class="trim-faq-extra-fade" aria-hidden="true"></div></div>
+      <div class="trim-faq-more-wrap"><button class="trim-faq-more" type="button" data-faq-expand aria-expanded="false" data-label-more="Вижте още" data-label-less="Вижте по-малко"><span data-faq-expand-label>Вижте още</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></div>
       {% endif %}
     </div>
   </div>
 </section>
-{% endif %}
 
-{% if service.faq and service.faq.length %}
-<section class="relative section-pad overflow-hidden bg-brand-mist">
-  <div class="pointer-events-none absolute left-0 top-0 h-full w-1.5 bg-brand" aria-hidden="true"></div>
-  <div class="container-site">
-    <div class="mb-10 flex flex-col justify-between gap-4 border-b border-ink/10 pb-8 md:flex-row md:items-end reveal">
-      <div>
-        <div class="eyebrow">FAQ</div>
-        <h2 class="section-title mb-0">Често задавани въпроси</h2>
-      </div>
-      <p class="text-sm text-ink-muted">{{ service.faq.length }} въпроса · {{ service.title }}</p>
-    </div>
-    <div class="space-y-3">
-      {% for f in service.faq %}
-        <details class="reveal group border-b border-ink/10 bg-transparent open:bg-white open:border open:border-ink/10 open:rounded-2xl open:shadow-card open:px-2">
-          <summary class="flex cursor-pointer list-none items-start justify-between gap-4 px-2 py-5 font-display text-lg font-extrabold marker:content-none md:text-xl">
-            <span>{{ f.q }}</span>
-            <span class="mt-1 shrink-0 font-display text-brand transition group-open:rotate-45" aria-hidden="true">+</span>
-          </summary>
-          <div class="px-2 pb-6 text-[15px] leading-relaxed text-ink-muted md:text-base">{{ f.a }}</div>
-        </details>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-{% endif %}
+<section class="trim-contact" id="zapitvane" aria-labelledby="trim-contact-title"><div class="container-site trim-contact-grid"><div><h2 id="trim-contact-title">{{ service.copy.ctaTitle }}</h2><p>{{ service.copy.ctaText }}</p></div><div class="trim-contact-actions"><button class="btn btn-primary open-inquiry" type="button">Поискайте оферта {{ arrow() }}</button></div></div></section>
 
-{{ faqSchema(service.faq) }}
-
-{% include "sections/home-cta.njk" %}
+{{ faqSchema(service.copy.faq) }}
+{% set serviceUrl = site.seo.siteUrl + (page.url | url) %}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"Service","@id":{{ (serviceUrl + '#service') | dump | safe }},"name":{{ service.copy.h1 | dump | safe }},"serviceType":{{ service.title | dump | safe }},"description":{{ service.copy.description | dump | safe }},"url":{{ serviceUrl | dump | safe }},"provider":{"@id":{{ (site.seo.siteUrl + '/#organization') | dump | safe }}},"areaServed":[{"@type":"City","name":"Пловдив"},{"@type":"Country","name":"България"}]},
+ {"@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Начало","item":{{ (site.seo.siteUrl + ('/' | url)) | dump | safe }}},
+  {"@type":"ListItem","position":2,"name":"Услуги","item":{{ (site.seo.siteUrl + ('/uslugi/' | url)) | dump | safe }}},
+  {% if service.parentUrl %}{"@type":"ListItem","position":3,"name":{{ service.parentTitle | dump | safe }},"item":{{ (site.seo.siteUrl + (service.parentUrl | url)) | dump | safe }}},{% endif %}
+  {"@type":"ListItem","position":{% if service.parentUrl %}4{% else %}3{% endif %},"name":{{ service.title | dump | safe }},"item":{{ serviceUrl | dump | safe }}}
+ ]}
+]}
+</script>
+<script src="{{ '/assets/js/service-carousel.js' | url }}" defer></script>
