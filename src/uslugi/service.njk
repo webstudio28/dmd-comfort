@@ -25,7 +25,7 @@ eleventyComputed:
     {% for item in items %}
     <li{% if not item.url %} data-step="0{{ loop.index }}"{% else %} class="trim-service-link-slide"{% endif %}>
       {% if item.url %}<a class="trim-service-card-link" href="{{ item.url | url }}" draggable="false">
-        {% if item.image and not item.imageMissing %}<img src="{{ item.image | url }}" alt="{{ item.imageAlt or item.title }}" width="640" height="480" loading="lazy" decoding="async" draggable="false" />{% endif %}
+        {% if item.image and not item.imageMissing %}<img src="{{ item.image | url }}" alt="{{ item.imageAlt or item.title }}" width="{{ item.imageWidth or 640 }}" height="{{ item.imageHeight or 480 }}"{% if item.imageFit == "contain" %} style="object-fit: contain; background: #edf1ed"{% endif %} loading="lazy" decoding="async" draggable="false" />{% endif %}
         <div class="trim-service-card-body">
       {% endif %}
       <h3>{{ item.title }}</h3><p>{{ item.text or item.summary }}</p>
@@ -49,7 +49,7 @@ eleventyComputed:
       <div class="mt-6 flex flex-wrap items-center gap-5"><button class="btn btn-primary open-inquiry" type="button">Поискайте оферта {{ arrow() }}</button><a class="trim-text-link trim-text-link-light" href="#montazh">Вижте как се изпълнява <span aria-hidden="true">↓</span></a></div>
     </div>
     {% if service.image and not service.imageMissing %}
-    <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-lift"><img class="aspect-[4/3] w-full object-cover" src="{{ service.image | url }}" alt="{{ service.imageAlt or service.title }}" width="1536" height="1024" fetchpriority="high" decoding="async" /><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" aria-hidden="true"></div></div>
+    <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-lift"><img class="aspect-[4/3] w-full object-cover" src="{{ service.image | url }}" alt="{{ service.imageAlt or service.title }}" width="{{ service.imageWidth or 1536 }}" height="{{ service.imageHeight or 1024 }}"{% if service.imageFit == "contain" %} style="object-fit: contain"{% endif %} fetchpriority="high" decoding="async" /><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" aria-hidden="true"></div></div>
     {% endif %}
   </div>
 {% endcall %}

@@ -9,7 +9,11 @@
   {
     "slug": "dograma",
     "title": "Дограма",
-    "imageMissing": true,
+    "image": "/assets/images/hero.jpg",
+    "imageAlt": "Бяла дограма с остъклени врати и прозорци към двор",
+    "imageWidth": 1216,
+    "imageHeight": 832,
+    "imageFit": "cover",
     "menuChildren": [
       { "title": "Алуминиева дограма", "slug": "aluminiumieva-dograma" },
       { "title": "PVC дограма", "slug": "pvc-dograma" }
@@ -32,11 +36,17 @@
   {
     "slug": "vrati",
     "title": "Врати",
-    "imageMissing": true,
+    "image": "/assets/images/services/approved-2026-10-22/vrati.webp",
+    "imageAlt": "Алуминиева врата в антрацит със стъклени декоративни вложки",
+    "imageWidth": 960,
+    "imageHeight": 1280,
+    "imageFit": "contain",
     "menuChildren": [
       { "title": "Входни врати", "slug": "vhodni-vrati" },
       { "title": "Вътрешни врати", "slug": "vatreshni-vrati" },
-      { "title": "Врати за баня", "slug": "vrati-za-banya" }
+      { "title": "Врати за баня", "slug": "vrati-za-banya" },
+      { "title": "Дворни врати", "slug": "dvorni-vrati" },
+      { "title": "Входни портали", "slug": "vhodni-portali" }
     ]
   },
   {
@@ -50,19 +60,31 @@
     "slug": "vatreshni-vrati",
     "title": "Вътрешни врати",
     "parentSlug": "vrati",
-    "imageMissing": true
+    "image": "/assets/images/services/approved-2026-10-22/vatreshni-vrati.webp",
+    "imageAlt": "Две вътрешни врати с дървесен декор и диагонални стъклени вложки",
+    "imageWidth": 1280,
+    "imageHeight": 960,
+    "imageFit": "cover"
   },
   {
     "slug": "vrati-za-banya",
     "title": "Врати за баня",
     "parentSlug": "vrati",
-    "imageMissing": true
+    "image": "/assets/images/services/approved-2026-10-22/vrati-za-banya.webp",
+    "imageAlt": "Врата за баня с тъмен дървесен декор и сребриста дръжка",
+    "imageWidth": 960,
+    "imageHeight": 1280,
+    "imageFit": "contain"
   },
   {
     "slug": "aluminievi-i-pvc-pregradi",
     "title": "Алуминиеви и PVC прегради",
     "shortDescription": "За санитарни възли и офиси.",
-    "imageMissing": true
+    "image": "/assets/images/services/approved-2026-10-22/aluminievi-i-pvc-pregradi.webp",
+    "imageAlt": "Офисна преграда с алуминиеви рамки и матирани стъклени панели",
+    "imageWidth": 1000,
+    "imageHeight": 1000,
+    "imageFit": "contain"
   },
   {
     "slug": "plazgashti-sistemi",
@@ -80,42 +102,72 @@
     "slug": "termo-plazgashti-sistemi",
     "title": "Термо плъзгащи системи",
     "parentSlug": "plazgashti-sistemi",
-    "imageMissing": true
+    "image": "/assets/images/services/approved-2026-10-22/termo-plazgashti-sistemi.webp",
+    "imageAlt": "Термоалуминиева плъзгаща система с дървесен декор към двор",
+    "imageWidth": 1080,
+    "imageHeight": 810,
+    "imageFit": "cover"
   },
   {
     "slug": "studeni-plazgashti-sistemi",
     "title": "Студени плъзгащи системи",
     "parentSlug": "plazgashti-sistemi",
-    "imageMissing": true
+    "image": "/assets/images/services/approved-2026-10-22/studeni-plazgashti-sistemi.webp",
+    "imageAlt": "Алуминиево плъзгащо остъкляване на покрита веранда с изглед от двора",
+    "imageWidth": 1448,
+    "imageHeight": 1086,
+    "imageFit": "cover"
   },
   {
     "slug": "pvc-plazgashti-sistemi",
     "title": "PVC плъзгащи системи",
     "parentSlug": "plazgashti-sistemi",
-    "imageMissing": true
+    "image": "/assets/images/services/approved-2026-10-22/pvc-plazgashti-sistemi.webp",
+    "imageAlt": "Бяла PVC плъзгаща врата с два остъклени панела към тераса",
+    "imageWidth": 1448,
+    "imageHeight": 1086,
+    "imageFit": "cover"
   },
   {
     "slug": "bezprofilno-ostaklyavane",
     "title": "Безпрофилно остъкляване",
     "parentSlug": "plazgashti-sistemi",
-    "imageMissing": true
+    "image": "/assets/images/services/approved-2026-10-22/bezprofilno-ostaklyavane.webp",
+    "imageAlt": "Безпрофилно остъкляване на тераса с плъзгащи стъклени панели",
+    "imageWidth": 555,
+    "imageHeight": 430,
+    "imageFit": "cover"
   },
   {
     "slug": "dvorni-vrati",
     "title": "Дворни врати",
-    "shortDescription": "Изцяло алуминиеви. Издържат на всякакви външни условия.",
-    "imageMissing": true
+    "parentSlug": "vrati",
+    "image": "/assets/images/services/aluminievi-vrati-i-portali-generated-v1.webp",
+    "imageAlt": "Алуминиева пешеходна дворна врата, вградена в ограда с хоризонтални ламели",
+    "imageWidth": 1448,
+    "imageHeight": 1086,
+    "imageFit": "cover",
+    "imageKind": "generated"
   },
   {
     "slug": "vhodni-portali",
     "title": "Входни портали",
-    "shortDescription": "Изцяло алуминиеви. Издържат на всякакви външни условия.",
-    "imageMissing": true
+    "parentSlug": "vrati",
+    "image": "/assets/images/services/aluminievi-vrati-i-portali-generated-v1.webp",
+    "imageAlt": "Двукрилен алуминиев входен портал с хоризонтални ламели и съседна пешеходна врата",
+    "imageWidth": 1448,
+    "imageHeight": 1086,
+    "imageFit": "cover",
+    "imageKind": "generated"
   },
   {
     "slug": "vanshni-roletni-shtori",
     "title": "Външни ролетни щори",
-    "imageMissing": true
+    "image": "/assets/images/services/approved-2026-10-22/vanshni-roletni-shtori.webp",
+    "imageAlt": "Външна ролетна щора с видима кутия над прозореца",
+    "imageWidth": 750,
+    "imageHeight": 750,
+    "imageFit": "contain"
   },
   {
     "slug": "vatreshni-shtori",
@@ -132,7 +184,11 @@
   {
     "slug": "metalni-konstruktsii",
     "title": "Метални конструкции",
-    "imageMissing": true,
+    "image": "/assets/images/services/approved-2026-10-22/metalni-konstruktsii.webp",
+    "imageAlt": "Монтирана стоманена носеща конструкция за разширение на магазин",
+    "imageWidth": 1280,
+    "imageHeight": 960,
+    "imageFit": "cover",
     "menuChildren": [
       { "title": "Навеси", "slug": "navesi" },
       { "title": "Магазини", "slug": "magazini" },
@@ -150,17 +206,30 @@
     "slug": "magazini",
     "title": "Магазини",
     "parentSlug": "metalni-konstruktsii",
-    "imageMissing": true
+    "image": "/assets/images/services/approved-2026-10-22/magazini.webp",
+    "imageAlt": "Завършено разширение на магазин с покрив и остъклена фасада",
+    "imageWidth": 960,
+    "imageHeight": 720,
+    "imageFit": "cover"
   },
   {
     "slug": "ofisi",
     "title": "Офиси",
     "parentSlug": "metalni-konstruktsii",
-    "imageMissing": true
+    "image": "/assets/images/services/ofisi-generated-v1.webp",
+    "imageAlt": "Остъклено разширение на офис с бяла метална конструкция към съществуваща сграда",
+    "imageWidth": 1448,
+    "imageHeight": 1086,
+    "imageFit": "cover",
+    "imageKind": "generated"
   },
   {
     "slug": "usvoyavane-na-terasi",
     "title": "Усвояване на тераси с изнесени покриви",
-    "imageMissing": true
+    "image": "/assets/images/services/approved-2026-10-22/usvoyavane-na-terasi.webp",
+    "imageAlt": "Остъклена тераса с изнесен покрив към жилищна сграда",
+    "imageWidth": 1280,
+    "imageHeight": 960,
+    "imageFit": "cover"
   }
 ]

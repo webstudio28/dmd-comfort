@@ -4,6 +4,8 @@
       class="image-cover {{ className }}"
       src="{{ item.image | url }}"
       alt="{{ item.imageAlt or item.title }}"
+      {% if item.imageWidth and item.imageHeight %}width="{{ item.imageWidth }}" height="{{ item.imageHeight }}"{% endif %}
+      {% if item.imageFit == "contain" %}style="object-fit: contain; background: #edf1ed"{% endif %}
       {% if eager %}fetchpriority="high"{% else %}loading="lazy" decoding="async"{% endif %}
     />
   {% else %}
