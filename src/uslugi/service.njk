@@ -17,43 +17,59 @@ eleventyComputed:
 ---
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}
+{% from "macros/include-icon.njk" import includeIcon %}
 {% from "macros/faq-schema.njk" import faqSchema %}
 {% macro arrow() %}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endmacro %}
 {% macro check() %}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endmacro %}
-{% macro rail(items, label, ordered=false, actionLabel='Разгледайте услугата') %}
-  {% if ordered %}<ol{% else %}<ul{% endif %} class="trim-process trim-process--five trim-service-rail" data-service-carousel data-card-count="{{ items.length }}" tabindex="0" role="region" aria-label="{{ label }} — плъзнете хоризонтално">
-    {% for item in items %}
-    <li{% if not item.url %} data-step="0{{ loop.index }}"{% else %} class="trim-service-link-slide"{% endif %}>
-      {% if item.url %}<a class="trim-service-card-link" href="{{ item.url | url }}" draggable="false">
-        {% if item.image and not item.imageMissing %}<img src="{{ item.image | url }}" alt="{{ item.imageAlt or item.title }}" width="{{ item.imageWidth or 640 }}" height="{{ item.imageHeight or 480 }}"{% if item.imageFit == "contain" %} style="object-fit: contain; background: #edf1ed"{% endif %} loading="lazy" decoding="async" draggable="false" />{% endif %}
-        <div class="trim-service-card-body">
-      {% endif %}
-      <h3>{{ item.title }}</h3><p>{{ item.text or item.summary }}</p>
-      {% if item.url %}<span class="trim-service-card-action">{{ actionLabel }} {{ arrow() }}</span></div></a>{% endif %}
-    </li>
-    {% endfor %}
-  {% if ordered %}</ol>{% else %}</ul>{% endif %}
-{% endmacro %}
 {% macro faqItem(faq) %}
 <details class="trim-faq-item">
   <summary class="trim-faq-summary"><span>{{ faq.q }}</span><span class="trim-faq-chevron" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
   <div class="trim-faq-answer"><div class="trim-faq-answer-inner"><div class="trim-faq-answer-body"><p>{{ faq.a }}</p></div></div></div>
 </details>
 {% endmacro %}
+{% macro serviceLinkRail(items, label, actionLabel='Разгледайте услугата') %}
+<ul class="trim-process trim-process--five trim-service-rail" data-drag-scroll data-card-count="{{ items.length }}" tabindex="0" role="region" aria-label="{{ label }} — плъзнете хоризонтално">
+  {% for item in items %}
+  <li class="trim-service-link-slide">
+    <a class="trim-service-card-link" href="{{ item.url | url }}" draggable="false">
+      {% if item.image and not item.imageMissing %}<img src="{{ item.image | url }}" alt="{{ item.imageAlt or item.title }}" width="{{ item.imageWidth or 640 }}" height="{{ item.imageHeight or 480 }}"{% if item.imageFit == "contain" %} style="object-fit: contain; background: #edf1ed"{% endif %} loading="lazy" decoding="async" draggable="false" />{% endif %}
+      <div class="trim-service-card-body">
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.summary or item.text }}</p>
+        <span class="trim-service-card-action">{{ actionLabel }} {{ arrow() }}</span>
+      </div>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endmacro %}
 
 {% call pageBanner() %}
-  <div class="grid items-end gap-8{% if service.image and not service.imageMissing %} lg:grid-cols-2{% endif %}">
+  <div class="grid items-end gap-8{% if service.image and not service.imageMissing %} lg:grid-cols-2 lg:items-center{% endif %}">
     <div>
       <h1 class="font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-black leading-none" id="trim-title">{{ service.copy.h1 }}</h1>
-      <p class="mt-4 text-lg leading-relaxed text-white/70{% if service.image and not service.imageMissing %} max-w-xl{% endif %}">{{ service.copy.description }}</p>
-      <div class="mt-6 flex flex-wrap items-center gap-5"><button class="btn btn-primary open-inquiry" type="button">Поискайте оферта {{ arrow() }}</button><a class="trim-text-link trim-text-link-light" href="#montazh">Вижте как се изпълнява <span aria-hidden="true">↓</span></a></div>
+      <p class="mt-4 text-lg leading-relaxed text-white/70{% if service.image and not service.imageMissing %} max-w-xl{% endif %}">{{ service.copy.heroLead or service.copy.description }}</p>
+      <div class="mt-6 flex flex-wrap items-center gap-5">
+        <button class="btn btn-primary open-inquiry" type="button">Поискайте оферта {{ arrow() }}</button>
+        <a class="btn btn-light" href="#kakvo-predstavlyava">Виж повече за услугата</a>
+      </div>
+      {% if service.copy.features.length %}
+      <ul class="trim-hero-points">
+        {% for feature in service.copy.features %}{% if loop.index0 < 3 %}
+        <li>{{ check() }}<span>{{ feature.title }}</span></li>
+        {% endif %}{% endfor %}
+      </ul>
+      {% endif %}
     </div>
     {% if service.image and not service.imageMissing %}
-    <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-lift"><img class="aspect-[4/3] w-full object-cover" src="{{ service.image | url }}" alt="{{ service.imageAlt or service.title }}" width="{{ service.imageWidth or 1536 }}" height="{{ service.imageHeight or 1024 }}"{% if service.imageFit == "contain" %} style="object-fit: contain"{% endif %} fetchpriority="high" decoding="async" /><div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" aria-hidden="true"></div></div>
+    <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-lift">
+      <img class="aspect-[4/3] w-full object-cover" src="{{ service.image | url }}" alt="{{ service.imageAlt or service.title }}" width="{{ service.imageWidth or 1536 }}" height="{{ service.imageHeight or 1024 }}"{% if service.imageFit == "contain" %} style="object-fit: contain"{% endif %} fetchpriority="high" decoding="async" />
+      <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" aria-hidden="true"></div>
+    </div>
     {% endif %}
   </div>
 {% endcall %}
-<div class="trim-benefits trim-band--mist"><div class="container-site trim-benefits-grid">{% for feature in service.copy.features %}{% if loop.index0 < 3 %}<div>{{ check() }}<span>{{ feature.title }}</span></div>{% endif %}{% endfor %}</div></div>
+
 {% if service.parentUrl %}
 {{ breadcrumbs([{label: "Начало", url: "/"}, {label: "Услуги", url: "/uslugi/"}, {label: service.parentTitle, url: service.parentUrl}, {label: service.title}]) }}
 {% else %}
@@ -61,7 +77,28 @@ eleventyComputed:
 {% endif %}
 
 {% set band = cycler("trim-band--mist", "trim-band--white", "trim-band--mist", "trim-band--lined") %}
-<section class="trim-section {{ band.next() }}" aria-labelledby="trim-intro-title"><div class="container-site"><h2 class="trim-heading" id="trim-intro-title">{{ service.copy.introTitle }}</h2><div class="trim-prose">{% for paragraph in service.copy.intro %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
+
+<section class="trim-section {{ band.next() }}" id="kakvo-predstavlyava" aria-labelledby="trim-intro-title">
+  <div class="container-site">
+    <h2 class="trim-heading" id="trim-intro-title">{{ service.copy.introTitle }}</h2>
+    {% if service.copy.intro.length > 1 %}
+    <div class="trim-prose" data-read-more>
+      <p>{{ service.copy.intro[0] }}</p>
+      <div class="trim-read-more-panel" data-read-more-panel id="trim-intro-more-{{ service.slug }}">
+        <div class="trim-read-more-inner">
+          {% for paragraph in service.copy.intro %}{% if not loop.first %}<p>{{ paragraph }}</p>{% endif %}{% endfor %}
+        </div>
+      </div>
+      <button class="trim-text-link trim-read-more-link" type="button" data-read-more-toggle aria-expanded="false" aria-controls="trim-intro-more-{{ service.slug }}" data-label-more="Прочети повече за услугата" data-label-less="Скрий текста">
+        <span data-read-more-label>Прочети повече за услугата</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+    </div>
+    {% else %}
+    <div class="trim-prose">{% for paragraph in service.copy.intro %}<p>{{ paragraph }}</p>{% endfor %}</div>
+    {% endif %}
+  </div>
+</section>
 
 {% if service.relatedProjects.length %}
 <section class="trim-section {{ band.next() }}" aria-labelledby="trim-projects-title">
@@ -76,48 +113,230 @@ eleventyComputed:
       {% endif %}
     </div>
   </div>
-  {{ rail(service.relatedProjects, 'Нашите проекти', false, 'Разгледайте проекта') }}
+  <ul class="trim-project-rail trim-card-rail" data-drag-scroll data-card-count="{{ service.relatedProjects.length }}" tabindex="0" role="region" aria-label="Нашите проекти — плъзнете хоризонтално">
+    {% for item in service.relatedProjects %}
+    <li>
+      <a class="trim-project-card" href="{{ item.url | url }}" draggable="false">
+        {% if item.image %}<img src="{{ item.image | url }}" alt="{{ item.imageAlt or item.title }}" width="640" height="480" loading="lazy" decoding="async" draggable="false" />{% endif %}
+        <div class="trim-project-card-body">
+          <h3>{{ item.title }}</h3>
+          {% if item.location or item.text %}<p>{{ item.location or item.text }}</p>{% endif %}
+          <span class="trim-project-card-action">Разгледайте проекта {{ arrow() }}</span>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
 </section>
 {% endif %}
 
-<section class="trim-section {{ band.next() }}" aria-labelledby="trim-features-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-features-title">Какво съобразяваме с вашия обект?</h2></div></div>{{ rail(service.copy.features, 'Основни детайли') }}</section>
+{% if service.copy.features.length %}
+<section class="trim-section {{ band.next() }}" aria-labelledby="trim-benefit-title">
+  <div class="container-site">
+    <h2 class="trim-heading" id="trim-benefit-title">Защо да изберете {{ service.title }}?</h2>
+    {% if service.copy.featuresLead %}<p class="trim-copy">{{ service.copy.featuresLead }}</p>{% endif %}
+  </div>
+  <div class="trim-quality-list trim-card-rail" data-drag-scroll data-card-count="{{ service.copy.features.length }}" tabindex="0" role="region" aria-label="Предимства — плъзнете хоризонтално">
+    {% for feature in service.copy.features %}
+    <div>
+      <span>{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
+      <h3>{{ feature.title }}</h3>
+      <p>{{ feature.text }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
 
 {% if service.subcategoryCards.length %}
-<section class="trim-section {{ band.next() }}" aria-labelledby="trim-types-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-types-title">{{ service.copy.typesTitle }}</h2></div></div>{{ rail(service.subcategoryCards, 'Видове услуги') }}</section>
+<section class="trim-section {{ band.next() }}" aria-labelledby="trim-types-title">
+  <div class="container-site">
+    <div class="trim-section-head"><h2 class="trim-heading" id="trim-types-title">{{ service.copy.typesTitle }}</h2></div>
+  </div>
+  {{ serviceLinkRail(service.subcategoryCards, 'Видове услуги') }}
+</section>
 {% endif %}
 
-<section class="trim-section {{ band.next() }}" aria-labelledby="trim-suitable-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-suitable-title">Кога е подходящо това решение?</h2></div></div>{{ rail(service.copy.applications, 'Приложения') }}</section>
-
-<section class="trim-section {{ band.next() }}" id="materiali" aria-labelledby="trim-materials-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-materials-title">Материали, размери и детайли на изпълнението</h2></div></div>{{ rail(service.copy.materials, 'Материали и детайли') }}</section>
-
-{% for section in service.copy.sections %}
-<section class="trim-section {{ band.next() }}" aria-labelledby="trim-detail-{{ loop.index }}"><div class="container-site"><h2 class="trim-heading" id="trim-detail-{{ loop.index }}">{{ section.title }}</h2><div class="trim-prose">{% for paragraph in section.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
-{% endfor %}
-
-<section class="trim-section {{ band.next() }}" id="montazh" aria-labelledby="trim-process-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-process-title">Как протича работата?</h2></div></div>{{ rail(service.copy.process, 'Как протича работата', true) }}</section>
-
-<section class="trim-section trim-price-section {{ band.next() }}" id="tsena" aria-labelledby="trim-price-title">
-  <div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-price-title">Как се определя цената?</h2></div><p class="trim-copy trim-service-price-intro">{{ service.copy.priceText }}</p></div>
-  {{ rail(service.copy.priceDetails, 'Фактори за цената') }}
-  <div class="container-site"><aside class="trim-quote-card" aria-labelledby="trim-quote-title"><h3 id="trim-quote-title">Оферта според вашия обект</h3><p>{{ service.copy.inquiry }}</p><button class="btn btn-primary open-inquiry mt-6" type="button">Поискайте оферта за вашия обект {{ arrow() }}</button></aside></div>
+{% if service.copy.applications.length %}
+<section class="trim-section {{ band.next() }}" aria-labelledby="trim-suitable-title">
+  <div class="container-site">
+    <div class="trim-section-head"><h2 class="trim-heading" id="trim-suitable-title">Кога е подходящо това решение?</h2></div>
+    <div class="trim-situations">
+      {% for item in service.copy.applications %}
+      <article class="trim-situation">
+        <span class="trim-icon">{{ includeIcon(item.icon or item.title) }}</span>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
 </section>
+{% endif %}
 
 {% if service.relatedServices.length %}
-<section class="trim-section trim-comparison-section {{ band.next() }}" aria-labelledby="trim-related-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-related-title">{{ service.copy.relatedTitle }}</h2></div></div>{{ rail(service.relatedServices, 'Свързани услуги') }}</section>
+<aside class="trim-service-banner trim-band--charcoal" aria-labelledby="trim-related-title">
+  <div class="container-site trim-service-banner-inner">
+    <div class="trim-service-banner-main">
+      <div class="trim-service-banner-copy">
+        <strong id="trim-related-title">{{ service.copy.relatedTitle or "Още решения за вашия обект" }}</strong>
+        <p>Разгледайте свързаните услуги:</p>
+      </div>
+      <div class="trim-related-services">
+        {% for item in service.relatedServices %}
+        <a class="trim-related-service" href="{{ item.url | url }}">
+          {% if item.image and not item.imageMissing %}
+          <img src="{{ item.image | url }}" alt="{{ item.imageAlt or item.title }}" width="96" height="72" loading="lazy" decoding="async" />
+          {% endif %}
+          <span>{{ item.title }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    <p class="trim-service-banner-note">{{ service.copy.relatedNote or "Могат да бъдат обсъдени заедно като част от общото изпълнение." }}</p>
+  </div>
+</aside>
+{% endif %}
+
+{% if service.copy.materials.length %}
+<section class="trim-section {{ band.next() }}" id="materiali" aria-labelledby="trim-materials-title">
+  <div class="container-site">
+    <h2 class="trim-heading" id="trim-materials-title">Материали, размери и детайли на изпълнението</h2>
+    {% if service.copy.materialsLead %}<p class="trim-copy">{{ service.copy.materialsLead }}</p>{% endif %}
+  </div>
+  <dl class="trim-material-points trim-card-rail" data-drag-scroll data-card-count="{{ service.copy.materials.length }}" tabindex="0" role="region" aria-label="Материали и детайли — плъзнете хоризонтално">
+    {% for item in service.copy.materials %}
+    <div>
+      <span class="trim-icon">{{ includeIcon(item.icon or item.title) }}</span>
+      <div>
+        <dt>{{ item.title }}</dt>
+        <dd>{{ item.text }}</dd>
+      </div>
+    </div>
+    {% endfor %}
+  </dl>
+</section>
+{% endif %}
+
+{% for section in service.copy.sections %}
+<section class="trim-section {{ band.next() }}" aria-labelledby="trim-detail-{{ loop.index }}">
+  <div class="container-site trim-quality-grid">
+    <div><h2 class="trim-heading" id="trim-detail-{{ loop.index }}">{{ section.title }}</h2></div>
+    <div class="trim-prose">
+      {% for paragraph in section.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
+      {% if loop.last %}
+      <button class="btn btn-primary open-inquiry mt-6" type="button">Поискайте оферта {{ arrow() }}</button>
+      {% endif %}
+    </div>
+  </div>
+</section>
+{% endfor %}
+
+{% if service.copy.process.length %}
+<section class="trim-section {{ band.next() }}" id="montazh" aria-labelledby="trim-process-title">
+  <div class="container-site">
+    <div class="trim-section-head"><h2 class="trim-heading" id="trim-process-title">Как протича работата?</h2></div>
+  </div>
+  <ol class="trim-process trim-process--five" data-drag-scroll data-card-count="{{ service.copy.process.length }}" tabindex="0" role="region" aria-label="Как протича работата — плъзнете хоризонтално">
+    {% for step in service.copy.process %}
+    <li data-step="0{{ loop.index }}"><h3>{{ step.title }}</h3><p>{{ step.text }}</p></li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}
+
+{% if service.copy.priceDetails.length %}
+<section class="trim-section trim-price-section {{ band.next() }}" id="cena" aria-labelledby="trim-price-title">
+  <div class="container-site">
+    <h2 class="trim-heading" id="trim-price-title">Как се определя цената?</h2>
+    <p class="trim-copy">{{ service.copy.priceText }}</p>
+  </div>
+  <dl class="price-boxes price-boxes--cards trim-card-rail" data-drag-scroll data-card-count="{{ service.copy.priceDetails.length }}" tabindex="0" role="region" aria-label="Как се определя цената — плъзнете хоризонтално">
+    {% for item in service.copy.priceDetails %}
+    <div>
+      <dt>{{ item.title or item.name }}</dt>
+      <dd>{{ item.text }}</dd>
+    </div>
+    {% endfor %}
+  </dl>
+</section>
+{% endif %}
+
+<section class="trim-offer-banner {{ band.next() }}" aria-labelledby="trim-quote-title">
+  <div class="container-site trim-offer-banner-inner">
+    <div class="trim-offer-banner-copy">
+      <h2 class="trim-heading" id="trim-quote-title">Оферта според вашия обект</h2>
+      <p>{{ service.copy.inquiry }}</p>
+      <div class="trim-offer-banner-actions">
+        <button class="btn btn-primary open-inquiry" type="button">Направете запитване {{ arrow() }}</button>
+        <a class="btn btn-outline" href="{{ '/kontakti/' | url }}">Контакти</a>
+      </div>
+    </div>
+    <figure class="trim-offer-banner-media">
+      {% set offerImage = service.copy.offerImage or service.image or "/assets/images/hero.jpg" %}
+      <img src="{{ offerImage | url }}" alt="{{ service.imageAlt or service.title }}" width="1600" height="1067" loading="lazy" decoding="async" />
+    </figure>
+  </div>
+</section>
+
+{% if service.relatedBlog %}
+<section class="trim-section trim-comparison-section {{ band.next() }}" id="sravnenie" aria-labelledby="trim-compare-title">
+  <div class="container-site">
+    <div class="trim-section-head">
+      <h2 class="trim-heading" id="trim-compare-title">{{ service.copy.blogTitle or service.relatedBlog.title }}</h2>
+      {% if service.copy.blogLead %}<p>{{ service.copy.blogLead }}</p>{% endif %}
+    </div>
+    <a class="trim-blog-card trim-blog-card--compact" href="{{ ('/blog/' + service.relatedBlog.slug + '/') | url }}">
+      <img class="trim-blog-card-image" src="{{ service.relatedBlog.image | url }}" alt="{{ service.relatedBlog.imageAlt or service.relatedBlog.title }}" width="1536" height="1024" loading="lazy" decoding="async" />
+      <div class="trim-blog-card-body">
+        <h3>{{ service.relatedBlog.title }}</h3>
+        <p>{{ service.relatedBlog.excerpt }}</p>
+        <span class="trim-blog-card-link">Прочетете статията <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+  </div>
+</section>
 {% endif %}
 
 <section class="trim-section {{ band.next() }}" id="vaprosi" aria-labelledby="trim-faq-title" data-faq>
-  <div class="container-site"><div class="trim-faq-head"><h2 class="trim-heading" id="trim-faq-title">Често задавани въпроси</h2><p>Отговори за избора, подготовката и изпълнението на услугата.</p></div>
-    <div class="trim-faq-list"><div class="trim-faq-stack">{% for faq in service.copy.faq %}{% if loop.index0 < 7 %}{{ faqItem(faq) }}{% endif %}{% endfor %}</div>
+  <div class="container-site">
+    <div class="trim-faq-head">
+      <h2 class="trim-heading" id="trim-faq-title">Често задавани въпроси</h2>
+      <p>Отговори за избора, подготовката и изпълнението на услугата.</p>
+    </div>
+    <div class="trim-faq-list">
+      <div class="trim-faq-stack">
+        {% for faq in service.copy.faq %}{% if loop.index0 < 7 %}{{ faqItem(faq) }}{% endif %}{% endfor %}
+      </div>
       {% if service.copy.faq.length > 7 %}
-      <div class="trim-faq-extra" data-faq-extra><div class="trim-faq-extra-inner trim-faq-stack" data-faq-extra-inner>{% for faq in service.copy.faq %}{% if loop.index0 >= 7 %}{{ faqItem(faq) }}{% endif %}{% endfor %}</div><div class="trim-faq-extra-fade" aria-hidden="true"></div></div>
-      <div class="trim-faq-more-wrap"><button class="trim-faq-more" type="button" data-faq-expand aria-expanded="false" data-label-more="Вижте още" data-label-less="Вижте по-малко"><span data-faq-expand-label>Вижте още</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></button></div>
+      <div class="trim-faq-extra" data-faq-extra>
+        <div class="trim-faq-extra-inner trim-faq-stack" data-faq-extra-inner>
+          {% for faq in service.copy.faq %}{% if loop.index0 >= 7 %}{{ faqItem(faq) }}{% endif %}{% endfor %}
+        </div>
+        <div class="trim-faq-extra-fade" aria-hidden="true"></div>
+      </div>
+      <div class="trim-faq-more-wrap">
+        <button class="trim-faq-more" type="button" data-faq-expand aria-expanded="false" data-label-more="Вижте още" data-label-less="Вижте по-малко">
+          <span data-faq-expand-label>Вижте още</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
       {% endif %}
     </div>
   </div>
 </section>
 
-<section class="trim-contact" id="zapitvane" aria-labelledby="trim-contact-title"><div class="container-site trim-contact-grid"><div><h2 id="trim-contact-title">{{ service.copy.ctaTitle }}</h2><p>{{ service.copy.ctaText }}</p></div><div class="trim-contact-actions"><button class="btn btn-primary open-inquiry" type="button">Поискайте оферта {{ arrow() }}</button></div></div></section>
+<section class="trim-contact" id="zapitvane" aria-labelledby="trim-contact-title">
+  <div class="container-site trim-contact-grid">
+    <div>
+      <h2 id="trim-contact-title">{{ service.copy.ctaTitle }}</h2>
+      <p>{{ service.copy.ctaText }}</p>
+    </div>
+    <div class="trim-contact-actions">
+      <button class="btn btn-primary open-inquiry" type="button">Поискайте оферта {{ arrow() }}</button>
+    </div>
+  </div>
+</section>
 
 {{ faqSchema(service.copy.faq) }}
 {% set serviceUrl = site.seo.siteUrl + (page.url | url) %}
@@ -132,4 +351,3 @@ eleventyComputed:
  ]}
 ]}
 </script>
-<script src="{{ '/assets/js/service-carousel.js' | url }}" defer></script>

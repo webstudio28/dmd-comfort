@@ -8,11 +8,17 @@ module.exports = function () {
   const services = JSON.parse(fs.readFileSync(path.join(__dirname, "services.json"), "utf8"));
   const content = JSON.parse(fs.readFileSync(path.join(__dirname, "serviceContent.json"), "utf8"));
   const projects = JSON.parse(fs.readFileSync(path.join(__dirname, "projects.json"), "utf8"));
-  const bySlug = new Map(services.map(service => [service.slug, service]));
-  const card = slug => {
+  const blog = JSON.parse(fs.readFileSync(path.join(__dirname, "blog.json"), "utf8"));
+  const bySlug = new Map(services.map((service) => [service.slug, service]));
+  const blogBySlug = new Map(blog.map((post) => [post.slug, post]));
+  const card = (slug) => {
     const item = bySlug.get(slug);
     if (!item) throw new Error(`Unknown related service: ${slug}`);
-    return {...item, url: item.href || `/uslugi/${item.slug}/`, summary: content[slug]?.description || item.shortDescription || item.title};
+    return {
+      ...item,
+      url: item.href || `/uslugi/${item.slug}/`,
+      summary: content[slug]?.description || item.shortDescription || item.title,
+    };
   };
 
   const projectsForService = (service) => {
@@ -29,6 +35,7 @@ module.exports = function () {
       seen.add(project.slug);
       matched.push({
         title: project.title,
+        location: project.location || project.objectType || "",
         text: project.location || project.objectType || project.shortDescription,
         summary: project.shortDescription,
         url: `/proekti/${project.slug}/`,
@@ -40,21 +47,25 @@ module.exports = function () {
     return matched;
   };
 
-  return services.filter(service => !service.href).map(service => {
-    const copy = content[service.slug];
-    if (!copy) throw new Error(`Missing approved service content: ${service.slug}`);
-    const parent = service.parentSlug ? bySlug.get(service.parentSlug) : null;
-    const relatedProjects = projectsForService(service);
-    return {
-      ...service,
-      copy,
-      parentTitle: parent?.title || "",
-      parentUrl: parent ? `/uslugi/${parent.slug}/` : "",
-      subcategoryCards: (service.menuChildren || []).map(child => card(child.slug)),
-      relatedServices: (copy.relatedSlugs || []).map(card),
-      relatedProjects: relatedProjects.slice(0, PROJECTS_PREVIEW),
-      projectsMoreUrl: relatedProjects.length ? `/proekti/usluga/${service.slug}/` : "",
-      projectsTotal: relatedProjects.length,
-    };
-  });
+  return services
+    .filter((service) => !service.href)
+    .map((service) => {
+      const copy = content[service.slug];
+      if (!copy) throw new Error(`Missing approved service content: ${service.slug}`);
+      const parent = service.parentSlug ? bySlug.get(service.parentSlug) : null;
+      const relatedProjects = projectsForService(service);
+      const relatedBlog = copy.blogSlug ? blogBySlug.get(copy.blogSlug) || null : null;
+      return {
+        ...service,
+        copy,
+        parentTitle: parent?.title || "",
+        parentUrl: parent ? `/uslugi/${parent.slug}/` : "",
+        subcategoryCards: (service.menuChildren || []).map((child) => card(child.slug)),
+        relatedServices: (copy.relatedSlugs || []).map(card),
+        relatedProjects: relatedProjects.slice(0, PROJECTS_PREVIEW),
+        projectsMoreUrl: relatedProjects.length ? `/proekti/usluga/${service.slug}/` : "",
+        projectsTotal: relatedProjects.length,
+        relatedBlog,
+      };
+    });
 };
