@@ -41,9 +41,10 @@
 .trim-benefits-grid svg { color: #057230; flex-shrink: 0; }
 .trim-section { padding: 92px 0; }
 /*
-  Band rhythm rule (service / обръщане pages):
-  After the hero → soft gray → plain white → soft gray → white+lines → … (repeat)
-  Lines only on every second white band. Pattern from “Оферта…” — keep, but softer.
+  Band rhythm (service / обръщане pages):
+  Neighboring sections must never share the same background.
+  Cycle: mist → white → mist → lined → (repeat).
+  Never set background: transparent on a section that also uses a band class.
 */
 .trim-band--mist {
   background: rgba(244, 245, 244, 0.72);
@@ -266,7 +267,6 @@
 .trim-material h3 { min-height: 62px; }
 .trim-material p { margin-bottom: 28px; }
 .trim-material-tag { display: block; border-top: 1px solid #e5eae6; padding-top: 17px; font-size: 13px; color: #45604d; margin-top: auto; }
-.trim-comparison-section { background: transparent; }
 .trim-comparison-grid { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: start; }
 .trim-comparison-grid .trim-text-link, .trim-faq-intro .trim-text-link { margin-top: 25px; }
 .trim-table-wrap { min-width: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--trim-radius); border: 1px solid #e2e5df; background: #fff; }
@@ -289,7 +289,6 @@
 .trim-timing { display: flex; gap: 20px; align-items: center; margin-top: 38px; background: #f4f7f3; padding: 25px 30px; border-radius: var(--trim-radius); }
 .trim-timing h3 { font-size: 22px; font-weight: 700; margin-bottom: 5px; }
 .trim-timing p { font-size: 15px; line-height: 1.7; color: var(--trim-muted); }
-.trim-price-section { background: transparent; }
 .trim-price-grid { display: grid; grid-template-columns: 1fr; gap: 36px; align-items: start; }
 .trim-material-points { display: grid; gap: 16px; margin: 8px 0 0; }
 .trim-material-points > div { display: flex; align-items: flex-start; gap: 20px; background: #fff; border: 1px solid #e3ebe5; border-radius: var(--trim-radius); padding: 22px 28px; box-shadow: 0 8px 24px rgba(32, 58, 39, 0.05); }

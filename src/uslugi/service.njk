@@ -60,7 +60,7 @@ eleventyComputed:
 {{ breadcrumbs([{label: "Начало", url: "/"}, {label: "Услуги", url: "/uslugi/"}, {label: service.title}]) }}
 {% endif %}
 
-{% set band = cycler("trim-band--white", "trim-band--mist", "trim-band--lined", "trim-band--mist") %}
+{% set band = cycler("trim-band--mist", "trim-band--white", "trim-band--mist", "trim-band--lined") %}
 <section class="trim-section {{ band.next() }}" aria-labelledby="trim-intro-title"><div class="container-site"><h2 class="trim-heading" id="trim-intro-title">{{ service.copy.introTitle }}</h2><div class="trim-prose">{% for paragraph in service.copy.intro %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
 
 {% if service.relatedProjects.length %}

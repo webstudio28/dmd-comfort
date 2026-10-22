@@ -1,0 +1,352 @@
+{
+  "checkedOn": "2026-10-22",
+  "engine": "Google.bg",
+  "calls": [
+    {
+      "seed": "конденз по прозорците",
+      "type": "questions",
+      "data": {
+        "data": {
+          "results": {
+            "конденз по прозорците": {
+              "questions": [],
+              "similar_searches": {
+                "против влага и мухъл": {
+                  "search_volume": 10,
+                  "competition": 0.14,
+                  "cpc": 0,
+                  "intents": {
+                    "informational": 84,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                },
+                "влага и мухъл вкъщи": {
+                  "search_volume": 10,
+                  "competition": 0.64,
+                  "cpc": 0,
+                  "intents": {
+                    "informational": 98,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                },
+                "мухъл по ъглите": {
+                  "search_volume": 10,
+                  "competition": 0,
+                  "cpc": 0,
+                  "intents": {
+                    "informational": 99,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                },
+                "пасивен влагоуловител": {
+                  "search_volume": 10,
+                  "competition": 0.69,
+                  "cpc": 0.262174591365,
+                  "intents": {
+                    "informational": 34,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 48
+                  }
+                },
+                "решение за влага": {
+                  "search_volume": 10,
+                  "competition": 0,
+                  "cpc": 0,
+                  "intents": {
+                    "informational": 48,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 39
+                  }
+                },
+                "конденз в банята": {
+                  "search_volume": 10,
+                  "competition": 0.21,
+                  "cpc": 0,
+                  "intents": {
+                    "informational": 93,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                },
+                "конденз по тавана": {
+                  "search_volume": 10,
+                  "competition": 0,
+                  "cpc": 0,
+                  "intents": {
+                    "informational": 87,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                },
+                "мухъл под прозореца": {
+                  "search_volume": 0,
+                  "competition": 0,
+                  "cpc": 0,
+                  "intents": {
+                    "informational": 96,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                }
+              }
+            }
+          },
+          "credits": 38663
+        }
+      }
+    },
+    {
+      "seed": "смяна на уплътнения на дограма",
+      "type": "discovery-verification",
+      "data": {
+        "data": {
+          "results": {
+            "смяна на уплътнения на дограма": {
+              "search_volume": 50,
+              "competition": 0.1,
+              "cpc": 0.506870876639,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 56
+              }
+            },
+            "смяна на уплътнения на дограма цена": {
+              "search_volume": 20,
+              "competition": 0.24,
+              "cpc": 0.384522734002,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 85,
+                "transactional": 0
+              }
+            },
+            "смяна уплътнение на дограма": {
+              "search_volume": 10,
+              "competition": 0.3,
+              "cpc": 0.8,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 81
+              }
+            },
+            "смяна на уплътнение на пвц дограма": {
+              "search_volume": 10,
+              "competition": 0.11,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 91
+              }
+            }
+          },
+          "credits": 38653
+        }
+      }
+    },
+    {
+      "seed": "почистване на пожълтяла пвц дограма",
+      "type": "discovery-verification",
+      "data": {
+        "data": {
+          "results": {
+            "почистване на пожълтяла пвц дограма": {
+              "search_volume": 90,
+              "competition": 0.03,
+              "cpc": 0.73,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 71
+              }
+            }
+          },
+          "credits": 38643
+        }
+      }
+    },
+    {
+      "seed": "обръщане на прозорци цена",
+      "type": "discovery-verification",
+      "data": {
+        "data": {
+          "results": {
+            "обръщане на прозорци цена": {
+              "search_volume": 590,
+              "competition": 0.25,
+              "cpc": 2.25,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 83,
+                "transactional": 0
+              }
+            },
+            "цена за обръщане на прозорци": {
+              "search_volume": 170,
+              "competition": 0.3,
+              "cpc": 2.06,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 85,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цена на линеен метър": {
+              "search_volume": 140,
+              "competition": 0.22,
+              "cpc": 0.75,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 93,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цена за труд": {
+              "search_volume": 50,
+              "competition": 0.12,
+              "cpc": 0.91,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 92,
+                "transactional": 0
+              }
+            },
+            "обръщане на врати и прозорци цена": {
+              "search_volume": 40,
+              "competition": 0.29,
+              "cpc": 0.72,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 90,
+                "transactional": 0
+              }
+            },
+            "цена обръщане на прозорци": {
+              "search_volume": 30,
+              "competition": 0.29,
+              "cpc": 0.23,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 83,
+                "transactional": 0
+              }
+            },
+            "обръщане на дограма цена": {
+              "search_volume": 30,
+              "competition": 0.31,
+              "cpc": 0.38,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 56,
+                "transactional": 0
+              }
+            },
+            "цена на обръщане на прозорци": {
+              "search_volume": 20,
+              "competition": 0.17,
+              "cpc": 0.26,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 87,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с гипсокартон цена": {
+              "search_volume": 20,
+              "competition": 0.23,
+              "cpc": 1.33,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 92,
+                "transactional": 0
+              }
+            },
+            "обръщане прозорци цена": {
+              "search_volume": 10,
+              "competition": 0.02,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 81,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с фибран цени": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 75,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цена 2021": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 68,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цена 2020": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 73,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цена 2022": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 32,
+                "navigational": 0,
+                "commercial": 60,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38633
+        }
+      }
+    }
+  ]
+}

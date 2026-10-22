@@ -1,0 +1,4524 @@
+{
+  "checkedOn": "2026-10-22",
+  "engine": "Google.bg",
+  "country": "Bulgaria",
+  "seedList": [
+    [
+      "пвц профил за обръщане на прозорци",
+      140
+    ],
+    [
+      "каква дограма да избера",
+      50
+    ],
+    [
+      "пвц врата за баня",
+      720
+    ],
+    [
+      "затварящ механизъм за пвц дограма",
+      140
+    ],
+    [
+      "пвц и алуминиева дограма разлика",
+      null
+    ],
+    [
+      "коя дограма е най-добра за шумоизолация",
+      null
+    ],
+    [
+      "коя дограма е най-добра за топлоизолация",
+      null
+    ],
+    [
+      "регулиране на дограма врата",
+      210
+    ],
+    [
+      "правила за монтаж на пвц дограма",
+      90
+    ],
+    [
+      "сваляне на стъклопакет от пвц дограма",
+      90
+    ],
+    [
+      "как се сваля крило на пвц дограма",
+      30
+    ],
+    [
+      "външно обръщане на прозорци",
+      170
+    ],
+    [
+      "готови ъгли за обръщане на прозорци",
+      110
+    ],
+    [
+      "лесно обръщане на прозорци",
+      210
+    ],
+    [
+      "материали за обръщане на прозорци",
+      210
+    ],
+    [
+      "готови профили за обръщане на прозорци",
+      210
+    ],
+    [
+      "регулиране на пвц дограма видео",
+      320
+    ]
+  ],
+  "calls": [
+    {
+      "seed": "пвц профил за обръщане на прозорци",
+      "claimed": 140,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "пвц профил за обръщане на прозорци": {
+              "search_volume": 140,
+              "competition": 0.07,
+              "cpc": 1,
+              "intents": {
+                "informational": 0,
+                "navigational": 29,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с пвц профили": {
+              "search_volume": 20,
+              "competition": 0.03,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 41,
+                "transactional": 42
+              }
+            },
+            "pvc профили за обръщане на прозорци": {
+              "search_volume": 10,
+              "competition": 0.43,
+              "cpc": 0.54,
+              "intents": {
+                "informational": 20,
+                "navigational": 0,
+                "commercial": 35,
+                "transactional": 36
+              }
+            }
+          },
+          "credits": 39058
+        }
+      }
+    },
+    {
+      "seed": "каква дограма да избера",
+      "claimed": 50,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "каква дограма да избера": {
+              "search_volume": 50,
+              "competition": 0.42,
+              "cpc": 0.7,
+              "intents": {
+                "informational": 83,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "какъв стъклопакет да избера": {
+              "search_volume": 10,
+              "competition": 0.26,
+              "cpc": 0,
+              "intents": {
+                "informational": 71,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "каква пвц дограма да избера": {
+              "search_volume": 10,
+              "competition": 0.18,
+              "cpc": 0,
+              "intents": {
+                "informational": 67,
+                "navigational": 0,
+                "commercial": 33,
+                "transactional": 0
+              }
+            },
+            "каква марка дограма да избера": {
+              "search_volume": 10,
+              "competition": 0.63,
+              "cpc": 0.59,
+              "intents": {
+                "informational": 50,
+                "navigational": 0,
+                "commercial": 46,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 39048
+        }
+      }
+    },
+    {
+      "seed": "пвц врата за баня",
+      "claimed": 720,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "пвц врати за баня": {
+              "search_volume": 720,
+              "competition": 0.36,
+              "cpc": 0.37,
+              "intents": {
+                "informational": 37,
+                "navigational": 27,
+                "commercial": 0,
+                "transactional": 20
+              }
+            },
+            "пвц врата за баня": {
+              "search_volume": 720,
+              "competition": 0.28,
+              "cpc": 0.61,
+              "intents": {
+                "informational": 28,
+                "navigational": 56,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "pvc врата за баня": {
+              "search_volume": 320,
+              "competition": 0.57,
+              "cpc": 0.3,
+              "intents": {
+                "informational": 0,
+                "navigational": 84,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "pvc врати за баня": {
+              "search_volume": 320,
+              "competition": 0.57,
+              "cpc": 0.3,
+              "intents": {
+                "informational": 0,
+                "navigational": 63,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "кафява пвц врата за баня": {
+              "search_volume": 170,
+              "competition": 0.53,
+              "cpc": 0.38,
+              "intents": {
+                "informational": 0,
+                "navigational": 98,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц врата за баня с огледало цена": {
+              "search_volume": 170,
+              "competition": 0.48,
+              "cpc": 0.28,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 91,
+                "transactional": 0
+              }
+            },
+            "пвц врати за баня втора ръка": {
+              "search_volume": 110,
+              "competition": 0.28,
+              "cpc": 0.24,
+              "intents": {
+                "informational": 27,
+                "navigational": 33,
+                "commercial": 35,
+                "transactional": 0
+              }
+            },
+            "пвц или алуминиева врата за баня": {
+              "search_volume": 110,
+              "competition": 0.47,
+              "cpc": 0.3,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 69,
+                "transactional": 0
+              }
+            },
+            "пвц врата за баня цена": {
+              "search_volume": 70,
+              "competition": 0.53,
+              "cpc": 0.26,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 81,
+                "transactional": 0
+              }
+            },
+            "пвц врата за баня с огледало": {
+              "search_volume": 30,
+              "competition": 0.22,
+              "cpc": 0.262174591365,
+              "intents": {
+                "informational": 0,
+                "navigational": 86,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "врата за баня пвц": {
+              "search_volume": 30,
+              "competition": 0.58,
+              "cpc": 0.26,
+              "intents": {
+                "informational": 0,
+                "navigational": 59,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "pvc врата за баня цена": {
+              "search_volume": 20,
+              "competition": 0.53,
+              "cpc": 0.279652897456,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 59,
+                "transactional": 0
+              }
+            },
+            "алуминиева или пвц врата за баня": {
+              "search_volume": 20,
+              "competition": 0.12,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 71,
+                "transactional": 0
+              }
+            },
+            "певеце врати за баня": {
+              "search_volume": 10,
+              "competition": 0.19,
+              "cpc": 0.367044427911,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 94
+              }
+            },
+            "врати за баня от пвц": {
+              "search_volume": 10,
+              "competition": 0.71,
+              "cpc": 0,
+              "intents": {
+                "informational": 30,
+                "navigational": 0,
+                "commercial": 18,
+                "transactional": 36
+              }
+            },
+            "врата за баня pvc": {
+              "search_volume": 10,
+              "competition": 0.39,
+              "cpc": 0.192261367001,
+              "intents": {
+                "informational": 0,
+                "navigational": 83,
+                "commercial": 0,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 39038
+        }
+      }
+    },
+    {
+      "seed": "затварящ механизъм за пвц дограма",
+      "claimed": 140,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "затварящ механизъм за пвц дограма": {
+              "search_volume": 140,
+              "competition": 0.01,
+              "cpc": 1.29,
+              "intents": {
+                "informational": 0,
+                "navigational": 80,
+                "commercial": 0,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 39028
+        }
+      }
+    },
+    {
+      "seed": "пвц и алуминиева дограма разлика",
+      "claimed": null,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "разлика между пвц и алуминиева дограма": {
+              "search_volume": 20,
+              "competition": 0.21,
+              "cpc": 0.38,
+              "intents": {
+                "informational": 35,
+                "navigational": 0,
+                "commercial": 65,
+                "transactional": 0
+              }
+            },
+            "разлика между алуминиева и пвц дограма": {
+              "search_volume": 20,
+              "competition": 0.25,
+              "cpc": 0.33,
+              "intents": {
+                "informational": 34,
+                "navigational": 0,
+                "commercial": 66,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 39018
+        }
+      }
+    },
+    {
+      "seed": "коя дограма е най-добра за шумоизолация",
+      "claimed": null,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "коя дограма е най добра за шумоизолация": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 52,
+                "navigational": 0,
+                "commercial": 48,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 39008
+        }
+      }
+    },
+    {
+      "seed": "коя дограма е най-добра за топлоизолация",
+      "claimed": null,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "коя дограма е най добра за топлоизолация": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 64,
+                "navigational": 0,
+                "commercial": 35,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38998
+        }
+      }
+    },
+    {
+      "seed": "регулиране на дограма врата",
+      "claimed": 210,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "регулиране на дограма врата": {
+              "search_volume": 210,
+              "competition": 0.03,
+              "cpc": 3.64,
+              "intents": {
+                "informational": 0,
+                "navigational": 66,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "регулиране на пвц врата": {
+              "search_volume": 140,
+              "competition": 0.01,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 57,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "регулиране на алуминиева врата": {
+              "search_volume": 50,
+              "competition": 0.01,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 96
+              }
+            },
+            "регулиране пвц врата": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 56,
+                "commercial": 0,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38988
+        }
+      }
+    },
+    {
+      "seed": "правила за монтаж на пвц дограма",
+      "claimed": 90,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "правила за монтаж на пвц дограма": {
+              "search_volume": 70,
+              "competition": 0.1,
+              "cpc": 1.21,
+              "intents": {
+                "informational": 82,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38978
+        }
+      }
+    },
+    {
+      "seed": "сваляне на стъклопакет от пвц дограма",
+      "claimed": 90,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "сваляне на стъклопакет от пвц дограма": {
+              "search_volume": 90,
+              "competition": 0.04,
+              "cpc": 0.91,
+              "intents": {
+                "informational": 0,
+                "navigational": 36,
+                "commercial": 0,
+                "transactional": 52
+              }
+            },
+            "как се сваля стъклопакет на пвц дограма": {
+              "search_volume": 20,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 64,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38968
+        }
+      }
+    },
+    {
+      "seed": "как се сваля крило на пвц дограма",
+      "claimed": 30,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "как се сваля крило на пвц дограма": {
+              "search_volume": 30,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 93,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38958
+        }
+      }
+    },
+    {
+      "seed": "външно обръщане на прозорци",
+      "claimed": 170,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "външно обръщане на прозорци": {
+              "search_volume": 170,
+              "competition": 0.03,
+              "cpc": 0.59,
+              "intents": {
+                "informational": 80,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "външно обръщане на дограма": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 90,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38948
+        }
+      }
+    },
+    {
+      "seed": "готови ъгли за обръщане на прозорци",
+      "claimed": 110,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "готови ъгли за обръщане на прозорци": {
+              "search_volume": 110,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 94
+              }
+            }
+          },
+          "credits": 38938
+        }
+      }
+    },
+    {
+      "seed": "лесно обръщане на прозорци",
+      "claimed": 210,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "лесно обръщане на прозорци": {
+              "search_volume": 210,
+              "competition": 0.02,
+              "cpc": 0.75,
+              "intents": {
+                "informational": 55,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38928
+        }
+      }
+    },
+    {
+      "seed": "материали за обръщане на прозорци",
+      "claimed": 210,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "материали за обръщане на прозорци": {
+              "search_volume": 210,
+              "competition": 0.01,
+              "cpc": 0,
+              "intents": {
+                "informational": 29,
+                "navigational": 0,
+                "commercial": 35,
+                "transactional": 36
+              }
+            }
+          },
+          "credits": 38918
+        }
+      }
+    },
+    {
+      "seed": "готови профили за обръщане на прозорци",
+      "claimed": 210,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "готови профили за обръщане на прозорци": {
+              "search_volume": 170,
+              "competition": 0.03,
+              "cpc": 5.86,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 74
+              }
+            }
+          },
+          "credits": 38908
+        }
+      }
+    },
+    {
+      "seed": "регулиране на пвц дограма видео",
+      "claimed": 320,
+      "type": "verification",
+      "data": {
+        "data": {
+          "results": {
+            "регулиране на пвц дограма видео": {
+              "search_volume": 260,
+              "competition": 0.02,
+              "cpc": 1.26,
+              "intents": {
+                "informational": 0,
+                "navigational": 75,
+                "commercial": 0,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38898
+        }
+      }
+    },
+    {
+      "seed": "дограма",
+      "type": "questions",
+      "data": {
+        "data": {
+          "results": {
+            "дограма": {
+              "questions": [],
+              "similar_searches": {
+                "пвц дограма цени": {
+                  "search_volume": 880,
+                  "competition": 0.58,
+                  "cpc": 0.297131203547,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 0,
+                    "commercial": 81,
+                    "transactional": 0
+                  }
+                },
+                "пвц дограма цена м2": {
+                  "search_volume": 720,
+                  "competition": 0.4,
+                  "cpc": 0.22721797918300002,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 0,
+                    "commercial": 81,
+                    "transactional": 0
+                  }
+                },
+                "алуминиева дограма цени": {
+                  "search_volume": 480,
+                  "competition": 0.67,
+                  "cpc": 0.367044427911,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 0,
+                    "commercial": 77,
+                    "transactional": 0
+                  }
+                },
+                "готова пвц дограма практикер": {
+                  "search_volume": 480,
+                  "competition": 0.19,
+                  "cpc": 0.367044427911,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 85
+                  }
+                },
+                "най ниски цени на пвц дограма": {
+                  "search_volume": 390,
+                  "competition": 0.55,
+                  "cpc": 0.262174591365,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 0,
+                    "commercial": 69,
+                    "transactional": 0
+                  }
+                },
+                "калкулатор пвц дограма": {
+                  "search_volume": 390,
+                  "competition": 0.52,
+                  "cpc": 0.20973967309199998,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 80,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                },
+                "кафява дограма цени": {
+                  "search_volume": 320,
+                  "competition": 0.24,
+                  "cpc": 0.297131203547,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 0,
+                    "commercial": 73,
+                    "transactional": 0
+                  }
+                },
+                "алуминиева дограма калкулатор": {
+                  "search_volume": 140,
+                  "competition": 0.63,
+                  "cpc": 0.297131203547,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 65,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                }
+              }
+            }
+          },
+          "credits": 38888
+        }
+      }
+    },
+    {
+      "seed": "обръщане на прозорци",
+      "type": "questions",
+      "data": {
+        "data": {
+          "results": {
+            "обръщане на прозорци": {
+              "questions": [],
+              "similar_searches": {
+                "обръщане на прозорци цена": {
+                  "search_volume": 590,
+                  "competition": 0.24,
+                  "cpc": 0.279652897456,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 0,
+                    "commercial": 83,
+                    "transactional": 0
+                  }
+                },
+                "лесно обръщане на прозорци": {
+                  "search_volume": 210,
+                  "competition": 0.04,
+                  "cpc": 0.34956612182,
+                  "intents": {
+                    "informational": 55,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                },
+                "материали за обръщане на прозорци": {
+                  "search_volume": 170,
+                  "competition": 0.02,
+                  "cpc": 0,
+                  "intents": {
+                    "informational": 29,
+                    "navigational": 0,
+                    "commercial": 35,
+                    "transactional": 36
+                  }
+                },
+                "външно обръщане на прозорци": {
+                  "search_volume": 170,
+                  "competition": 0.03,
+                  "cpc": 0.279652897456,
+                  "intents": {
+                    "informational": 80,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                },
+                "шпакловка за обръщане на прозорци": {
+                  "search_volume": 90,
+                  "competition": 0.03,
+                  "cpc": 0.20973967309199998,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 63
+                  }
+                },
+                "лента за обръщане на прозорци": {
+                  "search_volume": 90,
+                  "competition": 0.02,
+                  "cpc": 0.34956612182,
+                  "intents": {
+                    "informational": 20,
+                    "navigational": 38,
+                    "commercial": 0,
+                    "transactional": 28
+                  }
+                },
+                "вътрешно обръщане на прозорци": {
+                  "search_volume": 70,
+                  "competition": 0.08,
+                  "cpc": 0.297131203547,
+                  "intents": {
+                    "informational": 71,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                },
+                "външно обръщане на прозорци с фибран": {
+                  "search_volume": 50,
+                  "competition": 0.01,
+                  "cpc": 0,
+                  "intents": {
+                    "informational": 44,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 41
+                  }
+                }
+              }
+            }
+          },
+          "credits": 38878
+        }
+      }
+    },
+    {
+      "seed": "врати за баня",
+      "type": "questions",
+      "data": {
+        "data": {
+          "results": {
+            "врати за баня": {
+              "questions": [],
+              "similar_searches": {
+                "влагоустойчиви врати за баня": {
+                  "search_volume": 320,
+                  "competition": 0.4,
+                  "cpc": 0.297131203547,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 0,
+                    "commercial": 73,
+                    "transactional": 0
+                  }
+                },
+                "интериорни врати за баня": {
+                  "search_volume": 210,
+                  "competition": 0.64,
+                  "cpc": 0.34956612182,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 72
+                  }
+                },
+                "врати за баня пловдив": {
+                  "search_volume": 110,
+                  "competition": 0.69,
+                  "cpc": 0.279652897456,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 86,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                },
+                "видове врати за баня": {
+                  "search_volume": 40,
+                  "competition": 0.44,
+                  "cpc": 0.367044427911,
+                  "intents": {
+                    "informational": 81,
+                    "navigational": 0,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                },
+                "двулицеви врати за баня пловдив": {
+                  "search_volume": 20,
+                  "competition": 0.75,
+                  "cpc": 0.279652897456,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 70,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                },
+                "двулицеви врати за баня софия": {
+                  "search_volume": 0,
+                  "competition": 0,
+                  "cpc": 0,
+                  "intents": {
+                    "informational": 0,
+                    "navigational": 69,
+                    "commercial": 0,
+                    "transactional": 0
+                  }
+                }
+              }
+            }
+          },
+          "credits": 38868
+        }
+      }
+    },
+    {
+      "seed": "пвц дограма",
+      "type": "discovery",
+      "data": {
+        "data": {
+          "results": {
+            "пвц дограма цени": {
+              "search_volume": 1300,
+              "competition": 0.51,
+              "cpc": 0.93,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 81,
+                "transactional": 0
+              }
+            },
+            "пвц дограма цена": {
+              "search_volume": 1300,
+              "competition": 0.44,
+              "cpc": 0.96,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 90,
+                "transactional": 0
+              }
+            },
+            "пвц дограма": {
+              "search_volume": 1000,
+              "competition": 0.54,
+              "cpc": 0.42,
+              "intents": {
+                "informational": 65,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц дограма цена м2": {
+              "search_volume": 880,
+              "competition": 0.46,
+              "cpc": 0.49,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 81,
+                "transactional": 0
+              }
+            },
+            "пвц дограма калкулатор ролпласт": {
+              "search_volume": 720,
+              "competition": 0.39,
+              "cpc": 0.42,
+              "intents": {
+                "informational": 30,
+                "navigational": 42,
+                "commercial": 25,
+                "transactional": 0
+              }
+            },
+            "най ниски цени на пвц дограма": {
+              "search_volume": 590,
+              "competition": 0.46,
+              "cpc": 0.63,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 69,
+                "transactional": 0
+              }
+            },
+            "готова пвц дограма практикер": {
+              "search_volume": 480,
+              "competition": 0.22,
+              "cpc": 0.91,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 85
+              }
+            },
+            "обков за пвц дограма": {
+              "search_volume": 390,
+              "competition": 0.16,
+              "cpc": 1.07,
+              "intents": {
+                "informational": 28,
+                "navigational": 46,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "райбери за пвц дограма": {
+              "search_volume": 390,
+              "competition": 0.17,
+              "cpc": 0.84,
+              "intents": {
+                "informational": 31,
+                "navigational": 37,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "калкулатор пвц дограма": {
+              "search_volume": 390,
+              "competition": 0.47,
+              "cpc": 0.28,
+              "intents": {
+                "informational": 0,
+                "navigational": 80,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "райбер за пвц дограма": {
+              "search_volume": 320,
+              "competition": 0.36,
+              "cpc": 0.84,
+              "intents": {
+                "informational": 45,
+                "navigational": 42,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц дограма калкулатор": {
+              "search_volume": 320,
+              "competition": 0.45,
+              "cpc": 0.49,
+              "intents": {
+                "informational": 0,
+                "navigational": 68,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "регулиране на пвц дограма видео": {
+              "search_volume": 260,
+              "competition": 0.02,
+              "cpc": 1.26,
+              "intents": {
+                "informational": 0,
+                "navigational": 75,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц дограма втора ръка": {
+              "search_volume": 210,
+              "competition": 0.13,
+              "cpc": 0.91,
+              "intents": {
+                "informational": 42,
+                "navigational": 27,
+                "commercial": 25,
+                "transactional": 0
+              }
+            },
+            "вътрешни щори за пвц дограма": {
+              "search_volume": 210,
+              "competition": 0.29,
+              "cpc": 0.52,
+              "intents": {
+                "informational": 0,
+                "navigational": 90,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "уплътнение за пвц дограма": {
+              "search_volume": 210,
+              "competition": 0.09,
+              "cpc": 0.35,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 34,
+                "transactional": 45
+              }
+            },
+            "продавам пвц дограма втора ръка": {
+              "search_volume": 210,
+              "competition": 0.08,
+              "cpc": 1.03,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 100
+              }
+            },
+            "уплътнения за пвц дограма": {
+              "search_volume": 210,
+              "competition": 0.17,
+              "cpc": 1.22,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 40,
+                "transactional": 44
+              }
+            },
+            "цени на пвц дограма": {
+              "search_volume": 170,
+              "competition": 0.48,
+              "cpc": 0.51,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 91,
+                "transactional": 0
+              }
+            },
+            "пвц дограма софия": {
+              "search_volume": 170,
+              "competition": 0.76,
+              "cpc": 1.7,
+              "intents": {
+                "informational": 32,
+                "navigational": 64,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "алуминиева и пвц дограма профил груп": {
+              "search_volume": 170,
+              "competition": 0.03,
+              "cpc": 0.09,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 89,
+                "transactional": 0
+              }
+            },
+            "обков за пвц дограма практикер": {
+              "search_volume": 170,
+              "competition": 0.05,
+              "cpc": 1.19,
+              "intents": {
+                "informational": 35,
+                "navigational": 0,
+                "commercial": 48,
+                "transactional": 0
+              }
+            },
+            "гумени уплътнения за пвц дограма цена": {
+              "search_volume": 170,
+              "competition": 0.07,
+              "cpc": 0.84,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 77,
+                "transactional": 0
+              }
+            },
+            "пвц дограма пловдив": {
+              "search_volume": 140,
+              "competition": 0.25,
+              "cpc": 0.49,
+              "intents": {
+                "informational": 28,
+                "navigational": 55,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "готова пвц дограма": {
+              "search_volume": 140,
+              "competition": 0.44,
+              "cpc": 0.56,
+              "intents": {
+                "informational": 31,
+                "navigational": 38,
+                "commercial": 0,
+                "transactional": 26
+              }
+            },
+            "панти за пвц дограма": {
+              "search_volume": 140,
+              "competition": 0.08,
+              "cpc": 2.17,
+              "intents": {
+                "informational": 33,
+                "navigational": 53,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "боя за пвц дограма": {
+              "search_volume": 140,
+              "competition": 0.03,
+              "cpc": 0.75,
+              "intents": {
+                "informational": 58,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц дограма варна цени": {
+              "search_volume": 140,
+              "competition": 0.58,
+              "cpc": 0.35,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 77,
+                "transactional": 0
+              }
+            },
+            "затварящ механизъм за пвц дограма": {
+              "search_volume": 140,
+              "competition": 0.01,
+              "cpc": 1.29,
+              "intents": {
+                "informational": 0,
+                "navigational": 80,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "шнапер за пвц дограма": {
+              "search_volume": 110,
+              "competition": 0.01,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 55,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "дръжки за пвц дограма": {
+              "search_volume": 110,
+              "competition": 0.07,
+              "cpc": 0.49,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 48
+              }
+            },
+            "гумени уплътнения за пвц дограма": {
+              "search_volume": 110,
+              "competition": 0.06,
+              "cpc": 0.91,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 69,
+                "transactional": 0
+              }
+            },
+            "гумено уплътнение за пвц дограма": {
+              "search_volume": 110,
+              "competition": 0.09,
+              "cpc": 0.58,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 59,
+                "transactional": 0
+              }
+            },
+            "цветна пвц дограма цени": {
+              "search_volume": 110,
+              "competition": 0.36,
+              "cpc": 0.89,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 90,
+                "transactional": 0
+              }
+            },
+            "дръжка за пвц дограма": {
+              "search_volume": 110,
+              "competition": 0.06,
+              "cpc": 0.16,
+              "intents": {
+                "informational": 0,
+                "navigational": 57,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц дограма втора ръка варна": {
+              "search_volume": 110,
+              "competition": 0.22,
+              "cpc": 1.22,
+              "intents": {
+                "informational": 41,
+                "navigational": 20,
+                "commercial": 29,
+                "transactional": 0
+              }
+            },
+            "пвц дограма златен дъб цени": {
+              "search_volume": 110,
+              "competition": 0.28,
+              "cpc": 0.21,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 74,
+                "transactional": 0
+              }
+            },
+            "пвц дограма за тераса цени": {
+              "search_volume": 110,
+              "competition": 0.37,
+              "cpc": 0.21,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 79,
+                "transactional": 0
+              }
+            },
+            "пвц дограма варна": {
+              "search_volume": 110,
+              "competition": 0.28,
+              "cpc": 0.21,
+              "intents": {
+                "informational": 62,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "почистване на пожълтяла пвц дограма": {
+              "search_volume": 90,
+              "competition": 0.03,
+              "cpc": 0.73,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 71
+              }
+            },
+            "видове обков за пвц дограма": {
+              "search_volume": 90,
+              "competition": 0.18,
+              "cpc": 0.24,
+              "intents": {
+                "informational": 60,
+                "navigational": 0,
+                "commercial": 39,
+                "transactional": 0
+              }
+            },
+            "видове дръжки за пвц дограма": {
+              "search_volume": 90,
+              "competition": 0.16,
+              "cpc": 0.38,
+              "intents": {
+                "informational": 91,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц профили за дограма цени": {
+              "search_volume": 90,
+              "competition": 0.28,
+              "cpc": 0.21,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 89,
+                "transactional": 0
+              }
+            },
+            "сваляне на стъклопакет от пвц дограма": {
+              "search_volume": 90,
+              "competition": 0.04,
+              "cpc": 0.91,
+              "intents": {
+                "informational": 0,
+                "navigational": 36,
+                "commercial": 0,
+                "transactional": 52
+              }
+            },
+            "машини за пвц дограма": {
+              "search_volume": 90,
+              "competition": 0.37,
+              "cpc": 0.54,
+              "intents": {
+                "informational": 0,
+                "navigational": 36,
+                "commercial": 35,
+                "transactional": 0
+              }
+            },
+            "сваляне на стъкло от пвц дограма": {
+              "search_volume": 90,
+              "competition": 0.03,
+              "cpc": 0.4,
+              "intents": {
+                "informational": 0,
+                "navigational": 72,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "готова пвц дограма бриколаж": {
+              "search_volume": 90,
+              "competition": 0.29,
+              "cpc": 0.65,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 87
+              }
+            },
+            "пласт маркет пвц дограма": {
+              "search_volume": 90,
+              "competition": 0.12,
+              "cpc": 0.72,
+              "intents": {
+                "informational": 0,
+                "navigational": 75,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц дограма цветове": {
+              "search_volume": 90,
+              "competition": 0.27,
+              "cpc": 0.21,
+              "intents": {
+                "informational": 75,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "препарат за почистване на пвц дограма": {
+              "search_volume": 90,
+              "competition": 0.04,
+              "cpc": 0.31,
+              "intents": {
+                "informational": 0,
+                "navigational": 85,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц и алуминиева дограма цени": {
+              "search_volume": 90,
+              "competition": 0.27,
+              "cpc": 0.19,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 91,
+                "transactional": 0
+              }
+            },
+            "аксесоари за пвц дограма": {
+              "search_volume": 90,
+              "competition": 0.19,
+              "cpc": 0.23,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 55,
+                "transactional": 0
+              }
+            },
+            "пвц дограма втора ръка пловдив": {
+              "search_volume": 90,
+              "competition": 0.22,
+              "cpc": 0.54,
+              "intents": {
+                "informational": 0,
+                "navigational": 28,
+                "commercial": 47,
+                "transactional": 0
+              }
+            },
+            "ремонт на пвц дограма": {
+              "search_volume": 90,
+              "competition": 0.34,
+              "cpc": 0.45,
+              "intents": {
+                "informational": 32,
+                "navigational": 58,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц дограма русе": {
+              "search_volume": 90,
+              "competition": 0.16,
+              "cpc": 0.45,
+              "intents": {
+                "informational": 36,
+                "navigational": 63,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "алуминиева или пвц дограма": {
+              "search_volume": 90,
+              "competition": 0.18,
+              "cpc": 0.47,
+              "intents": {
+                "informational": 39,
+                "navigational": 0,
+                "commercial": 61,
+                "transactional": 0
+              }
+            },
+            "ремонт на пвц дограма софия": {
+              "search_volume": 70,
+              "competition": 0.78,
+              "cpc": 2.73,
+              "intents": {
+                "informational": 31,
+                "navigational": 45,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "препарат за премахване на лепенки от пвц дограма": {
+              "search_volume": 70,
+              "competition": 0.03,
+              "cpc": 0,
+              "intents": {
+                "informational": 20,
+                "navigational": 0,
+                "commercial": 33,
+                "transactional": 38
+              }
+            },
+            "мартина за пвц дограма": {
+              "search_volume": 70,
+              "competition": 0.07,
+              "cpc": 0,
+              "intents": {
+                "informational": 45,
+                "navigational": 34,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц дограма практикер": {
+              "search_volume": 70,
+              "competition": 0.31,
+              "cpc": 0.94,
+              "intents": {
+                "informational": 39,
+                "navigational": 20,
+                "commercial": 40,
+                "transactional": 0
+              }
+            },
+            "долна панта за пвц дограма": {
+              "search_volume": 70,
+              "competition": 0.13,
+              "cpc": 0.24,
+              "intents": {
+                "informational": 39,
+                "navigational": 55,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "правила за монтаж на пвц дограма": {
+              "search_volume": 70,
+              "competition": 0.1,
+              "cpc": 1.21,
+              "intents": {
+                "informational": 82,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц дограма бургас цени": {
+              "search_volume": 70,
+              "competition": 0.6,
+              "cpc": 0.79,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 73,
+                "transactional": 0
+              }
+            },
+            "панти за пвц дограма практикер": {
+              "search_volume": 70,
+              "competition": 0.05,
+              "cpc": 1.15,
+              "intents": {
+                "informational": 32,
+                "navigational": 0,
+                "commercial": 53,
+                "transactional": 0
+              }
+            },
+            "монтаж на пвц дограма цена": {
+              "search_volume": 70,
+              "competition": 0.24,
+              "cpc": 0.21,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 94,
+                "transactional": 0
+              }
+            },
+            "резета за пвц дограма": {
+              "search_volume": 70,
+              "competition": 0.01,
+              "cpc": 0,
+              "intents": {
+                "informational": 36,
+                "navigational": 39,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "почистване на тиксо от пвц дограма": {
+              "search_volume": 70,
+              "competition": 0.1,
+              "cpc": 1.03,
+              "intents": {
+                "informational": 0,
+                "navigational": 74,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "практикер пвц дограма": {
+              "search_volume": 70,
+              "competition": 0.3,
+              "cpc": 0.49,
+              "intents": {
+                "informational": 0,
+                "navigational": 45,
+                "commercial": 34,
+                "transactional": 0
+              }
+            },
+            "пвц дограма втора ръка бургас": {
+              "search_volume": 70,
+              "competition": 0.12,
+              "cpc": 0.16,
+              "intents": {
+                "informational": 44,
+                "navigational": 27,
+                "commercial": 24,
+                "transactional": 0
+              }
+            },
+            "резервни части за пвц дограма": {
+              "search_volume": 70,
+              "competition": 0.4,
+              "cpc": 1.24,
+              "intents": {
+                "informational": 0,
+                "navigational": 49,
+                "commercial": 33,
+                "transactional": 0
+              }
+            },
+            "пвц дограма пловдив цени": {
+              "search_volume": 70,
+              "competition": 0.77,
+              "cpc": 0.33,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 87,
+                "transactional": 0
+              }
+            },
+            "пвц дограма рехау мнения": {
+              "search_volume": 50,
+              "competition": 0.24,
+              "cpc": 0.24,
+              "intents": {
+                "informational": 71,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "как се регулира пвц дограма": {
+              "search_volume": 50,
+              "competition": 0.03,
+              "cpc": 0,
+              "intents": {
+                "informational": 98,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "фолио за пвц дограма": {
+              "search_volume": 50,
+              "competition": 0.18,
+              "cpc": 0.17,
+              "intents": {
+                "informational": 0,
+                "navigational": 87,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц дограма духа през зимата": {
+              "search_volume": 50,
+              "competition": 0.01,
+              "cpc": 0,
+              "intents": {
+                "informational": 79,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "препарат за пвц дограма": {
+              "search_volume": 50,
+              "competition": 0.02,
+              "cpc": 0.28,
+              "intents": {
+                "informational": 36,
+                "navigational": 0,
+                "commercial": 51,
+                "transactional": 0
+              }
+            },
+            "пвц или алуминиева дограма": {
+              "search_volume": 50,
+              "competition": 0.17,
+              "cpc": 0.35,
+              "intents": {
+                "informational": 45,
+                "navigational": 0,
+                "commercial": 55,
+                "transactional": 0
+              }
+            },
+            "резервни части за пвц дограма пловдив": {
+              "search_volume": 50,
+              "competition": 0.1,
+              "cpc": 0.72,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 91,
+                "transactional": 0
+              }
+            },
+            "как се сменя уплътнение на пвц дограма": {
+              "search_volume": 50,
+              "competition": 0.1,
+              "cpc": 2.38,
+              "intents": {
+                "informational": 84,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "тапи за пвц дограма": {
+              "search_volume": 50,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 46,
+                "navigational": 33,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "лепачка за пвц дограма": {
+              "search_volume": 50,
+              "competition": 0.22,
+              "cpc": 0.51,
+              "intents": {
+                "informational": 0,
+                "navigational": 37,
+                "commercial": 0,
+                "transactional": 40
+              }
+            },
+            "дръжки за пвц дограма практикер": {
+              "search_volume": 50,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 53,
+                "transactional": 0
+              }
+            },
+            "допълнително заключване на пвц дограма": {
+              "search_volume": 50,
+              "competition": 0.04,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 59
+              }
+            },
+            "райбер за пвц дограма с ключ": {
+              "search_volume": 50,
+              "competition": 0.04,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 73
+              }
+            },
+            "ремонт на пвц дограма варна": {
+              "search_volume": 50,
+              "competition": 0.29,
+              "cpc": 0.23,
+              "intents": {
+                "informational": 46,
+                "navigational": 25,
+                "commercial": 23,
+                "transactional": 0
+              }
+            },
+            "заключващи дръжки за пвц дограма": {
+              "search_volume": 50,
+              "competition": 0.11,
+              "cpc": 0.23,
+              "intents": {
+                "informational": 0,
+                "navigational": 30,
+                "commercial": 0,
+                "transactional": 52
+              }
+            },
+            "горна панта за пвц дограма": {
+              "search_volume": 50,
+              "competition": 0.13,
+              "cpc": 0.3,
+              "intents": {
+                "informational": 46,
+                "navigational": 38,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "резервни части за пвц дограма софия": {
+              "search_volume": 50,
+              "competition": 0.25,
+              "cpc": 0.94,
+              "intents": {
+                "informational": 0,
+                "navigational": 41,
+                "commercial": 50,
+                "transactional": 0
+              }
+            },
+            "пвц дограма орех": {
+              "search_volume": 40,
+              "competition": 0.15,
+              "cpc": 0.21,
+              "intents": {
+                "informational": 82,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц дограма цени калкулатор пловдив": {
+              "search_volume": 40,
+              "competition": 0.32,
+              "cpc": 0.17,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 94,
+                "transactional": 0
+              }
+            },
+            "механизми за пвц дограма цени": {
+              "search_volume": 40,
+              "competition": 0.15,
+              "cpc": 0.24,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 97,
+                "transactional": 0
+              }
+            },
+            "резе за пвц дограма": {
+              "search_volume": 40,
+              "competition": 0.25,
+              "cpc": 0.03,
+              "intents": {
+                "informational": 39,
+                "navigational": 26,
+                "commercial": 0,
+                "transactional": 24
+              }
+            },
+            "щори за пвц дограма": {
+              "search_volume": 40,
+              "competition": 0.7,
+              "cpc": 0.72,
+              "intents": {
+                "informational": 41,
+                "navigational": 33,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "части за пвц дограма": {
+              "search_volume": 40,
+              "competition": 0.22,
+              "cpc": 0.44,
+              "intents": {
+                "informational": 0,
+                "navigational": 62,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обков за пвц дограма варна": {
+              "search_volume": 40,
+              "competition": 0.3,
+              "cpc": 1.75,
+              "intents": {
+                "informational": 33,
+                "navigational": 31,
+                "commercial": 22,
+                "transactional": 0
+              }
+            },
+            "капачки за панти на пвц дограма": {
+              "search_volume": 40,
+              "competition": 0.01,
+              "cpc": 20.41,
+              "intents": {
+                "informational": 36,
+                "navigational": 42,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц дограма русе цени": {
+              "search_volume": 30,
+              "competition": 0.22,
+              "cpc": 0.42,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 70,
+                "transactional": 0
+              }
+            },
+            "смяна на обков на пвц дограма цена": {
+              "search_volume": 30,
+              "competition": 0.35,
+              "cpc": 0.24,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 82,
+                "transactional": 0
+              }
+            },
+            "пвц дограма врати": {
+              "search_volume": 20,
+              "competition": 0.3,
+              "cpc": 0.19,
+              "intents": {
+                "informational": 37,
+                "navigational": 55,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "дръжки за пвц дограма с ключ": {
+              "search_volume": 20,
+              "competition": 0.16,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 75
+              }
+            }
+          },
+          "credits": 38863
+        }
+      }
+    },
+    {
+      "seed": "обръщане на прозорци",
+      "type": "discovery",
+      "data": {
+        "data": {
+          "results": {
+            "обръщане на прозорци": {
+              "search_volume": 1300,
+              "competition": 0.08,
+              "cpc": 1,
+              "intents": {
+                "informational": 94,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цена": {
+              "search_volume": 590,
+              "competition": 0.25,
+              "cpc": 2.25,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 83,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цени": {
+              "search_volume": 590,
+              "competition": 0.25,
+              "cpc": 2.25,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 76,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с гипсокартон": {
+              "search_volume": 260,
+              "competition": 0.06,
+              "cpc": 0.58,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 92
+              }
+            },
+            "обръщане на прозорци с фибран": {
+              "search_volume": 210,
+              "competition": 0.01,
+              "cpc": 0.65,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 70
+              }
+            },
+            "обръщане на прозорци цена 2023": {
+              "search_volume": 210,
+              "competition": 0.21,
+              "cpc": 0.42,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 63,
+                "transactional": 0
+              }
+            },
+            "лесно обръщане на прозорци": {
+              "search_volume": 210,
+              "competition": 0.02,
+              "cpc": 0.75,
+              "intents": {
+                "informational": 55,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "материали за обръщане на прозорци": {
+              "search_volume": 210,
+              "competition": 0.01,
+              "cpc": 0,
+              "intents": {
+                "informational": 29,
+                "navigational": 0,
+                "commercial": 35,
+                "transactional": 36
+              }
+            },
+            "цена за обръщане на прозорци": {
+              "search_volume": 170,
+              "competition": 0.3,
+              "cpc": 2.06,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 85,
+                "transactional": 0
+              }
+            },
+            "готови профили за обръщане на прозорци": {
+              "search_volume": 170,
+              "competition": 0.03,
+              "cpc": 5.86,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 74
+              }
+            },
+            "външно обръщане на прозорци": {
+              "search_volume": 170,
+              "competition": 0.03,
+              "cpc": 0.59,
+              "intents": {
+                "informational": 80,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "профили за обръщане на прозорци": {
+              "search_volume": 170,
+              "competition": 0.06,
+              "cpc": 3.6,
+              "intents": {
+                "informational": 23,
+                "navigational": 0,
+                "commercial": 32,
+                "transactional": 43
+              }
+            },
+            "профил за обръщане на прозорци": {
+              "search_volume": 170,
+              "competition": 0.06,
+              "cpc": 3.6,
+              "intents": {
+                "informational": 0,
+                "navigational": 80,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц профили за обръщане на прозорци": {
+              "search_volume": 140,
+              "competition": 0.07,
+              "cpc": 1,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 59,
+                "transactional": 0
+              }
+            },
+            "лайсни за обръщане на прозорци": {
+              "search_volume": 140,
+              "competition": 0.01,
+              "cpc": 0.31,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 66
+              }
+            },
+            "лайсна за обръщане на прозорци": {
+              "search_volume": 140,
+              "competition": 0.01,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 70
+              }
+            },
+            "пвц профил за обръщане на прозорци": {
+              "search_volume": 140,
+              "competition": 0.07,
+              "cpc": 1,
+              "intents": {
+                "informational": 0,
+                "navigational": 29,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цена на линеен метър": {
+              "search_volume": 140,
+              "competition": 0.22,
+              "cpc": 0.75,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 93,
+                "transactional": 0
+              }
+            },
+            "готови ъгли за обръщане на прозорци": {
+              "search_volume": 110,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 94
+              }
+            },
+            "лепило за обръщане на прозорци": {
+              "search_volume": 110,
+              "competition": 0.01,
+              "cpc": 0,
+              "intents": {
+                "informational": 37,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 45
+              }
+            },
+            "двустранно обръщане на прозорци": {
+              "search_volume": 110,
+              "competition": 0.12,
+              "cpc": 0.24,
+              "intents": {
+                "informational": 71,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "шпакловка за обръщане на прозорци": {
+              "search_volume": 90,
+              "competition": 0.03,
+              "cpc": 0.54,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 63
+              }
+            },
+            "лента за обръщане на прозорци": {
+              "search_volume": 90,
+              "competition": 0.02,
+              "cpc": 0.89,
+              "intents": {
+                "informational": 20,
+                "navigational": 38,
+                "commercial": 0,
+                "transactional": 28
+              }
+            },
+            "вътрешно обръщане на прозорци": {
+              "search_volume": 90,
+              "competition": 0.02,
+              "cpc": 0.66,
+              "intents": {
+                "informational": 71,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с гипсокартон цена за труд": {
+              "search_volume": 70,
+              "competition": 0.25,
+              "cpc": 1.45,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 97,
+                "transactional": 0
+              }
+            },
+            "гипсово лепило за обръщане на прозорци": {
+              "search_volume": 70,
+              "competition": 0.01,
+              "cpc": 1.31,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 92
+              }
+            },
+            "обръщане на прозорци цена за труд": {
+              "search_volume": 50,
+              "competition": 0.12,
+              "cpc": 0.91,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 92,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци отвън": {
+              "search_volume": 50,
+              "competition": 0.03,
+              "cpc": 0,
+              "intents": {
+                "informational": 91,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "външно обръщане на прозорци с фибран": {
+              "search_volume": 50,
+              "competition": 0.01,
+              "cpc": 19.14,
+              "intents": {
+                "informational": 44,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 41
+              }
+            },
+            "ъгли за обръщане на прозорци": {
+              "search_volume": 50,
+              "competition": 0.01,
+              "cpc": 0,
+              "intents": {
+                "informational": 36,
+                "navigational": 0,
+                "commercial": 26,
+                "transactional": 34
+              }
+            },
+            "обръщане на врати и прозорци цена": {
+              "search_volume": 40,
+              "competition": 0.29,
+              "cpc": 0.72,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 90,
+                "transactional": 0
+              }
+            },
+            "готови профили за обръщане на прозорци практикер": {
+              "search_volume": 40,
+              "competition": 0.01,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 64,
+                "transactional": 0
+              }
+            },
+            "майстор за обръщане на прозорци": {
+              "search_volume": 40,
+              "competition": 0.41,
+              "cpc": 1.12,
+              "intents": {
+                "informational": 0,
+                "navigational": 33,
+                "commercial": 23,
+                "transactional": 24
+              }
+            },
+            "обръщане на прозорци цена пловдив": {
+              "search_volume": 30,
+              "competition": 0.01,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 66,
+                "transactional": 0
+              }
+            },
+            "профил за обръщане на прозорци цена": {
+              "search_volume": 30,
+              "competition": 0.02,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 87,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с пвц профили": {
+              "search_volume": 20,
+              "competition": 0.03,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 41,
+                "transactional": 42
+              }
+            },
+            "обръщане на прозорци с гипсокартон цени": {
+              "search_volume": 20,
+              "competition": 0.23,
+              "cpc": 1.33,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 90,
+                "transactional": 0
+              }
+            },
+            "первази за обръщане на прозорци": {
+              "search_volume": 20,
+              "competition": 0.05,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 63
+              }
+            },
+            "обръщане на прозорци с гипсокартон цена": {
+              "search_volume": 20,
+              "competition": 0.23,
+              "cpc": 1.33,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 92,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с мазилка": {
+              "search_volume": 20,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 77
+              }
+            },
+            "обръщане на прозорци бургас цени": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 74,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с фибран видео": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 33,
+                "navigational": 53,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "г-е образни профили за обръщане на прозорци": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 51,
+                "navigational": 0,
+                "commercial": 35,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с гипс": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 66
+              }
+            },
+            "обръщане на прозорци направи си сам": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 98
+              }
+            },
+            "как се прави обръщане на прозорци": {
+              "search_volume": 10,
+              "competition": 0.01,
+              "cpc": 0,
+              "intents": {
+                "informational": 100,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с плочки": {
+              "search_volume": 10,
+              "competition": 0.04,
+              "cpc": 0,
+              "intents": {
+                "informational": 53,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 31
+              }
+            },
+            "обръщане на прозорци цена 2024": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 64,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци видео": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 45,
+                "navigational": 50,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци технология": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 78,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци от външната страна": {
+              "search_volume": 10,
+              "competition": 0.02,
+              "cpc": 0,
+              "intents": {
+                "informational": 84,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с изолация": {
+              "search_volume": 10,
+              "competition": 0.02,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 66
+              }
+            },
+            "обръщане на врати и прозорци": {
+              "search_volume": 10,
+              "competition": 0.15,
+              "cpc": 1.07,
+              "intents": {
+                "informational": 93,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цени пловдив": {
+              "search_volume": 10,
+              "competition": 0.86,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 64,
+                "transactional": 0
+              }
+            },
+            "какво значи обръщане на прозорци": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 100,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "какво е обръщане на прозорци": {
+              "search_volume": 10,
+              "competition": 0.02,
+              "cpc": 0,
+              "intents": {
+                "informational": 100,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "мисия моят дом обръщане на прозорци": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 90,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цени софия": {
+              "search_volume": 10,
+              "competition": 0.71,
+              "cpc": 1.35,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 70,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с гипсокартон или с фибран": {
+              "search_volume": 10,
+              "competition": 0.05,
+              "cpc": 0,
+              "intents": {
+                "informational": 39,
+                "navigational": 0,
+                "commercial": 54,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с дърво": {
+              "search_volume": 10,
+              "competition": 0.01,
+              "cpc": 0,
+              "intents": {
+                "informational": 82,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци варна": {
+              "search_volume": 10,
+              "competition": 0.24,
+              "cpc": 1.17,
+              "intents": {
+                "informational": 63,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с фибран цени": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 75,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци софия": {
+              "search_volume": 10,
+              "competition": 0.56,
+              "cpc": 3.34,
+              "intents": {
+                "informational": 72,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци с мдф": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 70
+              }
+            },
+            "пвц первази за обръщане на прозорци": {
+              "search_volume": 10,
+              "competition": 0.06,
+              "cpc": 0,
+              "intents": {
+                "informational": 26,
+                "navigational": 0,
+                "commercial": 30,
+                "transactional": 39
+              }
+            },
+            "обръщане на прозорци цени варна": {
+              "search_volume": 10,
+              "competition": 0.29,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 77,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цени стара загора": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 83,
+                "transactional": 0
+              }
+            },
+            "система за обръщане на прозорци вектор": {
+              "search_volume": 10,
+              "competition": 0.07,
+              "cpc": 1.24,
+              "intents": {
+                "informational": 35,
+                "navigational": 39,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "гипсокартон за обръщане на прозорци": {
+              "search_volume": 10,
+              "competition": 0.05,
+              "cpc": 0.14,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 64
+              }
+            },
+            "обръщане на прозорци отвътре": {
+              "search_volume": 10,
+              "competition": 0.04,
+              "cpc": 0,
+              "intents": {
+                "informational": 82,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци пловдив": {
+              "search_volume": 10,
+              "competition": 0.13,
+              "cpc": 0,
+              "intents": {
+                "informational": 36,
+                "navigational": 61,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "г е образни профили за обръщане на прозорци": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 51,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци отвън с фибран": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 98
+              }
+            },
+            "обръщане на прозорци с вароциментова мазилка": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 99
+              }
+            },
+            "система за обръщане на прозорци": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 24,
+                "navigational": 0,
+                "commercial": 35,
+                "transactional": 38
+              }
+            },
+            "обръщане на прозорци стъпка по стъпка": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 47,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 36
+              }
+            },
+            "топлоизолация обръщане на прозорци": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 83,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци пазарджик": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 61,
+                "navigational": 34,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци стара загора": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 57,
+                "navigational": 41,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "добра фирма за обръщане на прозорци": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 40,
+                "navigational": 0,
+                "commercial": 59,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цени 2016": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 69,
+                "transactional": 0
+              }
+            },
+            "плевен обръщане на прозорци": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 83,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "гипс за обръщане на прозорци": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 53
+              }
+            },
+            "обръщане на прозорци цена 2019": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 63,
+                "transactional": 0
+              }
+            },
+            "майстор за обръщане на прозорци пловдив": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 60,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци мисия моят дом": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 78,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цени 2019": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 33,
+                "navigational": 0,
+                "commercial": 63,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цена 2021": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 68,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цена 2020": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 73,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цени 2018": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 33,
+                "navigational": 0,
+                "commercial": 66,
+                "transactional": 0
+              }
+            },
+            "фирма за обръщане на прозорци": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 52,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци перник": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 66,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц профил за обръщане на прозорци варна": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 61,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци panel": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 89,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци асеновград": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 62,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци със стиропор": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 95
+              }
+            },
+            "обръщане на прозорци с ламинат": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 63,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "фирми за обръщане на прозорци": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 94,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цени плевен": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 76,
+                "transactional": 0
+              }
+            },
+            "обръщане на прозорци цена 2022": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 32,
+                "navigational": 0,
+                "commercial": 60,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38858
+        }
+      }
+    },
+    {
+      "seed": "регулиране на пвц дограма",
+      "type": "discovery",
+      "data": {
+        "data": {
+          "results": {
+            "регулиране на пвц дограма видео": {
+              "search_volume": 260,
+              "competition": 0.02,
+              "cpc": 1.26,
+              "intents": {
+                "informational": 0,
+                "navigational": 75,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "регулиране на пвц дограма": {
+              "search_volume": 40,
+              "competition": 0.16,
+              "cpc": 1.91,
+              "intents": {
+                "informational": 51,
+                "navigational": 38,
+                "commercial": 0,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38853
+        }
+      }
+    },
+    {
+      "seed": "конденз по прозорците",
+      "type": "discovery-verification",
+      "data": {
+        "data": {
+          "results": {
+            "конденз по прозорците": {
+              "search_volume": 210,
+              "competition": 0.01,
+              "cpc": 1.54,
+              "intents": {
+                "informational": 83,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "премахване на конденз по прозорците": {
+              "search_volume": 50,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 81
+              }
+            },
+            "конденз на прозорците": {
+              "search_volume": 20,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 82,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "причина за конденз по прозорците": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 100,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "конденз прозорци": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 73,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "конденз по прозорците сутрин": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 40,
+                "navigational": 55,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "конденз по прозорците решение": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 46,
+                "navigational": 0,
+                "commercial": 48,
+                "transactional": 0
+              }
+            },
+            "как да се справим с конденза по прозорците": {
+              "search_volume": 10,
+              "competition": 0.14,
+              "cpc": 0,
+              "intents": {
+                "informational": 100,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "как да премахнем конденза от прозорците": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 100,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "защо има конденз по прозорците": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 100,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38843
+        }
+      }
+    },
+    {
+      "seed": "зимен режим на дограма",
+      "type": "discovery-verification",
+      "data": {
+        "data": {
+          "results": {
+            "зимен режим на дограма": {
+              "search_volume": 90,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 66,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "дограма зимен режим": {
+              "search_volume": 50,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 90,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "зимен и летен режим на дограма": {
+              "search_volume": 30,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 82,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц дограма зимен режим": {
+              "search_volume": 20,
+              "competition": 0.07,
+              "cpc": 0,
+              "intents": {
+                "informational": 64,
+                "navigational": 32,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц дограма летен и зимен режим": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 68,
+                "transactional": 0
+              }
+            },
+            "зимен режим на пвц дограма": {
+              "search_volume": 10,
+              "competition": 0.05,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 71,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "зимен и летен режим на пвц дограма": {
+              "search_volume": 10,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 42,
+                "navigational": 0,
+                "commercial": 57,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38833
+        }
+      }
+    },
+    {
+      "seed": "шумоизолираща дограма",
+      "type": "discovery-verification",
+      "data": {
+        "data": {
+          "results": {
+            "шумоизолираща дограма": {
+              "search_volume": 30,
+              "competition": 0.67,
+              "cpc": 0.58,
+              "intents": {
+                "informational": 85,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38823
+        }
+      }
+    },
+    {
+      "seed": "топлоизолираща дограма",
+      "type": "discovery-verification",
+      "data": {
+        "data": {
+          "results": {
+            "топлоизолираща дограма": {
+              "search_volume": 0,
+              "competition": 0,
+              "cpc": 0,
+              "intents": {
+                "informational": 58,
+                "navigational": 31,
+                "commercial": 0,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38813
+        }
+      }
+    },
+    {
+      "seed": "двоен или троен стъклопакет",
+      "type": "discovery-verification",
+      "data": {
+        "data": {
+          "results": {
+            "смяна на двоен с троен стъклопакет": {
+              "search_volume": 30,
+              "competition": 0.6,
+              "cpc": 1.47,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 100
+              }
+            },
+            "двоен или троен стъклопакет мнения": {
+              "search_volume": 20,
+              "competition": 0.37,
+              "cpc": 0.37,
+              "intents": {
+                "informational": 47,
+                "navigational": 0,
+                "commercial": 53,
+                "transactional": 0
+              }
+            },
+            "двоен или троен стъклопакет": {
+              "search_volume": 20,
+              "competition": 0.21,
+              "cpc": 0.28,
+              "intents": {
+                "informational": 71,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "троен или двоен стъклопакет": {
+              "search_volume": 10,
+              "competition": 0.29,
+              "cpc": 0,
+              "intents": {
+                "informational": 71,
+                "navigational": 0,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "разлика между двоен и троен стъклопакет": {
+              "search_volume": 10,
+              "competition": 0.3,
+              "cpc": 0.087391530455,
+              "intents": {
+                "informational": 47,
+                "navigational": 0,
+                "commercial": 53,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38803
+        }
+      }
+    },
+    {
+      "seed": "пвц или алуминиева врата за баня",
+      "type": "discovery-verification",
+      "data": {
+        "data": {
+          "results": {
+            "пвц врата за баня": {
+              "search_volume": 720,
+              "competition": 0.28,
+              "cpc": 0.61,
+              "intents": {
+                "informational": 28,
+                "navigational": 56,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "pvc врата за баня": {
+              "search_volume": 320,
+              "competition": 0.57,
+              "cpc": 0.3,
+              "intents": {
+                "informational": 0,
+                "navigational": 84,
+                "commercial": 0,
+                "transactional": 0
+              }
+            },
+            "пвц или алуминиева врата за баня": {
+              "search_volume": 110,
+              "competition": 0.47,
+              "cpc": 0.3,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 69,
+                "transactional": 0
+              }
+            },
+            "алуминиева или пвц врата за баня": {
+              "search_volume": 20,
+              "competition": 0.12,
+              "cpc": 0,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 71,
+                "transactional": 0
+              }
+            },
+            "pvc врата за баня цена": {
+              "search_volume": 20,
+              "competition": 0.53,
+              "cpc": 0.28,
+              "intents": {
+                "informational": 0,
+                "navigational": 0,
+                "commercial": 59,
+                "transactional": 0
+              }
+            }
+          },
+          "credits": 38793
+        }
+      }
+    },
+    {
+      "seed": "каква дограма да избера",
+      "type": "serp",
+      "data": {
+        "data": {
+          "list": {
+            "1": {
+              "url": "https://stroitel.eu/blog/dograma-i-prozortzi/izbor-na-dograma-palno-rakovodstvo-za-izbor-na-pvc-aluminieva-ili-darvena-dograma",
+              "display_url": "https://stroitel.eu/blog/dograma-i-prozortzi/izbor-na-dograma-palno-rakovodstvo-za-izbor-na-pvc-aluminieva-ili-darvena-dograma",
+              "domain": "stroitel.eu",
+              "visibility": 15.62
+            },
+            "2": {
+              "url": "https://www.pvcruse.com/izbor-dograma/",
+              "display_url": "https://www.pvcruse.com/izbor-dograma/",
+              "domain": "www.pvcruse.com",
+              "visibility": 7.02
+            },
+            "3": {
+              "url": "http://npnconstruction.com/kakva-dograma-da-izberem/",
+              "display_url": "http://npnconstruction.com/kakva-dograma-da-izberem/",
+              "domain": "npnconstruction.com",
+              "visibility": 4.925
+            },
+            "4": {
+              "url": "https://www.bg-mamma.com/?topic=792893.30",
+              "display_url": "https://www.bg-mamma.com/?topic=792893.30",
+              "domain": "www.bg-mamma.com",
+              "visibility": 3.485
+            },
+            "5": {
+              "url": "https://premiumplast.bg/news/kakva-dograma-da-izberem-za-kushta",
+              "display_url": "https://premiumplast.bg/news/kakva-dograma-da-izberem-za-kushta",
+              "domain": "premiumplast.bg",
+              "visibility": 2.75
+            },
+            "6": {
+              "url": "https://dogramavarna.org/blog.php?id=1",
+              "display_url": "https://dogramavarna.org/blog.php?id=1",
+              "domain": "dogramavarna.org",
+              "visibility": 1.6614322206268275
+            },
+            "7": {
+              "url": "https://mm-dograma.com/blog/vsichko-za-pvc-dograma/",
+              "display_url": "https://mm-dograma.com/blog/vsichko-za-pvc-dograma/",
+              "domain": "mm-dograma.com",
+              "visibility": 1.2396061673868033
+            },
+            "8": {
+              "url": "https://remonts.bg/blog/pvc-aluminieva-ili-darvena-dograma",
+              "display_url": "https://remonts.bg/blog/pvc-aluminieva-ili-darvena-dograma",
+              "domain": "remonts.bg",
+              "visibility": 0.9618315729257161
+            },
+            "9": {
+              "url": "https://serpio.bg/%D0%BA%D0%B0%D0%BA-%D0%B4%D0%B0-%D1%81%D0%B5-%D0%B8%D0%B7%D0%B1%D0%B5%D1%80%D0%B5%D0%BC-%D0%BD%D0%B0%D0%B9-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%BD%D0%B0%D1%82%D0%B0-%D0%BF%D0%B2%D1%86-%D0%B4/",
+              "display_url": "https://serpio.bg/%D0%BA%D0%B0%D0%BA-%D0%B4%D0%B0-%D1%81%D0%B5-%D0%B8%D0%B7%D0%B1%D0%B5%D1%80%D0%B5%D0%BC-%D0%BD%D0%B0%D0%B9-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%BD%D0%B0%D1%82%D0%B0-%D0%BF%D0%B2%D1%86-%D0%B4/",
+              "domain": "serpio.bg",
+              "visibility": 0.7689697158120478
+            },
+            "10": {
+              "url": "https://dogramavarna.org/blog.php?id=1",
+              "display_url": "https://dogramavarna.org/blog.php?id=1",
+              "domain": "dogramavarna.org",
+              "visibility": 0.6294627058970836
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": "разлика между пвц и алуминиева дограма",
+      "type": "serp",
+      "data": {
+        "data": {
+          "list": {
+            "1": {
+              "url": "https://luxplast.bg/al-vs-pvc/",
+              "display_url": "https://luxplast.bg/al-vs-pvc/",
+              "domain": "luxplast.bg",
+              "visibility": 6.247999999999999
+            },
+            "2": {
+              "url": "https://plast-market.bg/blog/osnovni-razliki-mezhdu-pvc-i-aluminievata-dograma",
+              "display_url": "https://plast-market.bg/blog/osnovni-razliki-mezhdu-pvc-i-aluminievata-dograma",
+              "domain": "plast-market.bg",
+              "visibility": 2.8079999999999994
+            },
+            "3": {
+              "url": "https://serpio.bg/%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D0%BA%D0%B8-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D0%B0%D0%BB%D1%83%D0%BC%D0%B8%D0%BD%D0%B8%D0%B5%D0%B2%D0%B0-%D0%B8-%D0%BF%D0%B2%D1%86-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC-2/",
+              "display_url": "https://serpio.bg/%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D0%BA%D0%B8-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D0%B0%D0%BB%D1%83%D0%BC%D0%B8%D0%BD%D0%B8%D0%B5%D0%B2%D0%B0-%D0%B8-%D0%BF%D0%B2%D1%86-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC-2/",
+              "domain": "serpio.bg",
+              "visibility": 1.97
+            },
+            "4": {
+              "url": "https://www.dikos74.com/2024/03/27/pvc-aluminieva-dograma-razliki/",
+              "display_url": "https://www.dikos74.com/2024/03/27/pvc-aluminieva-dograma-razliki/",
+              "domain": "www.dikos74.com",
+              "visibility": 1.3940000000000001
+            },
+            "5": {
+              "url": "https://www.facebook.com/Rollplast.Ltd/posts/-%D1%82%D0%BE%D0%BF-%D0%B2%D1%8A%D0%BF%D1%80%D0%BE%D1%81%D0%B8-pvc-%D0%B8%D0%BB%D0%B8-%D0%B0%D0%BB%D1%83%D0%BC%D0%B8%D0%BD%D0%B8%D0%B5%D0%B2%D0%B0-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%BA%D0%BE%D1%8F-%D0%B5-%D0%BF%D0%BE-%D0%B4%D0%BE%D0%B1%D1%80%D0%B0-%D0%B7%D0%B0-%D0%B2%D0%B0%D1%81-%D1%82%D0%BE%D0%B2%D0%B0-%D0%B5-%D0%B5%D0%B4%D0%B8%D0%BD-%D0%BE%D1%82-%D0%BD%D0%B0%D0%B9/1116698043809700/",
+              "display_url": "https://www.facebook.com/Rollplast.Ltd/posts/-%D1%82%D0%BE%D0%BF-%D0%B2%D1%8A%D0%BF%D1%80%D0%BE%D1%81%D0%B8-pvc-%D0%B8%D0%BB%D0%B8-%D0%B0%D0%BB%D1%83%D0%BC%D0%B8%D0%BD%D0%B8%D0%B5%D0%B2%D0%B0-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%BA%D0%BE%D1%8F-%D0%B5-%D0%BF%D0%BE-%D0%B4%D0%BE%D0%B1%D1%80%D0%B0-%D0%B7%D0%B0-%D0%B2%D0%B0%D1%81-%D1%82%D0%BE%D0%B2%D0%B0-%D0%B5-%D0%B5%D0%B4%D0%B8%D0%BD-%D0%BE%D1%82-%D0%BD%D0%B0%D0%B9/1116698043809700/",
+              "domain": "www.facebook.com",
+              "visibility": 1.1
+            },
+            "6": {
+              "url": "https://forum.napravisam.bg/viewtopic.php?t=1222",
+              "display_url": "https://forum.napravisam.bg/viewtopic.php?t=1222",
+              "domain": "forum.napravisam.bg",
+              "visibility": 0.664572888250731
+            },
+            "7": {
+              "url": "https://studioidea.bg/pvc-%D0%B8-al-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0/",
+              "display_url": "https://studioidea.bg/pvc-%D0%B8-al-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0/",
+              "domain": "studioidea.bg",
+              "visibility": 0.49584246695472134
+            },
+            "8": {
+              "url": "https://alumeks21.com/pvc-%D0%B8%D0%BB%D0%B8-%D0%B0%D0%BB%D1%83%D0%BC%D0%B8%D0%BD%D0%B8%D0%B5%D0%B2%D0%B0-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0/",
+              "display_url": "https://alumeks21.com/pvc-%D0%B8%D0%BB%D0%B8-%D0%B0%D0%BB%D1%83%D0%BC%D0%B8%D0%BD%D0%B8%D0%B5%D0%B2%D0%B0-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0/",
+              "domain": "alumeks21.com",
+              "visibility": 0.3847326291702864
+            },
+            "9": {
+              "url": "https://www.reddit.com/r/bulgaria/comments/162w75k/%D0%B2%D1%81%D0%B8%D1%87%D0%BA%D0%B8_%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D1%82%D0%B8_%D0%BC%D0%B8_%D0%BA%D0%B0%D0%B7%D0%B2%D0%B0%D1%82_%D0%B4%D0%B0_%D0%BD%D0%B5_%D1%81%D0%BB%D0%B0%D0%B3%D0%B0%D0%BC_%D0%B0%D0%BB%D1%83%D0%BC%D0%B8%D0%BD%D0%B8%D0%B5%D0%B2%D0%B0/",
+              "display_url": "https://www.reddit.com/r/bulgaria/comments/162w75k/%D0%B2%D1%81%D0%B8%D1%87%D0%BA%D0%B8_%D0%BF%D0%BE%D0%B7%D0%BD%D0%B0%D1%82%D0%B8_%D0%BC%D0%B8_%D0%BA%D0%B0%D0%B7%D0%B2%D0%B0%D1%82_%D0%B4%D0%B0_%D0%BD%D0%B5_%D1%81%D0%BB%D0%B0%D0%B3%D0%B0%D0%BC_%D0%B0%D0%BB%D1%83%D0%BC%D0%B8%D0%BD%D0%B8%D0%B5%D0%B2%D0%B0/",
+              "domain": "www.reddit.com",
+              "visibility": 0.30758788632481915
+            },
+            "10": {
+              "url": "https://luxplast.bg/kakva-e-razlikata-mejdu-aluminievata-i-pvc-dograma-predimstva-i-nedostatutsi/",
+              "display_url": "https://luxplast.bg/kakva-e-razlikata-mejdu-aluminievata-i-pvc-dograma-predimstva-i-nedostatutsi/",
+              "domain": "luxplast.bg",
+              "visibility": 0.25178508235883346
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": "шумоизолираща дограма",
+      "type": "serp",
+      "data": {
+        "data": {
+          "list": {
+            "1": {
+              "url": "https://www.facebook.com/61571017573947/videos/%D1%88%D1%83%D0%BC%D0%BE%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%B0-%D0%BB%D0%B8-%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB-%D0%B8-%D1%82%D1%80%D0%BE%D0%B9%D0%BD%D0%B8%D1%8F-%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE%D0%BF%D0%B0%D0%BA%D0%B5%D1%82/681318611468692/",
+              "display_url": "https://www.facebook.com/61571017573947/videos/%D1%88%D1%83%D0%BC%D0%BE%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%B0-%D0%BB%D0%B8-%D0%BA%D0%B0%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BF%D1%80%D0%BE%D1%84%D0%B8%D0%BB-%D0%B8-%D1%82%D1%80%D0%BE%D0%B9%D0%BD%D0%B8%D1%8F-%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE%D0%BF%D0%B0%D0%BA%D0%B5%D1%82/681318611468692/",
+              "domain": "www.facebook.com",
+              "visibility": 9.372
+            },
+            "2": {
+              "url": "https://luxdograma.bg/",
+              "display_url": "https://luxdograma.bg/",
+              "domain": "luxdograma.bg",
+              "visibility": 4.212
+            },
+            "3": {
+              "url": "https://urbanpassive.bg/przorci",
+              "display_url": "https://urbanpassive.bg/przorci",
+              "domain": "urbanpassive.bg",
+              "visibility": 2.955
+            },
+            "4": {
+              "url": "https://forum.napravisam.bg/viewtopic.php?t=57188&start=10",
+              "display_url": "https://forum.napravisam.bg/viewtopic.php?t=57188&start=10",
+              "domain": "forum.napravisam.bg",
+              "visibility": 2.0909999999999997
+            },
+            "5": {
+              "url": "https://shumana.com/%D0%BA%D0%B0%D0%BA-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B0-%D0%B2%D0%BB%D0%B8%D1%8F%D0%B5-%D0%BD%D0%B0-%D1%88%D1%83%D0%BC%D0%BE%D0%B8%D0%B7%D0%BE%D0%BB%D0%B0%D1%86%D0%B8%D1%8F%D1%82/",
+              "display_url": "https://shumana.com/%D0%BA%D0%B0%D0%BA-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B0-%D0%B2%D0%BB%D0%B8%D1%8F%D0%B5-%D0%BD%D0%B0-%D1%88%D1%83%D0%BC%D0%BE%D0%B8%D0%B7%D0%BE%D0%BB%D0%B0%D1%86%D0%B8%D1%8F%D1%82/",
+              "domain": "shumana.com",
+              "visibility": 1.65
+            },
+            "6": {
+              "url": "https://alumeks21.com/%D0%B7%D0%B2%D1%83%D0%BA%D0%BE%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%B0%D1%89%D0%B8-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8/",
+              "display_url": "https://alumeks21.com/%D0%B7%D0%B2%D1%83%D0%BA%D0%BE%D0%B8%D0%B7%D0%BE%D0%BB%D0%B8%D1%80%D0%B0%D1%89%D0%B8-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8/",
+              "domain": "alumeks21.com",
+              "visibility": 0.9968593323760965
+            },
+            "7": {
+              "url": "https://dogramisofia.com/",
+              "display_url": "https://dogramisofia.com/",
+              "domain": "dogramisofia.com",
+              "visibility": 0.743763700432082
+            },
+            "8": {
+              "url": "https://bg.euplaiwindow.com/news/ultimate-soundproof-windows-doors-solution.html",
+              "display_url": "https://bg.euplaiwindow.com/news/ultimate-soundproof-windows-doors-solution.html",
+              "domain": "bg.euplaiwindow.com",
+              "visibility": 0.5770989437554297
+            },
+            "9": {
+              "url": "https://probild.bg/",
+              "display_url": "https://probild.bg/",
+              "domain": "probild.bg",
+              "visibility": 0.4613818294872287
+            },
+            "10": {
+              "url": "https://www.facebook.com/groups/299913907483894/posts/1312191889589419/",
+              "display_url": "https://www.facebook.com/groups/299913907483894/posts/1312191889589419/",
+              "domain": "www.facebook.com",
+              "visibility": 0.3776776235382502
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": "пвц или алуминиева врата за баня",
+      "type": "serp",
+      "data": {
+        "data": {
+          "list": {
+            "1": {
+              "url": "https://www.bg-mamma.com/?topic=157889",
+              "display_url": "https://www.bg-mamma.com/?topic=157889",
+              "domain": "www.bg-mamma.com",
+              "visibility": 34.364
+            },
+            "2": {
+              "url": "https://sbsdesign.bg/bg/aluminii-ili-pvc-vrata-za-banya/",
+              "display_url": "https://sbsdesign.bg/bg/aluminii-ili-pvc-vrata-za-banya/",
+              "domain": "sbsdesign.bg",
+              "visibility": 15.443999999999999
+            },
+            "3": {
+              "url": "https://temax.bg/vrati/vrati-za-banja",
+              "display_url": "https://temax.bg/vrati/vrati-za-banja",
+              "domain": "temax.bg",
+              "visibility": 10.835
+            },
+            "4": {
+              "url": "https://avasell.com/vrati/%D0%B2%D0%BE%D0%B4%D0%BE%D1%83%D1%81%D1%82%D0%BE%D0%B9%D1%87%D0%B8%D0%B2%D0%B0-%D0%B2%D1%80%D0%B0%D1%82%D0%B0-%D0%B7%D0%B0-%D0%B1%D0%B0%D0%BD%D1%8F-%D0%B8-%D1%82%D0%BE%D0%B0%D0%BB%D0%B5%D1%82%D0%BD/",
+              "display_url": "https://avasell.com/vrati/%D0%B2%D0%BE%D0%B4%D0%BE%D1%83%D1%81%D1%82%D0%BE%D0%B9%D1%87%D0%B8%D0%B2%D0%B0-%D0%B2%D1%80%D0%B0%D1%82%D0%B0-%D0%B7%D0%B0-%D0%B1%D0%B0%D0%BD%D1%8F-%D0%B8-%D1%82%D0%BE%D0%B0%D0%BB%D0%B5%D1%82%D0%BD/",
+              "domain": "avasell.com",
+              "visibility": 7.666999999999999
+            },
+            "5": {
+              "url": "http://www.renault-bg.com/smf/index.php?topic=40809.0",
+              "display_url": "http://www.renault-bg.com/smf/index.php?topic=40809.0",
+              "domain": "www.renault-bg.com",
+              "visibility": 6.05
+            },
+            "6": {
+              "url": "https://forum.setcombg.com/%D1%82%D0%BE%D0%BF%D0%BB%D0%BE%D0%B8%D0%B7%D0%BE%D0%BB%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%B2%D0%B5%D0%BD%D1%82%D0%B8%D0%BB%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-%D0%B2%D1%8A%D0%B7%D0%B4%D1%83%D1%85%D0%B0/49839-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B8%D0%BE%D1%80%D0%BD%D0%B0-%D0%B2%D1%80%D0%B0%D1%82%D0%B0-%D0%B0%D0%BB%D1%83%D0%BC%D0%B8%D0%BD%D0%B8%D0%B5%D0%B2%D0%B0-%D0%B8%D0%BB%D0%B8-%D0%BF%D0%B2%D1%86.html",
+              "display_url": "https://forum.setcombg.com/%D1%82%D0%BE%D0%BF%D0%BB%D0%BE%D0%B8%D0%B7%D0%BE%D0%BB%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%B2%D0%B5%D0%BD%D1%82%D0%B8%D0%BB%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-%D0%B2%D1%8A%D0%B7%D0%B4%D1%83%D1%85%D0%B0/49839-%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B8%D0%BE%D1%80%D0%BD%D0%B0-%D0%B2%D1%80%D0%B0%D1%82%D0%B0-%D0%B0%D0%BB%D1%83%D0%BC%D0%B8%D0%BD%D0%B8%D0%B5%D0%B2%D0%B0-%D0%B8%D0%BB%D0%B8-%D0%BF%D0%B2%D1%86.html",
+              "domain": "forum.setcombg.com",
+              "visibility": 3.6551508853790207
+            },
+            "7": {
+              "url": "https://www.borsauzunov.bg/vrati/aluminievi-vrati/%D0%BF%D0%B2%D1%86-%D0%B2%D1%80%D0%B0%D1%82%D0%B0-%D0%B7%D0%B0-%D0%B1%D0%B0%D0%BD%D1%8F-%D1%81-%D0%B4%D0%B2%D0%B5-%D0%BE%D0%B3%D0%BB%D0%B5%D0%B4%D0%B0%D0%BB%D0%B0-%D0%B3%D0%BE%D1%82%D0%BE/",
+              "display_url": "https://www.borsauzunov.bg/vrati/aluminievi-vrati/%D0%BF%D0%B2%D1%86-%D0%B2%D1%80%D0%B0%D1%82%D0%B0-%D0%B7%D0%B0-%D0%B1%D0%B0%D0%BD%D1%8F-%D1%81-%D0%B4%D0%B2%D0%B5-%D0%BE%D0%B3%D0%BB%D0%B5%D0%B4%D0%B0%D0%BB%D0%B0-%D0%B3%D0%BE%D1%82%D0%BE/",
+              "domain": "www.borsauzunov.bg",
+              "visibility": 2.7271335682509674
+            },
+            "8": {
+              "url": "https://sofia.vrati-abc.com/aluminievi-pvc-ili-stakleni-vrati-za-banya/",
+              "display_url": "https://sofia.vrati-abc.com/aluminievi-pvc-ili-stakleni-vrati-za-banya/",
+              "domain": "sofia.vrati-abc.com",
+              "visibility": 2.1160294604365752
+            },
+            "9": {
+              "url": "https://sofia.vrati-abc.com/aluminievi-pvc-ili-stakleni-vrati-za-banya/",
+              "display_url": "https://sofia.vrati-abc.com/aluminievi-pvc-ili-stakleni-vrati-za-banya/",
+              "domain": "sofia.vrati-abc.com",
+              "visibility": 1.6917333747865053
+            },
+            "10": {
+              "url": "https://eurostill.bg/pvc-vrati-za-banya/",
+              "display_url": "https://eurostill.bg/pvc-vrati-za-banya/",
+              "domain": "eurostill.bg",
+              "visibility": 1.3848179529735838
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": "двоен или троен стъклопакет",
+      "type": "serp",
+      "data": {
+        "data": {
+          "list": {
+            "1": {
+              "url": "https://plast-market.bg/blog/k-staklo-4-sezona-dvoen-i-troen-staklopaket",
+              "display_url": "https://plast-market.bg/blog/k-staklo-4-sezona-dvoen-i-troen-staklopaket",
+              "domain": "plast-market.bg",
+              "visibility": 6.247999999999999
+            },
+            "2": {
+              "url": "https://dogramavarna.bg/%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE%D0%BF%D0%B0%D0%BA%D0%B5%D1%82-%D0%B7%D0%B0-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8-%D0%BF%D1%80%D0%B5%D0%B4%D0%B8%D0%BC%D1%81%D1%82%D0%B2%D0%B0/",
+              "display_url": "https://dogramavarna.bg/%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE%D0%BF%D0%B0%D0%BA%D0%B5%D1%82-%D0%B7%D0%B0-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8-%D0%BF%D1%80%D0%B5%D0%B4%D0%B8%D0%BC%D1%81%D1%82%D0%B2%D0%B0/",
+              "domain": "dogramavarna.bg",
+              "visibility": 2.8079999999999994
+            },
+            "3": {
+              "url": "https://forum.napravisam.bg/viewtopic.php?t=62151",
+              "display_url": "https://forum.napravisam.bg/viewtopic.php?t=62151",
+              "domain": "forum.napravisam.bg",
+              "visibility": 1.97
+            },
+            "4": {
+              "url": "https://stroycity.bg/bg/novini/dvoen-ili-troen-staklopaket-za-doma/",
+              "display_url": "https://stroycity.bg/bg/novini/dvoen-ili-troen-staklopaket-za-doma/",
+              "domain": "stroycity.bg",
+              "visibility": 1.3940000000000001
+            },
+            "5": {
+              "url": "https://dom-bg.com/tehnologii/staklopaket-dvoen-ili-troen-i-koga-si-struva",
+              "display_url": "https://dom-bg.com/tehnologii/staklopaket-dvoen-ili-troen-i-koga-si-struva",
+              "domain": "dom-bg.com",
+              "visibility": 1.1
+            },
+            "6": {
+              "url": "https://offroad-bulgaria.com/forum/%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B8-%D1%84%D0%BE%D1%80%D1%83%D0%BC%D0%B8/%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BC%D0%B0-%D0%B8-%D1%81%D0%B5%D0%BC%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%BE%D1%82%D0%BE/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BC%D0%B0%D0%B9%D1%81%D1%82%D0%BE%D1%80%D0%B8-%D0%B8-%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8/6955441-%D1%82%D1%80%D0%B8%D1%81%D0%BB%D0%BE%D0%B5%D0%BD-%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE%D0%BF%D0%B0%D0%BA%D0%B5%D1%82-%D0%BF%D0%BE-%D0%B4%D0%BE%D0%B1%D1%8A%D1%80-%D0%BB%D0%B8-%D0%B5",
+              "display_url": "https://offroad-bulgaria.com/forum/%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B8-%D1%84%D0%BE%D1%80%D1%83%D0%BC%D0%B8/%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BC%D0%B0-%D0%B8-%D1%81%D0%B5%D0%BC%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%BE%D1%82%D0%BE/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BC%D0%B0%D0%B9%D1%81%D1%82%D0%BE%D1%80%D0%B8-%D0%B8-%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8/6955441-%D1%82%D1%80%D0%B8%D1%81%D0%BB%D0%BE%D0%B5%D0%BD-%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE%D0%BF%D0%B0%D0%BA%D0%B5%D1%82-%D0%BF%D0%BE-%D0%B4%D0%BE%D0%B1%D1%8A%D1%80-%D0%BB%D0%B8-%D0%B5",
+              "domain": "offroad-bulgaria.com",
+              "visibility": 0.664572888250731
+            },
+            "7": {
+              "url": "https://bravisbg.com/troen-staklopaket/",
+              "display_url": "https://bravisbg.com/troen-staklopaket/",
+              "domain": "bravisbg.com",
+              "visibility": 0.49584246695472134
+            },
+            "8": {
+              "url": "https://rehauvarna.com/dvoen-ili-troen-staklopaket-koj-e-po-dobriyat-izbor/",
+              "display_url": "https://rehauvarna.com/dvoen-ili-troen-staklopaket-koj-e-po-dobriyat-izbor/",
+              "domain": "rehauvarna.com",
+              "visibility": 0.3847326291702864
+            },
+            "9": {
+              "url": "https://dograma-rindor.com/%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D0%BA%D0%B0-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD-%D0%B8-%D1%82%D1%80%D0%BE%D0%B5%D0%BD-%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE%D0%BF%D0%B0%D0%BA/",
+              "display_url": "https://dograma-rindor.com/%D1%80%D0%B0%D0%B7%D0%BB%D0%B8%D0%BA%D0%B0-%D0%BC%D0%B5%D0%B6%D0%B4%D1%83-%D0%B4%D0%B2%D0%BE%D0%B5%D0%BD-%D0%B8-%D1%82%D1%80%D0%BE%D0%B5%D0%BD-%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE%D0%BF%D0%B0%D0%BA/",
+              "domain": "dograma-rindor.com",
+              "visibility": 0.30758788632481915
+            },
+            "10": {
+              "url": "https://mm-dograma.com/blog/kakuv-stuklopaket-da-izbera/",
+              "display_url": "https://mm-dograma.com/blog/kakuv-stuklopaket-da-izbera/",
+              "domain": "mm-dograma.com",
+              "visibility": 0.25178508235883346
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": "регулиране на дограма врата",
+      "type": "serp",
+      "data": {
+        "data": {
+          "list": {
+            "1": {
+              "url": "https://rollhome.bg/kak-da-regulirate-pvc-prozortsi-i-vrati/",
+              "display_url": "https://rollhome.bg/kak-da-regulirate-pvc-prozortsi-i-vrati/",
+              "domain": "rollhome.bg",
+              "visibility": 65.604
+            },
+            "2": {
+              "url": "https://forum.napravisam.bg/viewtopic.php?t=27821",
+              "display_url": "https://forum.napravisam.bg/viewtopic.php?t=27821",
+              "domain": "forum.napravisam.bg",
+              "visibility": 29.483999999999995
+            },
+            "3": {
+              "url": "https://stroitelstvo24.eu/%D1%80%D0%B5%D0%B3%D0%BB%D0%B0%D0%B6-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%BE%D0%B1%D0%BA%D0%BE%D0%B2",
+              "display_url": "https://stroitelstvo24.eu/%D1%80%D0%B5%D0%B3%D0%BB%D0%B0%D0%B6-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%BE%D0%B1%D0%BA%D0%BE%D0%B2",
+              "domain": "stroitelstvo24.eu",
+              "visibility": 20.685
+            },
+            "4": {
+              "url": "https://offroad-bulgaria.com/forum/%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B8-%D1%84%D0%BE%D1%80%D1%83%D0%BC%D0%B8/%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BC%D0%B0-%D0%B8-%D1%81%D0%B5%D0%BC%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%BE%D1%82%D0%BE/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BC%D0%B0%D0%B9%D1%81%D1%82%D0%BE%D1%80%D0%B8-%D0%B8-%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8/226393-%D0%BF%D0%B0%D0%BD%D1%82%D0%B8-%D0%BD%D0%B0-%D0%B2%D1%80%D0%B0%D1%82%D0%B0-%D0%BE%D1%82-pvc",
+              "display_url": "https://offroad-bulgaria.com/forum/%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B8-%D1%84%D0%BE%D1%80%D1%83%D0%BC%D0%B8/%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BC%D0%B0-%D0%B8-%D1%81%D0%B5%D0%BC%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%BE%D1%82%D0%BE/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BC%D0%B0%D0%B9%D1%81%D1%82%D0%BE%D1%80%D0%B8-%D0%B8-%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8/226393-%D0%BF%D0%B0%D0%BD%D1%82%D0%B8-%D0%BD%D0%B0-%D0%B2%D1%80%D0%B0%D1%82%D0%B0-%D0%BE%D1%82-pvc",
+              "domain": "offroad-bulgaria.com",
+              "visibility": 14.637
+            },
+            "5": {
+              "url": "https://forum.setcombg.com/%D1%82%D0%BE%D0%BF%D0%BB%D0%BE%D0%B8%D0%B7%D0%BE%D0%BB%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%B2%D0%B5%D0%BD%D1%82%D0%B8%D0%BB%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-%D0%B2%D1%8A%D0%B7%D0%B4%D1%83%D1%85%D0%B0/19977-%D0%BA%D0%B0%D0%BA-%D1%81%D0%B5-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8-%D1%80%D0%B5%D0%B3%D0%BB%D0%B0%D0%B6-%D0%BD%D0%B0-pvc-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0.html",
+              "display_url": "https://forum.setcombg.com/%D1%82%D0%BE%D0%BF%D0%BB%D0%BE%D0%B8%D0%B7%D0%BE%D0%BB%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%B2%D0%B5%D0%BD%D1%82%D0%B8%D0%BB%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-%D0%B2%D1%8A%D0%B7%D0%B4%D1%83%D1%85%D0%B0/19977-%D0%BA%D0%B0%D0%BA-%D1%81%D0%B5-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8-%D1%80%D0%B5%D0%B3%D0%BB%D0%B0%D0%B6-%D0%BD%D0%B0-pvc-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0.html",
+              "domain": "forum.setcombg.com",
+              "visibility": 11.55
+            },
+            "6": {
+              "url": "https://www.remontiraidogramata.com/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BD%D0%B0-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0/%D1%86%D0%B5%D0%BD%D0%B8",
+              "display_url": "https://www.remontiraidogramata.com/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BD%D0%B0-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0/%D1%86%D0%B5%D0%BD%D0%B8",
+              "domain": "www.remontiraidogramata.com",
+              "visibility": 6.978015326632675
+            },
+            "7": {
+              "url": "https://uslugibg.bg/regulirane-na-pvc-dograma-sofia/",
+              "display_url": "https://uslugibg.bg/regulirane-na-pvc-dograma-sofia/",
+              "domain": "uslugibg.bg",
+              "visibility": 5.206345903024573
+            },
+            "8": {
+              "url": "https://luxplast.bg/regulirane-na-prozorcite/",
+              "display_url": "https://luxplast.bg/regulirane-na-prozorcite/",
+              "domain": "luxplast.bg",
+              "visibility": 4.039692606288008
+            },
+            "9": {
+              "url": "https://borsazachasti.com/tutorial/step-by-step-regulirane-na-pvc-aluminieva-dograma-lesno/",
+              "display_url": "https://borsazachasti.com/tutorial/step-by-step-regulirane-na-pvc-aluminieva-dograma-lesno/",
+              "domain": "borsazachasti.com",
+              "visibility": 3.229672806410601
+            },
+            "10": {
+              "url": "https://aluminievadograma.bg/blog/regulirane-na-dograma",
+              "display_url": "https://aluminievadograma.bg/blog/regulirane-na-dograma",
+              "domain": "aluminievadograma.bg",
+              "visibility": 2.6437433647677513
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": "сваляне на стъклопакет от пвц дограма",
+      "type": "serp",
+      "data": {
+        "data": {
+          "list": {
+            "1": {
+              "url": "https://forum.napravisam.bg/viewtopic.php?t=8198",
+              "display_url": "https://forum.napravisam.bg/viewtopic.php?t=8198",
+              "domain": "forum.napravisam.bg",
+              "visibility": 28.116
+            },
+            "2": {
+              "url": "https://www.fiatforum.bg/forum/fiat/%D0%BE%D0%B1%D1%89%D0%B8-%D0%BF%D1%80%D0%B8%D0%BA%D0%B0%D0%B7%D0%BA%D0%B8/56420-%D0%BA%D0%B0%D0%BA-%D1%81%D0%B5-%D1%81%D0%B2%D0%B0%D0%BB%D1%8F-%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE-%D0%BE%D1%82-%D0%BF%D0%B2%D1%86-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0",
+              "display_url": "https://www.fiatforum.bg/forum/fiat/%D0%BE%D0%B1%D1%89%D0%B8-%D0%BF%D1%80%D0%B8%D0%BA%D0%B0%D0%B7%D0%BA%D0%B8/56420-%D0%BA%D0%B0%D0%BA-%D1%81%D0%B5-%D1%81%D0%B2%D0%B0%D0%BB%D1%8F-%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE-%D0%BE%D1%82-%D0%BF%D0%B2%D1%86-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0",
+              "domain": "www.fiatforum.bg",
+              "visibility": 12.636
+            },
+            "3": {
+              "url": "https://forum.setcombg.com/%D1%82%D0%BE%D0%BF%D0%BB%D0%BE%D0%B8%D0%B7%D0%BE%D0%BB%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%B2%D0%B5%D0%BD%D1%82%D0%B8%D0%BB%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-%D0%B2%D1%8A%D0%B7%D0%B4%D1%83%D1%85%D0%B0/55982-%D0%BA%D0%B0%D0%BA-%D0%B4%D0%B0-%D1%81%D0%B8-%D1%81%D0%B2%D0%B0%D0%BB%D1%8F-%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%B0.html",
+              "display_url": "https://forum.setcombg.com/%D1%82%D0%BE%D0%BF%D0%BB%D0%BE%D0%B8%D0%B7%D0%BE%D0%BB%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%B2%D0%B5%D0%BD%D1%82%D0%B8%D0%BB%D0%B0%D1%86%D0%B8%D1%8F-%D0%B8-%D0%BE%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-%D0%B2%D1%8A%D0%B7%D0%B4%D1%83%D1%85%D0%B0/55982-%D0%BA%D0%B0%D0%BA-%D0%B4%D0%B0-%D1%81%D0%B8-%D1%81%D0%B2%D0%B0%D0%BB%D1%8F-%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%B0.html",
+              "domain": "forum.setcombg.com",
+              "visibility": 8.865
+            },
+            "4": {
+              "url": "https://misiamoiatdom.com/forum/viewtopic.php?t=1129",
+              "display_url": "https://misiamoiatdom.com/forum/viewtopic.php?t=1129",
+              "domain": "misiamoiatdom.com",
+              "visibility": 6.273
+            },
+            "5": {
+              "url": "https://mr-bricolage.bg/kak-se-montira-stuklopaket-na-pvc-dograma",
+              "display_url": "https://mr-bricolage.bg/kak-se-montira-stuklopaket-na-pvc-dograma",
+              "domain": "mr-bricolage.bg",
+              "visibility": 4.95
+            },
+            "6": {
+              "url": "https://plast-market.bg/usluga-smyana-na-stuklopaket",
+              "display_url": "https://plast-market.bg/usluga-smyana-na-stuklopaket",
+              "domain": "plast-market.bg",
+              "visibility": 2.9905779971282898
+            },
+            "7": {
+              "url": "https://luxplast.bg/remont/",
+              "display_url": "https://luxplast.bg/remont/",
+              "domain": "luxplast.bg",
+              "visibility": 2.2312911012962457
+            },
+            "8": {
+              "url": "https://offnews.bg/dom/kak-se-montira-staklopaket-na-pvtc-dograma-833918.html",
+              "display_url": "https://offnews.bg/dom/kak-se-montira-staklopaket-na-pvtc-dograma-833918.html",
+              "domain": "offnews.bg",
+              "visibility": 1.7312968312662889
+            },
+            "9": {
+              "url": "https://stillplast.com/produkt/%D1%81%D0%BC%D1%8F%D0%BD%D0%B0-%D0%BD%D0%B0-%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%B8/",
+              "display_url": "https://stillplast.com/produkt/%D1%81%D0%BC%D1%8F%D0%BD%D0%B0-%D0%BD%D0%B0-%D1%81%D1%82%D1%8A%D0%BA%D0%BB%D0%BE%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%B8/",
+              "domain": "stillplast.com",
+              "visibility": 1.3841454884616864
+            },
+            "10": {
+              "url": "https://np-plast.com/glazing",
+              "display_url": "https://np-plast.com/glazing",
+              "domain": "np-plast.com",
+              "visibility": 1.1330328706147506
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": "правила за монтаж на пвц дограма",
+      "type": "serp",
+      "data": {
+        "data": {
+          "list": {
+            "1": {
+              "url": "https://www.aluplast.com.pl/bg/montazh-na-pvc-prozorci-instrukciya",
+              "display_url": "https://www.aluplast.com.pl/bg/montazh-na-pvc-prozorci-instrukciya",
+              "domain": "www.aluplast.com.pl",
+              "visibility": 21.868
+            },
+            "2": {
+              "url": "https://forum.napravisam.bg/viewtopic.php?t=39157",
+              "display_url": "https://forum.napravisam.bg/viewtopic.php?t=39157",
+              "domain": "forum.napravisam.bg",
+              "visibility": 9.828
+            },
+            "3": {
+              "url": "http://doors.vidira.org/project/%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D0%B8-%D0%B7%D0%B0-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B5%D0%BD-%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6/",
+              "display_url": "http://doors.vidira.org/project/%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D0%B8-%D0%B7%D0%B0-%D0%BF%D1%80%D0%B0%D0%B2%D0%B8%D0%BB%D0%B5%D0%BD-%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6/",
+              "domain": "doors.vidira.org",
+              "visibility": 6.895
+            },
+            "4": {
+              "url": "https://www.dograma-bg.com/page-%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F_%D0%B7%D0%B0_%D0%B5%D0%BA%D1%81%D0%BF%D0%BB%D0%BE%D0%B0%D1%82%D0%B0%D1%86%D0%B8%D1%8F_%D0%BD%D0%B0_pvc_%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0_3.html",
+              "display_url": "https://www.dograma-bg.com/page-%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%86%D0%B8%D1%8F_%D0%B7%D0%B0_%D0%B5%D0%BA%D1%81%D0%BF%D0%BB%D0%BE%D0%B0%D1%82%D0%B0%D1%86%D0%B8%D1%8F_%D0%BD%D0%B0_pvc_%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0_3.html",
+              "domain": "www.dograma-bg.com",
+              "visibility": 4.879
+            },
+            "5": {
+              "url": "https://stroitelstvo24.eu/wp-content/uploads/rakovodstvo-montaj-pvc-prozortsi-vrati-2011.pdf",
+              "display_url": "https://stroitelstvo24.eu/wp-content/uploads/rakovodstvo-montaj-pvc-prozortsi-vrati-2011.pdf",
+              "domain": "stroitelstvo24.eu",
+              "visibility": 3.85
+            },
+            "6": {
+              "url": "https://pvc-salamander.com/podgotovka-montaj-dograma/",
+              "display_url": "https://pvc-salamander.com/podgotovka-montaj-dograma/",
+              "domain": "pvc-salamander.com",
+              "visibility": 2.3260051088775584
+            },
+            "7": {
+              "url": "https://www.daibau.bg/statia/490/montazh_na_prozortsi_kak_da_montirate_prozorets",
+              "display_url": "https://www.daibau.bg/statia/490/montazh_na_prozortsi_kak_da_montirate_prozorets",
+              "domain": "www.daibau.bg",
+              "visibility": 1.7354486343415245
+            },
+            "8": {
+              "url": "https://www.e-kak.info/forum/viewtopic.php?f=27&t=4335",
+              "display_url": "https://www.e-kak.info/forum/viewtopic.php?f=27&t=4335",
+              "domain": "www.e-kak.info",
+              "visibility": 1.3465642020960025
+            },
+            "9": {
+              "url": "https://luxplast.bg/pvc-dograma/",
+              "display_url": "https://luxplast.bg/pvc-dograma/",
+              "domain": "luxplast.bg",
+              "visibility": 1.076557602136867
+            },
+            "10": {
+              "url": "https://novinionline.com/%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6-%D0%BD%D0%B0-%D0%BF%D0%B2%D1%86-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%BA%D0%B0%D0%BA%D0%B2%D0%BE-%D0%B4%D0%B0-%D0%BE%D1%87%D0%B0%D0%BA%D0%B2%D0%B0%D1%82",
+              "display_url": "https://novinionline.com/%D0%BC%D0%BE%D0%BD%D1%82%D0%B0%D0%B6-%D0%BD%D0%B0-%D0%BF%D0%B2%D1%86-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0-%D0%BA%D0%B0%D0%BA%D0%B2%D0%BE-%D0%B4%D0%B0-%D0%BE%D1%87%D0%B0%D0%BA%D0%B2%D0%B0%D1%82",
+              "domain": "novinionline.com",
+              "visibility": 0.8812477882559171
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": "външно обръщане на прозорци",
+      "type": "serp",
+      "data": {
+        "data": {
+          "list": {
+            "1": {
+              "url": "https://toolsbox.bg/blog/obrashtane-na-prozorets-saveti-i-etapi",
+              "display_url": "https://toolsbox.bg/blog/obrashtane-na-prozorets-saveti-i-etapi",
+              "domain": "toolsbox.bg",
+              "visibility": 53.108000000000004
+            },
+            "2": {
+              "url": "https://forum.napravisam.bg/viewtopic.php?t=57972",
+              "display_url": "https://forum.napravisam.bg/viewtopic.php?t=57972",
+              "domain": "forum.napravisam.bg",
+              "visibility": 23.868
+            },
+            "3": {
+              "url": "https://remontimetodiev.com/uslugi/obrushtane-na-prozorci-tseni",
+              "display_url": "https://remontimetodiev.com/uslugi/obrushtane-na-prozorci-tseni",
+              "domain": "remontimetodiev.com",
+              "visibility": 16.745
+            },
+            "4": {
+              "url": "https://uslugi.slivnitsa.com/%D0%BE%D0%B1%D1%80%D1%8A%D1%89%D0%B0%D0%BD%D0%B5-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8-%D0%B2%D1%80%D0%B0%D1%82%D0%B8-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0",
+              "display_url": "https://uslugi.slivnitsa.com/%D0%BE%D0%B1%D1%80%D1%8A%D1%89%D0%B0%D0%BD%D0%B5-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8-%D0%B2%D1%80%D0%B0%D1%82%D0%B8-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0",
+              "domain": "uslugi.slivnitsa.com",
+              "visibility": 11.848999999999998
+            },
+            "5": {
+              "url": "https://offroad-bulgaria.com/forum/%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B8-%D1%84%D0%BE%D1%80%D1%83%D0%BC%D0%B8/%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BC%D0%B0-%D0%B8-%D1%81%D0%B5%D0%BC%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%BE%D1%82%D0%BE/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BC%D0%B0%D0%B9%D1%81%D1%82%D0%BE%D1%80%D0%B8-%D0%B8-%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8/189983-%D0%BE%D0%B1%D1%80%D1%8A%D1%89%D0%B0%D0%BD%D0%B5-%D0%BD%D0%B0-%D0%BF%D0%B2%D1%86-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D0%B5%D1%86-%D0%BA%D0%B0%D0%BA",
+              "display_url": "https://offroad-bulgaria.com/forum/%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B8-%D1%84%D0%BE%D1%80%D1%83%D0%BC%D0%B8/%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BC%D0%B0-%D0%B8-%D1%81%D0%B5%D0%BC%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%BE%D1%82%D0%BE/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BC%D0%B0%D0%B9%D1%81%D1%82%D0%BE%D1%80%D0%B8-%D0%B8-%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8/189983-%D0%BE%D0%B1%D1%80%D1%8A%D1%89%D0%B0%D0%BD%D0%B5-%D0%BD%D0%B0-%D0%BF%D0%B2%D1%86-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D0%B5%D1%86-%D0%BA%D0%B0%D0%BA",
+              "domain": "offroad-bulgaria.com",
+              "visibility": 9.35
+            },
+            "6": {
+              "url": "https://topaldom.bg/uslugi/obrushtane",
+              "display_url": "https://topaldom.bg/uslugi/obrushtane",
+              "domain": "topaldom.bg",
+              "visibility": 5.648869550131213
+            },
+            "7": {
+              "url": "https://www.facebook.com/groups/299913907483894/posts/2336625327146065/",
+              "display_url": "https://www.facebook.com/groups/299913907483894/posts/2336625327146065/",
+              "domain": "www.facebook.com",
+              "visibility": 4.214660969115131
+            },
+            "8": {
+              "url": "https://eurostill.bg/obryshtane-na-dograma/",
+              "display_url": "https://eurostill.bg/obryshtane-na-dograma/",
+              "domain": "eurostill.bg",
+              "visibility": 3.2702273479474346
+            },
+            "9": {
+              "url": "https://remontvkushti.com/%D0%BE%D0%B1%D1%80%D1%8A%D1%89%D0%B0%D0%BD%D0%B5-%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8/",
+              "display_url": "https://remontvkushti.com/%D0%BE%D0%B1%D1%80%D1%8A%D1%89%D0%B0%D0%BD%D0%B5-%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8/",
+              "domain": "remontvkushti.com",
+              "visibility": 2.614497033760963
+            },
+            "10": {
+              "url": "https://www.forum.napravisam.bg/viewtopic.php?t=74333",
+              "display_url": "https://www.forum.napravisam.bg/viewtopic.php?t=74333",
+              "domain": "www.forum.napravisam.bg",
+              "visibility": 2.1401732000500844
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": "материали за обръщане на прозорци",
+      "type": "serp",
+      "data": {
+        "data": {
+          "list": {
+            "1": {
+              "url": "https://www.forum.napravisam.bg/viewtopic.php?f=18&t=74333",
+              "display_url": "https://www.forum.napravisam.bg/viewtopic.php?f=18&t=74333",
+              "domain": "www.forum.napravisam.bg",
+              "visibility": 65.604
+            },
+            "2": {
+              "url": "https://toolsbox.bg/blog/obrashtane-na-prozorets-saveti-i-etapi",
+              "display_url": "https://toolsbox.bg/blog/obrashtane-na-prozorets-saveti-i-etapi",
+              "domain": "toolsbox.bg",
+              "visibility": 29.483999999999995
+            },
+            "3": {
+              "url": "https://www.facebook.com/groups/299913907483894/posts/1864703281004941/",
+              "display_url": "https://www.facebook.com/groups/299913907483894/posts/1864703281004941/",
+              "domain": "www.facebook.com",
+              "visibility": 20.685
+            },
+            "4": {
+              "url": "https://remontimetodiev.com/uslugi/obrushtane-na-prozorci-tseni",
+              "display_url": "https://remontimetodiev.com/uslugi/obrushtane-na-prozorci-tseni",
+              "domain": "remontimetodiev.com",
+              "visibility": 14.637
+            },
+            "5": {
+              "url": "https://topaldom.bg/uslugi/obrushtane",
+              "display_url": "https://topaldom.bg/uslugi/obrushtane",
+              "domain": "topaldom.bg",
+              "visibility": 11.55
+            },
+            "6": {
+              "url": "https://uslugi.slivnitsa.com/%D0%BE%D0%B1%D1%80%D1%8A%D1%89%D0%B0%D0%BD%D0%B5-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8-%D0%B2%D1%80%D0%B0%D1%82%D0%B8-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0",
+              "display_url": "https://uslugi.slivnitsa.com/%D0%BE%D0%B1%D1%80%D1%8A%D1%89%D0%B0%D0%BD%D0%B5-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8-%D0%B2%D1%80%D0%B0%D1%82%D0%B8-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0",
+              "domain": "uslugi.slivnitsa.com",
+              "visibility": 6.978015326632675
+            },
+            "7": {
+              "url": "https://remontisofia.com/%D1%86%D0%B5%D0%BD%D0%B0-%D0%B7%D0%B0-%D0%BE%D0%B1%D1%80%D1%8A%D1%89%D0%B0%D0%BD%D0%B5-%D0%BD%D0%B0-%D0%B2%D1%80%D0%B0%D1%82%D0%B8-%D0%B8-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8/",
+              "display_url": "https://remontisofia.com/%D1%86%D0%B5%D0%BD%D0%B0-%D0%B7%D0%B0-%D0%BE%D0%B1%D1%80%D1%8A%D1%89%D0%B0%D0%BD%D0%B5-%D0%BD%D0%B0-%D0%B2%D1%80%D0%B0%D1%82%D0%B8-%D0%B8-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8/",
+              "domain": "remontisofia.com",
+              "visibility": 5.206345903024573
+            },
+            "8": {
+              "url": "https://offroad-bulgaria.com/forum/%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B8-%D1%84%D0%BE%D1%80%D1%83%D0%BC%D0%B8/%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BC%D0%B0-%D0%B8-%D1%81%D0%B5%D0%BC%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%BE%D1%82%D0%BE/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BC%D0%B0%D0%B9%D1%81%D1%82%D0%BE%D1%80%D0%B8-%D0%B8-%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8/189983-%D0%BE%D0%B1%D1%80%D1%8A%D1%89%D0%B0%D0%BD%D0%B5-%D0%BD%D0%B0-%D0%BF%D0%B2%D1%86-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D0%B5%D1%86-%D0%BA%D0%B0%D0%BA",
+              "display_url": "https://offroad-bulgaria.com/forum/%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%B8-%D1%84%D0%BE%D1%80%D1%83%D0%BC%D0%B8/%D0%B7%D0%B0-%D0%B4%D0%BE%D0%BC%D0%B0-%D0%B8-%D1%81%D0%B5%D0%BC%D0%B5%D0%B9%D1%81%D1%82%D0%B2%D0%BE%D1%82%D0%BE/%D1%80%D0%B5%D0%BC%D0%BE%D0%BD%D1%82-%D0%BC%D0%B0%D0%B9%D1%81%D1%82%D0%BE%D1%80%D0%B8-%D0%B8-%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%B8/189983-%D0%BE%D0%B1%D1%80%D1%8A%D1%89%D0%B0%D0%BD%D0%B5-%D0%BD%D0%B0-%D0%BF%D0%B2%D1%86-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D0%B5%D1%86-%D0%BA%D0%B0%D0%BA",
+              "domain": "offroad-bulgaria.com",
+              "visibility": 4.039692606288008
+            },
+            "9": {
+              "url": "https://forum.napravisam.bg/viewtopic.php?t=57972",
+              "display_url": "https://forum.napravisam.bg/viewtopic.php?t=57972",
+              "domain": "forum.napravisam.bg",
+              "visibility": 3.229672806410601
+            },
+            "10": {
+              "url": "https://remontvkushti.com/%D0%BE%D0%B1%D1%80%D1%8A%D1%89%D0%B0%D0%BD%D0%B5-%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8/",
+              "display_url": "https://remontvkushti.com/%D0%BE%D0%B1%D1%80%D1%8A%D1%89%D0%B0%D0%BD%D0%B5-%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8/",
+              "domain": "remontvkushti.com",
+              "visibility": 2.6437433647677513
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": "конденз по прозорците",
+      "type": "serp",
+      "data": {
+        "data": {
+          "list": {
+            "1": {
+              "url": "https://pvc-salamander.com/kondenz-po-prozortsite/",
+              "display_url": "https://pvc-salamander.com/kondenz-po-prozortsite/",
+              "domain": "pvc-salamander.com",
+              "visibility": 65.604
+            },
+            "2": {
+              "url": "https://mm-dograma.com/blog/kondenz-po-prozortsite/",
+              "display_url": "https://mm-dograma.com/blog/kondenz-po-prozortsite/",
+              "domain": "mm-dograma.com",
+              "visibility": 29.483999999999995
+            },
+            "3": {
+              "url": "https://www.e-shop-bg.eu/blog/da-izbegnem-orosiavane-na-prozorci/",
+              "display_url": "https://www.e-shop-bg.eu/blog/da-izbegnem-orosiavane-na-prozorci/",
+              "domain": "www.e-shop-bg.eu",
+              "visibility": 20.685
+            },
+            "4": {
+              "url": "https://www.bg-mamma.com/?topic=551842",
+              "display_url": "https://www.bg-mamma.com/?topic=551842",
+              "domain": "www.bg-mamma.com",
+              "visibility": 14.637
+            },
+            "5": {
+              "url": "https://www.facebook.com/reynaers.bg/posts/%D0%BA%D0%B0%D0%BA-%D0%B4%D0%B0-%D0%B8%D0%B7%D0%B1%D0%B5%D0%B3%D0%BD%D0%B5%D0%BC-%D0%BA%D0%BE%D0%BD%D0%B4%D0%B5%D0%BD%D0%B7-%D0%BF%D0%BE-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8%D1%82%D0%B5-%D0%B5%D1%82%D0%BE-%D0%BD%D1%8F%D0%BA%D0%BE%D0%B8-%D0%B5%D0%B6%D0%B5%D0%B4%D0%BD%D0%B5%D0%B2%D0%BD%D0%B8-%D1%81%D1%8A%D0%B2%D0%B5%D1%82%D0%B8-%D0%B8-%D0%B4%D1%8A%D0%BB%D0%B3%D0%BE%D1%81%D1%80%D0%BE%D1%87%D0%BD%D0%B8-%D1%80/917830583675442/",
+              "display_url": "https://www.facebook.com/reynaers.bg/posts/%D0%BA%D0%B0%D0%BA-%D0%B4%D0%B0-%D0%B8%D0%B7%D0%B1%D0%B5%D0%B3%D0%BD%D0%B5%D0%BC-%D0%BA%D0%BE%D0%BD%D0%B4%D0%B5%D0%BD%D0%B7-%D0%BF%D0%BE-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8%D1%82%D0%B5-%D0%B5%D1%82%D0%BE-%D0%BD%D1%8F%D0%BA%D0%BE%D0%B8-%D0%B5%D0%B6%D0%B5%D0%B4%D0%BD%D0%B5%D0%B2%D0%BD%D0%B8-%D1%81%D1%8A%D0%B2%D0%B5%D1%82%D0%B8-%D0%B8-%D0%B4%D1%8A%D0%BB%D0%B3%D0%BE%D1%81%D1%80%D0%BE%D1%87%D0%BD%D0%B8-%D1%80/917830583675442/",
+              "domain": "www.facebook.com",
+              "visibility": 11.55
+            },
+            "6": {
+              "url": "https://xn--e1anfbcgrz.bg/%D0%BF%D1%80%D0%BE%D0%BC%D0%BE%D1%86%D0%B8%D0%B8-%D0%BC%D0%B0%D0%B9%D1%81%D1%82%D0%BE%D1%80-%D0%B2%D0%BA%D1%8A%D1%89%D0%B8/%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%BD%D0%BE-%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D0%B8%D1%8F-%D0%BC%D0%B0%D0%B9%D1%81%D1%82%D0%BE%D1%80/%D0%BA%D0%BE%D0%BD%D0%B4%D0%B5%D0%BD%D0%B7-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8-%D1%81%D1%8A%D0%B2%D0%B5%D1%82-%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC",
+              "display_url": "https://xn--e1anfbcgrz.bg/%D0%BF%D1%80%D0%BE%D0%BC%D0%BE%D1%86%D0%B8%D0%B8-%D0%BC%D0%B0%D0%B9%D1%81%D1%82%D0%BE%D1%80-%D0%B2%D0%BA%D1%8A%D1%89%D0%B8/%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D1%87%D0%BD%D0%BE-%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D0%B8%D1%8F-%D0%BC%D0%B0%D0%B9%D1%81%D1%82%D0%BE%D1%80/%D0%BA%D0%BE%D0%BD%D0%B4%D0%B5%D0%BD%D0%B7-%D0%BF%D1%80%D0%BE%D0%B7%D0%BE%D1%80%D1%86%D0%B8-%D1%81%D1%8A%D0%B2%D0%B5%D1%82-%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC",
+              "domain": "xn--e1anfbcgrz.bg",
+              "visibility": 6.978015326632675
+            },
+            "7": {
+              "url": "https://pestimenergia.bg/blog-article/106/pomosht-ot-prozortsite-mi-teche-voda.html",
+              "display_url": "https://pestimenergia.bg/blog-article/106/pomosht-ot-prozortsite-mi-teche-voda.html",
+              "domain": "pestimenergia.bg",
+              "visibility": 5.206345903024573
+            },
+            "8": {
+              "url": "https://www.velux.bg/magazine/mould-and-humidity",
+              "display_url": "https://www.velux.bg/magazine/mould-and-humidity",
+              "domain": "www.velux.bg",
+              "visibility": 4.039692606288008
+            },
+            "9": {
+              "url": "https://premiumplast.bg/news/kondenz-po-prozorcite",
+              "display_url": "https://premiumplast.bg/news/kondenz-po-prozorcite",
+              "domain": "premiumplast.bg",
+              "visibility": 3.229672806410601
+            },
+            "10": {
+              "url": "https://duk-1.com/produkti/praktitcheski-saveti",
+              "display_url": "https://duk-1.com/produkti/praktitcheski-saveti",
+              "domain": "duk-1.com",
+              "visibility": 2.6437433647677513
+            }
+          }
+        }
+      }
+    },
+    {
+      "seed": "зимен режим на дограма",
+      "type": "serp",
+      "data": {
+        "data": {
+          "list": {
+            "1": {
+              "url": "https://dogrami.bg/da-nastroim-dogramata-na-zimen-rezhim/",
+              "display_url": "https://dogrami.bg/da-nastroim-dogramata-na-zimen-rezhim/",
+              "domain": "dogrami.bg",
+              "visibility": 28.116
+            },
+            "2": {
+              "url": "https://luxplast.bg/regulirane-na-prozorcite/",
+              "display_url": "https://luxplast.bg/regulirane-na-prozorcite/",
+              "domain": "luxplast.bg",
+              "visibility": 12.636
+            },
+            "3": {
+              "url": "https://serpio.bg/%D0%BF%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%B2%D0%B8-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B0-%D1%81%D0%B8-%D0%B7%D0%B0-%D0%B7%D0%B8%D0%BC%D0%B0%D1%82%D0%B0/",
+              "display_url": "https://serpio.bg/%D0%BF%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%B2%D0%B8-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B0-%D1%81%D0%B8-%D0%B7%D0%B0-%D0%B7%D0%B8%D0%BC%D0%B0%D1%82%D0%B0/",
+              "domain": "serpio.bg",
+              "visibility": 8.865
+            },
+            "4": {
+              "url": "https://rollhome.bg/kak-da-regulirate-pvc-prozortsi-i-vrati/",
+              "display_url": "https://rollhome.bg/kak-da-regulirate-pvc-prozortsi-i-vrati/",
+              "domain": "rollhome.bg",
+              "visibility": 6.273
+            },
+            "5": {
+              "url": "https://www.zajenata.bg/%D0%BA%D0%B0%D0%BA-%D0%B4%D0%B0-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B0-%D0%BD%D0%B0-%D0%B7%D0%B8%D0%BC%D0%B5%D0%BD-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC-%D0%B7%D0%B0-%D0%B4%D0%B0-%D0%B2%D0%B8-%D0%B5-%D0%BF%D0%BE-%D1%82%D0%BE%D0%BF%D0%BB%D0%BE-%D0%B2-%D0%B6%D0%B8%D0%BB%D0%B8%D1%89%D0%B5%D1%82%D0%BE-news119935.html",
+              "display_url": "https://www.zajenata.bg/%D0%BA%D0%B0%D0%BA-%D0%B4%D0%B0-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B0-%D0%BD%D0%B0-%D0%B7%D0%B8%D0%BC%D0%B5%D0%BD-%D1%80%D0%B5%D0%B6%D0%B8%D0%BC-%D0%B7%D0%B0-%D0%B4%D0%B0-%D0%B2%D0%B8-%D0%B5-%D0%BF%D0%BE-%D1%82%D0%BE%D0%BF%D0%BB%D0%BE-%D0%B2-%D0%B6%D0%B8%D0%BB%D0%B8%D1%89%D0%B5%D1%82%D0%BE-news119935.html",
+              "domain": "www.zajenata.bg",
+              "visibility": 4.95
+            },
+            "6": {
+              "url": "https://petel.bg/Eto-kak-da-nastroite-aluminievata-dograma-na-zimen-rezhim-__295612",
+              "display_url": "https://petel.bg/Eto-kak-da-nastroite-aluminievata-dograma-na-zimen-rezhim-__295612",
+              "domain": "petel.bg",
+              "visibility": 2.9905779971282898
+            },
+            "7": {
+              "url": "https://glasnews.bg/tehnologii-nauka/tainata-plastmasovata-dograma-kak-da-ia-nastroite-zimen-588719/",
+              "display_url": "https://glasnews.bg/tehnologii-nauka/tainata-plastmasovata-dograma-kak-da-ia-nastroite-zimen-588719/",
+              "domain": "glasnews.bg",
+              "visibility": 2.2312911012962457
+            },
+            "8": {
+              "url": "https://www.actualno.com/useful/montajnik-na-dograma-kaza-kak-da-prevkluchite-prozorcite-na-zimen-rejim-news_1821826.html",
+              "display_url": "https://www.actualno.com/useful/montajnik-na-dograma-kaza-kak-da-prevkluchite-prozorcite-na-zimen-rejim-news_1821826.html",
+              "domain": "www.actualno.com",
+              "visibility": 1.7312968312662889
+            },
+            "9": {
+              "url": "https://www.facebook.com/groups/299913907483894/posts/598580200950595/",
+              "display_url": "https://www.facebook.com/groups/299913907483894/posts/598580200950595/",
+              "domain": "www.facebook.com",
+              "visibility": 1.3841454884616864
+            },
+            "10": {
+              "url": "http://www.master-plastik.com/%D0%BF%D0%B2%D1%86-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B0-%D0%BF%D1%80%D0%B5%D0%B7-%D0%B7%D0%B8%D0%BC%D0%B0%D1%82%D0%B0-%D0%BA%D0%B0%D0%BA%D0%B2%D0%BE-%D1%82%D1%80%D1%8F%D0%B1%D0%B2/",
+              "display_url": "http://www.master-plastik.com/%D0%BF%D0%B2%D1%86-%D0%B4%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0%D1%82%D0%B0-%D0%BF%D1%80%D0%B5%D0%B7-%D0%B7%D0%B8%D0%BC%D0%B0%D1%82%D0%B0-%D0%BA%D0%B0%D0%BA%D0%B2%D0%BE-%D1%82%D1%80%D1%8F%D0%B1%D0%B2/",
+              "domain": "www.master-plastik.com",
+              "visibility": 1.1330328706147506
+            }
+          }
+        }
+      }
+    }
+  ]
+}

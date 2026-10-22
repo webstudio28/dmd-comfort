@@ -1,0 +1,51 @@
+---
+description: Neighboring page sections must never share the same background band
+globs: src/**/*.{njk,css}
+alwaysApply: false
+---
+
+# Section background rhythm
+
+On service, обръщане, and similar long content pages, **no section may use the same background as the section directly above or below it**.
+
+## Allowed bands
+
+Use the existing classes only:
+
+- `trim-band--mist` — soft gray
+- `trim-band--white` — plain white
+- `trim-band--lined` — white with subtle diagonal lines
+- `trim-band--charcoal` — dark accent band (banners)
+
+## Cycle
+
+Prefer: **mist → white → mist → lined → (repeat)**.
+
+Charcoal / contact dark bands break the cycle intentionally; resume with a band that differs from both neighbors.
+
+## Do / Don't
+
+```html
+<!-- ❌ BAD: transparent overrides the band; neighbors look the same -->
+<section class="trim-section trim-price-section trim-band--white">
+```
+
+```css
+/* ❌ BAD */
+.trim-price-section { background: transparent; }
+```
+
+```html
+<!-- ❌ BAD: two whites in a row -->
+<section class="trim-section trim-band--white">...</section>
+<section class="trim-offer-banner trim-band--white">...</section>
+```
+
+```html
+<!-- ✅ GOOD -->
+<section class="trim-section trim-band--white">...</section>
+<section class="trim-offer-banner trim-band--mist">...</section>
+<section class="trim-section trim-band--lined">...</section>
+```
+
+When sections are optional, assign the next band from the cycle only for sections that actually render so the visible stack still alternates.
