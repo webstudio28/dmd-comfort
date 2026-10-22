@@ -141,10 +141,9 @@
   const reducedDragMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   document.querySelectorAll("[data-drag-scroll]").forEach((el) => {
-    let isDown = false;
-    let startX = 0;
-    let startScroll = 0;
+    let active = null;
     let moved = false;
+    let suppressClick = false;
     let samples = [];
     let glide = 0;
 
@@ -194,54 +193,66 @@
       glide = requestAnimationFrame(step);
     };
 
+    const endDrag = (e) => {
+      if (!active || (e && e.pointerId !== active.id)) return;
+      const id = active.id;
+      const didMove = moved;
+      const velocity = didMove ? releaseVelocity(e?.timeStamp ?? performance.now()) : 0;
+      active = null;
+      moved = false;
+      samples = [];
+      el.classList.remove("is-dragging");
+      try {
+        if (el.hasPointerCapture?.(id)) el.releasePointerCapture(id);
+      } catch (_) {}
+      if (didMove) {
+        suppressClick = true;
+        startGlide(velocity);
+      }
+    };
+
     el.addEventListener("pointerdown", (e) => {
-      if (e.pointerType === "touch") return;
+      if (e.pointerType === "touch" || e.button !== 0 || !e.isPrimary) return;
       if (el.scrollWidth <= el.clientWidth + 2) return;
       stopGlide();
-      isDown = true;
+      suppressClick = false;
       moved = false;
-      startX = e.clientX;
-      startScroll = el.scrollLeft;
       samples = [];
       track(e.clientX, e.timeStamp);
-      el.setPointerCapture?.(e.pointerId);
-      el.classList.add("is-dragging");
+      active = { id: e.pointerId, x: e.clientX, left: el.scrollLeft };
     });
 
     el.addEventListener("pointermove", (e) => {
-      if (!isDown) return;
-      const dx = e.clientX - startX;
-      if (Math.abs(dx) > 3) moved = true;
-      el.scrollLeft = startScroll - dx;
+      if (!active || e.pointerId !== active.id) return;
+      const dx = e.clientX - active.x;
+      if (!moved && Math.abs(dx) <= 5) return;
+      if (!moved) {
+        moved = true;
+        el.setPointerCapture?.(e.pointerId);
+        el.classList.add("is-dragging");
+      }
+      e.preventDefault();
+      el.scrollLeft = active.left - dx;
       track(e.clientX, e.timeStamp);
     });
 
-    function endDrag(e) {
-      if (!isDown) return;
-      isDown = false;
-      el.classList.remove("is-dragging");
-      try {
-        el.releasePointerCapture?.(e.pointerId);
-      } catch (_) {}
-      if (moved) startGlide(releaseVelocity(e.timeStamp));
-      samples = [];
-    }
-
-    el.addEventListener("pointerup", endDrag);
-    el.addEventListener("pointercancel", endDrag);
+    window.addEventListener("pointerup", endDrag);
+    window.addEventListener("pointercancel", endDrag);
     el.addEventListener("lostpointercapture", () => {
-      isDown = false;
+      active = null;
+      moved = false;
       el.classList.remove("is-dragging");
     });
+
+    el.addEventListener("dragstart", (e) => e.preventDefault());
 
     el.addEventListener(
       "click",
       (e) => {
-        if (moved) {
-          e.preventDefault();
-          e.stopPropagation();
-          moved = false;
-        }
+        if (!suppressClick) return;
+        e.preventDefault();
+        e.stopPropagation();
+        suppressClick = false;
       },
       true,
     );

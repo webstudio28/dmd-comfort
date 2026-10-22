@@ -71,7 +71,37 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   </ul>
 </section>
 
-<section class="trim-section trim-band--white" aria-labelledby="trim-benefit-title">
+{% if obrashtaneProjects.items.length %}
+<section class="trim-section trim-band--white" aria-labelledby="trim-projects-title">
+  <div class="container-site">
+    <div class="trim-section-head trim-projects-head">
+      <div>
+        <h2 class="trim-heading" id="trim-projects-title">Нашите проекти за обръщане с PVC первази</h2>
+        <p>Реализирани обекти, свързани с тази услуга.</p>
+      </div>
+      {% if obrashtaneProjects.moreUrl %}
+      <a class="trim-text-link" href="{{ obrashtaneProjects.moreUrl | url }}">Всички проекти{% if obrashtaneProjects.total > obrashtaneProjects.items.length %} ({{ obrashtaneProjects.total }}){% endif %} {{ arrow() }}</a>
+      {% endif %}
+    </div>
+  </div>
+  <ul class="trim-project-rail trim-card-rail" data-drag-scroll data-card-count="{{ obrashtaneProjects.items.length }}" tabindex="0" role="region" aria-label="Нашите проекти — плъзнете хоризонтално">
+    {% for item in obrashtaneProjects.items %}
+    <li>
+      <a class="trim-project-card" href="{{ item.url | url }}" draggable="false">
+        {% if item.image %}<img src="{{ item.image | url }}" alt="{{ item.title }}" width="640" height="480" loading="lazy" decoding="async" draggable="false" />{% endif %}
+        <div class="trim-project-card-body">
+          <h3>{{ item.title }}</h3>
+          {% if item.location %}<p>{{ item.location }}</p>{% endif %}
+          <span class="trim-project-card-action">Разгледайте проекта {{ arrow() }}</span>
+        </div>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
+<section class="trim-section trim-band--mist" aria-labelledby="trim-benefit-title">
   <div class="container-site"><h2 class="trim-heading" id="trim-benefit-title">Защо да изберете обръщане с PVC профили?</h2><p class="trim-copy">Готовата облицовка оформя пространството около прозореца и дава завършек, съобразен с дограмата и интериора.</p></div>
   <div class="trim-quality-list trim-card-rail" data-drag-scroll data-card-count="4" tabindex="0" role="region" aria-label="Предимства — плъзнете хоризонтално">
     <div><span>01</span><h3>Готова довършителна повърхност</h3><p>Самият профил има завършена повърхност и не изисква шпакловане и боядисване като измазана стена. Състоянието на стената извън облицованата зона се оценява отделно.</p></div>
@@ -81,7 +111,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   </div>
 </section>
 
-<section class="trim-section trim-band--mist" aria-labelledby="trim-suitable-title"><div class="container-site">
+<section class="trim-section trim-band--white" aria-labelledby="trim-suitable-title"><div class="container-site">
   <div class="trim-section-head"><h2 class="trim-heading" id="trim-suitable-title">Кога е подходящо обръщане с ПВЦ профили?</h2></div>
   <div class="trim-situations">
     {% set situations = [
@@ -93,7 +123,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   </div>
 </div></section>
 
-<aside class="trim-service-banner trim-band--white" aria-labelledby="trim-related-title">
+<aside class="trim-service-banner trim-band--charcoal" aria-labelledby="trim-related-title">
   <div class="container-site trim-service-banner-inner">
     <div class="trim-service-banner-main">
       <div class="trim-service-banner-copy">
@@ -172,7 +202,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   </dl>
 </section>
 
-<section class="trim-offer-banner trim-band--mist" aria-labelledby="trim-quote-title">
+<section class="trim-offer-banner trim-band--white" aria-labelledby="trim-quote-title">
   <div class="container-site trim-offer-banner-inner">
     <div class="trim-offer-banner-copy">
       <h2 class="trim-heading" id="trim-quote-title">Оферта за вашите прозорци и врати</h2>

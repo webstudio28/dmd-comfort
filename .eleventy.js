@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 
 let servicesBySlugCache;
+let projectGroupBySlugCache;
 
 function servicesBySlugMap() {
   if (!servicesBySlugCache) {
@@ -12,6 +13,25 @@ function servicesBySlugMap() {
   return servicesBySlugCache;
 }
 
+function projectGroupBySlugMap() {
+  if (!projectGroupBySlugCache) {
+    const groups = require("./src/_data/projectGroups")();
+    projectGroupBySlugCache = new Map();
+    for (const group of groups) {
+      for (const project of group.projects) {
+        if (!projectGroupBySlugCache.has(project.slug)) {
+          projectGroupBySlugCache.set(project.slug, {
+            title: group.title,
+            href: group.href,
+            slug: group.slug,
+          });
+        }
+      }
+    }
+  }
+  return projectGroupBySlugCache;
+}
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/favicon.png": "favicon.png" });
@@ -20,6 +40,12 @@ module.exports = function (eleventyConfig) {
     if (!Array.isArray(slugs) || !slugs.length) return [];
     const bySlug = servicesBySlugMap();
     return slugs.map((slug) => bySlug.get(slug)).filter(Boolean);
+  });
+
+  eleventyConfig.addFilter("projectGroup", (project) => {
+    const slug = typeof project === "string" ? project : project && project.slug;
+    if (!slug) return null;
+    return projectGroupBySlugMap().get(slug) || null;
   });
 
   eleventyConfig.addFilter("matchesAnyHref", (pageUrl, hrefs) => {

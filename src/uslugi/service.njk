@@ -20,7 +20,7 @@ eleventyComputed:
 {% from "macros/faq-schema.njk" import faqSchema %}
 {% macro arrow() %}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endmacro %}
 {% macro check() %}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endmacro %}
-{% macro rail(items, label, ordered=false) %}
+{% macro rail(items, label, ordered=false, actionLabel='Разгледайте услугата') %}
   {% if ordered %}<ol{% else %}<ul{% endif %} class="trim-process trim-process--five trim-service-rail" data-service-carousel data-card-count="{{ items.length }}" tabindex="0" role="region" aria-label="{{ label }} — плъзнете хоризонтално">
     {% for item in items %}
     <li{% if not item.url %} data-step="0{{ loop.index }}"{% else %} class="trim-service-link-slide"{% endif %}>
@@ -29,7 +29,7 @@ eleventyComputed:
         <div class="trim-service-card-body">
       {% endif %}
       <h3>{{ item.title }}</h3><p>{{ item.text or item.summary }}</p>
-      {% if item.url %}<span class="trim-service-card-action">Разгледайте услугата {{ arrow() }}</span></div></a>{% endif %}
+      {% if item.url %}<span class="trim-service-card-action">{{ actionLabel }} {{ arrow() }}</span></div></a>{% endif %}
     </li>
     {% endfor %}
   {% if ordered %}</ol>{% else %}</ul>{% endif %}
@@ -63,6 +63,23 @@ eleventyComputed:
 {% set band = cycler("trim-band--white", "trim-band--mist", "trim-band--lined", "trim-band--mist") %}
 <section class="trim-section {{ band.next() }}" aria-labelledby="trim-intro-title"><div class="container-site"><h2 class="trim-heading" id="trim-intro-title">{{ service.copy.introTitle }}</h2><div class="trim-prose">{% for paragraph in service.copy.intro %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
 
+{% if service.relatedProjects.length %}
+<section class="trim-section {{ band.next() }}" aria-labelledby="trim-projects-title">
+  <div class="container-site">
+    <div class="trim-section-head trim-projects-head">
+      <div>
+        <h2 class="trim-heading" id="trim-projects-title">Нашите проекти за {{ service.title }}</h2>
+        <p>Реализирани обекти, свързани с тази услуга.</p>
+      </div>
+      {% if service.projectsMoreUrl %}
+      <a class="trim-text-link" href="{{ service.projectsMoreUrl | url }}">Всички проекти{% if service.projectsTotal > service.relatedProjects.length %} ({{ service.projectsTotal }}){% endif %} {{ arrow() }}</a>
+      {% endif %}
+    </div>
+  </div>
+  {{ rail(service.relatedProjects, 'Нашите проекти', false, 'Разгледайте проекта') }}
+</section>
+{% endif %}
+
 <section class="trim-section {{ band.next() }}" aria-labelledby="trim-features-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-features-title">Какво съобразяваме с вашия обект?</h2></div></div>{{ rail(service.copy.features, 'Основни детайли') }}</section>
 
 {% if service.subcategoryCards.length %}
@@ -73,15 +90,11 @@ eleventyComputed:
 
 <section class="trim-section {{ band.next() }}" id="materiali" aria-labelledby="trim-materials-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-materials-title">Материали, размери и детайли на изпълнението</h2></div></div>{{ rail(service.copy.materials, 'Материали и детайли') }}</section>
 
-<section class="trim-section {{ band.next() }}" aria-labelledby="trim-planning-title"><div class="container-site"><h2 class="trim-heading" id="trim-planning-title">{{ service.copy.planningTitle }}</h2><div class="trim-prose">{% for paragraph in service.copy.planning %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
-
 {% for section in service.copy.sections %}
 <section class="trim-section {{ band.next() }}" aria-labelledby="trim-detail-{{ loop.index }}"><div class="container-site"><h2 class="trim-heading" id="trim-detail-{{ loop.index }}">{{ section.title }}</h2><div class="trim-prose">{% for paragraph in section.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
 {% endfor %}
 
 <section class="trim-section {{ band.next() }}" id="montazh" aria-labelledby="trim-process-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-process-title">Как протича работата?</h2></div></div>{{ rail(service.copy.process, 'Как протича работата', true) }}</section>
-
-<section class="trim-section {{ band.next() }}" aria-labelledby="trim-preparation-title"><div class="container-site"><h2 class="trim-heading" id="trim-preparation-title">Подготовка на обекта и проверка след монтажа</h2><div class="trim-prose">{% for paragraph in service.copy.preparation %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
 
 <section class="trim-section trim-price-section {{ band.next() }}" id="tsena" aria-labelledby="trim-price-title">
   <div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-price-title">Как се определя цената?</h2></div><p class="trim-copy trim-service-price-intro">{{ service.copy.priceText }}</p></div>

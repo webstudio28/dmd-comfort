@@ -30,8 +30,17 @@ module.exports = function () {
 
   const groups = [];
   for (const service of services) {
-    const items = buckets.get(service.slug);
-    if (!items || !items.length) continue;
+    const childSlugs = (service.menuChildren || []).map((child) => child.slug);
+    const seen = new Set();
+    const items = [];
+    for (const slug of [service.slug, ...childSlugs]) {
+      for (const project of buckets.get(slug) || []) {
+        if (seen.has(project.slug)) continue;
+        seen.add(project.slug);
+        items.push(project);
+      }
+    }
+    if (!items.length) continue;
     groups.push({
       slug: service.slug,
       title: service.title,
