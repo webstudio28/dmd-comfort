@@ -88,8 +88,6 @@ eleventyComputed:
   <div class="container-site"><aside class="trim-quote-card" aria-labelledby="trim-quote-title"><h3 id="trim-quote-title">Оферта според вашия обект</h3><p>{{ service.copy.inquiry }}</p><button class="btn btn-primary open-inquiry mt-6" type="button">Поискайте оферта за вашия обект {{ arrow() }}</button></aside></div>
 </section>
 
-<section class="trim-section" id="obsluzhvani-raioni" aria-labelledby="trim-area-title"><div class="container-site"><h2 class="trim-heading" id="trim-area-title">{{ service.copy.areaTitle }}</h2><div class="trim-prose"><p>{{ service.copy.areaText }}</p><p>Приемаме запитвания и за обекти в други населени места в България. Възможността за изпълнение, организацията на огледа и условията за транспорт и монтаж се уточняват според местоположението и обхвата на работата.</p></div><button class="btn btn-primary open-inquiry mt-6" type="button">Поискайте оферта {{ arrow() }}</button></div></section>
-
 {% if service.relatedServices.length %}
 <section class="trim-section trim-comparison-section" aria-labelledby="trim-related-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-related-title">{{ service.copy.relatedTitle }}</h2></div></div>{{ rail(service.relatedServices, 'Свързани услуги') }}</section>
 {% endif %}
