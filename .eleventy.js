@@ -22,6 +22,11 @@ module.exports = function (eleventyConfig) {
     return slugs.map((slug) => bySlug.get(slug)).filter(Boolean);
   });
 
+  eleventyConfig.addFilter("matchesAnyHref", (pageUrl, hrefs) => {
+    if (!pageUrl || !Array.isArray(hrefs)) return false;
+    return hrefs.some((href) => href === pageUrl || `${href}/` === pageUrl || href === `${pageUrl}/`);
+  });
+
   eleventyConfig.addGlobalData("buildDate", () =>
     new Date().toISOString().slice(0, 10),
   );

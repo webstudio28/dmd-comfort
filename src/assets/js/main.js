@@ -401,3 +401,20 @@
     }
   }
 })();
+
+(() => {
+  document.querySelectorAll("[data-read-more]").forEach((root) => {
+    const panel = root.querySelector("[data-read-more-panel]");
+    const btn = root.querySelector("[data-read-more-toggle]");
+    const label = btn?.querySelector("[data-read-more-label]");
+    if (!panel || !btn || !label) return;
+
+    btn.addEventListener("click", () => {
+      const open = panel.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      label.textContent = open
+        ? btn.getAttribute("data-label-less")
+        : btn.getAttribute("data-label-more");
+    });
+  });
+})();

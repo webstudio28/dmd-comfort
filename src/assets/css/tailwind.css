@@ -23,6 +23,23 @@
   }
 }
 
+/* Inquiry modal: long <select> option labels must not force horizontal scroll */
+#inquiryModal,
+#inquiryModal [role="dialog"] {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+#inquiryModal [role="dialog"] {
+  box-sizing: border-box;
+}
+#inquiryModal :is(input, select, textarea, button, .btn) {
+  max-width: 100%;
+}
+#inquiryModal select {
+  width: 100%;
+  min-width: 0;
+}
+
 @layer components {
   .container-site {
     @apply mx-auto w-[min(80rem,calc(100%-2rem))] md:w-[min(80rem,calc(100%-4rem))];

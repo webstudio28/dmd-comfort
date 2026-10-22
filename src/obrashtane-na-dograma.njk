@@ -14,13 +14,13 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
 {% macro check() %}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endmacro %}
 
 {% call pageBanner() %}
-  <div class="grid items-end gap-8 lg:grid-cols-2">
+  <div class="grid items-end gap-8 lg:grid-cols-2 lg:items-center">
     <div>
       <h1 class="font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-black leading-none" id="trim-title">ПВЦ профили за <span class="block text-[#a5d7b8]">обръщане на прозорци</span></h1>
       <p class="mt-4 max-w-xl text-lg leading-relaxed text-white/70">Завършен вид около дограмата с прецизно оформени страници, ръбове и ъгли.</p>
       <div class="mt-6 flex flex-wrap items-center gap-5">
         <button class="btn btn-primary open-inquiry" type="button">Поискайте оферта {{ arrow() }}</button>
-        <a class="trim-text-link trim-text-link-light" href="#montazh">Вижте как се изпълнява <span aria-hidden="true">↓</span></a>
+        <a class="btn btn-light" href="#kakvo-predstavlyava">Виж повече за услугата</a>
       </div>
     </div>
     <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-lift">
@@ -46,24 +46,31 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   <div class="container-site trim-intro-grid">
     <div>
       <h2 class="trim-heading" id="trim-intro-title">Какво представлява обръщането на прозорци с PVC профили?</h2>
-      <div class="trim-prose">
+      <div class="trim-prose" data-read-more>
         <p>След монтажа на прозорците остава още една важна стъпка — оформянето на пространството между дограмата и стената. В ДМД Комфорт предлагаме обръщане с PVC профили, подбрани и разкроени според размерите на вашия прозоречен отвор.</p>
-        <p>Работим основно в Пловдив и региона, като приемаме запитвания и за обекти в други населени места в България. Възможността и условията за изпълнение се уточняват според местоположението и обхвата на работата.</p>
-        <p>При смяна на дограмата около новата рамка често остават нарушена мазилка, открита монтажна пяна и неоформени участъци. Обръщането завършва страничните и горната част на отвора и оформя връзката между прозореца и вътрешната стена.</p>
-        <p>За тази цел се използват готови <strong>ПВЦ профили за обръщане на прозорци</strong>. Те се оразмеряват за конкретния отвор и образуват завършена облицовка около дограмата.</p>
-        <p>Профилите са довършителни елементи около прозореца. Те се съчетават с рамката и подпрозоречния перваз, за да се получи цялостен и подреден вид.</p>
+        <div class="trim-read-more-panel" data-read-more-panel id="trim-intro-more">
+          <div class="trim-read-more-inner">
+            <p>Работим основно в Пловдив и региона, като приемаме запитвания и за обекти в други населени места в България. Възможността и условията за изпълнение се уточняват според местоположението и обхвата на работата.</p>
+            <p>При смяна на дограмата около новата рамка често остават нарушена мазилка, открита монтажна пяна и неоформени участъци. Обръщането завършва страничните и горната част на отвора и оформя връзката между прозореца и вътрешната стена.</p>
+            <p>За тази цел се използват готови <strong>ПВЦ профили за обръщане на прозорци</strong>. Те се оразмеряват за конкретния отвор и образуват завършена облицовка около дограмата.</p>
+            <p>Профилите са довършителни елементи около прозореца. Те се съчетават с рамката и подпрозоречния перваз, за да се получи цялостен и подреден вид.</p>
+          </div>
+        </div>
+        <button class="trim-text-link trim-read-more-link" type="button" data-read-more-toggle aria-expanded="false" aria-controls="trim-intro-more" data-label-more="Прочети повече за услугата" data-label-less="Скрий текста">
+          <span data-read-more-label>Прочети повече за услугата</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
       </div>
     </div>
     <aside class="trim-result-panel" aria-labelledby="trim-result-title">
-      <span class="trim-icon">{{ includeIcon("Финишен вид") }}</span>
       <h3 id="trim-result-title">Завършек според вашия отвор</h3>
-      <ul class="trim-detail-list">
-        <li><span>01</span><div><strong>Оразмерени елементи</strong><p>Профили, съобразени с ширината, височината и дълбочината на отвора.</p></div></li>
-        <li><span>02</span><div><strong>Съгласувани детайли</strong><p>Предварително уточнени съединения, ъгли и връзка с перваза.</p></div></li>
-        <li><span>03</span><div><strong>Цялостен вид</strong><p>Завършек, съобразен с дограмата и вътрешните стени.</p></div></li>
-      </ul>
     </aside>
   </div>
+  <ul class="trim-detail-list trim-card-rail" data-drag-scroll data-card-count="3" tabindex="0" role="region" aria-label="Завършек според вашия отвор — плъзнете хоризонтално">
+    <li><strong>Оразмерени елементи</strong><p>Профили, съобразени с ширината, височината и дълбочината на отвора.</p></li>
+    <li><strong>Съгласувани детайли</strong><p>Предварително уточнени съединения, ъгли и връзка с перваза.</p></li>
+    <li><strong>Цялостен вид</strong><p>Завършек, съобразен с дограмата и вътрешните стени.</p></li>
+  </ul>
 </section>
 
 <section class="trim-section trim-section-soft" aria-labelledby="trim-benefit-title">
@@ -77,7 +84,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
 </section>
 
 <section class="trim-section" aria-labelledby="trim-suitable-title"><div class="container-site">
-  <div class="trim-section-head"><h2 class="trim-heading" id="trim-suitable-title">Кога е подходящо това решение?</h2><p>Решението се съобразява със състоянието на отвора и останалите довършителни работи.</p></div>
+  <div class="trim-section-head"><h2 class="trim-heading" id="trim-suitable-title">Кога е подходящо обръщане с ПВЦ профили?</h2></div>
   <div class="trim-situations">
     {% set situations = [
       { title: "След монтаж на нова дограма", text: "Когато демонтажът на старите прозорци е оставил повредени ръбове и незавършени участъци, профилите могат да оформят вътрешния отвор след необходимата подготовка.", icon: "Монтаж" },
@@ -86,8 +93,31 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
     ] %}
     {% for item in situations %}<article class="trim-situation"><span class="trim-icon">{{ includeIcon(item.icon) }}</span><h3>{{ item.title }}</h3><p>{{ item.text }}</p></article>{% endfor %}
   </div>
-  <div class="trim-inline-note"><strong>Планирате и нови прозорци?</strong><p>Разгледайте услугите ни за <a class="trim-text-link" href="{{ '/uslugi/pvc-dograma/' | url }}">PVC дограма</a> и <a class="trim-text-link" href="{{ '/uslugi/aluminiumieva-dograma/' | url }}">алуминиева дограма</a>. Монтажът и довършването около отворите могат да бъдат обсъдени като част от общото изпълнение.</p></div>
 </div></section>
+
+<aside class="trim-service-banner" aria-labelledby="trim-related-title">
+  <div class="container-site trim-service-banner-inner">
+    <div class="trim-service-banner-main">
+      <div class="trim-service-banner-copy">
+        <strong id="trim-related-title">Планирате ремонт на врати и прозорци?</strong>
+        <p>Разгледайте нашите услуги за:</p>
+      </div>
+      <div class="trim-related-services">
+        {% set relatedServices = [
+          { slug: "pvc-dograma", title: "PVC дограма", image: "/assets/images/services/pvc-dograma.jpg", alt: "Бяла PVC дограма" },
+          { slug: "aluminiumieva-dograma", title: "Алуминиева дограма", image: "/assets/images/services/aluminiumieva-dograma.jpg", alt: "Алуминиева дограма с тънки рамки" }
+        ] %}
+        {% for item in relatedServices %}
+        <a class="trim-related-service" href="{{ ('/uslugi/' + item.slug + '/') | url }}">
+          <img src="{{ item.image | url }}" alt="{{ item.alt }}" width="96" height="72" loading="lazy" decoding="async" />
+          <span>{{ item.title }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+    <p class="trim-service-banner-note">Монтажът и довършването около отворите могат да бъдат обсъдени като част от общото изпълнение.</p>
+  </div>
+</aside>
 
 <section class="trim-section trim-section-soft" id="materiali" aria-labelledby="trim-materials-title">
   <div class="container-site"><h2 class="trim-heading" id="trim-materials-title">Профили, размери и завършек според вашия прозорец</h2><p class="trim-copy">За добрия резултат са важни както видимата повърхност, така и точните размери и начинът на монтаж. Размерите и материалите се съгласуват преди изпълнението.</p></div>
@@ -142,34 +172,42 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   <dl class="price-boxes price-boxes--cards trim-card-rail" data-drag-scroll data-card-count="6" tabindex="0" role="region" aria-label="Как се определя цената — плъзнете хоризонтално">
     {% for item in priceFactors %}<div><dt>{{ item.name }}</dt><dd>{{ item.text }}</dd></div>{% endfor %}
   </dl>
-  <div class="container-site">
-    <aside class="trim-quote-card" aria-labelledby="trim-quote-title"><span class="trim-icon">{{ includeIcon("Измерване") }}</span><h3 id="trim-quote-title">Оферта за вашите прозорци и врати</h3><p>Когато сравнявате оферти, проверявайте дали посочената цена включва материалите, монтажа и необходимата подготовка.</p><button class="btn btn-primary open-inquiry mt-6" type="button">Поискайте оферта за вашия обект {{ arrow() }}</button></aside>
+</section>
+
+<section class="trim-offer-banner" aria-labelledby="trim-quote-title">
+  <div class="container-site trim-offer-banner-inner">
+    <div class="trim-offer-banner-copy">
+      <h2 class="trim-heading" id="trim-quote-title">Оферта за вашите прозорци и врати</h2>
+      <p>Направете запитване и ще ви изготвим ясна оферта за вашия обект.</p>
+      <div class="trim-offer-banner-actions">
+        <button class="btn btn-primary open-inquiry" type="button">Направете запитване {{ arrow() }}</button>
+        <a class="btn btn-outline" href="{{ '/kontakti/' | url }}">Контакти</a>
+      </div>
+    </div>
+    <figure class="trim-offer-banner-media">
+      <img src="{{ '/assets/images/hero.jpg' | url }}" alt="Реализиран обект на ДМД Комфорт" width="1600" height="1067" loading="lazy" decoding="async" />
+    </figure>
   </div>
 </section>
 
-<section class="trim-section" id="obsluzhvani-raioni" aria-labelledby="trim-area-title"><div class="container-site trim-quality-grid">
-  <div><h2 class="trim-heading" id="trim-area-title">Обръщане с PVC профили в Пловдив и страната</h2></div>
-  <div class="trim-prose">
-    <p>Предлагаме вътрешно обръщане около прозорци и врати, както след смяна на дограмата, така и при обновяване на съществуващи отвори.</p>
-    <p>Основно работим в Пловдив и околните населени места. Ако обектът ви е в друга част на България, свържете се с нас, за да обсъдим изпълнението. Посочете населеното място, броя отвори и необходимите довършителни работи.</p>
-    <button class="btn btn-primary open-inquiry mt-6" type="button">Поискайте оферта {{ arrow() }}</button>
-  </div>
-</div></section>
-
-<section class="trim-section trim-comparison-section" id="sravnenie" aria-labelledby="trim-compare-title"><div class="container-site trim-quality-grid">
-  <div><h2 class="trim-heading" id="trim-compare-title">PVC профили или стандартно обръщане?</h2></div>
-  <div class="trim-prose"><p>При стандартното обръщане отворът се оформя с довършителни материали и обикновено се боядисва в цвета на стената. При метода с PVC профили се получава отделна, завършена облицовъчна повърхност около дограмата.</p><p>Изборът зависи от желания вид, състоянието на отвора и останалите ремонтни дейности.</p></div>
-  {% for post in blog %}{% if post.slug == 'obrashtane-na-prozortsi' %}
-  <a class="trim-blog-card" href="{{ ('/blog/' + post.slug + '/') | url }}">
-    <img class="trim-blog-card-image" src="{{ post.image | url }}" alt="{{ post.imageAlt }}" width="1536" height="1024" loading="lazy" decoding="async" />
-    <div class="trim-blog-card-body">
-      <h3>{{ post.title }}</h3>
-      <p>{{ post.excerpt }}</p>
-      <span class="trim-blog-card-link">Прочетете статията <span aria-hidden="true">→</span></span>
+<section class="trim-section trim-comparison-section" id="sravnenie" aria-labelledby="trim-compare-title">
+  <div class="container-site">
+    <div class="trim-section-head">
+      <h2 class="trim-heading" id="trim-compare-title">PVC профили или стандартно обръщане?</h2>
+      <p>Можете да прочетете и нашата статия с по-подробно сравнение на двата подхода.</p>
     </div>
-  </a>
-  {% endif %}{% endfor %}
-</div></section>
+    {% for post in blog %}{% if post.slug == 'obrashtane-na-prozortsi' %}
+    <a class="trim-blog-card trim-blog-card--compact" href="{{ ('/blog/' + post.slug + '/') | url }}">
+      <img class="trim-blog-card-image" src="{{ post.image | url }}" alt="{{ post.imageAlt }}" width="1536" height="1024" loading="lazy" decoding="async" />
+      <div class="trim-blog-card-body">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt }}</p>
+        <span class="trim-blog-card-link">Прочетете статията <span aria-hidden="true">→</span></span>
+      </div>
+    </a>
+    {% endif %}{% endfor %}
+  </div>
+</section>
 
 {% macro faqItem(faq) %}
 <details class="trim-faq-item">
@@ -221,7 +259,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
 </section>
 
 <section class="trim-contact" id="zapitvane" aria-labelledby="trim-contact-title"><div class="container-site trim-contact-grid">
-  <div><h2 id="trim-contact-title">Поискайте оферта за завършване около вашите прозорци</h2><p>За нови и вече монтирани прозорци в Пловдив и страната.</p></div>
+  <div><h2 id="trim-contact-title">Поискайте оферта за обръщане с ПВЦ профили</h2><p>За нови и вече монтирани прозорци в Пловдив и страната.</p></div>
   <div class="trim-contact-actions"><button class="btn btn-primary open-inquiry" type="button">Поискайте оферта {{ arrow() }}</button></div>
 </div></section>
 
