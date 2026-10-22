@@ -1,0 +1,27 @@
+---
+description: Card rails with exactly 3 items are a static grid on desktop
+globs: src/**/*.{njk,css}
+alwaysApply: false
+---
+
+# Card rail / carousel counts
+
+Horizontal card rails use `data-card-count="N"` on `.trim-card-rail` or `.trim-process--five`.
+
+## Desktop (≥1024px)
+
+- **2 cards** → static 2-column grid. No peek / drag.
+- **3 cards** → static 3-column grid. No peek / drag.
+- **4+ cards** → horizontal drag carousel.
+
+## Mobile
+
+Always allow horizontal scroll / peek, including when `data-card-count="3"`.
+
+## Markup
+
+Always set an accurate `data-card-count` from the rendered item length:
+
+```html
+<ul class="trim-card-rail" data-drag-scroll data-card-count="{{ items.length }}">
+```
