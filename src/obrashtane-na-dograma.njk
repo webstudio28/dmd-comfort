@@ -22,6 +22,11 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
         <button class="btn btn-primary open-inquiry" type="button">Поискайте оферта {{ arrow() }}</button>
         <a class="btn btn-light" href="#kakvo-predstavlyava">Виж повече за услугата</a>
       </div>
+      <ul class="trim-hero-points">
+        <li>{{ check() }}<span>Готова довършителна повърхност</span></li>
+        <li>{{ check() }}<span>Оформени ръбове и ъгли</span></li>
+        <li>{{ check() }}<span>За прозорци и врати</span></li>
+      </ul>
     </div>
     <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-lift">
       <img class="aspect-[4/3] w-full object-cover" src="{{ pageImage | url }}" alt="Илюстрация на бял прозорец с PVC профили по вътрешните страници на отвора" width="1536" height="1024" fetchpriority="high" decoding="async" />
@@ -30,19 +35,13 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   </div>
 {% endcall %}
 
-<div class="trim-benefits"><div class="container-site trim-benefits-grid">
-  <div>{{ check() }}<span>Готова довършителна повърхност</span></div>
-  <div>{{ check() }}<span>Оформени ръбове и ъгли</span></div>
-  <div>{{ check() }}<span>За прозорци и врати</span></div>
-</div></div>
-
 {{ breadcrumbs([
   { label: "Начало", url: "/" },
   { label: "Услуги", url: "/uslugi/" },
   { label: "Обръщане с PVC первази" }
 ]) }}
 
-<section class="trim-section" id="kakvo-predstavlyava" aria-labelledby="trim-intro-title">
+<section class="trim-section trim-band--mist" id="kakvo-predstavlyava" aria-labelledby="trim-intro-title">
   <div class="container-site trim-intro-grid">
     <div>
       <h2 class="trim-heading" id="trim-intro-title">Какво представлява обръщането на прозорци с PVC профили?</h2>
@@ -72,7 +71,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   </ul>
 </section>
 
-<section class="trim-section trim-section-soft" aria-labelledby="trim-benefit-title">
+<section class="trim-section trim-band--white" aria-labelledby="trim-benefit-title">
   <div class="container-site"><h2 class="trim-heading" id="trim-benefit-title">Защо да изберете обръщане с PVC профили?</h2><p class="trim-copy">Готовата облицовка оформя пространството около прозореца и дава завършек, съобразен с дограмата и интериора.</p></div>
   <div class="trim-quality-list trim-card-rail" data-drag-scroll data-card-count="4" tabindex="0" role="region" aria-label="Предимства — плъзнете хоризонтално">
     <div><span>01</span><h3>Готова довършителна повърхност</h3><p>Самият профил има завършена повърхност и не изисква шпакловане и боядисване като измазана стена. Състоянието на стената извън облицованата зона се оценява отделно.</p></div>
@@ -82,7 +81,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   </div>
 </section>
 
-<section class="trim-section" aria-labelledby="trim-suitable-title"><div class="container-site">
+<section class="trim-section trim-band--mist" aria-labelledby="trim-suitable-title"><div class="container-site">
   <div class="trim-section-head"><h2 class="trim-heading" id="trim-suitable-title">Кога е подходящо обръщане с ПВЦ профили?</h2></div>
   <div class="trim-situations">
     {% set situations = [
@@ -94,7 +93,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   </div>
 </div></section>
 
-<aside class="trim-service-banner" aria-labelledby="trim-related-title">
+<aside class="trim-service-banner trim-band--white" aria-labelledby="trim-related-title">
   <div class="container-site trim-service-banner-inner">
     <div class="trim-service-banner-main">
       <div class="trim-service-banner-copy">
@@ -118,7 +117,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   </div>
 </aside>
 
-<section class="trim-section trim-section-soft" id="materiali" aria-labelledby="trim-materials-title">
+<section class="trim-section trim-band--mist" id="materiali" aria-labelledby="trim-materials-title">
   <div class="container-site"><h2 class="trim-heading" id="trim-materials-title">Профили, размери и завършек според вашия прозорец</h2><p class="trim-copy">За добрия резултат са важни както видимата повърхност, така и точните размери и начинът на монтаж. Размерите и материалите се съгласуват преди изпълнението.</p></div>
   <dl class="trim-material-points trim-card-rail" data-drag-scroll data-card-count="5" tabindex="0" role="region" aria-label="Профили и размери — плъзнете хоризонтално">
     <div><span class="trim-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 3v18M20 3v18M8 12h8m-6-2.5L7.5 12 10 14.5m4-5L16.5 12 14 14.5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><dt>Дълбочината на отвора</dt><dd>Разстоянието, което трябва да бъде облицовано между дограмата и вътрешния ръб на стената.</dd></div></div>
@@ -129,7 +128,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   </dl>
 </section>
 
-<section class="trim-section" id="obrashtane-na-vrati" aria-labelledby="trim-doors-title"><div class="container-site trim-quality-grid">
+<section class="trim-section trim-band--lined" id="obrashtane-na-vrati" aria-labelledby="trim-doors-title"><div class="container-site trim-quality-grid">
   <div><h2 class="trim-heading" id="trim-doors-title">Предлагаме и обръщане на врати с PVC профили</h2></div>
   <div class="trim-prose">
     <p>Освен около прозорци, предлагаме оформяне с PVC профили и около врати.</p>
@@ -146,7 +145,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   { title: "Подготовка и монтаж", text: "Подготвяме работната зона и основата. Профилите се разкрояват и монтират според конкретния отвор и изискванията на избраната система." },
   { title: "Проверка на завършения резултат", text: "Проверяваме съединенията, ъглите, връзката с перваза и свободното отваряне на прозорците или вратите." }
 ] %}
-<section class="trim-section trim-section-soft" id="montazh" aria-labelledby="trim-process-title">
+<section class="trim-section trim-band--mist" id="montazh" aria-labelledby="trim-process-title">
   <div class="container-site">
     <div class="trim-section-head"><h2 class="trim-heading" id="trim-process-title">Как протича работата?</h2></div>
   </div>
@@ -163,7 +162,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   { name: "Детайли около отвора", text: "Ъгли, съединения и връзка със съществуващия перваз." },
   { name: "Местоположение и достъп", text: "Условията за работа на конкретния обект." }
 ] %}
-<section class="trim-section trim-price-section" id="cena" aria-labelledby="trim-price-title">
+<section class="trim-section trim-price-section trim-band--white" id="cena" aria-labelledby="trim-price-title">
   <div class="container-site">
     <h2 class="trim-heading" id="trim-price-title">Как се определя цената?</h2>
     <p class="trim-copy">Цената за обръщане с PVC профили зависи от размерите на отворите, избраните материали и работата, необходима преди монтажа.</p>
@@ -173,7 +172,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   </dl>
 </section>
 
-<section class="trim-offer-banner" aria-labelledby="trim-quote-title">
+<section class="trim-offer-banner trim-band--mist" aria-labelledby="trim-quote-title">
   <div class="container-site trim-offer-banner-inner">
     <div class="trim-offer-banner-copy">
       <h2 class="trim-heading" id="trim-quote-title">Оферта за вашите прозорци и врати</h2>
@@ -189,7 +188,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   </div>
 </section>
 
-<section class="trim-section trim-comparison-section" id="sravnenie" aria-labelledby="trim-compare-title">
+<section class="trim-section trim-comparison-section trim-band--lined" id="sravnenie" aria-labelledby="trim-compare-title">
   <div class="container-site">
     <div class="trim-section-head">
       <h2 class="trim-heading" id="trim-compare-title">PVC профили или стандартно обръщане?</h2>
@@ -229,7 +228,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
   { q: "Как да поискам оферта?", a: "Изпратете запитване с населеното място, броя прозорци или врати и кратко описание на състоянието им. Ако разполагате със снимки и приблизителни размери, добавете и тях за първоначална преценка." },
   { q: "Работите ли по обекти извън Пловдив?", a: "Да, приемаме запитвания и за обекти в други населени места в България. Възможността и условията за изпълнение се уточняват според местоположението и обхвата на работата." }
 ] %}
-<section class="trim-section trim-section-soft" id="vaprosi" aria-labelledby="trim-faq-title" data-faq>
+<section class="trim-section trim-band--mist" id="vaprosi" aria-labelledby="trim-faq-title" data-faq>
   <div class="container-site">
     <div class="trim-faq-head">
       <h2 class="trim-heading" id="trim-faq-title">Често задавани въпроси</h2>

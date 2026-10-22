@@ -1,5 +1,5 @@
 /* Scoped service-page layout; shared brand typography and buttons stay in Tailwind. */
-.window-finishing { background: #fff; }
+.window-finishing { background: transparent; }
 .window-finishing main { --trim-border: #dce4de; --trim-muted: #55625a; --trim-radius: 1rem; }
 .window-finishing main :is(a, button, summary):focus-visible { outline: 3px solid #53b97c; outline-offset: 5px; }
 .window-finishing main section[id] { scroll-margin-top: 24px; }
@@ -12,13 +12,56 @@
 .trim-text-link:hover { text-decoration: underline; text-underline-offset: 5px; }
 .trim-text-link svg { flex-shrink: 0; }
 .trim-text-link-light { color: #fff; }
-.trim-benefits { background: #eaf2ec; border-bottom: 1px solid var(--trim-border); }
+.trim-hero-points {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 22px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.trim-hero-points li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: rgba(255, 255, 255, 0.88);
+}
+.trim-hero-points svg {
+  flex-shrink: 0;
+  color: #a5d7b8;
+}
+.trim-benefits { border-bottom: 1px solid var(--trim-border); }
 .trim-benefits-grid { display: grid; grid-template-columns: repeat(3, 1fr); padding-block: 22px; }
 .trim-benefits-grid > div { display: flex; align-items: center; justify-content: center; gap: 12px; font-size: 16px; font-weight: 500; }
 .trim-benefits-grid > div + div { border-left: 1px solid #cbd9d0; }
 .trim-benefits-grid svg { color: #057230; flex-shrink: 0; }
 .trim-section { padding: 92px 0; }
-.trim-section-soft { background: #f4f7f3; }
+/*
+  Band rhythm rule (service / обръщане pages):
+  After the hero → soft gray → plain white → soft gray → white+lines → … (repeat)
+  Lines only on every second white band. Pattern from “Оферта…” — keep, but softer.
+*/
+.trim-band--mist {
+  background: rgba(244, 245, 244, 0.72);
+}
+.trim-band--white {
+  background: #fff;
+}
+.trim-band--lined {
+  background-color: #fff;
+  background-image: repeating-linear-gradient(
+    155deg,
+    transparent 0,
+    transparent 18px,
+    rgba(26, 29, 31, 0.016) 18px,
+    rgba(26, 29, 31, 0.016) 19px
+  );
+}
+.trim-section-soft { background: transparent; }
 .trim-heading { color: #1a1d1f; font-size: clamp(33px, 3.35vw, 48px); line-height: 1.08; font-weight: 800; letter-spacing: -.012em; margin: 0 0 24px; max-width: 630px; }
 .trim-prose p, .trim-copy { color: var(--trim-muted); font-size: 17px; line-height: 1.8; }
 .trim-prose p + p { margin-top: 17px; }
@@ -38,6 +81,8 @@
   border: 1px solid #dce6df;
   border-radius: 12px;
   background: #fff;
+  background-color: #fff;
+  box-shadow: 0 6px 18px rgba(26, 29, 31, 0.05);
 }
 .trim-detail-list.trim-card-rail > * { width: min(78vw, 320px); }
 .trim-detail-list strong { display: block; font-size: 16px; font-weight: 700; color: #1a1d1f; line-height: 1.3; }
@@ -64,8 +109,7 @@
 .trim-situation h3, .trim-material h3 { font-size: 27px; font-weight: 700; line-height: 1.15; margin: 22px 0 14px; }
 .trim-situation p, .trim-material p { color: var(--trim-muted); font-size: 16px; line-height: 1.75; }
 .trim-service-banner {
-  background: #f4f7f3;
-  border-block: 1px solid #d5e1d8;
+  border-block: 0;
   padding: 40px 0;
 }
 .trim-service-banner-inner {
@@ -142,7 +186,7 @@
 .trim-material h3 { min-height: 62px; }
 .trim-material p { margin-bottom: 28px; }
 .trim-material-tag { display: block; border-top: 1px solid #e5eae6; padding-top: 17px; font-size: 13px; color: #45604d; margin-top: auto; }
-.trim-comparison-section { background: #f7f6f2; }
+.trim-comparison-section { background: transparent; }
 .trim-comparison-grid { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: start; }
 .trim-comparison-grid .trim-text-link, .trim-faq-intro .trim-text-link { margin-top: 25px; }
 .trim-table-wrap { min-width: 0; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--trim-radius); border: 1px solid #e2e5df; background: #fff; }
@@ -165,7 +209,7 @@
 .trim-timing { display: flex; gap: 20px; align-items: center; margin-top: 38px; background: #f4f7f3; padding: 25px 30px; border-radius: var(--trim-radius); }
 .trim-timing h3 { font-size: 22px; font-weight: 700; margin-bottom: 5px; }
 .trim-timing p { font-size: 15px; line-height: 1.7; color: var(--trim-muted); }
-.trim-price-section { background: #edf3ed; }
+.trim-price-section { background: transparent; }
 .trim-price-grid { display: grid; grid-template-columns: 1fr; gap: 36px; align-items: start; }
 .trim-material-points { display: grid; gap: 16px; margin: 8px 0 0; }
 .trim-material-points > div { display: flex; align-items: flex-start; gap: 20px; background: #fff; border: 1px solid #e3ebe5; border-radius: var(--trim-radius); padding: 22px 28px; box-shadow: 0 8px 24px rgba(32, 58, 39, 0.05); }
@@ -186,8 +230,7 @@
 
 .trim-offer-banner {
   padding: 56px 0;
-  background: #f4f7f3;
-  border-block: 1px solid #d5e1d8;
+  border-block: 0;
 }
 .trim-offer-banner-inner {
   display: flex;

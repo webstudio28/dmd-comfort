@@ -53,46 +53,47 @@ eleventyComputed:
     {% endif %}
   </div>
 {% endcall %}
-<div class="trim-benefits"><div class="container-site trim-benefits-grid">{% for feature in service.copy.features %}{% if loop.index0 < 3 %}<div>{{ check() }}<span>{{ feature.title }}</span></div>{% endif %}{% endfor %}</div></div>
+<div class="trim-benefits trim-band--mist"><div class="container-site trim-benefits-grid">{% for feature in service.copy.features %}{% if loop.index0 < 3 %}<div>{{ check() }}<span>{{ feature.title }}</span></div>{% endif %}{% endfor %}</div></div>
 {% if service.parentUrl %}
 {{ breadcrumbs([{label: "Начало", url: "/"}, {label: "Услуги", url: "/uslugi/"}, {label: service.parentTitle, url: service.parentUrl}, {label: service.title}]) }}
 {% else %}
 {{ breadcrumbs([{label: "Начало", url: "/"}, {label: "Услуги", url: "/uslugi/"}, {label: service.title}]) }}
 {% endif %}
 
-<section class="trim-section" aria-labelledby="trim-intro-title"><div class="container-site"><h2 class="trim-heading" id="trim-intro-title">{{ service.copy.introTitle }}</h2><div class="trim-prose">{% for paragraph in service.copy.intro %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
+{% set band = cycler("trim-band--white", "trim-band--mist", "trim-band--lined", "trim-band--mist") %}
+<section class="trim-section {{ band.next() }}" aria-labelledby="trim-intro-title"><div class="container-site"><h2 class="trim-heading" id="trim-intro-title">{{ service.copy.introTitle }}</h2><div class="trim-prose">{% for paragraph in service.copy.intro %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
 
-<section class="trim-section trim-section-soft" aria-labelledby="trim-features-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-features-title">Какво съобразяваме с вашия обект?</h2></div></div>{{ rail(service.copy.features, 'Основни детайли') }}</section>
+<section class="trim-section {{ band.next() }}" aria-labelledby="trim-features-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-features-title">Какво съобразяваме с вашия обект?</h2></div></div>{{ rail(service.copy.features, 'Основни детайли') }}</section>
 
 {% if service.subcategoryCards.length %}
-<section class="trim-section" aria-labelledby="trim-types-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-types-title">{{ service.copy.typesTitle }}</h2></div></div>{{ rail(service.subcategoryCards, 'Видове услуги') }}</section>
+<section class="trim-section {{ band.next() }}" aria-labelledby="trim-types-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-types-title">{{ service.copy.typesTitle }}</h2></div></div>{{ rail(service.subcategoryCards, 'Видове услуги') }}</section>
 {% endif %}
 
-<section class="trim-section" aria-labelledby="trim-suitable-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-suitable-title">Кога е подходящо това решение?</h2></div></div>{{ rail(service.copy.applications, 'Приложения') }}</section>
+<section class="trim-section {{ band.next() }}" aria-labelledby="trim-suitable-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-suitable-title">Кога е подходящо това решение?</h2></div></div>{{ rail(service.copy.applications, 'Приложения') }}</section>
 
-<section class="trim-section trim-section-soft" id="materiali" aria-labelledby="trim-materials-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-materials-title">Материали, размери и детайли на изпълнението</h2></div></div>{{ rail(service.copy.materials, 'Материали и детайли') }}</section>
+<section class="trim-section {{ band.next() }}" id="materiali" aria-labelledby="trim-materials-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-materials-title">Материали, размери и детайли на изпълнението</h2></div></div>{{ rail(service.copy.materials, 'Материали и детайли') }}</section>
 
-<section class="trim-section" aria-labelledby="trim-planning-title"><div class="container-site"><h2 class="trim-heading" id="trim-planning-title">{{ service.copy.planningTitle }}</h2><div class="trim-prose">{% for paragraph in service.copy.planning %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
+<section class="trim-section {{ band.next() }}" aria-labelledby="trim-planning-title"><div class="container-site"><h2 class="trim-heading" id="trim-planning-title">{{ service.copy.planningTitle }}</h2><div class="trim-prose">{% for paragraph in service.copy.planning %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
 
 {% for section in service.copy.sections %}
-<section class="trim-section{% if loop.index0 % 2 == 0 %} trim-section-soft{% endif %}" aria-labelledby="trim-detail-{{ loop.index }}"><div class="container-site"><h2 class="trim-heading" id="trim-detail-{{ loop.index }}">{{ section.title }}</h2><div class="trim-prose">{% for paragraph in section.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
+<section class="trim-section {{ band.next() }}" aria-labelledby="trim-detail-{{ loop.index }}"><div class="container-site"><h2 class="trim-heading" id="trim-detail-{{ loop.index }}">{{ section.title }}</h2><div class="trim-prose">{% for paragraph in section.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
 {% endfor %}
 
-<section class="trim-section trim-section-soft" id="montazh" aria-labelledby="trim-process-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-process-title">Как протича работата?</h2></div></div>{{ rail(service.copy.process, 'Как протича работата', true) }}</section>
+<section class="trim-section {{ band.next() }}" id="montazh" aria-labelledby="trim-process-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-process-title">Как протича работата?</h2></div></div>{{ rail(service.copy.process, 'Как протича работата', true) }}</section>
 
-<section class="trim-section" aria-labelledby="trim-preparation-title"><div class="container-site"><h2 class="trim-heading" id="trim-preparation-title">Подготовка на обекта и проверка след монтажа</h2><div class="trim-prose">{% for paragraph in service.copy.preparation %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
+<section class="trim-section {{ band.next() }}" aria-labelledby="trim-preparation-title"><div class="container-site"><h2 class="trim-heading" id="trim-preparation-title">Подготовка на обекта и проверка след монтажа</h2><div class="trim-prose">{% for paragraph in service.copy.preparation %}<p>{{ paragraph }}</p>{% endfor %}</div></div></section>
 
-<section class="trim-section trim-price-section" id="tsena" aria-labelledby="trim-price-title">
+<section class="trim-section trim-price-section {{ band.next() }}" id="tsena" aria-labelledby="trim-price-title">
   <div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-price-title">Как се определя цената?</h2></div><p class="trim-copy trim-service-price-intro">{{ service.copy.priceText }}</p></div>
   {{ rail(service.copy.priceDetails, 'Фактори за цената') }}
   <div class="container-site"><aside class="trim-quote-card" aria-labelledby="trim-quote-title"><h3 id="trim-quote-title">Оферта според вашия обект</h3><p>{{ service.copy.inquiry }}</p><button class="btn btn-primary open-inquiry mt-6" type="button">Поискайте оферта за вашия обект {{ arrow() }}</button></aside></div>
 </section>
 
 {% if service.relatedServices.length %}
-<section class="trim-section trim-comparison-section" aria-labelledby="trim-related-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-related-title">{{ service.copy.relatedTitle }}</h2></div></div>{{ rail(service.relatedServices, 'Свързани услуги') }}</section>
+<section class="trim-section trim-comparison-section {{ band.next() }}" aria-labelledby="trim-related-title"><div class="container-site"><div class="trim-section-head"><h2 class="trim-heading" id="trim-related-title">{{ service.copy.relatedTitle }}</h2></div></div>{{ rail(service.relatedServices, 'Свързани услуги') }}</section>
 {% endif %}
 
-<section class="trim-section trim-section-soft" id="vaprosi" aria-labelledby="trim-faq-title" data-faq>
+<section class="trim-section {{ band.next() }}" id="vaprosi" aria-labelledby="trim-faq-title" data-faq>
   <div class="container-site"><div class="trim-faq-head"><h2 class="trim-heading" id="trim-faq-title">Често задавани въпроси</h2><p>Отговори за избора, подготовката и изпълнението на услугата.</p></div>
     <div class="trim-faq-list"><div class="trim-faq-stack">{% for faq in service.copy.faq %}{% if loop.index0 < 7 %}{{ faqItem(faq) }}{% endif %}{% endfor %}</div>
       {% if service.copy.faq.length > 7 %}
