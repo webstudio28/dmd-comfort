@@ -14,6 +14,19 @@ function pageNameFromKeyword(keyword) {
     .replace(/^./u, (ch) => ch.toUpperCase());
 }
 
+/** Label used in “Нашите проекти за …” — wider than bare “Пловдив”. */
+function projectsForLabel(slug, pageName) {
+  if (slug === "aluminiumieva-dograma" || slug === "pvc-dograma") {
+    return "Дограма в Пловдив и региона";
+  }
+  if (!pageName) return pageName;
+  if (/Пловдив и региона/u.test(pageName)) return pageName;
+  if (/Пловдив$/u.test(pageName)) {
+    return pageName.replace(/Пловдив$/u, "Пловдив и региона");
+  }
+  return pageName;
+}
+
 /** Keep menu identities separate from the approved, keyword-led page content. */
 module.exports = function () {
   const services = JSON.parse(fs.readFileSync(path.join(__dirname, "services.json"), "utf8"));
@@ -79,6 +92,7 @@ module.exports = function () {
         ...service,
         copy,
         pageName,
+        projectsFor: projectsForLabel(service.slug, pageName),
         parentTitle: parent ? pageNameFor(parent.slug) : "",
         parentMenuTitle: parent?.title || "",
         parentUrl: parent ? `/uslugi/${parent.slug}/` : "",

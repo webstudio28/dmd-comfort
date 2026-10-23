@@ -105,7 +105,7 @@ eleventyComputed:
   <div class="container-site">
     <div class="trim-section-head trim-projects-head">
       <div>
-        <h2 class="trim-heading" id="trim-projects-title">Нашите проекти за {{ service.pageName }}</h2>
+        <h2 class="trim-heading" id="trim-projects-title">Нашите проекти за {{ service.projectsFor or service.pageName }}</h2>
         <p>Реализирани обекти, свързани с тази услуга.</p>
       </div>
       {% if service.projectsMoreUrl %}
