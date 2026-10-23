@@ -23,9 +23,7 @@ description: Свържете се с ДМД Комфорт — телефон, 
     <div class="space-y-4 reveal">
       {% set rows = [
         { "label": "Телефон", "value": site.contact.phone, "href": site.contact.phoneHref },
-        { "label": "Имейл", "value": site.contact.email, "href": "mailto:" + site.contact.email },
-        { "label": "Адрес / район", "value": site.contact.address },
-        { "label": "Работно време", "value": site.contact.hours }
+        { "label": "Имейл", "value": site.contact.email, "href": "mailto:" + site.contact.email }
       ] %}
       {% for r in rows %}
         <div class="rounded-xl border border-ink/10 bg-brand-mist p-5">

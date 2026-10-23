@@ -276,7 +276,9 @@
       calc((100% - min(var(--site-max), calc(100% - var(--site-gutter) * 2))) / 2)
     );
     @apply flex w-full gap-4 overflow-x-auto overflow-y-hidden;
-    padding-bottom: 2rem;
+    /* Extra Y padding so card shadows aren’t clipped by overflow-y-hidden */
+    padding-top: 0.75rem;
+    padding-bottom: 2.5rem;
     margin-left: 0;
     padding-left: var(--site-inline);
     padding-right: var(--site-inline);
@@ -331,7 +333,9 @@
 
   @media (min-width: 1024px) {
     .h-scroll.h-scroll-lg {
+      display: grid;
       width: auto;
+      padding-top: 0;
       padding-left: 0;
       padding-right: 0;
       padding-bottom: 0;
@@ -339,9 +343,12 @@
       overflow: visible;
     }
 
-    .h-scroll.h-scroll-lg > * {
+    /* Must beat the md rule `.h-scroll-lg:not(.h-scroll-steps) > *` (fixed peek widths) */
+    .h-scroll.h-scroll-lg > *,
+    .h-scroll.h-scroll-lg:not(.h-scroll-steps) > * {
       width: auto;
       max-width: none;
+      min-width: 0;
       flex-shrink: 1;
     }
   }
@@ -361,7 +368,9 @@
       calc((100% - min(var(--site-max), calc(100% - var(--site-gutter) * 2))) / 2)
     );
     @apply flex w-full cursor-grab gap-4 overflow-x-auto overflow-y-hidden select-none;
-    padding-bottom: 2rem;
+    /* Extra Y padding so card shadows aren’t clipped by overflow-y-hidden */
+    padding-top: 0.75rem;
+    padding-bottom: 2.5rem;
     padding-left: var(--site-inline);
     padding-right: var(--site-inline);
     scroll-padding-inline: var(--site-inline);
@@ -590,6 +599,18 @@
 
   .menu-opt strong {
     @apply shrink-0 font-display text-[13px] font-extrabold text-brand;
+  }
+
+  /* Same treatment as .trim-band--lined on service pages */
+  .section-band-lined {
+    background-color: #fff;
+    background-image: repeating-linear-gradient(
+      155deg,
+      transparent 0,
+      transparent 18px,
+      rgba(26, 29, 31, 0.016) 18px,
+      rgba(26, 29, 31, 0.016) 19px
+    );
   }
 
   .service-image-missing {

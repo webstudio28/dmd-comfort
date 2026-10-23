@@ -15,23 +15,9 @@
   "email": {{ site.contact.email | dump | safe }},
   "telephone": {{ site.contact.phoneHref | replace("tel:", "") | dump | safe }},
   "foundingDate": {{ site.brand.foundedYear | string | dump | safe }},
-  "areaServed": {
-    "@type": "AdministrativeArea",
-    "name": {{ site.contact.address | dump | safe }}
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Пловдив",
-    "addressRegion": "Пловдив",
-    "addressCountry": "BG"
-  },
-  "openingHoursSpecification": [
-    {
-      "@type": "OpeningHoursSpecification",
-      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      "opens": "09:00",
-      "closes": "18:00"
-    }
+  "areaServed": [
+    { "@type": "City", "name": "Пловдив" },
+    { "@type": "Country", "name": "България" }
   ]
 }
 </script>

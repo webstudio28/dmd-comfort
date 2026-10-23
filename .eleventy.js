@@ -54,6 +54,9 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.ignores.add("src/videa/**");
   }
 
+  // Asset provenance documents are internal notes, not public pages.
+  eleventyConfig.ignores.add("src/assets/**/*.md");
+
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/favicon.png": "favicon.png" });
 

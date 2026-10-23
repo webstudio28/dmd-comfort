@@ -1,4 +1,4 @@
-<section class="relative overflow-hidden section-pad text-white">
+<section class="relative overflow-x-clip section-pad text-white">
   <div class="absolute inset-0 bg-gradient-to-br from-[#1a1d1f] via-[#161a1c] to-brand-deeper" aria-hidden="true"></div>
   <div
     class="absolute inset-0 scale-[1.02] bg-cover bg-center opacity-10"
@@ -12,17 +12,28 @@
       <h2 class="section-title text-white">От огледа до готовия монтаж</h2>
       <p class="section-copy text-white/65">Ясен процес, точна комуникация и професионално изпълнение.</p>
     </div>
-    <div class="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+  </div>
+
+  <div class="container-site relative z-10 mt-12 max-lg:contents">
+    <div
+      class="relative z-10 h-scroll h-scroll-lg reveal max-lg:mt-12 lg:grid lg:grid-cols-4 lg:gap-10"
+      data-drag-scroll
+      data-card-count="{{ home.process.length }}"
+      tabindex="0"
+      role="region"
+      aria-label="Как работим — плъзнете хоризонтално"
+    >
       {% for step in home.process %}
-        <article class="reveal relative">
+        <article class="relative">
           <span class="relative z-[1] mb-6 grid h-14 w-14 place-items-center rounded-full border border-brand/65 bg-ink/80 font-display text-[17px] font-extrabold text-brand">0{{ loop.index }}</span>
           <h3 class="mb-2.5 font-display text-[22px] font-extrabold">{{ step.title }}</h3>
           <p class="m-0 text-[15px] leading-relaxed text-white/60">{{ step.text }}</p>
         </article>
       {% endfor %}
     </div>
-    <div class="mt-10 reveal">
-      <button class="btn btn-primary open-inquiry" type="button">Заяви оглед</button>
-    </div>
+  </div>
+
+  <div class="container-site relative z-10 mt-10 reveal">
+    <button class="btn btn-primary open-inquiry" type="button">Заяви оглед</button>
   </div>
 </section>

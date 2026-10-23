@@ -4,7 +4,7 @@
     "shortName": "ДМД",
     "tagline": "Дограма · Монтаж · Комфорт",
     "language": "bg",
-    "foundedYear": 2004,
+    "foundedYear": 2021,
     "slogan": "Качество и прецизност във всеки детайл"
   },
   "seo": {
@@ -14,15 +14,13 @@
     "defaultOgImage": "/assets/images/hero.jpg"
   },
   "contact": {
-    "phone": "0888 000 000",
-    "phoneHref": "tel:+359888000000",
-    "email": "info@dmdkomfort.bg",
-    "address": "Пловдив и региона",
-    "hours": "Пон–Съб: 09:00–18:00",
-    "facebook": "#",
-    "tiktok": "#",
-    "viber": "#",
-    "whatsapp": "#"
+    "phone": "089 614 4790",
+    "phoneHref": "tel:+359896144790",
+    "email": "dmdkomfort@gmail.com",
+    "facebook": "https://www.facebook.com/p/%D0%94%D0%9C%D0%94-%D0%9A%D0%BE%D0%BC%D1%84%D0%BE%D1%80%D1%82-100089794642774/",
+    "tiktok": "https://www.tiktok.com/@dmdkomforteood",
+    "viber": "viber://chat?number=%2B359896144790",
+    "whatsapp": "https://wa.me/359896144790"
   },
   "colors": {
     "brand": "#057230",
@@ -35,14 +33,40 @@
   },
   "nav": {
     "header": [
-      { "label": "Начало", "url": "/" },
-      { "label": "Услуги", "url": "/uslugi/", "childrenFrom": "services" },
-      { "label": "Обръщане с PVC первази", "url": "/obrashtane-na-dograma-s-pvc-profili/" },
-      { "label": "Проекти", "url": "/proekti/" },
-      { "label": "Блог", "url": "/blog/" },
-      { "label": "Видеа", "url": "/videa/", "feature": "videos" },
-      { "label": "За нас", "url": "/za-nas/" },
-      { "label": "Контакти", "url": "/kontakti/" }
+      {
+        "label": "Начало",
+        "url": "/"
+      },
+      {
+        "label": "Услуги",
+        "url": "/uslugi/",
+        "childrenFrom": "services"
+      },
+      {
+        "label": "Обръщане с PVC первази",
+        "url": "/obrashtane-na-dograma-s-pvc-profili/"
+      },
+      {
+        "label": "Проекти",
+        "url": "/proekti/"
+      },
+      {
+        "label": "Блог",
+        "url": "/blog/"
+      },
+      {
+        "label": "Видеа",
+        "url": "/videa/",
+        "feature": "videos"
+      },
+      {
+        "label": "За нас",
+        "url": "/za-nas/"
+      },
+      {
+        "label": "Контакти",
+        "url": "/kontakti/"
+      }
     ]
   }
 }
