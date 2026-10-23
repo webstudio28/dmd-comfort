@@ -8,6 +8,8 @@ permalink: "/videa/{{ video.slug }}/"
 eleventyComputed:
   title: "{{ video.title }}"
   description: "{{ video.summary }}"
+  pageImage: "{{ video.image }}"
+  pageImageAlt: "{{ video.title }}"
 ---
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}

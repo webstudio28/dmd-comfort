@@ -6,12 +6,12 @@ eleventyExcludeFromCollections: true
 <html lang="bg">
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="refresh" content="0;url=/obrashtane-na-dograma-s-pvc-profili/" />
-  <link rel="canonical" href="/obrashtane-na-dograma-s-pvc-profili/" />
+  <meta http-equiv="refresh" content="0;url={{ site.seo.siteUrl }}/obrashtane-na-dograma-s-pvc-profili/" />
+  <link rel="canonical" href="{{ site.seo.siteUrl }}/obrashtane-na-dograma-s-pvc-profili/" />
   <title>Пренаправление…</title>
-  <script>location.replace("/obrashtane-na-dograma-s-pvc-profili/");</script>
+  <script>location.replace({{ (site.seo.siteUrl + "/obrashtane-na-dograma-s-pvc-profili/") | dump | safe }});</script>
 </head>
 <body>
-  <p><a href="/obrashtane-na-dograma-s-pvc-profili/">Обръщане с PVC профили</a></p>
+  <p><a href="{{ site.seo.siteUrl }}/obrashtane-na-dograma-s-pvc-profili/">Обръщане с PVC профили</a></p>
 </body>
 </html>

@@ -3098,6 +3098,10 @@ body.menu-open,
   .max-lg\:contents {
     display: contents;
   }
+
+  .max-lg\:bg-black\/70 {
+    background-color: rgb(0 0 0 / 0.7);
+  }
 }
 
 @media not all and (min-width: 768px) {
@@ -3478,6 +3482,10 @@ body.menu-open,
 
   .lg\:to-black\/55 {
     --tw-gradient-to: rgb(0 0 0 / 0.55) var(--tw-gradient-to-position);
+  }
+
+  .lg\:to-black\/40 {
+    --tw-gradient-to: rgb(0 0 0 / 0.4) var(--tw-gradient-to-position);
   }
 
   .lg\:pl-10 {

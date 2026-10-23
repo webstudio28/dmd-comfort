@@ -1,23 +1,47 @@
 {% set orgId = site.seo.siteUrl + "/#organization" %}
-{% set logoUrl = site.seo.siteUrl + ("/assets/images/logo.png" | url) %}
-{% set ogDefault = site.seo.siteUrl + ((site.seo.defaultOgImage or "/assets/images/hero.jpg") | url) %}
+{% set websiteId = site.seo.siteUrl + "/#website" %}
+{% set logoUrl = site.seo.siteUrl + ("/assets/images/logo.webp" | url) %}
+{% set ogDefault = site.seo.siteUrl + ((site.seo.defaultOgImage or "/assets/images/og-default.jpg") | url) %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": ["Organization", "HomeAndConstructionBusiness", "LocalBusiness"],
-  "@id": {{ orgId | dump | safe }},
-  "name": {{ site.brand.name | dump | safe }},
-  "alternateName": {{ site.brand.shortName | dump | safe }},
-  "url": {{ site.seo.siteUrl | dump | safe }},
-  "logo": {{ logoUrl | dump | safe }},
-  "image": {{ ogDefault | dump | safe }},
-  "description": {{ site.seo.defaultDescription | dump | safe }},
-  "email": {{ site.contact.email | dump | safe }},
-  "telephone": {{ site.contact.phoneHref | replace("tel:", "") | dump | safe }},
-  "foundingDate": {{ site.brand.foundedYear | string | dump | safe }},
-  "areaServed": [
-    { "@type": "City", "name": "Пловдив" },
-    { "@type": "Country", "name": "България" }
+  "@graph": [
+    {
+      "@type": ["Organization", "HomeAndConstructionBusiness", "LocalBusiness"],
+      "@id": {{ orgId | dump | safe }},
+      "name": {{ site.brand.name | dump | safe }},
+      "alternateName": {{ site.brand.shortName | dump | safe }},
+      "url": {{ site.seo.siteUrl | dump | safe }},
+      "logo": {
+        "@type": "ImageObject",
+        "url": {{ logoUrl | dump | safe }},
+        "width": 400,
+        "height": 400
+      },
+      "image": {{ ogDefault | dump | safe }},
+      "description": {{ site.seo.defaultDescription | dump | safe }},
+      "email": {{ site.contact.email | dump | safe }},
+      "telephone": {{ site.contact.phoneHref | replace("tel:", "") | dump | safe }},
+      "foundingDate": {{ site.brand.foundedYear | string | dump | safe }},
+      "areaServed": [
+        { "@type": "City", "name": "Пловдив" },
+        { "@type": "Country", "name": "България" }
+      ],
+      "sameAs": [
+        {%- if site.contact.facebook %}{{ site.contact.facebook | dump | safe }}{% endif %}
+        {%- if site.contact.facebook and site.contact.tiktok %},{% endif %}
+        {%- if site.contact.tiktok %}{{ site.contact.tiktok | dump | safe }}{% endif %}
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ websiteId | dump | safe }},
+      "url": {{ site.seo.siteUrl | dump | safe }},
+      "name": {{ site.brand.name | dump | safe }},
+      "description": {{ site.seo.defaultDescription | dump | safe }},
+      "inLanguage": "bg-BG",
+      "publisher": { "@id": {{ orgId | dump | safe }} }
+    }
   ]
 }
 </script>

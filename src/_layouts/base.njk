@@ -3,29 +3,39 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="{{ site.colors.brand }}" />
   {% set pageTitle = title or site.seo.defaultTitle %}
   <title>{{ pageTitle }}{% if title %} | {{ site.brand.name }}{% endif %}</title>
   <meta name="description" content="{{ description or site.seo.defaultDescription }}" />
   <link rel="canonical" href="{{ site.seo.siteUrl }}{{ page.url | url }}" />
-  <link rel="icon" href="{{ '/favicon.png' | url }}" type="image/png" />
-  <link rel="apple-touch-icon" href="{{ '/favicon.png' | url }}" />
+  <link rel="icon" href="{{ '/favicon-32.png' | url }}" type="image/png" sizes="32x32" />
+  <link rel="icon" href="{{ '/favicon.png' | url }}" type="image/png" sizes="48x48" />
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | url }}" sizes="180x180" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:opsz,wght@8..144,400;8..144,500;8..144,600&family=Sofia+Sans+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}" />
   {% if pageStyles %}<link rel="stylesheet" href="{{ pageStyles | url }}" />{% endif %}
-  {% set ogImage = pageImage or site.seo.defaultOgImage %}
-  <meta property="og:type" content="website" />
+  {% set ogImageRaw = pageImage if pageImage else site.seo.defaultOgImage %}
+  {% set ogImageUrl = ogImageRaw if (ogImageRaw and '://' in ogImageRaw) else (site.seo.siteUrl + (ogImageRaw | url)) %}
+  {% set ogDesc = description or site.seo.defaultDescription %}
+  {% set ogW = pageImageWidth or site.seo.defaultOgImageWidth or 1200 %}
+  {% set ogH = pageImageHeight or site.seo.defaultOgImageHeight or 630 %}
+  <meta property="og:type" content="{{ ogType or 'website' }}" />
   <meta property="og:locale" content="bg_BG" />
   <meta property="og:site_name" content="{{ site.brand.name }}" />
   <meta property="og:title" content="{% if title %}{{ pageTitle }} | {{ site.brand.name }}{% else %}{{ site.seo.defaultTitle }}{% endif %}" />
-  <meta property="og:description" content="{{ description or site.seo.defaultDescription }}" />
+  <meta property="og:description" content="{{ ogDesc }}" />
   <meta property="og:url" content="{{ site.seo.siteUrl }}{{ page.url | url }}" />
-  <meta property="og:image" content="{{ site.seo.siteUrl }}{{ ogImage | url }}" />
+  <meta property="og:image" content="{{ ogImageUrl }}" />
+  <meta property="og:image:width" content="{{ ogW }}" />
+  <meta property="og:image:height" content="{{ ogH }}" />
+  <meta property="og:image:alt" content="{{ pageImageAlt or pageTitle }}" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="{% if title %}{{ pageTitle }} | {{ site.brand.name }}{% else %}{{ site.seo.defaultTitle }}{% endif %}" />
-  <meta name="twitter:description" content="{{ description or site.seo.defaultDescription }}" />
-  <meta name="twitter:image" content="{{ site.seo.siteUrl }}{{ ogImage | url }}" />
+  <meta name="twitter:description" content="{{ ogDesc }}" />
+  <meta name="twitter:image" content="{{ ogImageUrl }}" />
+  <meta name="twitter:image:alt" content="{{ pageImageAlt or pageTitle }}" />
 </head>
 <body class="{% if bodyClass %}{{ bodyClass }}{% endif %}" data-transparent-header="true">
   {% set transparentHeader = true %}

@@ -57,8 +57,42 @@ module.exports = function (eleventyConfig) {
   // Asset provenance documents are internal notes, not public pages.
   eleventyConfig.ignores.add("src/assets/**/*.md");
 
-  eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
+  // Skip draft folders and superseded heavy originals (WebP/OG replacements are used instead).
+  // recursive-copy may pass either a full relative path or a bare filename.
+  const skipNames = new Set([
+    "sources.md",
+    "generated-image.md",
+    "pages-bg - copy - copy.png",
+    "pages-bg.png",
+    "logo.png",
+    "hero.jpg",
+    "process-bg.jpg",
+    "aluminiumievi-navesi.jpg",
+    "aluminiumieva-dograma.jpg",
+    "pvc-dograma.jpg",
+    "vrati.png",
+    "obrashtane-s-pvc-profili.png",
+    "windows-dec.png",
+    "komarnitsi.png",
+  ]);
+  const skipDirs = [
+    "refined-2026-09-22",
+    "selected-2026-09-22",
+    "window-trim-final",
+  ];
+  const skipAsset = (srcPath) => {
+    const p = String(srcPath).replace(/\\/g, "/").toLowerCase();
+    const base = p.split("/").pop();
+    if (skipNames.has(base)) return true;
+    return skipDirs.some((dir) => p.split("/").includes(dir));
+  };
+
+  eleventyConfig.addPassthroughCopy("src/assets", {
+    filter: (src) => !skipAsset(src),
+  });
   eleventyConfig.addPassthroughCopy({ "src/favicon.png": "favicon.png" });
+  eleventyConfig.addPassthroughCopy({ "src/favicon-32.png": "favicon-32.png" });
+  eleventyConfig.addPassthroughCopy({ "src/apple-touch-icon.png": "apple-touch-icon.png" });
 
   eleventyConfig.addFilter("servicesBySlugs", (slugs) => {
     if (!Array.isArray(slugs) || !slugs.length) return [];

@@ -7,7 +7,9 @@ pagination:
 permalink: "/proekti/{{ project.slug }}/"
 eleventyComputed:
   title: "{{ project.title }}"
-  description: "{{ project.shortDescription }}"
+  description: "{{ project.description or project.shortDescription }}"
+  pageImage: "{% if project.images and project.images.length %}{{ project.images | first }}{% endif %}"
+  pageImageAlt: "{{ project.title }}"
 ---
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}

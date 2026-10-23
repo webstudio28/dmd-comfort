@@ -7,7 +7,9 @@ pagination:
 permalink: "{{ group.href }}"
 eleventyComputed:
   title: "Проекти - {{ group.title }}"
-  description: "{% if group.slug == 'drugi' %}Други реализирани обекти на ДМД Комфорт.{% else %}Реализирани проекти за {{ group.title }} от ДМД Комфорт.{% endif %}"
+  description: "{% if group.slug == 'drugi' %}Други реализирани обекти на ДМД Комфорт - {{ group.countLabel }}. Оглед, изработка и монтаж.{% else %}Реализирани проекти за {{ group.title }} от ДМД Комфорт - {{ group.countLabel }}. Реални обекти с оглед, изработка и монтаж.{% endif %}"
+  pageImage: "{{ group.image }}"
+  pageImageAlt: "{{ group.title }}"
 ---
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}

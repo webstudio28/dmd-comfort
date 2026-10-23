@@ -6,6 +6,9 @@ description: Монтаж на ПВЦ профили за обръщане на 
 bodyClass: window-finishing
 pageStyles: /assets/css/window-finishing.css
 pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
+pageImageAlt: Обръщане на прозорци с PVC профили
+pageImageWidth: 1536
+pageImageHeight: 1024
 ---
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/include-icon.njk" import includeIcon %}
@@ -132,8 +135,8 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
       </div>
       <div class="trim-related-services">
         {% set relatedServices = [
-          { slug: "pvc-dograma", title: "PVC дограма", image: "/assets/images/services/pvc-dograma.jpg", alt: "Бяла PVC дограма" },
-          { slug: "aluminiumieva-dograma", title: "Алуминиева дограма", image: "/assets/images/services/aluminiumieva-dograma.jpg", alt: "Алуминиева дограма с тънки рамки" }
+          { slug: "pvc-dograma", title: "PVC дограма", image: "/assets/images/services/pvc-dograma.webp", alt: "Бяла PVC дограма" },
+          { slug: "aluminiumieva-dograma", title: "Алуминиева дограма", image: "/assets/images/services/aluminiumieva-dograma.webp", alt: "Алуминиева дограма с тънки рамки" }
         ] %}
         {% for item in relatedServices %}
         <a class="trim-related-service" href="{{ ('/uslugi/' + item.slug + '/') | url }}">
@@ -224,7 +227,7 @@ pageImage: /assets/images/services/obrashtane-s-pvc-profili.webp
       </div>
     </div>
     <figure class="trim-offer-banner-media">
-      <img src="{{ '/assets/images/hero.jpg' | url }}" alt="Реализиран обект на ДМД Комфорт" width="1600" height="1067" loading="lazy" decoding="async" />
+      <img src="{{ '/assets/images/hero.webp' | url }}" alt="Реализиран обект на ДМД Комфорт" width="1216" height="832" loading="lazy" decoding="async" />
     </figure>
   </div>
 </section>

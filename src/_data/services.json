@@ -4,12 +4,14 @@
     "title": "Обръщане с PVC первази",
     "image": "/assets/images/services/obrashtane-s-pvc-profili.webp",
     "imageAlt": "Обръщане на прозорец с PVC первази",
+    "imageWidth": 1536,
+    "imageHeight": 1024,
     "href": "/obrashtane-na-dograma-s-pvc-profili/"
   },
   {
     "slug": "dograma",
     "title": "Дограма",
-    "image": "/assets/images/hero.jpg",
+    "image": "/assets/images/hero.webp",
     "imageAlt": "Бяла дограма с остъклени врати и прозорци към двор",
     "imageWidth": 1216,
     "imageHeight": 832,
@@ -29,15 +31,21 @@
     "slug": "aluminiumieva-dograma",
     "title": "Алуминиева дограма",
     "parentSlug": "dograma",
-    "image": "/assets/images/services/aluminiumieva-dograma.jpg",
-    "imageAlt": "Алуминиева дограма с тънки рамки"
+    "image": "/assets/images/services/aluminiumieva-dograma.webp",
+    "imageAlt": "Алуминиева дограма с тънки рамки",
+    "imageWidth": 1600,
+    "imageHeight": 901,
+    "imageFit": "cover"
   },
   {
     "slug": "pvc-dograma",
     "title": "PVC дограма",
     "parentSlug": "dograma",
-    "image": "/assets/images/services/pvc-dograma.jpg",
-    "imageAlt": "Бяла PVC дограма"
+    "image": "/assets/images/services/pvc-dograma.webp",
+    "imageAlt": "Бяла PVC дограма",
+    "imageWidth": 1600,
+    "imageHeight": 900,
+    "imageFit": "cover"
   },
   {
     "slug": "vrati",
@@ -74,8 +82,11 @@
     "slug": "vhodni-vrati",
     "title": "Входни врати",
     "parentSlug": "vrati",
-    "image": "/assets/images/services/vrati.png",
-    "imageAlt": "Алуминиева входна врата"
+    "image": "/assets/images/services/vrati.webp",
+    "imageAlt": "Алуминиева входна врата",
+    "imageWidth": 660,
+    "imageHeight": 430,
+    "imageFit": "cover"
   },
   {
     "slug": "interiorni-vrati",
@@ -241,8 +252,11 @@
     "slug": "navesi",
     "title": "Навеси",
     "parentSlug": "metalni-konstruktsii",
-    "image": "/assets/images/services/aluminiumievi-navesi.jpg",
-    "imageAlt": "Алуминиев навес към тераса"
+    "image": "/assets/images/services/aluminiumievi-navesi.webp",
+    "imageAlt": "Алуминиев навес към тераса",
+    "imageWidth": 1600,
+    "imageHeight": 1201,
+    "imageFit": "cover"
   },
   {
     "slug": "razshirenie-na-magazin",

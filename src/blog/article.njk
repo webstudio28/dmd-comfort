@@ -12,6 +12,8 @@ eleventyComputed:
   title: "{{ article.seoTitle or article.title }}"
   description: "{{ article.excerpt }}"
   pageImage: "{{ article.image }}"
+  pageImageAlt: "{{ article.imageAlt or article.title }}"
+  ogType: article
   inquiryHref: "{{ article.cta.url or '/obrashtane-na-dograma-s-pvc-profili/' }}"
   inquiryDescription: "{{ article.cta.text or 'Посочете населеното място, броя прозорци или врати и състоянието около дограмата.' }}"
 ---
@@ -144,7 +146,17 @@ eleventyComputed:
       "image": {{ (site.seo.siteUrl + (article.image | url)) | dump | safe }},
       "mainEntityOfPage": { "@type": "WebPage", "@id": {{ articleUrl | dump | safe }} },
       "author": { "@type": "Organization", "name": {{ site.brand.name | dump | safe }}, "url": {{ site.seo.siteUrl | dump | safe }} },
-      "publisher": { "@type": "Organization", "name": {{ site.brand.name | dump | safe }}, "url": {{ site.seo.siteUrl | dump | safe }} }
+      "publisher": {
+        "@type": "Organization",
+        "name": {{ site.brand.name | dump | safe }},
+        "url": {{ site.seo.siteUrl | dump | safe }},
+        "logo": {
+          "@type": "ImageObject",
+          "url": {{ (site.seo.siteUrl + ("/assets/images/logo.webp" | url)) | dump | safe }},
+          "width": 400,
+          "height": 400
+        }
+      }
     },
     {
       "@type": "BreadcrumbList",

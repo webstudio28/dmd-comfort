@@ -12,6 +12,9 @@ eleventyComputed:
   title: "{{ service.copy.seoTitle }}"
   description: "{{ service.copy.description }}"
   pageImage: "{{ service.image if service.image and not service.imageMissing else '' }}"
+  pageImageAlt: "{{ service.imageAlt or service.copy.h1 or service.pageName }}"
+  pageImageWidth: "{{ service.imageWidth or '' }}"
+  pageImageHeight: "{{ service.imageHeight or '' }}"
   inquiryDescription: "{{ service.copy.inquiry }}"
   inquiryPlaceholder: "{{ service.copy.inquiry }}"
 ---
@@ -296,7 +299,7 @@ eleventyComputed:
       </div>
     </div>
     <figure class="trim-offer-banner-media">
-      {% set offerImage = service.copy.offerImage or service.image or "/assets/images/hero.jpg" %}
+      {% set offerImage = service.copy.offerImage or service.image or "/assets/images/hero.webp" %}
       <img src="{{ offerImage | url }}" alt="{{ service.imageAlt or service.title }}" width="1600" height="1067" loading="lazy" decoding="async" />
     </figure>
   </div>
