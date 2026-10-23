@@ -6,7 +6,7 @@ const PROJECTS_PREVIEW = 8;
 /** Display name for the service page (keyword-led). Menu keeps services.json title. */
 function pageNameFromKeyword(keyword) {
   if (!keyword) return "";
-  // Avoid \\b — it does not treat Cyrillic as word chars in JS.
+  // Avoid \\b - it does not treat Cyrillic as word chars in JS.
   return keyword
     .replace(/(^|[^\p{L}\p{N}_])пвц(?=[^\p{L}\p{N}_]|$)/giu, "$1ПВЦ")
     .replace(/(^|[^\p{L}\p{N}_])pvc(?=[^\p{L}\p{N}_]|$)/giu, "$1PVC")
@@ -14,7 +14,7 @@ function pageNameFromKeyword(keyword) {
     .replace(/^./u, (ch) => ch.toUpperCase());
 }
 
-/** Label used in “Нашите проекти за …” — wider than bare “Пловдив”. */
+/** Label used in “Нашите проекти за …” - wider than bare “Пловдив”. */
 function projectsForLabel(slug, pageName) {
   if (slug === "aluminiumieva-dograma" || slug === "pvc-dograma") {
     return "Дограма в Пловдив и региона";

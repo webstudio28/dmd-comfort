@@ -6,7 +6,7 @@ pagination:
   alias: group
 permalink: "{{ group.href }}"
 eleventyComputed:
-  title: "Проекти — {{ group.title }}"
+  title: "Проекти - {{ group.title }}"
   description: "{% if group.slug == 'drugi' %}Други реализирани обекти на ДМД Комфорт.{% else %}Реализирани проекти за {{ group.title }} от ДМД Комфорт.{% endif %}"
 ---
 {% from "macros/page-banner.njk" import pageBanner %}

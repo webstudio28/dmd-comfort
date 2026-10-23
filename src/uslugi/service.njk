@@ -28,7 +28,7 @@ eleventyComputed:
 </details>
 {% endmacro %}
 {% macro serviceLinkRail(items, label, actionLabel='Разгледайте услугата') %}
-<ul class="trim-process trim-process--five trim-service-rail" data-drag-scroll data-card-count="{{ items.length }}" tabindex="0" role="region" aria-label="{{ label }} — плъзнете хоризонтално">
+<ul class="trim-process trim-process--five trim-service-rail" data-drag-scroll data-card-count="{{ items.length }}" tabindex="0" role="region" aria-label="{{ label }} - плъзнете хоризонтално">
   {% for item in items %}
   <li class="trim-service-link-slide">
     <a class="trim-service-card-link" href="{{ item.url | url }}" draggable="false">
@@ -113,7 +113,7 @@ eleventyComputed:
       {% endif %}
     </div>
   </div>
-  <ul class="trim-project-rail trim-card-rail" data-drag-scroll data-card-count="{{ service.relatedProjects.length }}" tabindex="0" role="region" aria-label="Нашите проекти — плъзнете хоризонтално">
+  <ul class="trim-project-rail trim-card-rail" data-drag-scroll data-card-count="{{ service.relatedProjects.length }}" tabindex="0" role="region" aria-label="Нашите проекти - плъзнете хоризонтално">
     {% for item in service.relatedProjects %}
     <li>
       <a class="trim-project-card" href="{{ item.url | url }}" draggable="false">
@@ -136,7 +136,7 @@ eleventyComputed:
     <h2 class="trim-heading" id="trim-benefit-title">{{ service.copy.featuresTitle }}</h2>
     {% if service.copy.featuresLead %}<p class="trim-copy">{{ service.copy.featuresLead }}</p>{% endif %}
   </div>
-  <div class="trim-quality-list trim-card-rail" data-drag-scroll data-card-count="{{ service.copy.features.length }}" tabindex="0" role="region" aria-label="Предимства — плъзнете хоризонтално">
+  <div class="trim-quality-list trim-card-rail" data-drag-scroll data-card-count="{{ service.copy.features.length }}" tabindex="0" role="region" aria-label="Предимства - плъзнете хоризонтално">
     {% for feature in service.copy.features %}
     <div>
       <span>{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
@@ -204,7 +204,7 @@ eleventyComputed:
     <h2 class="trim-heading" id="trim-materials-title">Материали, размери и детайли на изпълнението</h2>
     {% if service.copy.materialsLead %}<p class="trim-copy">{{ service.copy.materialsLead }}</p>{% endif %}
   </div>
-  <dl class="trim-material-points trim-card-rail" data-drag-scroll data-card-count="{{ service.copy.materials.length }}" tabindex="0" role="region" aria-label="Материали и детайли — плъзнете хоризонтално">
+  <dl class="trim-material-points trim-card-rail" data-drag-scroll data-card-count="{{ service.copy.materials.length }}" tabindex="0" role="region" aria-label="Материали и детайли - плъзнете хоризонтално">
     {% for item in service.copy.materials %}
     <div>
       <span class="trim-icon">{{ includeIcon(item.icon or item.title) }}</span>
@@ -237,7 +237,7 @@ eleventyComputed:
   <div class="container-site">
     <div class="trim-section-head"><h2 class="trim-heading" id="trim-process-title">Как протича работата?</h2></div>
   </div>
-  <ol class="trim-process trim-process--five" data-drag-scroll data-card-count="{{ service.copy.process.length }}" tabindex="0" role="region" aria-label="Как протича работата — плъзнете хоризонтално">
+  <ol class="trim-process trim-process--five" data-drag-scroll data-card-count="{{ service.copy.process.length }}" tabindex="0" role="region" aria-label="Как протича работата - плъзнете хоризонтално">
     {% for step in service.copy.process %}
     <li data-step="0{{ loop.index }}"><h3>{{ step.title }}</h3><p>{{ step.text }}</p></li>
     {% endfor %}
@@ -251,7 +251,7 @@ eleventyComputed:
     <h2 class="trim-heading" id="trim-price-title">Как се определя цената?</h2>
     <p class="trim-copy">{{ service.copy.priceText }}</p>
   </div>
-  <dl class="price-boxes price-boxes--cards trim-card-rail" data-drag-scroll data-card-count="{{ service.copy.priceDetails.length }}" tabindex="0" role="region" aria-label="Как се определя цената — плъзнете хоризонтално">
+  <dl class="price-boxes price-boxes--cards trim-card-rail" data-drag-scroll data-card-count="{{ service.copy.priceDetails.length }}" tabindex="0" role="region" aria-label="Как се определя цената - плъзнете хоризонтално">
     {% for item in service.copy.priceDetails %}
     <div>
       <dt>{{ item.title or item.name }}</dt>

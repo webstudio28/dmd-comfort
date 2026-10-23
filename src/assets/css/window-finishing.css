@@ -177,7 +177,7 @@
 .trim-situation h3, .trim-material h3 { font-size: 27px; font-weight: 700; line-height: 1.15; margin: 22px 0 14px; }
 .trim-situation p, .trim-material p { color: var(--trim-muted); font-size: 16px; line-height: 1.75; }
 
-/* Additional services — spine ladder (unique to this block) */
+/* Additional services - spine ladder (unique to this block) */
 .trim-extras-section .trim-extras-layout {
   display: grid;
   gap: 36px;
@@ -681,7 +681,7 @@
 .trim-card-rail.is-dragging { cursor: grabbing; }
 .trim-card-rail > * { flex: 0 0 auto; width: min(78vw, 420px); min-width: 0; }
 
-/* 2–3 cards: static equal grid on desktop — no peek / drag carousel. */
+/* 2–3 cards: static equal grid on desktop - no peek / drag carousel. */
 @media (min-width: 1024px) {
   .trim-process--five[data-card-count="2"],
   .trim-process--five[data-card-count="3"],

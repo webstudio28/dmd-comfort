@@ -3,7 +3,7 @@ permalink: false
 eleventyExcludeFromCollections: true
 ---
 
-# Approved service images — 22 October 2026
+# Approved service images - 22 October 2026
 
 Approved by the user in this chat. Images 07 and 08 use the approved AI-edited versions. Dograma and ofisi remain pending.
 Online images are locally hosted assets; commercial publication rights have not been verified.

@@ -66,7 +66,7 @@ eleventyComputed:
           <img
             class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
             src="{{ img | url }}"
-            alt="{{ project.title }} — снимка {{ loop.index }}"
+            alt="{{ project.title }} - снимка {{ loop.index }}"
             loading="lazy"
             decoding="async"
             draggable="false"
@@ -171,7 +171,7 @@ eleventyComputed:
     <a class="btn btn-primary shrink-0 self-start md:self-auto" href="{{ group.href | url }}">Всички от {{ group.title }}</a>
   </div>
   <div class="overflow-x-clip py-6 md:py-8">
-    <div class="h-scroll-drag reveal" data-drag-scroll tabindex="0" role="region" aria-label="Още проекти от {{ group.title }} — плъзнете хоризонтално">
+    <div class="h-scroll-drag reveal" data-drag-scroll tabindex="0" role="region" aria-label="Още проекти от {{ group.title }} - плъзнете хоризонтално">
       {% for p in relatedProjects %}
         {% if p.images and p.images.length %}
           <a class="card group block no-underline" href="{{ ('/proekti/' + p.slug + '/') | url }}" draggable="false">
@@ -219,7 +219,7 @@ eleventyComputed:
       <aside class="flex flex-col justify-between gap-6 border-t border-ink/10 pt-8 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
         <div>
           <p class="font-display text-lg font-extrabold text-ink">Искате подобен резултат?</p>
-          <p class="mt-2 text-[15px] leading-relaxed text-ink-muted">Заявете оглед — ще предложим решение за вашия обект.</p>
+          <p class="mt-2 text-[15px] leading-relaxed text-ink-muted">Заявете оглед - ще предложим решение за вашия обект.</p>
         </div>
         <button class="btn btn-primary open-inquiry" type="button">Заяви подобен проект</button>
       </aside>

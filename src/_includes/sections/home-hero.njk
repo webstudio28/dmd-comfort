@@ -1,24 +1,24 @@
 <section class="relative flex h-svh min-h-0 items-center overflow-hidden text-white">
   <div class="absolute inset-0 scale-[1.02] bg-cover bg-center" style="background-image:url('{{ '/assets/images/hero.jpg' | url }}')" aria-hidden="true"></div>
-  <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" aria-hidden="true"></div>
+  <div class="absolute inset-0 bg-black/70 lg:bg-gradient-to-r lg:from-black/90 lg:via-black/70 lg:to-black/55" aria-hidden="true"></div>
   <div class="absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t from-black/80 to-transparent" aria-hidden="true"></div>
 
-  <div class="container-site relative z-10 py-24 md:pb-28 md:pt-40">
-    <div class="mb-4 flex items-center gap-2.5 font-display text-[13px] font-bold uppercase tracking-[0.18em] text-brand md:mb-5">
+  <div class="container-site relative z-10 py-24 text-center md:pb-28 md:pt-40 lg:text-left">
+    <div class="mb-4 hidden items-center gap-2.5 font-display text-[13px] font-bold uppercase tracking-[0.18em] text-brand lg:mb-5 lg:flex">
       <span class="h-px w-6 bg-gradient-to-r from-transparent to-brand"></span>
       {{ home.hero.eyebrow }}
       <span class="h-px w-6 bg-gradient-to-l from-transparent to-brand"></span>
     </div>
-    <h1 class="mb-5 max-w-4xl font-display text-[clamp(2.5rem,9vw,6.5rem)] font-black leading-[0.91] tracking-tight md:mb-6">
+    <h1 class="mb-5 max-w-4xl font-display text-[clamp(2.5rem,9vw,6.5rem)] font-black leading-[0.91] tracking-tight md:mb-6 mx-auto lg:mx-0">
       {{ home.hero.title }}
       <span class="mt-1 block text-white">{{ home.hero.titleAccent }}</span>
     </h1>
-    <p class="mb-6 max-w-xl text-lg leading-relaxed text-white/80 md:mb-8 md:text-xl">{{ home.hero.copy }}</p>
-    <div class="flex flex-wrap gap-3.5">
+    <p class="mb-6 max-w-xl text-lg leading-relaxed text-white/80 md:mb-8 md:text-xl mx-auto lg:mx-0">{{ home.hero.copy }}</p>
+    <div class="flex flex-wrap justify-center gap-3.5 lg:justify-start">
       <button class="btn btn-primary open-inquiry" type="button">Заяви безплатен оглед</button>
       <a class="btn btn-light" href="{{ '/uslugi/' | url }}">Разгледай услугите</a>
     </div>
-    <div class="mt-6 flex flex-wrap items-center gap-3 text-sm text-white/65">
+    <div class="mt-6 hidden flex-wrap items-center gap-3 text-sm text-white/65 lg:flex">
       {{ home.hero.note }}
     </div>
   </div>

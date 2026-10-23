@@ -7,7 +7,7 @@
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
     min-height: 100%;
-    /* Neutral mist — section washes layer on top without a green cast */
+    /* Neutral mist - section washes layer on top without a green cast */
     background-color: #f4f5f4;
     background-image:
       radial-gradient(ellipse 100% 70% at 0% 0%, rgba(255, 255, 255, 0.85), transparent 55%),
@@ -46,7 +46,7 @@
 }
 
 /* Inquiry modal: keep form controls inside the card width.
-   Do not set max-width:100% on [role=dialog] — that overrides the 590px card width. */
+   Do not set max-width:100% on [role=dialog] - that overrides the 590px card width. */
 #inquiryModal {
   overflow-x: hidden;
 }
@@ -266,7 +266,7 @@
   }
 
   /* Mobile horizontal carousels: align to gutters, bleed past the right edge, free scroll.
-     Must sit in a full-bleed parent (section + max-md:contents). Use 100% not 100vw —
+     Must sit in a full-bleed parent (section + max-md:contents). Use 100% not 100vw -
      100vw + overflow-x-clip clips the left padding and flushes the first card. */
   .h-scroll {
     --site-gutter: 1rem;
@@ -359,7 +359,7 @@
     }
   }
 
-  /* Always-horizontal strip (mobile + desktop), drag via JS — full-bleed gutters */
+  /* Always-horizontal strip (mobile + desktop), drag via JS - full-bleed gutters */
   .h-scroll-drag {
     --site-gutter: 1rem;
     --site-max: 80rem;
