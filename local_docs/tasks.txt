@@ -7,5 +7,17 @@ everywhere on a serice page we dont want the section for the plovdiv and stranat
 За нови и вече монтирани прозорци в Пловдив и страната. i hate thoes kind of texts... for where we work we shoud just include it once or twice natuarally 
 
 phone number 
+email
+
+we remove those Пловдив и региона
+Пон–Съб: 09:00–18:00
+
+connect emails so they work 
 
 real ions for the socials
+
+sitemap
+
+i vsqkakvi neshta po seo
+
+caching (optional): Cloudflare or LiteSpeed Cache for HIT/MISS; longer asset Cache-Control if needed — current LiteSpeed asset cache is already fine

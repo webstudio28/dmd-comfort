@@ -2,9 +2,7 @@
 layout: base.njk
 bodyClass: blog-article
 pageStyles: /assets/css/blog-article.css
-inquiryService: Обръщане с PVC первази
 inquiryEyebrow: Индивидуална оферта
-inquiryDescription: Посочете населеното място, броя прозорци или врати и състоянието около дограмата.
 pagination:
   data: blog
   size: 1
@@ -14,6 +12,8 @@ eleventyComputed:
   title: "{{ article.seoTitle or article.title }}"
   description: "{{ article.excerpt }}"
   pageImage: "{{ article.image }}"
+  inquiryHref: "{{ article.cta.url or '/obrashtane-na-dograma-s-pvc-profili/' }}"
+  inquiryDescription: "{{ article.cta.text or 'Посочете населеното място, броя прозорци или врати и състоянието около дограмата.' }}"
 ---
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}
@@ -36,8 +36,9 @@ eleventyComputed:
 
   <div class="section-pad bg-white">
     <div class="container-site blog-article-content">
-      <figure class="blog-article-figure">
-        <img src="{{ article.image | url }}" alt="{{ article.imageAlt }}" width="1536" height="1024" decoding="async" />
+      <figure class="blog-article-figure{% if article.imageFit == 'contain' %} blog-article-figure--contain{% endif %}">
+        <img src="{{ article.image | url }}" alt="{{ article.imageAlt }}" width="{{ article.imageWidth or 1536 }}" height="{{ article.imageHeight or 1024 }}" fetchpriority="high" decoding="async" />
+        {% if article.imageCredit %}<figcaption><a href="{{ article.imageCredit.url }}">{{ article.imageCredit.text }}</a></figcaption>{% endif %}
       </figure>
 
       <div class="blog-article-intro">
@@ -58,9 +59,9 @@ eleventyComputed:
           {% for paragraph in section.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
           {% if section.bullets %}<ul class="blog-bullet-list">{% for bullet in section.bullets %}<li>{{ bullet }}</li>{% endfor %}</ul>{% endif %}
           {% if section.table %}
-            <div class="blog-comparison-wrap" role="region" aria-label="Сравнение на методите за обръщане на прозорци" tabindex="0">
+            <div class="blog-comparison-wrap" role="region" aria-label="{{ section.table.caption or 'Сравнение на методите за обръщане на прозорци' }}" tabindex="0">
               <table class="blog-comparison">
-                <caption>Основни разлики между стандартно обръщане и PVC профили</caption>
+                <caption>{{ section.table.caption or 'Основни разлики между стандартно обръщане и PVC профили' }}</caption>
                 <thead><tr>{% for header in section.table.headers %}<th scope="col">{{ header }}</th>{% endfor %}</tr></thead>
                 <tbody>{% for row in section.table.rows %}<tr>{% for cell in row %}{% if loop.first %}<th scope="row">{{ cell }}</th>{% else %}<td>{{ cell }}</td>{% endif %}{% endfor %}</tr>{% endfor %}</tbody>
               </table>
@@ -70,6 +71,8 @@ eleventyComputed:
             <h3>{{ subsection.title }}</h3>
             {% for paragraph in subsection.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
           {% endfor %}
+          {% if section.image %}<figure class="blog-detail-image"><img src="{{ section.image.url | url }}" alt="{{ section.image.alt }}" width="{{ section.image.width }}" height="{{ section.image.height }}" loading="lazy" decoding="async" /></figure>{% endif %}
+          {% if section.sources %}<div class="blog-sources"><span>Техническа справка:</span><ul>{% for source in section.sources %}<li><a href="{{ source.url }}">{{ source.title }}</a></li>{% endfor %}</ul></div>{% endif %}
           {% if section.closing %}<p>{{ section.closing }}</p>{% endif %}
           {% if section.serviceLink %}<p class="blog-service-link"><a href="{{ section.serviceLink.url | url }}">{{ section.serviceLink.text }} <span aria-hidden="true">→</span></a></p>{% endif %}
         </section>
@@ -84,11 +87,41 @@ eleventyComputed:
 
       <aside class="blog-article-cta" aria-labelledby="article-cta-title">
         <p class="blog-article-eyebrow">ДМД Комфорт · Пловдив и страната</p>
-        <h2 id="article-cta-title">Обсъдете обръщането на вашите прозорци</h2>
-        <p>Разгледайте как изпълняваме вътрешно обръщане с PVC профили и какво е необходимо за оферта. Приемаме запитвания за прозорци и врати в Пловдив и региона, както и за обекти в други населени места в България.</p>
-        <a class="btn btn-primary" href="{{ '/obrashtane-na-dograma-s-pvc-profili/' | url }}">Вижте услугата с PVC профили <span aria-hidden="true">→</span></a>
+        <h2 id="article-cta-title">{{ article.cta.title or 'Обсъдете обръщането на вашите прозорци' }}</h2>
+        <p>{{ article.cta.text or 'Разгледайте как изпълняваме вътрешно обръщане с PVC профили и какво е необходимо за оферта. Приемаме запитвания за прозорци и врати в Пловдив и региона, както и за обекти в други населени места в България.' }}</p>
+        <div class="blog-cta-actions">
+          <a class="btn btn-primary" href="{{ (article.cta.url or '/obrashtane-na-dograma-s-pvc-profili/') | url }}">{{ article.cta.label or 'Вижте услугата с PVC профили' }} <span aria-hidden="true">→</span></a>
+          <button class="btn blog-contact-button open-inquiry" type="button" aria-haspopup="dialog">Изпратете запитване</button>
+        </div>
       </aside>
 
+      {% if article.relatedSlugs and article.relatedSlugs.length %}
+      <section class="blog-related" aria-labelledby="blog-related-title">
+        <h2 id="blog-related-title">Прочетете още</h2>
+      </section>
+      {% endif %}
+    </div>
+    {% if article.relatedSlugs and article.relatedSlugs.length %}
+    <div
+      class="blog-related-rail"
+      data-drag-scroll
+      data-card-count="{{ article.relatedSlugs.length }}"
+      tabindex="0"
+      role="region"
+      aria-label="Прочетете още — плъзнете хоризонтално"
+    >
+      {% for related in blog %}
+        {% if related.slug in article.relatedSlugs %}
+        <a class="blog-related-card" href="{{ ('/blog/' + related.slug + '/') | url }}" draggable="false">
+          <img src="{{ related.image | url }}" alt="{{ related.imageAlt or related.title }}" loading="lazy" decoding="async" width="{{ related.imageWidth or 1536 }}" height="{{ related.imageHeight or 1024 }}" draggable="false" />
+          <h3>{{ related.title }}</h3>
+          <p>{{ related.excerpt }}</p>
+        </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+    {% endif %}
+    <div class="container-site">
       <a class="blog-back-link" href="{{ '/blog/' | url }}"><span aria-hidden="true">←</span> Обратно към блога</a>
     </div>
   </div>

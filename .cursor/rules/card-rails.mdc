@@ -14,9 +14,11 @@ Horizontal card rails use `data-card-count="N"` on `.trim-card-rail` or `.trim-p
 - **3 cards** → static 3-column grid. No peek / drag.
 - **4+ cards** → horizontal drag carousel.
 
-## Mobile
+## Mobile / tablet (<1024px)
 
-Always allow horizontal scroll / peek, including when `data-card-count="3"`.
+Always allow horizontal scroll / peek, including when `data-card-count` is 2 or 3.
+
+Blog “Прочетете още” uses the same rule: carousel below desktop, static grid from 1024px.
 
 ## Markup
 

@@ -34,14 +34,14 @@
   }
 }
 
-/* Inquiry modal: long <select> option labels must not force horizontal scroll */
-#inquiryModal,
-#inquiryModal [role="dialog"] {
-  max-width: 100%;
+/* Inquiry modal: long <select> option labels must not force horizontal scroll.
+   Do not set max-width:100% on [role=dialog] — that overrides the 590px card width. */
+#inquiryModal {
   overflow-x: hidden;
 }
 #inquiryModal [role="dialog"] {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 #inquiryModal :is(input, select, textarea, button, .btn) {
   max-width: 100%;

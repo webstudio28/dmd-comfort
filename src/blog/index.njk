@@ -2,7 +2,7 @@
 layout: base.njk
 permalink: /blog/
 title: Блог
-description: Практични съвети за обръщане на прозорци и избор на довършителен метод. Сравнения и решения от ДМД Комфорт.
+description: Практични статии за дограма, врати за баня, обръщане на прозорци, конденз и поддръжка. Сравнения и съвети от ДМД Комфорт.
 ---
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}
@@ -10,7 +10,7 @@ description: Практични съвети за обръщане на проз
 {% call pageBanner() %}
   <div class="eyebrow text-brand before:bg-brand">Полезно</div>
   <h1 class="mt-3 max-w-3xl font-display text-[clamp(2.5rem,5vw,3.75rem)] font-black leading-none">Блог</h1>
-  <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/70">Практични съвети и сравнения за завършването около прозорци и врати.</p>
+  <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/70">От избора на врата за баня до конденза по стъклата: отговори на въпросите за дограмата и довършването около нея.</p>
 {% endcall %}
 
 {{ breadcrumbs([
@@ -19,8 +19,8 @@ description: Практични съвети за обръщане на проз
 ]) }}
 
 <section class="section-pad bg-brand-mist">
-  <div class="container-site grid gap-5 md:grid-cols-2">
-    {% for a in blog %}
+  <div class="container-site grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+    {% for a in blog | reverse %}
       <a class="card reveal group block no-underline" href="{{ ('/blog/' + a.slug + '/') | url }}">
         <div class="relative m-3 aspect-[16/9] overflow-hidden rounded-lg">
           <img class="image-cover" src="{{ a.image | url }}" alt="{{ a.imageAlt or a.title }}" loading="lazy" />
