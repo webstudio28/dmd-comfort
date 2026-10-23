@@ -1559,6 +1559,10 @@ body.menu-open,
   margin-top: 2rem;
 }
 
+.mb-0 {
+  margin-bottom: 0px;
+}
+
 .line-clamp-3 {
   overflow: hidden;
   display: -webkit-box;
@@ -2183,6 +2187,11 @@ body.menu-open,
 
 .bg-brand\/70 {
   background-color: rgb(5 114 48 / 0.7);
+}
+
+.bg-\[\#fafafa\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1));
 }
 
 .bg-\[radial-gradient\(circle_at_100\%\2c rgba\(5\2c 114\2c 48\2c 0\.18\)\2c transparent_62\%\)\] {
@@ -3465,6 +3474,10 @@ body.menu-open,
     margin-left: 0.75rem;
   }
 
+  .lg\:mt-4 {
+    margin-top: 1rem;
+  }
+
   .lg\:flex {
     display: flex;
   }
@@ -3505,6 +3518,10 @@ body.menu-open,
 
   .lg\:grid-cols-\[minmax\(0\2c 1fr\)_min\(100\%\2c 17\.5rem\)\] {
     grid-template-columns: minmax(0,1fr) min(100%, 17.5rem);
+  }
+
+  .lg\:grid-rows-\[auto_1fr\] {
+    grid-template-rows: auto 1fr;
   }
 
   .lg\:flex-row {
