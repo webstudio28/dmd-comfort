@@ -7,14 +7,6 @@ description: Запознайте се с ДМД Комфорт — опит, п
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}
 
-{% set teamPhotos = [
-  { "src": "/assets/images/about/team/team-01.webp", "alt": "Екипът на ДМД Комфорт монтира стоманен навес" },
-  { "src": "/assets/images/about/team/team-02.webp", "alt": "Монтажник на ДМД Комфорт при работа на покрив" },
-  { "src": "/assets/images/about/team/team-03.webp", "alt": "Монтаж на покривни панели от екипа на ДМД Комфорт" },
-  { "src": "/assets/images/about/team/team-04.webp", "alt": "Монтаж на алуминиево плъзгане — екипът в обекта" },
-  { "src": "/assets/images/about/team/team-05.webp", "alt": "Работа по остъкляване на тераса от ДМД Комфорт" }
-] %}
-
 {% call pageBanner() %}
   <div class="eyebrow text-brand before:bg-brand">ДМД Комфорт</div>
   <h1 class="mt-3 max-w-3xl font-display text-[clamp(2.5rem,5vw,3.75rem)] font-black leading-none">Кои сме ние</h1>
@@ -51,32 +43,7 @@ description: Запознайте се с ДМД Комфорт — опит, п
   </div>
 </section>
 
-<section class="section-pad overflow-x-clip bg-brand-mist" aria-labelledby="about-team-title">
-  <div class="container-site mb-10 reveal md:mb-12">
-    <div class="eyebrow">Екипът</div>
-    <h2 class="section-title" id="about-team-title">В обекта — с нас</h2>
-    <p class="section-copy">Монтажът е нашата работа на терен. Ето как изглежда екипът, когато сме при вас.</p>
-  </div>
-
-  <div class="h-scroll-drag reveal" data-drag-scroll tabindex="0" role="region" aria-label="Екипът на обект — плъзнете хоризонтално">
-    {% for photo in teamPhotos %}
-      <figure class="about-team-shot m-0 overflow-hidden rounded-[13px]">
-        <img
-          class="image-cover"
-          src="{{ photo.src | url }}"
-          alt="{{ photo.alt }}"
-          width="640"
-          height="800"
-          loading="lazy"
-          decoding="async"
-          draggable="false"
-        />
-      </figure>
-    {% endfor %}
-  </div>
-</section>
-
-<section class="section-pad bg-white">
+<section class="section-pad bg-brand-mist">
   <div class="container-site">
     <div class="mb-10 reveal">
       <div class="eyebrow">Силни страни</div>
@@ -98,40 +65,39 @@ description: Запознайте се с ДМД Комфорт — опит, п
   </div>
 </section>
 
-<section class="section-pad overflow-x-clip bg-brand-mist" aria-labelledby="about-work-title">
+<section class="section-pad bg-white" aria-labelledby="about-work-title">
   <div class="container-site mb-10 flex flex-col gap-6 reveal md:mb-12 md:flex-row md:items-end md:justify-between">
     <div>
       <div class="eyebrow">Портфолио</div>
       <h2 class="section-title" id="about-work-title">Нашата работа</h2>
-      <p class="section-copy">Реализирани обекти — плъзнете, за да разгледате, или отворете проект за повече снимки.</p>
+      <p class="section-copy">Изберете тип проекти, за да видите обектите по него.</p>
     </div>
     <a class="btn btn-primary shrink-0 self-start md:self-auto" href="{{ '/proekti/' | url }}">Всички проекти</a>
   </div>
 
-  <div class="h-scroll-drag reveal" data-drag-scroll tabindex="0" role="region" aria-label="Нашата работа — плъзнете хоризонтално">
-    {% for p in projects %}
-      {% if p.featured and p.images and p.images.length %}
-        <a class="project-tile group relative block min-h-[300px] overflow-hidden rounded-xl text-white no-underline" href="{{ ('/proekti/' + p.slug + '/') | url }}" draggable="false">
-          <img
-            class="image-cover absolute inset-0"
-            src="{{ p.images[0] | url }}"
-            alt="{{ p.title }}"
-            width="640"
-            height="480"
-            loading="lazy"
-            decoding="async"
-            draggable="false"
-          />
-          <div class="absolute inset-0 bg-gradient-to-t from-[#121516]/90 via-[#121516]/25 to-transparent"></div>
-          <div class="absolute inset-x-5 bottom-5 z-[2]">
-            <h3 class="line-clamp-2 font-display text-[20px] font-extrabold leading-snug">{{ p.title }}</h3>
-            {% if p.location %}
-              <p class="mt-1.5 m-0 text-sm text-white/75">{{ p.location }}</p>
-            {% endif %}
+  <div class="overflow-x-clip py-6 md:py-8">
+    <div class="h-scroll-drag reveal" data-drag-scroll tabindex="0" role="region" aria-label="Нашата работа — плъзнете хоризонтално">
+      {% for group in projectGroups %}
+        <a class="card group block no-underline" href="{{ group.href | url }}" draggable="false">
+          <div class="relative m-2.5 aspect-[4/3] overflow-hidden rounded-lg">
+            <img
+              class="image-cover"
+              src="{{ group.image | url }}"
+              alt="{{ group.title }}"
+              width="640"
+              height="480"
+              loading="lazy"
+              decoding="async"
+              draggable="false"
+            />
+          </div>
+          <div class="border-t border-ink/10 px-4 pb-5 pt-3.5">
+            <h3 class="mb-1.5 font-display text-lg font-extrabold leading-snug text-ink group-hover:text-brand">{{ group.title }}</h3>
+            <p class="m-0 text-[15px] leading-relaxed text-ink-muted">{{ group.countLabel }}</p>
           </div>
         </a>
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
+    </div>
   </div>
 </section>
 

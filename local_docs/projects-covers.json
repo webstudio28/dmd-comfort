@@ -1,0 +1,975 @@
+{
+  "format": "dmd-project-cover-choices",
+  "version": 1,
+  "exportedAt": "2026-10-23T12:34:54.899Z",
+  "sourceHash": "0833d61bcd60ae3df03516db849cd8faf3d4eb0b21242a944464afb02fa6add9",
+  "projectCount": 146,
+  "entries": {
+    "obekt-varhovrah-smyana-na-dograma-veka-70-klapi-za-nalyagane": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-varhovrah-smyana-na-dograma-veka-70-klapi-za-nalyagane/IMG_20230504_101105.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-varhovrah-smyana-na-dograma-veka-70-klapi-za-nalyagane/IMG_20230505_172620.webp",
+      "updatedAt": "2026-10-23T11:57:26.808Z"
+    },
+    "zimna-gradina-ot-a-do-ya": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/zimna-gradina-ot-a-do-ya/IMG_20210914_180927.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/zimna-gradina-ot-a-do-ya/IMG_20210914_181109.webp",
+      "updatedAt": "2026-10-23T11:57:35.114Z"
+    },
+    "kurtovo-4-ostaklenie-na-barbekyu-aluminievo-plazgane-antratsit": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/kurtovo-4-ostaklenie-na-barbekyu-aluminievo-plazgane-antratsit/IMG_20230626_172636.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/kurtovo-4-ostaklenie-na-barbekyu-aluminievo-plazgane-antratsit/IMG_20230626_172626.webp",
+      "updatedAt": "2026-10-23T11:57:59.200Z"
+    },
+    "obekt-5-stamboliyski-termoaluminievo-plazgane-altest-s38": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-5-stamboliyski-termoaluminievo-plazgane-altest-s38/IMG_20240405_175908.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-5-stamboliyski-termoaluminievo-plazgane-altest-s38/IMG_20250817_105939.webp",
+      "updatedAt": "2026-10-23T11:58:14.404Z"
+    },
+    "usvoyavane-na-terasi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/usvoyavane-na-terasi/IMG_20210827_191859.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/usvoyavane-na-terasi/IMG_20260912_160936.webp",
+      "updatedAt": "2026-10-23T11:58:29.759Z"
+    },
+    "obekt-krichim-2-vetropregrada-oblichane-na-kolona-oformyane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-krichim-2-vetropregrada-oblichane-na-kolona-oformyane-s-pervazi/IMG_20240214_120920.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-krichim-2-vetropregrada-oblichane-na-kolona-oformyane-s-pervazi/IMG_20240214_121048.webp",
+      "updatedAt": "2026-10-23T11:58:57.520Z"
+    },
+    "vhodni-vrati": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/vhodni-vrati/IMG_20260409_123716.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/vhodni-vrati/IMG_20251201_172956.webp",
+      "updatedAt": "2026-10-23T11:59:11.547Z"
+    },
+    "aluminieva-vrata-sas-dekorativno-krilo-i-aluminieva-tsyala-kasa": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/aluminieva-vrata-sas-dekorativno-krilo-i-aluminieva-tsyala-kasa/IMG_20260916_161240.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/aluminieva-vrata-sas-dekorativno-krilo-i-aluminieva-tsyala-kasa/IMG_20260916_174132.webp",
+      "updatedAt": "2026-10-23T11:59:30.462Z"
+    },
+    "aluminievi-navesi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/aluminievi-navesi/IMG_20251022_163337.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/aluminievi-navesi/IMG_20251020_134053.webp",
+      "updatedAt": "2026-10-23T11:59:38.252Z"
+    },
+    "betonna-plocha-podgotovka-i-nalivane": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/betonna-plocha-podgotovka-i-nalivane/IMG_20260923_122758.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/betonna-plocha-podgotovka-i-nalivane/IMG_20260923_122758.webp",
+      "updatedAt": "2026-10-23T12:00:16.986Z"
+    },
+    "blagotvoritelnost-blagotvoritelen-montazh-na-dograma-za-tsarkva": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/blagotvoritelnost-blagotvoritelen-montazh-na-dograma-za-tsarkva/IMG_20260321_160409.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/blagotvoritelnost-blagotvoritelen-montazh-na-dograma-za-tsarkva/IMG_20260321_155528.webp",
+      "updatedAt": "2026-10-23T12:00:38.729Z"
+    },
+    "vrati-za-banya-topizpalnenie": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/vrati-za-banya-topizpalnenie/IMG_20231117_143019.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/vrati-za-banya-topizpalnenie/IMG_20260326_113039.webp",
+      "updatedAt": "2026-10-23T12:02:08.802Z"
+    },
+    "vhoden-portal": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/vhoden-portal/IMG_20250606_192504.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/vhoden-portal/IMG_20251201_172956.webp",
+      "updatedAt": "2026-10-23T12:02:45.470Z"
+    },
+    "vanshni-dvorni-i-garazhni-vrati": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/vanshni-dvorni-i-garazhni-vrati/IMG_20210619_124042.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/vanshni-dvorni-i-garazhni-vrati/IMG_20210619_124042.webp",
+      "updatedAt": "2026-10-23T12:02:50.022Z"
+    },
+    "vrati-za-banya-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/vrati-za-banya-obrashtane-s-pervazi/IMG_20250317_161506.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/vrati-za-banya-obrashtane-s-pervazi/IMG_20250317_161506.webp",
+      "updatedAt": "2026-10-23T12:02:54.745Z"
+    },
+    "barbekyuta-aluminievo-plazgane": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/barbekyuta-aluminievo-plazgane/IMG_20260608_191328.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/barbekyuta-aluminievo-plazgane/IMG_20260608_191328.webp",
+      "updatedAt": "2026-10-23T12:03:03.447Z"
+    },
+    "barbekta-bezprofilno-ostaklenie": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/barbekta-bezprofilno-ostaklenie/IMG_20201221_153026.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/barbekta-bezprofilno-ostaklenie/IMG_20201221_153026.webp",
+      "updatedAt": "2026-10-23T12:03:10.135Z"
+    },
+    "apartament-plovdiv-1": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/apartament-plovdiv-1/IMG_20260730_185355.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/apartament-plovdiv-1/IMG_20260730_185355.webp",
+      "updatedAt": "2026-10-23T12:03:13.051Z"
+    },
+    "antipanik-mehanizmi-za-obshtestveni-zgradi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/antipanik-mehanizmi-za-obshtestveni-zgradi/IMG_20241105_142353.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/antipanik-mehanizmi-za-obshtestveni-zgradi/IMG_20241105_142353.webp",
+      "updatedAt": "2026-10-23T12:03:15.997Z"
+    },
+    "aluminieva-veranda-prototip": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/aluminieva-veranda-prototip/IMG_20230510_170710.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/aluminieva-veranda-prototip/IMG_20230510_170710.webp",
+      "updatedAt": "2026-10-23T12:03:18.419Z"
+    },
+    "ral-montazh": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/ral-montazh/IMG_20251121_082044.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/ral-montazh/IMG_20251121_082044.webp",
+      "updatedAt": "2026-10-23T12:03:24.821Z"
+    },
+    "dush-kabini": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/dush-kabini/IMG_20210402_181921.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/dush-kabini/IMG_20210402_181921.webp",
+      "updatedAt": "2026-10-23T12:03:26.867Z"
+    },
+    "obekt-stamboliyski-1-topmontazh-vanshni-roletni-shtori": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-1-topmontazh-vanshni-roletni-shtori/IMG_20260424_155011.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-1-topmontazh-vanshni-roletni-shtori/IMG_20260424_155011.webp",
+      "updatedAt": "2026-10-23T12:03:29.432Z"
+    },
+    "vrati-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/vrati-s-pervazi/IMG_20250514_170036.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/vrati-s-pervazi/IMG_20250514_170036.webp",
+      "updatedAt": "2026-10-23T12:03:35.153Z"
+    },
+    "vatreshni-shtori": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/vatreshni-shtori/IMG_20201128_210541.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/vatreshni-shtori/IMG_20260526_145130.webp",
+      "updatedAt": "2026-10-23T12:03:45.281Z"
+    },
+    "golemi-obekti-montazh-na-kooperatsii": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/golemi-obekti-montazh-na-kooperatsii/IMG_20260408_115030.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/golemi-obekti-montazh-na-kooperatsii/IMG_20260408_114627.webp",
+      "updatedAt": "2026-10-23T12:03:56.623Z"
+    },
+    "dograma-v-palna-okomplektovka": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/dograma-v-palna-okomplektovka/IMG_20260818_111737.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/dograma-v-palna-okomplektovka/IMG_20200325_123242.webp",
+      "updatedAt": "2026-10-23T12:04:01.750Z"
+    },
+    "zatvaryane-na-stalbishte": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/zatvaryane-na-stalbishte/IMG_20260222_124845.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/zatvaryane-na-stalbishte/IMG_20260222_124845.webp",
+      "updatedAt": "2026-10-23T12:04:07.014Z"
+    },
+    "zimna-gradina": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/zimna-gradina/IMG_20251113_174719.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/zimna-gradina/IMG_20251113_174719.webp",
+      "updatedAt": "2026-10-23T12:04:17.082Z"
+    },
+    "izprashtane-na-dograma-za-angliya": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/izprashtane-na-dograma-za-angliya/IMG_20241015_151817.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/izprashtane-na-dograma-za-angliya/IMG_20241015_151817.webp",
+      "updatedAt": "2026-10-23T12:04:21.520Z"
+    },
+    "izrabotka-i-montazh-na-magazin-ot-a-do-ya": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/izrabotka-i-montazh-na-magazin-ot-a-do-ya/IMG_20240130_133350.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/izrabotka-i-montazh-na-magazin-ot-a-do-ya/IMG_20240130_133350.webp",
+      "updatedAt": "2026-10-23T12:04:24.243Z"
+    },
+    "kapanduri": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/kapanduri/IMG_20251126_133641.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/kapanduri/IMG_20251210_170229.webp",
+      "updatedAt": "2026-10-23T12:05:12.320Z"
+    },
+    "kuhni": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/kuhni/IMG_20260309_210321.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/kuhni/IMG_20260309_210321.webp",
+      "updatedAt": "2026-10-23T12:05:15.377Z"
+    },
+    "mebeli-za-vanshni-usloviya": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/mebeli-za-vanshni-usloviya/IMG_20250925_183039.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/mebeli-za-vanshni-usloviya/IMG_20250925_183039.webp",
+      "updatedAt": "2026-10-23T12:06:29.710Z"
+    },
+    "neozaglaven": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/neozaglaven/IMG_20240725_131659.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/neozaglaven/IMG_20230301_175141.webp",
+      "updatedAt": "2026-10-23T12:07:03.678Z"
+    },
+    "oazis-4": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/oazis-4/IMG_20260818_111820.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/oazis-4/IMG_20260818_111820.webp",
+      "updatedAt": "2026-10-23T12:07:40.219Z"
+    },
+    "obekt-3-stamboliyski-ral-montazh-veka-70mm-troen-st-et-zl-dab": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-3-stamboliyski-ral-montazh-veka-70mm-troen-st-et-zl-dab/005.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-3-stamboliyski-ral-montazh-veka-70mm-troen-st-et-zl-dab/IMG_20251121_082044.webp",
+      "updatedAt": "2026-10-23T12:07:47.633Z"
+    },
+    "obekt-4-plovdiv-topmontazh-shuko82-troen-st-et-pervazi-zavarshen-vid-pochistvane": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-4-plovdiv-topmontazh-shuko82-troen-st-et-pervazi-zavarshen-vid-pochistvane/IMG_20260430_160038.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-4-plovdiv-topmontazh-shuko82-troen-st-et-pervazi-zavarshen-vid-pochistvane/IMG_20260430_172057.webp",
+      "updatedAt": "2026-10-23T12:07:55.488Z"
+    },
+    "obekt-4-stamboliyski-pregrazhda-e-na-koridor-i-stalbishte-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-4-stamboliyski-pregrazhda-e-na-koridor-i-stalbishte-obrashtane-s-pervazi/IMG_20251111_181429.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-4-stamboliyski-pregrazhda-e-na-koridor-i-stalbishte-obrashtane-s-pervazi/IMG_20251111_181429.webp",
+      "updatedAt": "2026-10-23T12:11:17.065Z"
+    },
+    "obekt-5-plovdiv-vrati-za-banya-topizpalnenie": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-5-plovdiv-vrati-za-banya-topizpalnenie/IMG_20260326_113048.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-5-plovdiv-vrati-za-banya-topizpalnenie/IMG_20260326_113039.webp",
+      "updatedAt": "2026-10-23T12:11:25.005Z"
+    },
+    "obekt-7-plovdiv-zimna-gradina-aluminiev-naves-staklen-pokriv": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-7-plovdiv-zimna-gradina-aluminiev-naves-staklen-pokriv/IMG_20251113_174719.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-7-plovdiv-zimna-gradina-aluminiev-naves-staklen-pokriv/IMG_20251113_174719.webp",
+      "updatedAt": "2026-10-23T12:11:28.431Z"
+    },
+    "obekt-7-stamboliyski-vrati-sas-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-7-stamboliyski-vrati-sas-pervazi/IMG_20251009_134759.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-7-stamboliyski-vrati-sas-pervazi/IMG_20251009_134811.webp",
+      "updatedAt": "2026-10-23T12:11:37.255Z"
+    },
+    "obekt-brestovitsa-vhoden-portal-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-brestovitsa-vhoden-portal-obrashtane-s-pervazi/IMG_20251201_173039.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-brestovitsa-vhoden-portal-obrashtane-s-pervazi/IMG_20251201_172956.webp",
+      "updatedAt": "2026-10-23T12:11:46.371Z"
+    },
+    "obekt-voyvodinovo-smyana-na-dograma-vanshni-vgradeni-roletni-shtori-vgradeni-komarnitsi-el": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-voyvodinovo-smyana-na-dograma-vanshni-vgradeni-roletni-shtori-vgradeni-komarnitsi-el/IMG_20241206_105858.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-voyvodinovo-smyana-na-dograma-vanshni-vgradeni-roletni-shtori-vgradeni-komarnitsi-el/IMG_20241206_153536.webp",
+      "updatedAt": "2026-10-23T12:12:02.782Z"
+    },
+    "obekt-govedare-ostaklenie-na-barbekyu": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-govedare-ostaklenie-na-barbekyu/IMG_20241218_142456.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-govedare-ostaklenie-na-barbekyu/IMG_20241218_142452.webp",
+      "updatedAt": "2026-10-23T12:12:10.054Z"
+    },
+    "obekt-dragomir-ostaklenie-na-barbekyu-aluminievo-plazgane-plazgashti-komarnitsi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-dragomir-ostaklenie-na-barbekyu-aluminievo-plazgane-plazgashti-komarnitsi/IMG_20230622_155905.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-dragomir-ostaklenie-na-barbekyu-aluminievo-plazgane-plazgashti-komarnitsi/IMG_20230622_155759.webp",
+      "updatedAt": "2026-10-23T12:12:16.412Z"
+    },
+    "obekt-yoakim-gruevo-ostaklenie-na-barbekyu-aluminievo-plazgane-plazgashti-komarnitsi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-yoakim-gruevo-ostaklenie-na-barbekyu-aluminievo-plazgane-plazgashti-komarnitsi/IMG_20230907_154827.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-yoakim-gruevo-ostaklenie-na-barbekyu-aluminievo-plazgane-plazgashti-komarnitsi/IMG_20230907_154817.webp",
+      "updatedAt": "2026-10-23T12:12:33.160Z"
+    },
+    "obekt-kaloferskite-voyvodi-gelan74-troen-st-et": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-kaloferskite-voyvodi-gelan74-troen-st-et/IMG_20230413_192141.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-kaloferskite-voyvodi-gelan74-troen-st-et/IMG_20230413_192230.webp",
+      "updatedAt": "2026-10-23T12:12:48.677Z"
+    },
+    "obekt-krichim-5-ostaklenie-na-barbekyu-aluminievo-plazgane-stopsol-antratsit": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-krichim-5-ostaklenie-na-barbekyu-aluminievo-plazgane-stopsol-antratsit/IMG_20230411_202710.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-krichim-5-ostaklenie-na-barbekyu-aluminievo-plazgane-stopsol-antratsit/IMG_20230411_202549.webp",
+      "updatedAt": "2026-10-23T12:12:53.715Z"
+    },
+    "obekt-kurtovo-3-smyana-na-dograma-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-kurtovo-3-smyana-na-dograma-obrashtane-s-pervazi/IMG_20240222_175039.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-kurtovo-3-smyana-na-dograma-obrashtane-s-pervazi/IMG_20240222_173100.webp",
+      "updatedAt": "2026-10-23T12:13:01.865Z"
+    },
+    "obekt-kurtovo-konare-smyana-na-prozortsi-vrati-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-kurtovo-konare-smyana-na-prozortsi-vrati-obrashtane-s-pervazi/IMG_20250310_182534.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-kurtovo-konare-smyana-na-prozortsi-vrati-obrashtane-s-pervazi/IMG_20250310_182528.webp",
+      "updatedAt": "2026-10-23T12:13:06.993Z"
+    },
+    "obekt-kurtovo-smyana-na-vinkelovo-ostaklenie": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-kurtovo-smyana-na-vinkelovo-ostaklenie/IMG_20241116_131759.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-kurtovo-smyana-na-vinkelovo-ostaklenie/IMG_20241116_131759.webp",
+      "updatedAt": "2026-10-23T12:13:11.109Z"
+    },
+    "obekt-lilkovo-smyana-na-dograma-obrashtane-s-pervazi-varhu-lamperiya": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-lilkovo-smyana-na-dograma-obrashtane-s-pervazi-varhu-lamperiya/IMG_20240705_180654.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-lilkovo-smyana-na-dograma-obrashtane-s-pervazi-varhu-lamperiya/IMG_20240705_180654.webp",
+      "updatedAt": "2026-10-23T12:13:16.229Z"
+    },
+    "obekt-markovo-s-obrazno-ostaklenie-na-stalbishte": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-markovo-s-obrazno-ostaklenie-na-stalbishte/IMG_20240627_150032.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-markovo-s-obrazno-ostaklenie-na-stalbishte/IMG_20240627_150027.webp",
+      "updatedAt": "2026-10-23T12:13:38.533Z"
+    },
+    "obekt-markovo-etem-e75-e50-plazgane-s-povdigane-troen-st-et-skrit-obkov": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-markovo-etem-e75-e50-plazgane-s-povdigane-troen-st-et-skrit-obkov/IMG_20260603_182639.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-markovo-etem-e75-e50-plazgane-s-povdigane-troen-st-et-skrit-obkov/IMG_20260603_181736.webp",
+      "updatedAt": "2026-10-23T12:13:47.785Z"
+    },
+    "obekt-miryantsi-vhoden-portal": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-miryantsi-vhoden-portal/IMG_20250526_162452.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-miryantsi-vhoden-portal/IMG_20250526_162452.webp",
+      "updatedAt": "2026-10-23T12:13:53.354Z"
+    },
+    "obekt-novo-selo-ostaklenie-na-barbekyu-aluminievo-plazgane-plazgashti-komarnitsi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-novo-selo-ostaklenie-na-barbekyu-aluminievo-plazgane-plazgashti-komarnitsi/IMG_20230511_151659.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-novo-selo-ostaklenie-na-barbekyu-aluminievo-plazgane-plazgashti-komarnitsi/IMG_20230511_151659.webp",
+      "updatedAt": "2026-10-23T12:13:56.608Z"
+    },
+    "obekt-perushtitsa-plazgasht-portal-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-perushtitsa-plazgasht-portal-obrashtane-s-pervazi/IMG_20250114_103751.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-perushtitsa-plazgasht-portal-obrashtane-s-pervazi/IMG_20250114_103822.webp",
+      "updatedAt": "2026-10-23T12:13:59.682Z"
+    },
+    "obekt-perushtitsa-smyana-na-vrati-portali-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-perushtitsa-smyana-na-vrati-portali-obrashtane-s-pervazi/IMG_20241008_190145.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-perushtitsa-smyana-na-vrati-portali-obrashtane-s-pervazi/IMG_20241008_190217.webp",
+      "updatedAt": "2026-10-23T12:14:10.951Z"
+    },
+    "obekt-peshtera-3-podmyana-na-dograma-avtomatichen-vw-veka-82-troen-st-et-pvts-distantsione": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-peshtera-3-podmyana-na-dograma-avtomatichen-vw-veka-82-troen-st-et-pvts-distantsione/IMG_20231016_132810.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-peshtera-3-podmyana-na-dograma-avtomatichen-vw-veka-82-troen-st-et-pvts-distantsione/IMG_20231016_132810.webp",
+      "updatedAt": "2026-10-23T12:14:19.788Z"
+    },
+    "obekt-peshtera-smyana-na-dograma-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-peshtera-smyana-na-dograma-obrashtane-s-pervazi/IMG_20250326_143450.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-peshtera-smyana-na-dograma-obrashtane-s-pervazi/IMG_20250326_143450.webp",
+      "updatedAt": "2026-10-23T12:14:31.686Z"
+    },
+    "obekt-plovdiv-13-dush-kabini": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-plovdiv-13-dush-kabini/IMG_20250402_184000.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-plovdiv-13-dush-kabini/IMG_20250402_184000.webp",
+      "updatedAt": "2026-10-23T12:14:36.798Z"
+    },
+    "obekt-plovdiv-14-vrata-za-banya-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-plovdiv-14-vrata-za-banya-obrashtane-s-pervazi/IMG_20250324_180047.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-plovdiv-14-vrata-za-banya-obrashtane-s-pervazi/IMG_20250324_180047.webp",
+      "updatedAt": "2026-10-23T12:14:39.752Z"
+    },
+    "obekt-plovdiv-15-smyana-na-dograma-parolepenki-silikonirane-ral-montazh": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-plovdiv-15-smyana-na-dograma-parolepenki-silikonirane-ral-montazh/IMG_20250321_170215.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-plovdiv-15-smyana-na-dograma-parolepenki-silikonirane-ral-montazh/IMG_20250321_170215.webp",
+      "updatedAt": "2026-10-23T12:14:42.691Z"
+    },
+    "obekt-plovdiv-20-tsyalostna-smyana-na-dograma-ostaklenie-na-terasa": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-plovdiv-20-tsyalostna-smyana-na-dograma-ostaklenie-na-terasa/IMG_20250226_172655.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-plovdiv-20-tsyalostna-smyana-na-dograma-ostaklenie-na-terasa/IMG_20250226_172655.webp",
+      "updatedAt": "2026-10-23T12:16:19.018Z"
+    },
+    "obekt-plovdiv-22-smyana-na-dograma-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-plovdiv-22-smyana-na-dograma-obrashtane-s-pervazi/IMG_20250211_170928.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-plovdiv-22-smyana-na-dograma-obrashtane-s-pervazi/IMG_20250211_170928.webp",
+      "updatedAt": "2026-10-23T12:16:26.380Z"
+    },
+    "obekt-plovdiv-26-smyana-vrata-na-banya-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-plovdiv-26-smyana-vrata-na-banya-obrashtane-s-pervazi/IMG_20240809_110405.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-plovdiv-26-smyana-vrata-na-banya-obrashtane-s-pervazi/IMG_20240809_110430.webp",
+      "updatedAt": "2026-10-23T12:16:35.580Z"
+    },
+    "obekt-plovdiv-30-usvoyavane-na-terasa-plazgashto-s-povdigane-etem-e50-antratsit": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-plovdiv-30-usvoyavane-na-terasa-plazgashto-s-povdigane-etem-e50-antratsit/IMG_20230702_185729.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-plovdiv-30-usvoyavane-na-terasa-plazgashto-s-povdigane-etem-e50-antratsit/IMG_20230702_185729.webp",
+      "updatedAt": "2026-10-23T12:16:38.787Z"
+    },
+    "obekt-plovdiv-32-smyana-na-dograma-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-plovdiv-32-smyana-na-dograma-obrashtane-s-pervazi/IMG_20240410_120222.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-plovdiv-32-smyana-na-dograma-obrashtane-s-pervazi/IMG_20240410_120257.webp",
+      "updatedAt": "2026-10-23T12:16:46.839Z"
+    },
+    "obekt-plovdiv-39-tsyalostno-izpalnenie-na-magazin-ot-a-do-ya-fundament-metalna-konstruktsi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-plovdiv-39-tsyalostno-izpalnenie-na-magazin-ot-a-do-ya-fundament-metalna-konstruktsi/IMG_20240116_172215.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-plovdiv-39-tsyalostno-izpalnenie-na-magazin-ot-a-do-ya-fundament-metalna-konstruktsi/IMG_20240130_133350.webp",
+      "updatedAt": "2026-10-23T12:17:02.929Z"
+    },
+    "obekt-plovdiv-6-detska-gradina": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-plovdiv-6-detska-gradina/IMG_20251220_160500.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-plovdiv-6-detska-gradina/IMG_20251220_160453.webp",
+      "updatedAt": "2026-10-23T12:17:21.454Z"
+    },
+    "obekt-sveti-vlas-zimna-gradina-kashtichka-ot-dograma": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-sveti-vlas-zimna-gradina-kashtichka-ot-dograma/IMG_20210914_181008.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-sveti-vlas-zimna-gradina-kashtichka-ot-dograma/IMG_20210914_181109.webp",
+      "updatedAt": "2026-10-23T12:17:38.967Z"
+    },
+    "obekt-stamboliyski-12-dush-kabina-plazgashta": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-12-dush-kabina-plazgashta/IMG_20250403_171255.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-12-dush-kabina-plazgashta/IMG_20250403_171255.webp",
+      "updatedAt": "2026-10-23T12:17:43.173Z"
+    },
+    "obekt-stamboliyski-13-dush-kabina": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-13-dush-kabina/IMG_20250401_130953.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-13-dush-kabina/IMG_20250401_130953.webp",
+      "updatedAt": "2026-10-23T12:17:46.575Z"
+    },
+    "obekt-stamboliyski-16-vatreshni-vrati-dekorativni-paneli-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-16-vatreshni-vrati-dekorativni-paneli-obrashtane-s-pervazi/IMG_20250314_144442.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-16-vatreshni-vrati-dekorativni-paneli-obrashtane-s-pervazi/IMG_20250320_131947.webp",
+      "updatedAt": "2026-10-23T12:17:55.513Z"
+    },
+    "obekt-stamboliyski-18-zatvaryane-na-barbekyu-aluminievo-plazgane-antratsit-zavarshvane-s-p": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-18-zatvaryane-na-barbekyu-aluminievo-plazgane-antratsit-zavarshvane-s-p/IMG_20250314_120038.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-18-zatvaryane-na-barbekyu-aluminievo-plazgane-antratsit-zavarshvane-s-p/IMG_20250314_120038.webp",
+      "updatedAt": "2026-10-23T12:17:58.196Z"
+    },
+    "obekt-stamboliyski-2-smyana-na-stara-pvts-dograma-s-nova-i-oformyane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-2-smyana-na-stara-pvts-dograma-s-nova-i-oformyane-s-pervazi/IMG_20251223_130412.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-2-smyana-na-stara-pvts-dograma-s-nova-i-oformyane-s-pervazi/IMG_20251223_130423.webp",
+      "updatedAt": "2026-10-23T12:18:10.790Z"
+    },
+    "obekt-stamboliyski-20-vatreshna-vrata-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-20-vatreshna-vrata-obrashtane-s-pervazi/IMG_20250304_110607.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-20-vatreshna-vrata-obrashtane-s-pervazi/IMG_20250304_110614.webp",
+      "updatedAt": "2026-10-23T12:18:14.884Z"
+    },
+    "obekt-stamboliyski-21-vatreshni-vrati-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-21-vatreshni-vrati-obrashtane-s-pervazi/IMG_20250214_134329.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-21-vatreshni-vrati-obrashtane-s-pervazi/IMG_20250214_134434.webp",
+      "updatedAt": "2026-10-23T12:18:19.870Z"
+    },
+    "obekt-stamboliyski-22-smyana-na-dograma-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-22-smyana-na-dograma-obrashtane-s-pervazi/IMG_20250129_173202.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-22-smyana-na-dograma-obrashtane-s-pervazi/IMG_20250129_173202.webp",
+      "updatedAt": "2026-10-23T12:18:41.108Z"
+    },
+    "obekt-stamboliyski-23-smyana-na-vhodna-vrata-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-23-smyana-na-vhodna-vrata-obrashtane-s-pervazi/IMG_20250103_162116.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-23-smyana-na-vhodna-vrata-obrashtane-s-pervazi/IMG_20250103_162123.webp",
+      "updatedAt": "2026-10-23T12:18:46.768Z"
+    },
+    "obekt-stamboliyski-23-smyana-na-dograma-obrashtane-s-pervazi-vanshni-roletni-shtori": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-23-smyana-na-dograma-obrashtane-s-pervazi-vanshni-roletni-shtori/IMG_20250117_144759.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-23-smyana-na-dograma-obrashtane-s-pervazi-vanshni-roletni-shtori/IMG_20250117_145249.webp",
+      "updatedAt": "2026-10-23T12:19:43.796Z"
+    },
+    "obekt-stamboliyski-24-magazin-bratya-nedelevi-predverie-i-naves": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-24-magazin-bratya-nedelevi-predverie-i-naves/IMG_20241011_121236.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-24-magazin-bratya-nedelevi-predverie-i-naves/IMG_20241011_121236.webp",
+      "updatedAt": "2026-10-23T12:19:48.873Z"
+    },
+    "obekt-stamboliyski-24-ostaklenie-na-barbekyu": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-24-ostaklenie-na-barbekyu/IMG_20240911_164038.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-24-ostaklenie-na-barbekyu/IMG_20240911_164046.webp",
+      "updatedAt": "2026-10-23T12:20:04.278Z"
+    },
+    "obekt-stamboliyski-27-usvoyavane-na-terasa": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-27-usvoyavane-na-terasa/IMG_20240725_131710.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-27-usvoyavane-na-terasa/IMG_20240725_131710.webp",
+      "updatedAt": "2026-10-23T12:20:08.680Z"
+    },
+    "obekt-stamboliyski-30-vhoden-portal-plazgashta-vrata-za-banya-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-30-vhoden-portal-plazgashta-vrata-za-banya-obrashtane-s-pervazi/IMG_20240628_172859.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-30-vhoden-portal-plazgashta-vrata-za-banya-obrashtane-s-pervazi/IMG_20240628_172859.webp",
+      "updatedAt": "2026-10-23T12:20:16.199Z"
+    },
+    "obekt-stamboliyski-31-usvoyavane-na-antre-v-blok": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-31-usvoyavane-na-antre-v-blok/IMG_20240620_165815.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-31-usvoyavane-na-antre-v-blok/IMG_20240620_165804.webp",
+      "updatedAt": "2026-10-23T12:20:19.872Z"
+    },
+    "obekt-stamboliyski-33-zabolekarski-kabineti": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-33-zabolekarski-kabineti/IMG_20240329_121002.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-33-zabolekarski-kabineti/IMG_20240329_120946.webp",
+      "updatedAt": "2026-10-23T12:20:31.560Z"
+    },
+    "obekt-stamboliyski-34-vhodna-vrata-termoaluminiy-antratsit-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-34-vhodna-vrata-termoaluminiy-antratsit-obrashtane-s-pervazi/IMG_20240312_180840.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-34-vhodna-vrata-termoaluminiy-antratsit-obrashtane-s-pervazi/IMG_20240312_182056.webp",
+      "updatedAt": "2026-10-23T12:20:58.759Z"
+    },
+    "obekt-stamboliyski-35-nova-dograma-komerling-76mm-troen-st-et-pvts-distantsioneri": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-35-nova-dograma-komerling-76mm-troen-st-et-pvts-distantsioneri/IMG_20240304_175014.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-35-nova-dograma-komerling-76mm-troen-st-et-pvts-distantsioneri/IMG_20240304_175014.webp",
+      "updatedAt": "2026-10-23T12:21:05.093Z"
+    },
+    "obekt-stamboliyski-36-obrashtane-s-pervazi-i-vanshni-roletni-shtori": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-36-obrashtane-s-pervazi-i-vanshni-roletni-shtori/IMG_20240228_163109.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-36-obrashtane-s-pervazi-i-vanshni-roletni-shtori/IMG_20240228_163109.webp",
+      "updatedAt": "2026-10-23T12:21:17.441Z"
+    },
+    "obekt-stamboliyski-36-smyana-na-dograma-vgradeni-roletni-shtori-komerling-76mm-pvts-distan": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-36-smyana-na-dograma-vgradeni-roletni-shtori-komerling-76mm-pvts-distan/IMG_20240216_154201.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-36-smyana-na-dograma-vgradeni-roletni-shtori-komerling-76mm-pvts-distan/IMG_20240216_154201.webp",
+      "updatedAt": "2026-10-23T12:21:36.289Z"
+    },
+    "obekt-stamboliyski-37-vhodna-vrata-obrashtane-s-pervazi-antratsit-termoaluminiy": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-37-vhodna-vrata-obrashtane-s-pervazi-antratsit-termoaluminiy/IMG_20240209_093649.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-37-vhodna-vrata-obrashtane-s-pervazi-antratsit-termoaluminiy/IMG_20240209_141911.webp",
+      "updatedAt": "2026-10-23T12:21:55.074Z"
+    },
+    "obekt-stamboliyski-41-smyana-na-dograma-vatreshni-vrati-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-41-smyana-na-dograma-vatreshni-vrati-obrashtane-s-pervazi/IMG_20230927_170822.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-41-smyana-na-dograma-vatreshni-vrati-obrashtane-s-pervazi/IMG_20230927_170855.webp",
+      "updatedAt": "2026-10-23T12:22:14.334Z"
+    },
+    "obekt-stamboliyski-42-portal-za-stalbishte-vkopan-vav-zamazkata-za-da-nyama-prag": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-42-portal-za-stalbishte-vkopan-vav-zamazkata-za-da-nyama-prag/IMG_20230915_193222.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-42-portal-za-stalbishte-vkopan-vav-zamazkata-za-da-nyama-prag/IMG_20230915_193222.webp",
+      "updatedAt": "2026-10-23T12:22:25.378Z"
+    },
+    "obekt-stamboliyski-44-ostaklenie-na-stalbishte": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-44-ostaklenie-na-stalbishte/IMG_20230711_155701.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-44-ostaklenie-na-stalbishte/IMG_20230711_155724.webp",
+      "updatedAt": "2026-10-23T12:22:34.014Z"
+    },
+    "obekt-stamboliyski-45-smyana-na-dograma-vhodna-vrata-ot-termoaluminiy-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-45-smyana-na-dograma-vhodna-vrata-ot-termoaluminiy-obrashtane-s-pervazi/IMG_20230518_181132.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-45-smyana-na-dograma-vhodna-vrata-ot-termoaluminiy-obrashtane-s-pervazi/IMG_20230519_140747.webp",
+      "updatedAt": "2026-10-23T12:23:18.433Z"
+    },
+    "obekt-stamboliyski-6-vatreshni-interiorni-vrati-prozortsi-shtori-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-6-vatreshni-interiorni-vrati-prozortsi-shtori-obrashtane-s-pervazi/IMG_20250723_185320.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-6-vatreshni-interiorni-vrati-prozortsi-shtori-obrashtane-s-pervazi/IMG_20250723_185358.webp",
+      "updatedAt": "2026-10-23T12:23:29.701Z"
+    },
+    "obekt-stamboliyski-7-byala-aluminieva-vatreshna-vrata-obrashtane-s-pvts-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-7-byala-aluminieva-vatreshna-vrata-obrashtane-s-pvts-pervazi/IMG_20250905_131316.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-7-byala-aluminieva-vatreshna-vrata-obrashtane-s-pvts-pervazi/IMG_20250905_131400.webp",
+      "updatedAt": "2026-10-23T12:23:35.729Z"
+    },
+    "obekt-stamboliyski-8-usvoyavane-na-terasa": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-8-usvoyavane-na-terasa/IMG_20250718_173656.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-8-usvoyavane-na-terasa/IMG_20250718_173656.webp",
+      "updatedAt": "2026-10-23T12:24:08.327Z"
+    },
+    "obekt-stamboliyski-iznesena-ostaklena-terasa-aluminievo-plazgane-pokrivche": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski-iznesena-ostaklena-terasa-aluminievo-plazgane-pokrivche/IMG_20230421_164514.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski-iznesena-ostaklena-terasa-aluminievo-plazgane-pokrivche/IMG_20230421_165332.webp",
+      "updatedAt": "2026-10-23T12:24:40.442Z"
+    },
+    "obekt-stamboliyski25-vrata-za-banya-obrashtane-s-pervazi-varhu-lamperiya": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-stamboliyski25-vrata-za-banya-obrashtane-s-pervazi-varhu-lamperiya/IMG_20240823_130001.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-stamboliyski25-vrata-za-banya-obrashtane-s-pervazi-varhu-lamperiya/IMG_20240823_130001.webp",
+      "updatedAt": "2026-10-23T12:24:44.670Z"
+    },
+    "obekt-saedinenie-nova-dograma-komerling-76mm-antratsit-troen-st-et-pvts-distantsioner": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-saedinenie-nova-dograma-komerling-76mm-antratsit-troen-st-et-pvts-distantsioner/IMG_20240502_161438.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-saedinenie-nova-dograma-komerling-76mm-antratsit-troen-st-et-pvts-distantsioner/IMG_20240502_161540.webp",
+      "updatedAt": "2026-10-23T12:24:52.205Z"
+    },
+    "obekt-t-market-i-pepco-saedinenie": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-t-market-i-pepco-saedinenie/IMG_20250408_194400.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-t-market-i-pepco-saedinenie/IMG_20250408_194400.webp",
+      "updatedAt": "2026-10-23T12:25:03.539Z"
+    },
+    "obekt-terasa-trakiya-tsyalosten-remont-ot-a-do-ya": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-terasa-trakiya-tsyalosten-remont-ot-a-do-ya/IMG_20260912_174607.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-terasa-trakiya-tsyalosten-remont-ot-a-do-ya/IMG_20260912_160936.webp",
+      "updatedAt": "2026-10-23T12:26:00.202Z"
+    },
+    "obekt-tri-voditsi-podmyana-na-vinkelovo-ostaklenie": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-tri-voditsi-podmyana-na-vinkelovo-ostaklenie/IMG_20251120_121816.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-tri-voditsi-podmyana-na-vinkelovo-ostaklenie/IMG_20251120_121813.webp",
+      "updatedAt": "2026-10-23T12:26:11.800Z"
+    },
+    "obekt-hrabrrino-smyana-na-dograma-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-hrabrrino-smyana-na-dograma-obrashtane-s-pervazi/IMG_20240410_184611.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-hrabrrino-smyana-na-dograma-obrashtane-s-pervazi/IMG_20240410_201532.webp",
+      "updatedAt": "2026-10-23T12:26:22.092Z"
+    },
+    "obekt-tsigov-chark-nova-dograma-komerling-70mm-antratsit-pvts-distantsioner": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-tsigov-chark-nova-dograma-komerling-70mm-antratsit-pvts-distantsioner/IMG_20230615_170852.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-tsigov-chark-nova-dograma-komerling-70mm-antratsit-pvts-distantsioner/IMG_20230615_170852.webp",
+      "updatedAt": "2026-10-23T12:26:49.187Z"
+    },
+    "obekt-yagodovo-nova-dograma-veka-82-troen-st-et-pvts-distantsioneri": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obekt-yagodovo-nova-dograma-veka-82-troen-st-et-pvts-distantsioneri/IMG_20240726_185652.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obekt-yagodovo-nova-dograma-veka-82-troen-st-et-pvts-distantsioneri/IMG_20240726_185652.webp",
+      "updatedAt": "2026-10-23T12:26:52.679Z"
+    },
+    "obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/obrashtane-s-pervazi/IMG_20251223_130423.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/obrashtane-s-pervazi/IMG_20251223_130418.webp",
+      "updatedAt": "2026-10-23T12:26:59.368Z"
+    },
+    "pavilioni-sglobyaemi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/pavilioni-sglobyaemi/IMG_20260328_095857.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/pavilioni-sglobyaemi/IMG_20260328_095857.webp",
+      "updatedAt": "2026-10-23T12:27:07.847Z"
+    },
+    "plovdiv-obekt-3-shuko76mm-troen-st-et-pvts-distantsioneri-usvoyavane-na-terasa": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/plovdiv-obekt-3-shuko76mm-troen-st-et-pvts-distantsioneri-usvoyavane-na-terasa/IMG_20260701_150422.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/plovdiv-obekt-3-shuko76mm-troen-st-et-pvts-distantsioneri-usvoyavane-na-terasa/IMG_20260701_150422.webp",
+      "updatedAt": "2026-10-23T12:27:11.835Z"
+    },
+    "plovdiv-obekt-5-usvoyavane-na-terasa-s-iznesen-pokriv": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/plovdiv-obekt-5-usvoyavane-na-terasa-s-iznesen-pokriv/IMG_20260223_191258.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/plovdiv-obekt-5-usvoyavane-na-terasa-s-iznesen-pokriv/IMG_20260223_191258.webp",
+      "updatedAt": "2026-10-23T12:27:14.684Z"
+    },
+    "plovdiv-obekt-8-smyana-na-dograma-troen-st-et-obrashtane-s-pervazi-vanshni-roletni-shtori-": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/plovdiv-obekt-8-smyana-na-dograma-troen-st-et-obrashtane-s-pervazi-vanshni-roletni-shtori-/IMG_20250704_145736.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/plovdiv-obekt-8-smyana-na-dograma-troen-st-et-obrashtane-s-pervazi-vanshni-roletni-shtori-/IMG_20250704_145606.webp",
+      "updatedAt": "2026-10-23T12:27:26.739Z"
+    },
+    "plazgashti-prozortsi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/plazgashti-sistemi/IMG_20260603_181736.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/plazgashti-sistemi/IMG_20260603_181736.webp",
+      "updatedAt": "2026-10-23T12:27:30.833Z"
+    },
+    "podgotovka-i-montazh-na-bezramkovo-ostaklenie-na-terasa": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/podgotovka-i-montazh-na-bezramkovo-ostaklenie-na-terasa/IMG_20210713_082315.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/podgotovka-i-montazh-na-bezramkovo-ostaklenie-na-terasa/IMG_20210713_082315.webp",
+      "updatedAt": "2026-10-23T12:27:39.783Z"
+    },
+    "podove-podgotovka": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/podove-podgotovka/IMG_20260909_194527.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/podove-podgotovka/IMG_20260909_194350.webp",
+      "updatedAt": "2026-10-23T12:27:54.994Z"
+    },
+    "pregradni-steni-i-ofisi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/pregradni-steni-i-ofisi/IMG_20211016_190344.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/pregradni-steni-i-ofisi/IMG_20211013_140840.webp",
+      "updatedAt": "2026-10-23T12:28:02.665Z"
+    },
+    "puskane-na-niva-i-ravnina-za-golemi-obekti": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/puskane-na-niva-i-ravnina-za-golemi-obekti/IMG_20260513_125958.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/puskane-na-niva-i-ravnina-za-golemi-obekti/IMG_20260513_085905.webp",
+      "updatedAt": "2026-10-23T12:28:37.729Z"
+    },
+    "sanitaren-vazel-ot-dograma": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/sanitaren-vazel-ot-dograma/IMG_20260910_102502.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/sanitaren-vazel-ot-dograma/IMG_20260910_102502.webp",
+      "updatedAt": "2026-10-23T12:28:59.347Z"
+    },
+    "stamboliyski-45-ostaklenie-na-barbekyu-aluminievo-plazgane-chlen-montazh-pred-balyuzi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/stamboliyski-45-ostaklenie-na-barbekyu-aluminievo-plazgane-chlen-montazh-pred-balyuzi/IMG_20230609_170344.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/stamboliyski-45-ostaklenie-na-barbekyu-aluminievo-plazgane-chlen-montazh-pred-balyuzi/IMG_20230609_170435.webp",
+      "updatedAt": "2026-10-23T12:29:35.559Z"
+    },
+    "stamboliyski-obekt-33-podmyana-na-vinkelovo-ostaklenie-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/stamboliyski-obekt-33-podmyana-na-vinkelovo-ostaklenie-obrashtane-s-pervazi/IMG_20240417_180646.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/stamboliyski-obekt-33-podmyana-na-vinkelovo-ostaklenie-obrashtane-s-pervazi/IMG_20240417_180646.webp",
+      "updatedAt": "2026-10-23T12:30:15.464Z"
+    },
+    "stamboliyski-obekt-40-vhodna-vrata-mako-troyna-brava-shipove-termoaluminiy-85mm-antratsit-": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/stamboliyski-obekt-40-vhodna-vrata-mako-troyna-brava-shipove-termoaluminiy-85mm-antratsit-/IMG_20231216_141454.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/stamboliyski-obekt-40-vhodna-vrata-mako-troyna-brava-shipove-termoaluminiy-85mm-antratsit-/IMG_20231216_141454.webp",
+      "updatedAt": "2026-10-23T12:30:26.800Z"
+    },
+    "stamboliyski-obekt-7-smyana-na-dograma-obrashtane-s-pervazi-shtori-den-i-nosht": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/stamboliyski-obekt-7-smyana-na-dograma-obrashtane-s-pervazi-shtori-den-i-nosht/IMG_20250717_114633.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/stamboliyski-obekt-7-smyana-na-dograma-obrashtane-s-pervazi-shtori-den-i-nosht/IMG_20250717_114633.webp",
+      "updatedAt": "2026-10-23T12:30:38.968Z"
+    },
+    "stamboliyski-obekt-10-interiorni-vrati": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/stamboliyski-obekt-10-interiorni-vrati/IMG_20250530_130229.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/stamboliyski-obekt-10-interiorni-vrati/IMG_20250530_130229.webp",
+      "updatedAt": "2026-10-23T12:30:42.192Z"
+    },
+    "stamboliyski-obekt-11-smyana-na-dograma-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/stamboliyski-obekt-11-smyana-na-dograma-obrashtane-s-pervazi/IMG_20250430_180136.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/stamboliyski-obekt-11-smyana-na-dograma-obrashtane-s-pervazi/IMG_20250509_152230.webp",
+      "updatedAt": "2026-10-23T12:30:59.711Z"
+    },
+    "stamboliyski-obekt-11-usvoyavane-na-terasa-oformyane-s-pervazi-termoaluminiy-troen-st-et-p": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/stamboliyski-obekt-11-usvoyavane-na-terasa-oformyane-s-pervazi-termoaluminiy-troen-st-et-p/IMG_20240828_190329.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/stamboliyski-obekt-11-usvoyavane-na-terasa-oformyane-s-pervazi-termoaluminiy-troen-st-et-p/IMG_20240828_190329.webp",
+      "updatedAt": "2026-10-23T12:31:04.637Z"
+    },
+    "stamboliyski-obekt-31-podmyana-vrati-za-banya": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/stamboliyski-obekt-31-podmyana-vrati-za-banya/IMG_20240423_145209.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/stamboliyski-obekt-31-podmyana-vrati-za-banya/IMG_20240423_145209.webp",
+      "updatedAt": "2026-10-23T12:31:22.607Z"
+    },
+    "stamboliyski-obekt-32-podmyana-vatreshni-vrati-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/stamboliyski-obekt-32-podmyana-vatreshni-vrati-obrashtane-s-pervazi/IMG_20240419_204430.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/stamboliyski-obekt-32-podmyana-vatreshni-vrati-obrashtane-s-pervazi/IMG_20240419_204430.webp",
+      "updatedAt": "2026-10-23T12:31:39.025Z"
+    },
+    "stamboliyski-obekt-8-smyana-na-dograma-obrashtane-s-pervazi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/stamboliyski-obekt-8-smyana-na-dograma-obrashtane-s-pervazi/IMG_20250716_183742.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/stamboliyski-obekt-8-smyana-na-dograma-obrashtane-s-pervazi/IMG_20250716_184824.webp",
+      "updatedAt": "2026-10-23T12:31:52.542Z"
+    },
+    "stamboliyski-obekt-9-smyana-na-dograma-obrashtane-s-pervazi-vatreshni-vrati": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/stamboliyski-obekt-9-smyana-na-dograma-obrashtane-s-pervazi-vatreshni-vrati/IMG_20250609_131533.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/stamboliyski-obekt-9-smyana-na-dograma-obrashtane-s-pervazi-vatreshni-vrati/IMG_20250609_131533.webp",
+      "updatedAt": "2026-10-23T12:32:06.186Z"
+    },
+    "stomaneni-navesi-garazhi-magazini": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/stomaneni-navesi-garazhi-magazini/IMG_20260918_131522.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/stomaneni-navesi-garazhi-magazini/IMG_20260918_191906.webp",
+      "updatedAt": "2026-10-23T12:32:39.908Z"
+    },
+    "topmontazh-1-plovdiv": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/topmontazh-1-plovdiv/IMG_20260430_172057.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/topmontazh-1-plovdiv/IMG_20260430_172057.webp",
+      "updatedAt": "2026-10-23T12:32:47.697Z"
+    },
+    "topmontazh-2": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/topmontazh-2/IMG_20260424_155011.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/topmontazh-2/IMG_20260424_155011.webp",
+      "updatedAt": "2026-10-23T12:32:57.989Z"
+    },
+    "hidroizolirane-na-osnovi": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/hidroizolirane-na-osnovi/IMG_20260922_154038.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/hidroizolirane-na-osnovi/IMG_20260922_154038.webp",
+      "updatedAt": "2026-10-23T12:33:38.121Z"
+    },
+    "hudozhestven-montazh-proizvedeniya-na-izkustvoto": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/hudozhestven-montazh-proizvedeniya-na-izkustvoto/IMG_20260730_185330.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/hudozhestven-montazh-proizvedeniya-na-izkustvoto/IMG_20240828_190329.webp",
+      "updatedAt": "2026-10-23T12:34:16.002Z"
+    },
+    "tsyalostni-stroitelni-obekti-ot-a-do-ya": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/tsyalostni-stroitelni-obekti-ot-a-do-ya/IMG_20260721_150948.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/tsyalostni-stroitelni-obekti-ot-a-do-ya/IMG_20260721_182026.webp",
+      "updatedAt": "2026-10-23T12:34:36.208Z"
+    },
+    "shkafcheta-za-pod-mivka": {
+      "status": "approved",
+      "selectedImage": "/assets/images/projects/shkafcheta-za-pod-mivka/IMG_20250925_183023.webp",
+      "note": "",
+      "initialCover": "/assets/images/projects/shkafcheta-za-pod-mivka/IMG_20250925_183039.webp",
+      "updatedAt": "2026-10-23T12:34:46.971Z"
+    }
+  }
+}
