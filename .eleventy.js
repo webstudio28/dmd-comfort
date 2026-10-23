@@ -16,16 +16,31 @@ function servicesBySlugMap() {
 function projectGroupBySlugMap() {
   if (!projectGroupBySlugCache) {
     const groups = require("./src/_data/projectGroups")();
+    const byGroupSlug = new Map(groups.map((group) => [group.slug, group]));
+    const services = servicesBySlugMap();
+    const projects = JSON.parse(
+      fs.readFileSync(path.join(__dirname, "src/_data/projects.json"), "utf8"),
+    );
     projectGroupBySlugCache = new Map();
-    for (const group of groups) {
-      for (const project of group.projects) {
-        if (!projectGroupBySlugCache.has(project.slug)) {
-          projectGroupBySlugCache.set(project.slug, {
-            title: group.title,
-            href: group.href,
-            slug: group.slug,
-          });
-        }
+
+    for (const project of projects) {
+      let group = null;
+      for (const serviceSlug of project.serviceSlugs || []) {
+        const service = services.get(serviceSlug);
+        if (!service) continue;
+        const hubSlug = service.parentSlug || service.slug;
+        group = byGroupSlug.get(hubSlug) || null;
+        if (group) break;
+      }
+      if (!group) {
+        group = byGroupSlug.get("drugi") || null;
+      }
+      if (group) {
+        projectGroupBySlugCache.set(project.slug, {
+          title: group.title,
+          href: group.href,
+          slug: group.slug,
+        });
       }
     }
   }
@@ -52,6 +67,18 @@ module.exports = function (eleventyConfig) {
     const slug = typeof project === "string" ? project : project && project.slug;
     if (!slug) return null;
     return projectGroupBySlugMap().get(slug) || null;
+  });
+
+  eleventyConfig.addFilter("relatedProjects", (project, limit = 12) => {
+    const slug = project && project.slug;
+    if (!slug) return [];
+    const groupMeta = projectGroupBySlugMap().get(slug);
+    if (!groupMeta) return [];
+    const groups = require("./src/_data/projectGroups")();
+    const group = groups.find((item) => item.slug === groupMeta.slug);
+    if (!group) return [];
+    const related = group.projects.filter((item) => item.slug !== slug);
+    return typeof limit === "number" ? related.slice(0, limit) : related;
   });
 
   eleventyConfig.addFilter("matchesAnyHref", (pageUrl, hrefs) => {

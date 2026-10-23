@@ -48,30 +48,35 @@ eleventyComputed:
 {% endif %}
 
 {% if project.images and project.images.length %}
-<section class="section-pad overflow-x-clip bg-white">
+<section class="section-pad bg-white">
   <div class="container-site">
     <div class="mb-10 max-w-2xl reveal md:mb-12">
       <div class="eyebrow">Галерия</div>
       <h2 class="section-title">Снимки от обекта</h2>
-      <p class="section-copy">Реални кадри от изпълнението и крайния резултат.</p>
+      <p class="section-copy">Реални кадри от изпълнението и крайния резултат. Кликнете за уголемен преглед.</p>
     </div>
-  </div>
-  <div class="container-site max-md:contents">
-    <div class="h-scroll reveal md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-4">
+    <div class="project-gallery reveal grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4 lg:grid-cols-5" data-gallery>
       {% for img in project.images %}
-        <figure class="overflow-hidden rounded-xl bg-brand-mist shadow-card">
+        <button
+          type="button"
+          class="project-gallery-item group relative overflow-hidden rounded-xl bg-brand-mist shadow-card"
+          data-gallery-index="{{ loop.index0 }}"
+          aria-label="Отвори снимка {{ loop.index }} от {{ project.images.length }}"
+        >
           <img
-            class="aspect-[4/3] w-full object-cover transition duration-500 hover:scale-[1.03]"
+            class="aspect-[4/3] w-full object-cover transition duration-500 group-hover:scale-[1.03]"
             src="{{ img | url }}"
             alt="{{ project.title }} — снимка {{ loop.index }}"
             loading="lazy"
             decoding="async"
+            draggable="false"
           />
-        </figure>
+        </button>
       {% endfor %}
     </div>
   </div>
 </section>
+{% include "image-lightbox.njk" %}
 {% endif %}
 
 {% if project.videos and project.videos.length %}
@@ -126,20 +131,6 @@ eleventyComputed:
 </section>
 {% endif %}
 
-<section class="relative section-pad overflow-hidden bg-white">
-  <div class="pointer-events-none absolute -right-20 top-10 h-64 w-64 rounded-full bg-brand/5 blur-3xl" aria-hidden="true"></div>
-  <div class="container-site relative reveal">
-    <div class="grid gap-10 lg:grid-cols-[auto_1fr] lg:gap-14">
-      <div class="hidden w-px bg-gradient-to-b from-brand via-brand/40 to-transparent lg:block" aria-hidden="true"></div>
-      <div>
-        <div class="eyebrow">Описание</div>
-        <h2 class="section-title">За проекта</h2>
-        <p class="border-l-4 border-brand pl-6 text-[17px] leading-relaxed text-ink-muted md:text-lg md:leading-8">{{ project.description }}</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 {% set linkedServices = project.serviceSlugs | servicesBySlugs %}
 {% if linkedServices.length %}
 <section class="section-pad bg-brand-mist" aria-labelledby="project-services-title">
@@ -162,6 +153,46 @@ eleventyComputed:
             <span class="mt-1 block text-sm font-bold text-brand">Виж услугата</span>
           </span>
         </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+
+{% set relatedProjects = project | relatedProjects %}
+{% if relatedProjects.length and group %}
+<section class="section-pad bg-white" aria-labelledby="related-projects-title">
+  <div class="container-site mb-10 flex flex-col gap-6 reveal md:mb-12 md:flex-row md:items-end md:justify-between">
+    <div>
+      <div class="eyebrow">Още от категорията</div>
+      <h2 class="section-title" id="related-projects-title">Още проекти от {{ group.title }}</h2>
+      <p class="section-copy">Други реализирани обекти в същата категория.</p>
+    </div>
+    <a class="btn btn-primary shrink-0 self-start md:self-auto" href="{{ group.href | url }}">Всички от {{ group.title }}</a>
+  </div>
+  <div class="overflow-x-clip py-6 md:py-8">
+    <div class="h-scroll-drag reveal" data-drag-scroll tabindex="0" role="region" aria-label="Още проекти от {{ group.title }} — плъзнете хоризонтално">
+      {% for p in relatedProjects %}
+        {% if p.images and p.images.length %}
+          <a class="card group block no-underline" href="{{ ('/proekti/' + p.slug + '/') | url }}" draggable="false">
+            <div class="relative m-2.5 aspect-[4/3] overflow-hidden rounded-lg">
+              <img
+                class="image-cover"
+                src="{{ p.images[0] | url }}"
+                alt="{{ p.title }}"
+                width="640"
+                height="480"
+                loading="lazy"
+                decoding="async"
+                draggable="false"
+              />
+            </div>
+            <div class="border-t border-ink/10 px-4 pb-5 pt-3.5">
+              <h3 class="mb-1.5 font-display text-lg font-extrabold leading-snug text-ink group-hover:text-brand">{{ p.title }}</h3>
+              <p class="m-0 text-[15px] leading-relaxed text-ink-muted">{{ p.shortDescription }}</p>
+            </div>
+          </a>
+        {% endif %}
       {% endfor %}
     </div>
   </div>

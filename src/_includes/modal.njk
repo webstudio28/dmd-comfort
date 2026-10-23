@@ -1,47 +1,70 @@
-<div class="pointer-events-none invisible fixed inset-0 z-[130] grid place-items-center overflow-x-hidden p-5" id="inquiryModal" aria-hidden="true">
-  <div class="absolute inset-0 bg-ink/75 opacity-0 backdrop-blur-sm transition" data-close-modal></div>
-  <div class="relative max-h-[calc(100vh-40px)] w-full max-w-[min(590px,calc(100vw-2.5rem))] min-w-0 translate-y-4 overflow-x-hidden overflow-y-auto rounded-2xl bg-white p-6 sm:p-8 opacity-0 shadow-[0_30px_90px_rgba(0,0,0,0.28)] transition" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <button class="absolute right-4 top-4 grid h-9 w-9 place-items-center rounded-lg bg-brand-mist text-ink" type="button" data-close-modal aria-label="Затвори">
-      <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="m5 5 14 14M19 5 5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-    </button>
-    <div id="formContent" class="min-w-0">
-      <div class="eyebrow">{{ inquiryEyebrow or 'Безплатен оглед' }}</div>
-      <h2 id="modalTitle" class="mt-2 pr-10 font-display text-[2rem] font-extrabold leading-tight">Разкажете ни за вашия обект</h2>
-      <p class="mt-2 text-ink-muted leading-relaxed">{{ inquiryDescription or 'Оставете контакт и ще се свържем с вас за удобен ден и час.' }}</p>
-      <form id="inquiryForm" class="mt-6 min-w-0">
-        <div class="grid min-w-0 gap-3.5 sm:grid-cols-2">
-          <div class="flex min-w-0 flex-col gap-1.5">
-            <label class="font-display text-[13px] font-bold uppercase tracking-wide" for="name">Име</label>
-            <input class="w-full min-w-0 max-w-full rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="name" name="name" required placeholder="Вашето име" />
-          </div>
-          <div class="flex min-w-0 flex-col gap-1.5">
-            <label class="font-display text-[13px] font-bold uppercase tracking-wide" for="phone">Телефон</label>
-            <input class="w-full min-w-0 max-w-full rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="phone" name="phone" type="tel" required placeholder="08..." />
-          </div>
-          <div class="flex min-w-0 flex-col gap-1.5 sm:col-span-2">
-            <label class="font-display text-[13px] font-bold uppercase tracking-wide" for="interest">Интересувам се от</label>
-            <select class="w-full min-w-0 max-w-full rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="interest" name="interest">
-              <option value="">Изберете услуга</option>
-              {% for s in catalogServices %}
-                <option value="{{ s.title }}"{% if (page.url | matchesAnyHref(s.selectHrefs)) or (inquiryHref | matchesAnyHref(s.selectHrefs)) %} selected{% endif %}>{{ s.title }}</option>
-              {% endfor %}
-              <option>Друго</option>
-            </select>
-          </div>
-          <div class="flex min-w-0 flex-col gap-1.5 sm:col-span-2">
-            <label class="font-display text-[13px] font-bold uppercase tracking-wide" for="message">Кратко описание</label>
-            <textarea class="w-full min-w-0 max-w-full rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="message" name="message" rows="3" placeholder="{{ inquiryPlaceholder or 'Тип обект, приблизителен брой прозорци...' }}"></textarea>
-          </div>
-        </div>
-        <button class="btn btn-primary mt-4 w-full" type="submit">Изпрати запитване</button>
-      </form>
-    </div>
-    <div class="hidden py-8 text-center" id="formSuccess">
-      <span class="mx-auto mb-4 grid h-16 w-16 place-items-center rounded-full bg-brand text-white">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </span>
-      <h2 class="font-display text-3xl font-extrabold">Благодарим ви!</h2>
-      <p class="mt-2 text-ink-muted">Запитването е подготвено. В реалния сайт формата ще бъде свързана към имейл.</p>
-    </div>
-  </div>
-</div>
+<div class="pointer-events-none invisible fixed inset-0 z-[130] grid place-items-center overflow-x-hidden p-5" id="inquiryModal" aria-hidden="true">
+  <div class="absolute inset-0 bg-ink/75 opacity-0 backdrop-blur-sm transition" data-close-modal></div>
+  <div class="relative max-h-[calc(100vh-40px)] w-full max-w-[min(590px,calc(100vw-2.5rem))] min-w-0 translate-y-4 overflow-x-hidden overflow-y-auto rounded-2xl bg-white p-6 sm:p-8 opacity-0 shadow-[0_30px_90px_rgba(0,0,0,0.28)] transition" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="absolute right-4 top-4 grid h-9 w-9 place-items-center rounded-lg bg-brand-mist text-ink" type="button" data-close-modal aria-label="Затвори">
+      <svg width="21" height="21" viewBox="0 0 24 24" fill="none"><path d="m5 5 14 14M19 5 5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <div id="formContent" class="min-w-0">
+      <div class="eyebrow">{{ inquiryEyebrow or 'Безплатен оглед' }}</div>
+      <h2 id="modalTitle" class="mt-2 pr-10 font-display text-[2rem] font-extrabold leading-tight">Разкажете ни за вашия обект</h2>
+      <p class="mt-2 text-ink-muted leading-relaxed">{{ inquiryDescription or 'Оставете контакт и ще се свържем с вас!' }}</p>
+      <form id="inquiryForm" class="mt-6 min-w-0">
+        <div class="grid min-w-0 gap-3.5 sm:grid-cols-2">
+          <div class="flex min-w-0 flex-col gap-1.5">
+            <label class="font-display text-[13px] font-bold uppercase tracking-wide" for="name">Име</label>
+            <input class="w-full min-w-0 max-w-full rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="name" name="name" required placeholder="Вашето име" />
+          </div>
+          <div class="flex min-w-0 flex-col gap-1.5">
+            <label class="font-display text-[13px] font-bold uppercase tracking-wide" for="phone">Телефон</label>
+            <input class="w-full min-w-0 max-w-full rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="phone" name="phone" type="tel" required placeholder="08..." />
+          </div>
+          <div class="flex min-w-0 flex-col gap-1.5 sm:col-span-2">
+            <label class="font-display text-[13px] font-bold uppercase tracking-wide" id="interest-label" for="interest-trigger">Интересувам се от</label>
+            <div class="custom-select" data-custom-select>
+              <input type="hidden" id="interest" name="interest" value="" />
+              <button
+                class="custom-select-trigger"
+                type="button"
+                id="interest-trigger"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="interest-listbox"
+                aria-labelledby="interest-label interest-trigger-label"
+              >
+                <span class="custom-select-value is-placeholder" id="interest-trigger-label" data-custom-select-label>Изберете услуга</span>
+                <svg class="custom-select-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <ul class="custom-select-list" id="interest-listbox" role="listbox" aria-labelledby="interest-label" hidden>
+                <li role="option" tabindex="-1" data-value="" aria-selected="true" class="is-selected" data-interest-default>Изберете услуга</li>
+                {% for s in catalogServices %}
+                  <li
+                    role="option"
+                    tabindex="-1"
+                    data-value="{{ s.title }}"
+                    aria-selected="false"
+                    {% if (page.url | matchesAnyHref(s.selectHrefs)) or (inquiryHref | matchesAnyHref(s.selectHrefs)) %}data-interest-preselect{% endif %}
+                  >{{ s.title }}</li>
+                {% endfor %}
+                <li role="option" tabindex="-1" data-value="Друго" aria-selected="false">Друго</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex min-w-0 flex-col gap-1.5 sm:col-span-2">
+            <label class="font-display text-[13px] font-bold uppercase tracking-wide" for="message">Кратко описание</label>
+            <textarea class="w-full min-w-0 max-w-full rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="message" name="message" rows="3" placeholder="{{ inquiryPlaceholder or 'Тип обект, приблизителен брой прозорци...' }}"></textarea>
+          </div>
+        </div>
+        <button class="btn btn-primary mt-4 w-full" type="submit">Изпрати запитване</button>
+      </form>
+    </div>
+    <div class="hidden py-8 text-center" id="formSuccess">
+      <span class="mx-auto mb-4 grid h-16 w-16 place-items-center rounded-full bg-brand text-white">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+      <h2 class="font-display text-3xl font-extrabold">Благодарим ви!</h2>
+      <p class="mt-2 text-ink-muted">Запитването е подготвено. В реалния сайт формата ще бъде свързана към имейл.</p>
+    </div>
+  </div>
+</div>

@@ -81,6 +81,7 @@
 
   function closeModal() {
     if (!modal) return;
+    closeCustomSelects();
     modal.classList.add("invisible", "pointer-events-none");
     modal.setAttribute("aria-hidden", "true");
     document.body.classList.remove("modal-open");
@@ -91,10 +92,265 @@
 
   document.querySelectorAll(".open-inquiry").forEach((el) => el.addEventListener("click", openModal));
   document.querySelectorAll("[data-close-modal]").forEach((el) => el.addEventListener("click", closeModal));
+
+  /* ---- Custom select (inquiry modal service field) ---- */
+  const customSelects = Array.from(document.querySelectorAll("[data-custom-select]"));
+
+  function getCustomSelectParts(root) {
+    return {
+      root,
+      input: root.querySelector('input[type="hidden"]'),
+      trigger: root.querySelector(".custom-select-trigger"),
+      label: root.querySelector("[data-custom-select-label]"),
+      list: root.querySelector(".custom-select-list"),
+      options: Array.from(root.querySelectorAll('[role="option"]')),
+    };
+  }
+
+  function setCustomSelectActive(parts, index) {
+    parts.options.forEach((option, i) => {
+      option.classList.toggle("is-active", i === index);
+    });
+  }
+
+  function scrollCustomOptionIntoList(parts, option) {
+    if (!option || !parts.list) return;
+    const list = parts.list;
+    const top = option.offsetTop;
+    const bottom = top + option.offsetHeight;
+    if (top < list.scrollTop) list.scrollTop = top;
+    else if (bottom > list.scrollTop + list.clientHeight) list.scrollTop = bottom - list.clientHeight;
+  }
+
+  function positionCustomSelectList(parts) {
+    const triggerRect = parts.trigger.getBoundingClientRect();
+    const dialog = parts.trigger.closest('[role="dialog"]');
+    const bounds = dialog?.getBoundingClientRect() || {
+      top: 0,
+      bottom: window.innerHeight,
+    };
+    const gap = 8;
+    const spaceBelow = bounds.bottom - triggerRect.bottom - gap;
+    const spaceAbove = triggerRect.top - bounds.top - gap;
+    const preferred = Math.min(264, window.innerHeight * 0.42);
+    const openUp = spaceBelow < 160 && spaceAbove > spaceBelow;
+    parts.root.classList.toggle("is-drop-up", openUp);
+    parts.list.style.maxHeight = `${Math.max(120, Math.min(preferred, openUp ? spaceAbove : spaceBelow))}px`;
+  }
+
+  function openCustomSelect(parts) {
+    customSelects.forEach((other) => {
+      if (other !== parts.root) closeCustomSelect(getCustomSelectParts(other));
+    });
+    parts.root.classList.add("is-open");
+    parts.list.hidden = false;
+    parts.trigger.setAttribute("aria-expanded", "true");
+    positionCustomSelectList(parts);
+    const selectedIndex = Math.max(
+      0,
+      parts.options.findIndex((option) => option.classList.contains("is-selected")),
+    );
+    setCustomSelectActive(parts, selectedIndex);
+    scrollCustomOptionIntoList(parts, parts.options[selectedIndex]);
+  }
+
+  function closeCustomSelect(parts) {
+    parts.root.classList.remove("is-open", "is-drop-up");
+    parts.list.hidden = true;
+    parts.list.style.maxHeight = "";
+    parts.trigger.setAttribute("aria-expanded", "false");
+    setCustomSelectActive(parts, -1);
+  }
+
+  function closeCustomSelects() {
+    customSelects.forEach((root) => closeCustomSelect(getCustomSelectParts(root)));
+  }
+
+  function applyCustomOption(parts, option, { close = true, focus = true } = {}) {
+    const value = option.getAttribute("data-value") || "";
+    const text = option.textContent.trim();
+    if (parts.input) parts.input.value = value;
+    if (parts.label) {
+      parts.label.textContent = text;
+      parts.label.classList.toggle("is-placeholder", !value);
+    }
+    parts.options.forEach((item) => {
+      const selected = item === option;
+      item.classList.toggle("is-selected", selected);
+      item.setAttribute("aria-selected", selected ? "true" : "false");
+    });
+    if (close) closeCustomSelect(parts);
+    if (focus) parts.trigger.focus();
+  }
+
+  function selectCustomOption(parts, option) {
+    applyCustomOption(parts, option);
+  }
+
+  customSelects.forEach((root) => {
+    const parts = getCustomSelectParts(root);
+    if (!parts.trigger || !parts.list) return;
+
+    const preselected = parts.list.querySelector("[data-interest-preselect]");
+    if (preselected) applyCustomOption(parts, preselected, { close: false, focus: false });
+
+    parts.trigger.addEventListener("click", () => {
+      if (parts.root.classList.contains("is-open")) closeCustomSelect(parts);
+      else openCustomSelect(parts);
+    });
+
+    parts.trigger.addEventListener("keydown", (e) => {
+      const open = parts.root.classList.contains("is-open");
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        if (!open) {
+          openCustomSelect(parts);
+          return;
+        }
+        const current = parts.options.findIndex((option) => option.classList.contains("is-active"));
+        const delta = e.key === "ArrowDown" ? 1 : -1;
+        const next = Math.min(parts.options.length - 1, Math.max(0, (current < 0 ? 0 : current) + delta));
+        setCustomSelectActive(parts, next);
+        scrollCustomOptionIntoList(parts, parts.options[next]);
+      } else if (e.key === "Enter" || e.key === " ") {
+        e.preventDefault();
+        if (!open) {
+          openCustomSelect(parts);
+          return;
+        }
+        const active = parts.options.find((option) => option.classList.contains("is-active"));
+        if (active) selectCustomOption(parts, active);
+      } else if (e.key === "Home" && open) {
+        e.preventDefault();
+        setCustomSelectActive(parts, 0);
+        scrollCustomOptionIntoList(parts, parts.options[0]);
+      } else if (e.key === "End" && open) {
+        e.preventDefault();
+        const last = parts.options.length - 1;
+        setCustomSelectActive(parts, last);
+        scrollCustomOptionIntoList(parts, parts.options[last]);
+      }
+    });
+
+    parts.options.forEach((option) => {
+      option.addEventListener("click", () => selectCustomOption(parts, option));
+    });
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("[data-custom-select]")) closeCustomSelects();
+  });
+
+  /* ---- Gallery modal (Valeto-style) ---- */
+  const lightbox = document.getElementById("imageLightbox");
+  const lightboxImage = lightbox?.querySelector("[data-lightbox-image]");
+  const lightboxStage = lightbox?.querySelector("[data-lightbox-stage]");
+  const lightboxPrev = lightbox?.querySelector("[data-lightbox-prev]");
+  const lightboxNext = lightbox?.querySelector("[data-lightbox-next]");
+  let lightboxItems = [];
+  let lightboxIndex = 0;
+
+  function isLightboxOpen() {
+    return Boolean(lightbox && !lightbox.hidden);
+  }
+
+  function showLightboxImage(index) {
+    if (!lightboxImage || !lightboxItems.length) return;
+    lightboxIndex = ((index % lightboxItems.length) + lightboxItems.length) % lightboxItems.length;
+    const item = lightboxItems[lightboxIndex];
+    lightboxImage.src = item.src;
+    lightboxImage.alt = item.alt || "";
+  }
+
+  function openLightbox(items, index) {
+    if (!lightbox || !items.length) return;
+    lightboxItems = items;
+    showLightboxImage(index);
+    lightbox.hidden = false;
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.classList.add("lightbox-open");
+  }
+
+  function closeLightbox() {
+    if (!isLightboxOpen()) return;
+    lightbox.hidden = true;
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("lightbox-open");
+    if (lightboxImage) {
+      lightboxImage.removeAttribute("src");
+      lightboxImage.alt = "";
+    }
+  }
+
+  function stepLightbox(delta) {
+    if (!isLightboxOpen() || lightboxItems.length < 2) return;
+    showLightboxImage(lightboxIndex + delta);
+  }
+
+  document.querySelectorAll("[data-gallery]").forEach((gallery) => {
+    const items = [...gallery.querySelectorAll("[data-gallery-index]")]
+      .map((btn) => {
+        const img = btn.querySelector("img");
+        return {
+          src: img?.currentSrc || img?.src || "",
+          alt: img?.alt || "",
+          button: btn,
+        };
+      })
+      .filter((item) => item.src);
+
+    items.forEach((item, index) => {
+      item.button?.addEventListener("click", () => openLightbox(items, index));
+    });
+  });
+
+  lightbox?.querySelectorAll("[data-lightbox-close]").forEach((el) => {
+    el.addEventListener("click", closeLightbox);
+  });
+  lightboxPrev?.addEventListener("click", () => stepLightbox(-1));
+  lightboxNext?.addEventListener("click", () => stepLightbox(1));
+
+  let swipeStartX = null;
+  lightboxStage?.addEventListener(
+    "touchstart",
+    (e) => {
+      if (!e.touches?.length) return;
+      swipeStartX = e.touches[0].clientX;
+    },
+    { passive: true },
+  );
+  lightboxStage?.addEventListener("touchend", (e) => {
+    if (swipeStartX === null || !e.changedTouches?.length) return;
+    const deltaX = e.changedTouches[0].clientX - swipeStartX;
+    swipeStartX = null;
+    if (Math.abs(deltaX) < 40) return;
+    if (deltaX < 0) stepLightbox(1);
+    else stepLightbox(-1);
+  });
+
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
+      if (isLightboxOpen()) {
+        closeLightbox();
+        return;
+      }
+      const openSelect = customSelects.find((root) => root.classList.contains("is-open"));
+      if (openSelect) {
+        closeCustomSelect(getCustomSelectParts(openSelect));
+        openSelect.querySelector(".custom-select-trigger")?.focus();
+        return;
+      }
       closeMenu();
       closeModal();
+      return;
+    }
+    if (!isLightboxOpen()) return;
+    if (e.key === "ArrowLeft") {
+      e.preventDefault();
+      stepLightbox(-1);
+    } else if (e.key === "ArrowRight") {
+      e.preventDefault();
+      stepLightbox(1);
     }
   });
 

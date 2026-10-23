@@ -1,0 +1,32 @@
+<div
+  id="imageLightbox"
+  class="gallery-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-hidden="true"
+  aria-label="Галерия"
+  hidden
+>
+  <div class="gallery-modal__backdrop" data-lightbox-close></div>
+  <div class="gallery-modal__panel" role="document">
+    <button type="button" class="gallery-modal__close" data-lightbox-close aria-label="Затвори галерията">&times;</button>
+
+    <button type="button" class="gallery-modal__arrow gallery-modal__arrow--prev" data-lightbox-prev aria-label="Предишна снимка">
+      <svg class="gallery-modal__arrow-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M15 5 8 12l7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="gallery-modal__stage" data-lightbox-stage>
+      <div class="gallery-modal__clip">
+        <img class="gallery-modal__image" data-lightbox-image src="" alt="" />
+      </div>
+    </div>
+
+    <button type="button" class="gallery-modal__arrow gallery-modal__arrow--next" data-lightbox-next aria-label="Следваща снимка">
+      <svg class="gallery-modal__arrow-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="m9 5 7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+  </div>
+</div>
