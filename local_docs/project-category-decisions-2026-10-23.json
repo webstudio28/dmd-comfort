@@ -1,0 +1,693 @@
+{
+  "date": "2026-10-23",
+  "appliedScope": "serviceSlugs only",
+  "projects": 138,
+  "changedProjects": 51,
+  "beforeCounts": {
+    "dograma": 48,
+    "plazgashti-prozortsi": 17,
+    "usvoyavane-na-terasi": 8,
+    "obrashtane-s-pvc-pervazi": 44,
+    "vrati": 33,
+    "vanshni-roletni-shtori": 6,
+    "dush-kabini": 4,
+    "drugi": 20,
+    "metalni-konstruktsii": 10,
+    "vatreshni-shtori": 2,
+    "pregradni-steni": 7
+  },
+  "afterCounts": {
+    "dograma": 69,
+    "plazgashti-prozortsi": 19,
+    "usvoyavane-na-terasi": 9,
+    "pregradni-steni": 9,
+    "vrati": 46,
+    "vanshni-roletni-shtori": 10,
+    "dush-kabini": 5,
+    "drugi": 9,
+    "metalni-konstruktsii": 9,
+    "obrashtane-s-pvc-pervazi": 39,
+    "vatreshni-shtori": 3
+  },
+  "galleryPhotosPreserved": 2137,
+  "sharedImagesPreserved": true,
+  "coversPreserved": true,
+  "titlesAndDescriptionsPreserved": true,
+  "records": [
+    {
+      "slug": "usvoyavane-na-terasi",
+      "title": "Усвояване на тераси",
+      "before": [
+        "usvoyavane-na-terasi"
+      ],
+      "after": [
+        "dograma",
+        "usvoyavane-na-terasi"
+      ],
+      "reason": "Показани са етапи от стара тераса до затворено и завършено помещение с нови прозорци. Има и други примери в същата галерия.",
+      "policyNote": "Съществуващата категория за тераси е запазена; липсващ ъгъл на снимане не е доказателство за липсващ покрив."
+    },
+    {
+      "slug": "obekt-krichim-2-vetropregrada-oblichane-na-kolona-oformyane-s-pervazi",
+      "title": "Обект Кричим 2, Ветропреграда, Обличане на колона, Оформяне с первази",
+      "before": [
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "pregradni-steni"
+      ],
+      "reason": "Матова остъклена преграда/ветрозащита при стълбище и детайли около колона. Кафявият ръб при рамката сам по себе си не доказва отделно обръщане с PVC.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-stamboliyski-1-topmontazh-vanshni-roletni-shtori",
+      "title": "Обект Стамболийски 1, Топмонтаж, Външни ролетни щори",
+      "before": [
+        "vanshni-roletni-shtori"
+      ],
+      "after": [
+        "vanshni-roletni-shtori",
+        "dograma"
+      ],
+      "reason": "Снимките показват нов прозорец с балконска врата и ролетни щори в затворено и отворено положение.",
+      "policyNote": ""
+    },
+    {
+      "slug": "ral-montazh",
+      "title": "RAL Монтаж",
+      "before": [],
+      "after": [
+        "dograma"
+      ],
+      "reason": "Монтажни ленти, връзка към отвора и поставена прозоречна дограма. Това е монтаж на дограма, а не видимо PVC облицоване на страниците.",
+      "policyNote": ""
+    },
+    {
+      "slug": "aluminieva-veranda-prototip",
+      "title": "Алуминиева веранда, Прототип",
+      "before": [
+        "aluminiumieva-dograma"
+      ],
+      "after": [],
+      "reason": "Единствената снимка е малък прототип върху работна маса. Не показва реализирана веранда или прозоречна дограма на обект.",
+      "policyNote": ""
+    },
+    {
+      "slug": "aluminievi-navesi",
+      "title": "Алуминиеви навеси",
+      "before": [
+        "navesi"
+      ],
+      "after": [
+        "navesi",
+        "dograma"
+      ],
+      "reason": "В галерията се виждат носещи колони/греди и стъклен навес, а после и затворено остъклено пространство. Да се уточни дали остъкляването е част от същия възложен обхват.",
+      "policyNote": ""
+    },
+    {
+      "slug": "antipanik-mehanizmi-za-obshtestveni-zgradi",
+      "title": "Антипаник Механизми за обществени згради",
+      "before": [],
+      "after": [
+        "vrati"
+      ],
+      "reason": "Показана е врата с червена антипаник греда и монтажни детайли. Подходящо за врати/обков, не за PVC обръщане.",
+      "policyNote": ""
+    },
+    {
+      "slug": "apartament-plovdiv-1",
+      "title": "Апартамент Пловдив 1",
+      "before": [],
+      "after": [
+        "dograma",
+        "vanshni-roletni-shtori"
+      ],
+      "reason": "Завършен прозорец с външни ролетни щори; има кадър отвън със спуснати щори. Широкият бял завършек около отвора изисква уточнение за материала.",
+      "policyNote": ""
+    },
+    {
+      "slug": "barbekta-bezprofilno-ostaklenie",
+      "title": "Барбекта, Безпрофилно остъкление",
+      "before": [
+        "bezprofilno-ostaklyavane"
+      ],
+      "after": [
+        "bezprofilno-ostaklyavane",
+        "dograma"
+      ],
+      "reason": "Снимките показват както безпрофилно остъкляване, така и рамкови зимни градини. И двата вида работа имат място в класификацията.",
+      "policyNote": "Споделените кадри документират няколко услуги; галерията е запазена изцяло."
+    },
+    {
+      "slug": "vhoden-portal",
+      "title": "Входен портал",
+      "before": [
+        "portalni-vrati"
+      ],
+      "after": [
+        "vrati"
+      ],
+      "reason": "Галерията смесва двойна плътна гаражна/входна врата и входни врати на сгради. Не трябва всички да се водят като автомобилни входни портали.",
+      "policyNote": ""
+    },
+    {
+      "slug": "vanshni-dvorni-i-garazhni-vrati",
+      "title": "Външни дворни и гаражни врати",
+      "before": [
+        "dvorni-vrati"
+      ],
+      "after": [
+        "vrati"
+      ],
+      "reason": "Единствената снимка е двукрила плътна врата към гараж/двор. Няма достатъчно основание да се представя като изцяло алуминиева.",
+      "policyNote": ""
+    },
+    {
+      "slug": "dograma-v-palna-okomplektovka",
+      "title": "Дограма в пълна окомплектовка",
+      "before": [
+        "dograma"
+      ],
+      "after": [
+        "dograma",
+        "vrati"
+      ],
+      "reason": "Прозорци, остъклени врати и обков в обитавано жилище. Има отделни широки завършващи елементи, чийто материал трябва да се уточни.",
+      "policyNote": ""
+    },
+    {
+      "slug": "izrabotka-i-montazh-na-magazin-ot-a-do-ya",
+      "title": "Изработка и монтаж на магазин, от А до Я",
+      "before": [
+        "razshirenie-na-magazin"
+      ],
+      "after": [
+        "razshirenie-na-magazin",
+        "dograma"
+      ],
+      "reason": "Виждат се носеща метална конструкция, покрив и последваща остъклена пристройка към магазин. Това подкрепя конструкция за магазин и дограма.",
+      "policyNote": ""
+    },
+    {
+      "slug": "neozaglaven",
+      "title": "Неозаглавен",
+      "before": [],
+      "after": [
+        "dograma",
+        "vrati",
+        "plazgashti-prozortsi",
+        "vatreshni-shtori",
+        "dush-kabini",
+        "navesi",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "reason": "В снимките се виждат прозорци, врати, плъзгащо остъкляване, вътрешни щори, душове, навеси и профилно оформяне. Отразени са няколкото видими услуги.",
+      "policyNote": "Споделените кадри документират няколко услуги; галерията е запазена изцяло."
+    },
+    {
+      "slug": "oazis-4",
+      "title": "Оазис 4",
+      "before": [],
+      "after": [
+        "vrati",
+        "dograma"
+      ],
+      "reason": "В галерията има голям остъклен входен елемент, прозорци и детайли по обков. Категорията „Други“ пропуска видимите изделия.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-4-stamboliyski-pregrazhda-e-na-koridor-i-stalbishte-obrashtane-s-pervazi",
+      "title": "Обект 4 Стамболийски, Прегражда е на коридор и стълбище, Обръщане с первази",
+      "before": [
+        "pregradni-steni",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "pregradni-steni"
+      ],
+      "reason": "Вътрешна матова преграда с врата към стълбище. По общите снимки не се отделя надеждно касата от допълнителна PVC облицовка.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-brestovitsa-vhoden-portal-obrashtane-s-pervazi",
+      "title": "Обект Брестовица, Входен портал, Обръщане с первази",
+      "before": [
+        "portalni-vrati",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "vhodni-vrati"
+      ],
+      "reason": "Врата на сграда към стълбище/коридор; не автомобилен портал. Широката дървесна облицовка около отвора трябва да се различи от стандартна каса.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-markovo-s-obrazno-ostaklenie-na-stalbishte",
+      "title": "Обект Марково, S-образно остъкление на стълбище",
+      "before": [
+        "pregradni-steni"
+      ],
+      "after": [
+        "dograma"
+      ],
+      "reason": "Външно S-образно остъкляване на стълбищна фасада, а не вътрешна офисна/санитарна преграда.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-miryantsi-vhoden-portal",
+      "title": "Обект Мирянци, Входен портал",
+      "before": [
+        "portalni-vrati"
+      ],
+      "after": [
+        "vhodni-vrati"
+      ],
+      "reason": "Двукрила входна врата на жилище с декоративни стъкла. Това не е дворен автомобилен портал.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-perushtitsa-plazgasht-portal-obrashtane-s-pervazi",
+      "title": "Обект Перущица, Плъзгащ портал, Обръщане с первази",
+      "before": [
+        "portalni-vrati",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "interiorni-vrati",
+        "pregradni-steni",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "reason": "Широка вътрешна плъзгаща врата/преграда с матово стъкло и плътни долни панели. Не е дворен портал; вижда се допълнително оформяне около отвора.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-perushtitsa-smyana-na-vrati-portali-obrashtane-s-pervazi",
+      "title": "Обект Перущица, Смяна на врати, Портали, Обръщане с первази",
+      "before": [
+        "portalni-vrati",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "vrati",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "reason": "Няколко вътрешни и входни врати на жилище, включително широка остъклена преграда. Портал за автомобилен достъп не се вижда.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-plovdiv-6-detska-gradina",
+      "title": "Обект Пловдив 6, Детска градина",
+      "before": [],
+      "after": [
+        "pregradni-steni"
+      ],
+      "reason": "Вътрешна остъклена преграда с врата в детска градина. Втори набор снимки показва санитарна преграда; и двата вида са преградни стени.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-stamboliyski-16-vatreshni-vrati-dekorativni-paneli-obrashtane-s-pervazi",
+      "title": "Обект Стамболийски 16, Вътрешни врати, Декоративни панели, Обръщане с первази",
+      "before": [
+        "interiorni-vrati",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "interiorni-vrati"
+      ],
+      "reason": "Интериорни врати с декоративни пълнежи, включително преди монтаж. Касата/первазите на готовата врата не доказват конкретния PVC метод.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-stamboliyski-18-zatvaryane-na-barbekyu-aluminievo-plazgane-antratsit-zavarshvane-s-p",
+      "title": "Обект Стамболийски 18, Затваряне на барбекю, Алуминиево плъзгане, Антрацит, Завършване с первази, Плъзгащи комарници, Хидроизолиране",
+      "before": [
+        "plazgashta-dograma-za-naves",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "plazgashta-dograma-za-naves"
+      ],
+      "reason": "Барбекю с плъзгаща система, външна мазилка и метални/профилни завършващи елементи. Не се виждат достатъчно данни за PVC облицоване на отвори.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-stamboliyski-22-smyana-na-dograma-obrashtane-s-pervazi",
+      "title": "Обект Стамболийски 22, Смяна на дограма, Обръщане с первази",
+      "before": [
+        "dograma",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "dograma",
+        "obrashtane-s-pvc-pervazi",
+        "vrati"
+      ],
+      "reason": "Малък прозорец в баня, друг тесен прозорец и врата с отделно профилно оформяне. Част от кадрите са с каменна облицовка — тя не е PVC.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-stamboliyski-24-magazin-bratya-nedelevi-predverie-i-naves",
+      "title": "Обект Стамболийски 24, Магазин Братя Неделеви, Предверие и навес",
+      "before": [
+        "navesi",
+        "razshirenie-na-magazin"
+      ],
+      "after": [
+        "navesi",
+        "razshirenie-na-magazin",
+        "dograma",
+        "vrati"
+      ],
+      "reason": "Входно преддверие на магазин с покривна рамка, стъклени полета и врата. Разширение на търговска площ срещу само преддверие трябва да се уточни.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-stamboliyski-27-usvoyavane-na-terasa",
+      "title": "Обект Стамболийски 27, Усвояване на тераса",
+      "before": [
+        "usvoyavane-na-terasi"
+      ],
+      "after": [
+        "dograma",
+        "usvoyavane-na-terasi"
+      ],
+      "reason": "Затворена тераса с непрекъснато ъглово остъкляване и преустройство отвътре. Типът на покрива не се установява от всеки кадър.",
+      "policyNote": "Съществуващата категория за тераси е запазена; липсващ ъгъл на снимане не е доказателство за липсващ покрив."
+    },
+    {
+      "slug": "obekt-stamboliyski-30-vhoden-portal-plazgashta-vrata-za-banya-obrashtane-s-pervazi",
+      "title": "Обект Стамболийски 30, Входен портал, Плъзгаща врата за баня, Обръщане с первази",
+      "before": [
+        "vrati-za-banya",
+        "portalni-vrati",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "vhodni-vrati",
+        "vrati-za-banya"
+      ],
+      "reason": "Входна врата на сграда и отделна врата към баня; нито една не е автомобилен портал. Добавеното оформяне при вратата за баня изисква материално уточнение.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-stamboliyski-31-usvoyavane-na-antre-v-blok",
+      "title": "Обект Стамболийски 31, Усвояване на антре в блок",
+      "before": [],
+      "after": [
+        "pregradni-steni",
+        "vrati"
+      ],
+      "reason": "Матова остъклена врата с горен панел, която затваря общо антре в блок. Не е метална конструкция за разширение на офис.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-stamboliyski-33-zabolekarski-kabineti",
+      "title": "Обект Стамболийски 33, Зъболекарски кабинети",
+      "before": [
+        "razshirenie-na-ofis"
+      ],
+      "after": [
+        "interiorni-vrati"
+      ],
+      "reason": "Коридор, монтажни отвори и детайли при прага на врати. Няма видима метална пристройка/разширение на офис; реалният обхват трябва да се уточни.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-stamboliyski-34-vhodna-vrata-termoaluminiy-antratsit-obrashtane-s-pervazi",
+      "title": "Обект Стамболийски 34, Входна Врата, Термоалуминий, Антрацит, Обръщане с первази",
+      "before": [
+        "vhodni-vrati",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "vhodni-vrati"
+      ],
+      "reason": "Входна врата в каменна фасада. Външният тъмен ръб около вратата не доказва вътрешно обръщане с PVC.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-stamboliyski-36-obrashtane-s-pervazi-i-vanshni-roletni-shtori",
+      "title": "Обект Стамболийски 36, Обръщане с первази и Външни ролетни щори",
+      "before": [
+        "vanshni-roletni-shtori",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "vanshni-roletni-shtori",
+        "obrashtane-s-pvc-pervazi",
+        "dograma"
+      ],
+      "reason": "Прозорци с отделно профилно оформяне и монтаж/детайли на ролетни щори. В първоначалното разпределение липсва категория Дограма.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-stamboliyski-37-vhodna-vrata-obrashtane-s-pervazi-antratsit-termoaluminiy",
+      "title": "Обект Стамболийски 37, Входна врата, Обръщане с первази, Антрацит, Термоалуминий",
+      "before": [
+        "vhodni-vrati",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "vhodni-vrati"
+      ],
+      "reason": "Входна врата на сграда, показана преди и след смяна. Няма достатъчен видим детайл за потвърждение на PVC облицоването.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-stamboliyski-44-ostaklenie-na-stalbishte",
+      "title": "Обект Стамболийски 44, Остъкление на стълбище",
+      "before": [
+        "pregradni-steni"
+      ],
+      "after": [
+        "dograma",
+        "vhodni-vrati"
+      ],
+      "reason": "Външна дограма на стълбищно помещение и входна врата. Това е затваряне на фасаден отвор, не вътрешна офисна/санитарна преграда.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-stamboliyski-6-vatreshni-interiorni-vrati-prozortsi-shtori-obrashtane-s-pervazi",
+      "title": "Обект Стамболийски 6, Вътрешни(Интериорни) врати, Прозорци, Щори, Обръщане с первази",
+      "before": [
+        "dograma",
+        "interiorni-vrati",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "dograma",
+        "interiorni-vrati",
+        "obrashtane-s-pvc-pervazi",
+        "vanshni-roletni-shtori"
+      ],
+      "reason": "Прозорци, вътрешни врати и отделни кадри със спуснати външни ролетни щори. Това не са доказано вътрешни щори.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-stamboliyski-8-usvoyavane-na-terasa",
+      "title": "Обект Стамболийски 8, Усвояване на тераса",
+      "before": [
+        "usvoyavane-na-terasi"
+      ],
+      "after": [
+        "dograma",
+        "usvoyavane-na-terasi"
+      ],
+      "reason": "Затворена балконска част с нови прозорци. Покривът/преустройството трябва да се провери преди конкретно представяне като изнесен покрив.",
+      "policyNote": "Съществуващата категория за тераси е запазена; липсващ ъгъл на снимане не е доказателство за липсващ покрив."
+    },
+    {
+      "slug": "obekt-t-market-i-pepco-saedinenie",
+      "title": "Обект Т-МАРКЕТ и PEPCO, Съединение",
+      "before": [
+        "razshirenie-na-magazin"
+      ],
+      "after": [
+        "dograma",
+        "navesi"
+      ],
+      "reason": "Реална метална покривна рамка и монтирани остъклени магазинни фасади. Снимките не доказват сами по себе си увеличение на площта на магазина.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-terasa-trakiya-tsyalosten-remont-ot-a-do-ya",
+      "title": "Обект Тераса Тракия, цялостен ремонт от А до Я",
+      "before": [],
+      "after": [
+        "dograma"
+      ],
+      "reason": "Етапи от стара открита тераса до затворено помещение с изолация и прозорци. Това е пропуснат проект за тераси; изнесен покрив не е ясно документиран.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-tri-voditsi-podmyana-na-vinkelovo-ostaklenie",
+      "title": "Обект Три Водици, Подмяна на винкелово остъкление",
+      "before": [
+        "pvc-dograma"
+      ],
+      "after": [
+        "pvc-dograma",
+        "vrati"
+      ],
+      "reason": "Сменено остъкляване и врата на малко помещение/пристройка. Виждат се дограма и входен елемент; няма доказан автомобилен портал.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-hrabrrino-smyana-na-dograma-obrashtane-s-pervazi",
+      "title": "Обект Храбррино, Смяна на дограма, Обръщане с первази",
+      "before": [
+        "dograma",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "dograma",
+        "obrashtane-s-pvc-pervazi",
+        "vrati"
+      ],
+      "reason": "Прозорци на къща, вътрешни врати и близки кадри на отделни оформящи профили около отворите.",
+      "policyNote": ""
+    },
+    {
+      "slug": "obekt-yagodovo-nova-dograma-veka-82-troen-st-et-pvts-distantsioneri",
+      "title": "Обект Ягодово, Нова Дограма, VEKA 82, Троен ст-ет, ПВЦ Дистанционери",
+      "before": [
+        "pvc-dograma"
+      ],
+      "after": [
+        "pvc-dograma",
+        "vrati"
+      ],
+      "reason": "Прозорци и остъклена входна врата на нова сграда. Няма снимка на довършване с PVC первази.",
+      "policyNote": ""
+    },
+    {
+      "slug": "plovdiv-obekt-5-usvoyavane-na-terasa-s-iznesen-pokriv",
+      "title": "Пловдив Обект 5, Усвояване на тераса с изнесен покрив",
+      "before": [
+        "usvoyavane-na-terasi"
+      ],
+      "after": [
+        "dograma",
+        "usvoyavane-na-terasi"
+      ],
+      "reason": "Затворена изнесена балконска част на фасада. Единствената снимка не документира кой е изградил покрива и носещата част.",
+      "policyNote": "Съществуващата категория за тераси е запазена; липсващ ъгъл на снимане не е доказателство за липсващ покрив."
+    },
+    {
+      "slug": "plazgashti-prozortsi",
+      "title": "Плъзгащи системи",
+      "before": [
+        "plazgashti-prozortsi"
+      ],
+      "after": [
+        "plazgashti-prozortsi",
+        "dograma"
+      ],
+      "reason": "Кадрите показват модерна къща с прозорци и големи плъзгащи остъклени врати. Подходящо е и за дограма, не само за плъзгащи прозорци.",
+      "policyNote": ""
+    },
+    {
+      "slug": "pregradni-steni-i-ofisi",
+      "title": "Преградни стени и Офиси",
+      "before": [
+        "razshirenie-na-ofis",
+        "pregradni-steni"
+      ],
+      "after": [
+        "pregradni-steni"
+      ],
+      "reason": "Черна вътрешна остъклена преграда и бял офисен модул. Няма показана носеща метална пристройка за разширение на офис.",
+      "policyNote": ""
+    },
+    {
+      "slug": "sanitaren-vazel-ot-dograma",
+      "title": "Санитарен възел от дограма",
+      "before": [
+        "dograma",
+        "pregradni-steni"
+      ],
+      "after": [
+        "pregradni-steni"
+      ],
+      "reason": "Санитарни клетки, преградни панели и врати в санитарен възел. Основната категория е прегради; не е външна прозоречна дограма.",
+      "policyNote": ""
+    },
+    {
+      "slug": "stamboliyski-obekt-11-smyana-na-dograma-obrashtane-s-pervazi",
+      "title": "Стамболийски, Обект 11, Смяна на дограма, Обръщане с первази",
+      "before": [
+        "dograma",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "after": [
+        "dograma",
+        "obrashtane-s-pvc-pervazi",
+        "vrati"
+      ],
+      "reason": "Прозорец с балконска врата, дървесни профили и вътрешни/външни детайли около отворите.",
+      "policyNote": ""
+    },
+    {
+      "slug": "stomaneni-navesi-garazhi-magazini",
+      "title": "Стоманени навеси, Гаражи, Магазини",
+      "before": [
+        "navesi",
+        "razshirenie-na-magazin",
+        "metalni-konstruktsii"
+      ],
+      "after": [
+        "metalni-konstruktsii",
+        "navesi"
+      ],
+      "reason": "Отделни стоманени носещи рамки, колони и завършени навеси. Не всяка снимка показва магазин; подуслугите се избират по конкретния обект.",
+      "policyNote": ""
+    },
+    {
+      "slug": "topmontazh-1-plovdiv",
+      "title": "Топмонтаж 1, Пловдив",
+      "before": [],
+      "after": [
+        "dograma",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "reason": "Прозорец и балконска врата с монтажни етапи и завършено бяло профилно оформяне. Това е пропуснато от основните категории; PVC материалът изисква потвърждение.",
+      "policyNote": ""
+    },
+    {
+      "slug": "topmontazh-2",
+      "title": "Топмонтаж 2",
+      "before": [],
+      "after": [
+        "dograma",
+        "vanshni-roletni-shtori"
+      ],
+      "reason": "Подмяна на прозорец и балконска врата, плюс ролетни щори. Възможно е допълнително PVC оформяне, което трябва да се уточни.",
+      "policyNote": ""
+    },
+    {
+      "slug": "hudozhestven-montazh-proizvedeniya-na-izkustvoto",
+      "title": "Художествен монтаж (Произведения на изкуството)",
+      "before": [],
+      "after": [
+        "dograma",
+        "vanshni-roletni-shtori",
+        "plazgashta-dograma-za-naves",
+        "usvoyavane-na-terasi",
+        "obrashtane-s-pvc-pervazi"
+      ],
+      "reason": "Споделените кадри показват прозорци, ролетни щори, плъзгащо остъкляване, тераса с покрив и оформяне около дограма.",
+      "policyNote": "Споделените кадри документират няколко услуги; галерията е запазена изцяло."
+    },
+    {
+      "slug": "tsyalostni-stroitelni-obekti-ot-a-do-ya",
+      "title": "Цялостни строителни обекти, от А до Я",
+      "before": [],
+      "after": [
+        "dograma"
+      ],
+      "reason": "Вижда се дървена носеща конструкция и остъкляване. Дървени греди не трябва да се представят като метална конструкция.",
+      "policyNote": ""
+    }
+  ]
+}
