@@ -6,6 +6,7 @@ description: Свържете се с ДМД Комфорт — телефон, 
 ---
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}
+{% from "macros/social-icons.njk" import facebookIcon, viberIcon, whatsappIcon %}
 
 {% call pageBanner() %}
   <div class="eyebrow text-brand before:bg-brand">Контакти</div>
@@ -35,11 +36,19 @@ description: Свържете се с ДМД Комфорт — телефон, 
           {% endif %}
         </div>
       {% endfor %}
-      <div class="flex flex-wrap gap-3 pt-2">
-        <a class="btn btn-outline" href="{{ site.contact.facebook }}">Facebook</a>
-        <a class="btn btn-outline" href="{{ site.contact.tiktok }}">TikTok</a>
-        <a class="btn btn-outline" href="{{ site.contact.viber }}">Viber</a>
-        <a class="btn btn-outline" href="{{ site.contact.whatsapp }}">WhatsApp</a>
+      <div class="space-y-4 pt-2">
+        <a class="flex items-center gap-4 rounded-xl border border-ink/10 bg-brand-mist p-5 text-ink no-underline transition hover:border-brand/30 hover:text-brand" href="{{ site.contact.facebook }}" target="_blank" rel="noopener noreferrer">
+          <span class="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-[#1877F2]">{{ facebookIcon(22, true) }}</span>
+          <span class="font-display text-base font-extrabold leading-snug sm:text-lg">ДМД-Комфорт официална фейсбук страница</span>
+        </a>
+        <a class="flex items-center gap-4 rounded-xl border border-ink/10 bg-brand-mist p-5 text-ink no-underline transition hover:border-brand/30 hover:text-brand" href="{{ site.contact.viber }}">
+          <span class="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-[#7360F2]">{{ viberIcon(22, true) }}</span>
+          <span class="font-display text-base font-extrabold leading-snug sm:text-lg">Пиши ни в Viber</span>
+        </a>
+        <a class="flex items-center gap-4 rounded-xl border border-ink/10 bg-brand-mist p-5 text-ink no-underline transition hover:border-brand/30 hover:text-brand" href="{{ site.contact.whatsapp }}" target="_blank" rel="noopener noreferrer">
+          <span class="grid h-11 w-11 shrink-0 place-items-center rounded-lg bg-[#25D366]">{{ whatsappIcon(22, true) }}</span>
+          <span class="font-display text-base font-extrabold leading-snug sm:text-lg">Пиши ни в WhatsApp</span>
+        </a>
       </div>
     </div>
 

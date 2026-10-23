@@ -1,0 +1,18 @@
+{# Official brand icons downloaded to /assets/images/social/
+   variant: "" (black) | "white" | "color" #}
+{% macro socialIcon(name, size=20, variant="") %}
+{% set suffix = "-" + variant if variant else "" %}
+<img src="{{ ('/assets/images/social/' + name + suffix + '.svg') | url }}" alt="" width="{{ size }}" height="{{ size }}" decoding="async" />
+{% endmacro %}
+
+{% macro facebookIcon(size=20, white=false, color=false) %}
+{{ socialIcon("facebook", size, "white" if white else ("color" if color else "")) }}
+{% endmacro %}
+
+{% macro viberIcon(size=20, white=false, color=false) %}
+{{ socialIcon("viber", size, "white" if white else ("color" if color else "")) }}
+{% endmacro %}
+
+{% macro whatsappIcon(size=20, white=false, color=false) %}
+{{ socialIcon("whatsapp", size, "white" if white else ("color" if color else "")) }}
+{% endmacro %}

@@ -1,3 +1,4 @@
+{% from "macros/social-icons.njk" import facebookIcon, viberIcon, whatsappIcon %}
 <footer class="bg-[#1a1d1f] text-white">
   <div class="container-site">
     <div class="grid gap-10 border-b border-white/10 py-14 text-center md:grid-cols-2 md:text-left lg:grid-cols-4">
@@ -43,8 +44,12 @@
         <ul class="flex flex-col items-center gap-3 text-[15px] text-white/50 md:items-start">
           <li><a class="text-white/50 no-underline transition hover:text-brand" href="{{ site.contact.phoneHref }}">{{ site.contact.phone }}</a></li>
           <li><a class="text-white/50 no-underline transition hover:text-brand" href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></li>
-          <li>Две години гаранция за всички стоки и услуги.</li>
         </ul>
+        <div class="mt-5 flex items-center gap-3">
+          <a class="grid h-10 w-10 place-items-center rounded-lg bg-white/5 transition hover:bg-white/10" href="{{ site.contact.facebook }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook">{{ facebookIcon(20, color=true) }}</a>
+          <a class="grid h-10 w-10 place-items-center rounded-lg bg-white/5 transition hover:bg-white/10" href="{{ site.contact.viber }}" aria-label="Viber">{{ viberIcon(20, color=true) }}</a>
+          <a class="grid h-10 w-10 place-items-center rounded-lg bg-white/5 transition hover:bg-white/10" href="{{ site.contact.whatsapp }}" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">{{ whatsappIcon(20, color=true) }}</a>
+        </div>
       </div>
     </div>
 
