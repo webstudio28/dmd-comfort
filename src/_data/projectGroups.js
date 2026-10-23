@@ -12,6 +12,9 @@ function countLabel(count) {
 module.exports = function () {
   const services = readJson("services.json");
   const projects = readJson("projects.json");
+  const coverProjects = readJson("projectGroupCovers.json");
+  const coverImage = (slug, items) =>
+    (items.find((project) => project.slug === coverProjects[slug]) || items[0]).images[0];
   const bySlug = new Map(services.map((service) => [service.slug, service]));
   const buckets = new Map();
   const others = [];
@@ -28,8 +31,10 @@ module.exports = function () {
     }
   }
 
+  // Hub categories = main services only (parents + standalones). Subservices roll up into their parent.
   const groups = [];
   for (const service of services) {
+    if (service.parentSlug) continue;
     const childSlugs = (service.menuChildren || []).map((child) => child.slug);
     const seen = new Set();
     const items = [];
@@ -45,7 +50,7 @@ module.exports = function () {
       slug: service.slug,
       title: service.title,
       href: `/proekti/usluga/${service.slug}/`,
-      image: items[0].images[0],
+      image: coverImage(service.slug, items),
       count: items.length,
       countLabel: countLabel(items.length),
       projects: items,
@@ -57,7 +62,7 @@ module.exports = function () {
       slug: "drugi",
       title: "Други",
       href: "/proekti/drugi/",
-      image: others[0].images[0],
+      image: coverImage("drugi", others),
       count: others.length,
       countLabel: countLabel(others.length),
       projects: others,

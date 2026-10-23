@@ -15,8 +15,14 @@
     "imageHeight": 832,
     "imageFit": "cover",
     "menuChildren": [
-      { "title": "Алуминиева дограма", "slug": "aluminiumieva-dograma" },
-      { "title": "PVC дограма", "slug": "pvc-dograma" }
+      {
+        "title": "Алуминиева дограма",
+        "slug": "aluminiumieva-dograma"
+      },
+      {
+        "title": "PVC дограма",
+        "slug": "pvc-dograma"
+      }
     ]
   },
   {
@@ -42,11 +48,26 @@
     "imageHeight": 1280,
     "imageFit": "contain",
     "menuChildren": [
-      { "title": "Входни врати", "slug": "vhodni-vrati" },
-      { "title": "Вътрешни врати", "slug": "vatreshni-vrati" },
-      { "title": "Врати за баня", "slug": "vrati-za-banya" },
-      { "title": "Дворни врати", "slug": "dvorni-vrati" },
-      { "title": "Входни портали", "slug": "vhodni-portali" }
+      {
+        "title": "Входни врати",
+        "slug": "vhodni-vrati"
+      },
+      {
+        "title": "Вътрешни врати",
+        "slug": "interiorni-vrati"
+      },
+      {
+        "title": "Врати за баня",
+        "slug": "vrati-za-banya"
+      },
+      {
+        "title": "Дворни врати",
+        "slug": "dvorni-vrati"
+      },
+      {
+        "title": "Входни портали",
+        "slug": "portalni-vrati"
+      }
     ]
   },
   {
@@ -57,7 +78,7 @@
     "imageAlt": "Алуминиева входна врата"
   },
   {
-    "slug": "vatreshni-vrati",
+    "slug": "interiorni-vrati",
     "title": "Вътрешни врати",
     "parentSlug": "vrati",
     "image": "/assets/images/services/approved-2026-10-22/vatreshni-vrati.webp",
@@ -77,7 +98,7 @@
     "imageFit": "contain"
   },
   {
-    "slug": "aluminievi-i-pvc-pregradi",
+    "slug": "pregradni-steni",
     "title": "Алуминиеви и PVC прегради",
     "shortDescription": "За санитарни възли и офиси.",
     "image": "/assets/images/services/approved-2026-10-22/aluminievi-i-pvc-pregradi.webp",
@@ -87,21 +108,33 @@
     "imageFit": "contain"
   },
   {
-    "slug": "plazgashti-sistemi",
+    "slug": "plazgashti-prozortsi",
     "title": "Плъзгащи системи",
     "image": "/assets/images/services/plazgashti-sistemi.jpg",
     "imageAlt": "Плъзгаща система към тераса",
     "menuChildren": [
-      { "title": "Термо плъзгащи системи", "slug": "termo-plazgashti-sistemi" },
-      { "title": "Студени плъзгащи системи", "slug": "studeni-plazgashti-sistemi" },
-      { "title": "PVC плъзгащи системи", "slug": "pvc-plazgashti-sistemi" },
-      { "title": "Безпрофилно остъкляване", "slug": "bezprofilno-ostaklyavane" }
+      {
+        "title": "Термо плъзгащи системи",
+        "slug": "aluminiumievi-plazgashti-vrati"
+      },
+      {
+        "title": "Студени плъзгащи системи",
+        "slug": "plazgashta-dograma-za-naves"
+      },
+      {
+        "title": "PVC плъзгащи системи",
+        "slug": "pvc-plazgashta-dograma"
+      },
+      {
+        "title": "Безпрофилно остъкляване",
+        "slug": "bezprofilno-ostaklyavane"
+      }
     ]
   },
   {
-    "slug": "termo-plazgashti-sistemi",
+    "slug": "aluminiumievi-plazgashti-vrati",
     "title": "Термо плъзгащи системи",
-    "parentSlug": "plazgashti-sistemi",
+    "parentSlug": "plazgashti-prozortsi",
     "image": "/assets/images/services/approved-2026-10-22/termo-plazgashti-sistemi.webp",
     "imageAlt": "Термоалуминиева плъзгаща система с дървесен декор към двор",
     "imageWidth": 1080,
@@ -109,9 +142,9 @@
     "imageFit": "cover"
   },
   {
-    "slug": "studeni-plazgashti-sistemi",
+    "slug": "plazgashta-dograma-za-naves",
     "title": "Студени плъзгащи системи",
-    "parentSlug": "plazgashti-sistemi",
+    "parentSlug": "plazgashti-prozortsi",
     "image": "/assets/images/services/approved-2026-10-22/studeni-plazgashti-sistemi.webp",
     "imageAlt": "Алуминиево плъзгащо остъкляване на покрита веранда с изглед от двора",
     "imageWidth": 1448,
@@ -119,9 +152,9 @@
     "imageFit": "cover"
   },
   {
-    "slug": "pvc-plazgashti-sistemi",
+    "slug": "pvc-plazgashta-dograma",
     "title": "PVC плъзгащи системи",
-    "parentSlug": "plazgashti-sistemi",
+    "parentSlug": "plazgashti-prozortsi",
     "image": "/assets/images/services/approved-2026-10-22/pvc-plazgashti-sistemi.webp",
     "imageAlt": "Бяла PVC плъзгаща врата с два остъклени панела към тераса",
     "imageWidth": 1448,
@@ -131,7 +164,7 @@
   {
     "slug": "bezprofilno-ostaklyavane",
     "title": "Безпрофилно остъкляване",
-    "parentSlug": "plazgashti-sistemi",
+    "parentSlug": "plazgashti-prozortsi",
     "image": "/assets/images/services/approved-2026-10-22/bezprofilno-ostaklyavane.webp",
     "imageAlt": "Безпрофилно остъкляване на тераса с плъзгащи стъклени панели",
     "imageWidth": 555,
@@ -150,7 +183,7 @@
     "imageKind": "generated"
   },
   {
-    "slug": "vhodni-portali",
+    "slug": "portalni-vrati",
     "title": "Входни портали",
     "parentSlug": "vrati",
     "image": "/assets/images/services/aluminievi-vrati-i-portali-generated-v1.webp",
@@ -190,9 +223,18 @@
     "imageHeight": 960,
     "imageFit": "cover",
     "menuChildren": [
-      { "title": "Навеси", "slug": "navesi" },
-      { "title": "Магазини", "slug": "magazini" },
-      { "title": "Офиси", "slug": "ofisi" }
+      {
+        "title": "Навеси",
+        "slug": "navesi"
+      },
+      {
+        "title": "Магазини",
+        "slug": "razshirenie-na-magazin"
+      },
+      {
+        "title": "Офиси",
+        "slug": "razshirenie-na-ofis"
+      }
     ]
   },
   {
@@ -203,7 +245,7 @@
     "imageAlt": "Алуминиев навес към тераса"
   },
   {
-    "slug": "magazini",
+    "slug": "razshirenie-na-magazin",
     "title": "Магазини",
     "parentSlug": "metalni-konstruktsii",
     "image": "/assets/images/services/approved-2026-10-22/magazini.webp",
@@ -213,7 +255,7 @@
     "imageFit": "cover"
   },
   {
-    "slug": "ofisi",
+    "slug": "razshirenie-na-ofis",
     "title": "Офиси",
     "parentSlug": "metalni-konstruktsii",
     "image": "/assets/images/services/ofisi-generated-v1.webp",

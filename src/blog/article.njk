@@ -72,7 +72,6 @@ eleventyComputed:
             {% for paragraph in subsection.paragraphs %}<p>{{ paragraph }}</p>{% endfor %}
           {% endfor %}
           {% if section.image %}<figure class="blog-detail-image"><img src="{{ section.image.url | url }}" alt="{{ section.image.alt }}" width="{{ section.image.width }}" height="{{ section.image.height }}" loading="lazy" decoding="async" /></figure>{% endif %}
-          {% if section.sources %}<div class="blog-sources"><span>Техническа справка:</span><ul>{% for source in section.sources %}<li><a href="{{ source.url }}">{{ source.title }}</a></li>{% endfor %}</ul></div>{% endif %}
           {% if section.closing %}<p>{{ section.closing }}</p>{% endif %}
           {% if section.serviceLink %}<p class="blog-service-link"><a href="{{ section.serviceLink.url | url }}">{{ section.serviceLink.text }} <span aria-hidden="true">→</span></a></p>{% endif %}
         </section>
@@ -110,14 +109,16 @@ eleventyComputed:
       role="region"
       aria-label="Прочетете още — плъзнете хоризонтално"
     >
-      {% for related in blog %}
-        {% if related.slug in article.relatedSlugs %}
-        <a class="blog-related-card" href="{{ ('/blog/' + related.slug + '/') | url }}" draggable="false">
-          <img src="{{ related.image | url }}" alt="{{ related.imageAlt or related.title }}" loading="lazy" decoding="async" width="{{ related.imageWidth or 1536 }}" height="{{ related.imageHeight or 1024 }}" draggable="false" />
-          <h3>{{ related.title }}</h3>
-          <p>{{ related.excerpt }}</p>
-        </a>
-        {% endif %}
+      {% for slug in article.relatedSlugs %}
+        {% for related in blog %}
+          {% if related.slug == slug %}
+          <a class="blog-related-card" href="{{ ('/blog/' + related.slug + '/') | url }}" draggable="false">
+            <img src="{{ related.image | url }}" alt="{{ related.imageAlt or related.title }}" loading="lazy" decoding="async" width="{{ related.imageWidth or 1536 }}" height="{{ related.imageHeight or 1024 }}" draggable="false" />
+            <h3>{{ related.title }}</h3>
+            <p>{{ related.excerpt }}</p>
+          </a>
+          {% endif %}
+        {% endfor %}
       {% endfor %}
     </div>
     {% endif %}

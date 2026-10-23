@@ -1,0 +1,16 @@
+---
+permalink: /.htaccess
+eleventyExcludeFromCollections: true
+layout: false
+---
+# DMD Comfort — LiteSpeed / Apache
+
+# Caching
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+  <FilesMatch "\.(css|js|webp|jpg|jpeg|png|gif|svg|woff2)$">
+    Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+</IfModule>

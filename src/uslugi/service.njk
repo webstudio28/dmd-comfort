@@ -71,9 +71,9 @@ eleventyComputed:
 {% endcall %}
 
 {% if service.parentUrl %}
-{{ breadcrumbs([{label: "Начало", url: "/"}, {label: "Услуги", url: "/uslugi/"}, {label: service.parentTitle, url: service.parentUrl}, {label: service.title}]) }}
+{{ breadcrumbs([{label: "Начало", url: "/"}, {label: "Услуги", url: "/uslugi/"}, {label: service.parentMenuTitle or service.parentTitle, url: service.parentUrl}, {label: service.pageName}]) }}
 {% else %}
-{{ breadcrumbs([{label: "Начало", url: "/"}, {label: "Услуги", url: "/uslugi/"}, {label: service.title}]) }}
+{{ breadcrumbs([{label: "Начало", url: "/"}, {label: "Услуги", url: "/uslugi/"}, {label: service.pageName}]) }}
 {% endif %}
 
 {% set band = cycler("trim-band--mist", "trim-band--white", "trim-band--mist", "trim-band--lined") %}
@@ -105,7 +105,7 @@ eleventyComputed:
   <div class="container-site">
     <div class="trim-section-head trim-projects-head">
       <div>
-        <h2 class="trim-heading" id="trim-projects-title">Нашите проекти за {{ service.title }}</h2>
+        <h2 class="trim-heading" id="trim-projects-title">Нашите проекти за {{ service.pageName }}</h2>
         <p>Реализирани обекти, свързани с тази услуга.</p>
       </div>
       {% if service.projectsMoreUrl %}
@@ -133,7 +133,7 @@ eleventyComputed:
 {% if service.copy.features.length %}
 <section class="trim-section {{ band.next() }}" aria-labelledby="trim-benefit-title">
   <div class="container-site">
-    <h2 class="trim-heading" id="trim-benefit-title">Защо да изберете {{ service.title }}?</h2>
+    <h2 class="trim-heading" id="trim-benefit-title">{{ service.copy.featuresTitle or ("Защо да изберете " + service.pageName + "?") }}</h2>
     {% if service.copy.featuresLead %}<p class="trim-copy">{{ service.copy.featuresLead }}</p>{% endif %}
   </div>
   <div class="trim-quality-list trim-card-rail" data-drag-scroll data-card-count="{{ service.copy.features.length }}" tabindex="0" role="region" aria-label="Предимства — плъзнете хоризонтално">
@@ -342,12 +342,12 @@ eleventyComputed:
 {% set serviceUrl = site.seo.siteUrl + (page.url | url) %}
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
- {"@type":"Service","@id":{{ (serviceUrl + '#service') | dump | safe }},"name":{{ service.copy.h1 | dump | safe }},"serviceType":{{ service.title | dump | safe }},"description":{{ service.copy.description | dump | safe }},"url":{{ serviceUrl | dump | safe }},"provider":{"@id":{{ (site.seo.siteUrl + '/#organization') | dump | safe }}},"areaServed":[{"@type":"City","name":"Пловдив"},{"@type":"Country","name":"България"}]},
+ {"@type":"Service","@id":{{ (serviceUrl + '#service') | dump | safe }},"name":{{ service.copy.h1 | dump | safe }},"serviceType":{{ service.pageName | dump | safe }},"description":{{ service.copy.description | dump | safe }},"url":{{ serviceUrl | dump | safe }},"provider":{"@id":{{ (site.seo.siteUrl + '/#organization') | dump | safe }}},"areaServed":[{"@type":"City","name":"Пловдив"},{"@type":"Country","name":"България"}]},
  {"@type":"BreadcrumbList","itemListElement":[
   {"@type":"ListItem","position":1,"name":"Начало","item":{{ (site.seo.siteUrl + ('/' | url)) | dump | safe }}},
   {"@type":"ListItem","position":2,"name":"Услуги","item":{{ (site.seo.siteUrl + ('/uslugi/' | url)) | dump | safe }}},
-  {% if service.parentUrl %}{"@type":"ListItem","position":3,"name":{{ service.parentTitle | dump | safe }},"item":{{ (site.seo.siteUrl + (service.parentUrl | url)) | dump | safe }}},{% endif %}
-  {"@type":"ListItem","position":{% if service.parentUrl %}4{% else %}3{% endif %},"name":{{ service.title | dump | safe }},"item":{{ serviceUrl | dump | safe }}}
+  {% if service.parentUrl %}{"@type":"ListItem","position":3,"name":{{ (service.parentMenuTitle or service.parentTitle) | dump | safe }},"item":{{ (site.seo.siteUrl + (service.parentUrl | url)) | dump | safe }}},{% endif %}
+  {"@type":"ListItem","position":{% if service.parentUrl %}4{% else %}3{% endif %},"name":{{ service.pageName | dump | safe }},"item":{{ serviceUrl | dump | safe }}}
  ]}
 ]}
 </script>

@@ -21,3 +21,9 @@ sitemap
 i vsqkakvi neshta po seo
 
 caching (optional): Cloudflare or LiteSpeed Cache for HIT/MISS; longer asset Cache-Control if needed — current LiteSpeed asset cache is already fine
+
+for projects cover where we have like showing projects we want the image to be like from the finished product so it looks nice 
+
+project names cleaning
+
+og images and descriptions

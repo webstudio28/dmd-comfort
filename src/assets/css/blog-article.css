@@ -3,6 +3,9 @@
 .blog-article-title { font-size: clamp(2.25rem, 4.5vw, 3.5rem); line-height: 1.08; }
 .blog-article-figure { margin: 0 0 36px; }
 .blog-article-figure img { width: 100%; height: auto; max-height: 460px; object-fit: cover; border-radius: 16px; }
+@media (min-width: 768px) {
+  .blog-article-figure { width: 75%; }
+}
 .blog-article-intro p, .blog-section > p, .blog-section > ul, .blog-faq > p, .blog-article-cta > p { color: #55625a; font-size: 17px; line-height: 1.85; }
 .blog-article-intro p + p, .blog-section > p + p { margin-top: 18px; }
 .blog-toc { margin-top: 36px; padding: 28px 32px; background: #f0f6f1; border: 1px solid #d9e5dc; border-radius: 16px; }
@@ -51,10 +54,6 @@
 .blog-article-figure figcaption a { text-decoration: underline; text-underline-offset: 3px; }
 .blog-detail-image { margin: 28px 0; }
 .blog-detail-image img { width: min(100%, 760px); height: auto; max-height: 420px; object-fit: contain; background: #f0f3ef; border-radius: 12px; }
-.blog-sources { margin: 24px 0; padding-left: 16px; border-left: 3px solid #d9e5dc; color: #55625a; font-size: 14px; line-height: 1.7; overflow-wrap: anywhere; }
-.blog-sources > span { font-weight: 600; }
-.blog-sources ul { margin-top: 4px; }
-.blog-sources a { color: #057230; text-decoration: underline; text-underline-offset: 3px; }
 .blog-cta-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 24px; }
 .blog-article-cta .blog-cta-actions .btn { margin-top: 0; white-space: normal; text-align: center; }
 .blog-contact-button { color: #057230; border: 1px solid #057230; background: transparent; }
@@ -114,24 +113,21 @@
 
 @media (min-width: 768px) {
   .blog-related-rail { --site-gutter: 2rem; }
+  /* Tablet: carousel with ~2 cards peeking */
+  .blog-related-rail > * { width: min(52vw, 380px); }
 }
 
-/* Desktop: static grid. Mobile/tablet: drag carousel. */
+/* Desktop: static 3-col grid. Mobile/tablet: drag carousel. */
 @media (min-width: 1024px) {
   .blog-related-rail {
     display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 24px;
     overflow: visible;
     cursor: default;
     user-select: auto;
     touch-action: auto;
     padding-bottom: 0;
-  }
-  .blog-related-rail[data-card-count="1"] { grid-template-columns: minmax(0, 1fr); }
-  .blog-related-rail[data-card-count="2"] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .blog-related-rail[data-card-count="3"],
-  .blog-related-rail:not([data-card-count="1"]):not([data-card-count="2"]) {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .blog-related-rail > * {
     width: auto;

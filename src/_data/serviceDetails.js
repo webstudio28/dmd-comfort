@@ -3,6 +3,17 @@ const path = require("path");
 
 const PROJECTS_PREVIEW = 8;
 
+/** Display name for the service page (keyword-led). Menu keeps services.json title. */
+function pageNameFromKeyword(keyword) {
+  if (!keyword) return "";
+  // Avoid \\b — it does not treat Cyrillic as word chars in JS.
+  return keyword
+    .replace(/(^|[^\p{L}\p{N}_])пвц(?=[^\p{L}\p{N}_]|$)/giu, "$1ПВЦ")
+    .replace(/(^|[^\p{L}\p{N}_])pvc(?=[^\p{L}\p{N}_]|$)/giu, "$1PVC")
+    .replace(/(^|[^\p{L}\p{N}_])пловдив(?=[^\p{L}\p{N}_]|$)/giu, "$1Пловдив")
+    .replace(/^./u, (ch) => ch.toUpperCase());
+}
+
 /** Keep menu identities separate from the approved, keyword-led page content. */
 module.exports = function () {
   const services = JSON.parse(fs.readFileSync(path.join(__dirname, "services.json"), "utf8"));
@@ -11,13 +22,21 @@ module.exports = function () {
   const blog = JSON.parse(fs.readFileSync(path.join(__dirname, "blog.json"), "utf8"));
   const bySlug = new Map(services.map((service) => [service.slug, service]));
   const blogBySlug = new Map(blog.map((post) => [post.slug, post]));
+
+  const pageNameFor = (slug) => {
+    const copy = content[slug];
+    return pageNameFromKeyword(copy?.keyword) || bySlug.get(slug)?.title || slug;
+  };
+
   const card = (slug) => {
     const item = bySlug.get(slug);
     if (!item) throw new Error(`Unknown related service: ${slug}`);
+    const copy = content[slug];
     return {
       ...item,
+      pageName: pageNameFor(slug),
       url: item.href || `/uslugi/${item.slug}/`,
-      summary: content[slug]?.description || item.shortDescription || item.title,
+      summary: copy?.description || item.shortDescription || item.title,
     };
   };
 
@@ -55,15 +74,21 @@ module.exports = function () {
       const parent = service.parentSlug ? bySlug.get(service.parentSlug) : null;
       const relatedProjects = projectsForService(service);
       const relatedBlog = copy.blogSlug ? blogBySlug.get(copy.blogSlug) || null : null;
+      const pageName = pageNameFor(service.slug);
       return {
         ...service,
         copy,
-        parentTitle: parent?.title || "",
+        pageName,
+        parentTitle: parent ? pageNameFor(parent.slug) : "",
+        parentMenuTitle: parent?.title || "",
         parentUrl: parent ? `/uslugi/${parent.slug}/` : "",
         subcategoryCards: (service.menuChildren || []).map((child) => card(child.slug)),
         relatedServices: (copy.relatedSlugs || []).map(card),
         relatedProjects: relatedProjects.slice(0, PROJECTS_PREVIEW),
-        projectsMoreUrl: relatedProjects.length ? `/proekti/usluga/${service.slug}/` : "",
+        // Project hub only has main-service groups; subservices link to the parent category.
+        projectsMoreUrl: relatedProjects.length
+          ? `/proekti/usluga/${parent?.slug || service.slug}/`
+          : "",
         projectsTotal: relatedProjects.length,
         relatedBlog,
       };
