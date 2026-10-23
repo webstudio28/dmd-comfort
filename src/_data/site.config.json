@@ -30,6 +30,9 @@
     "ink": "#1a1d1f",
     "paper": "#F3F8F5"
   },
+  "features": {
+    "videos": false
+  },
   "nav": {
     "header": [
       { "label": "Начало", "url": "/" },
@@ -37,7 +40,7 @@
       { "label": "Обръщане с PVC первази", "url": "/obrashtane-na-dograma-s-pvc-profili/" },
       { "label": "Проекти", "url": "/proekti/" },
       { "label": "Блог", "url": "/blog/" },
-      { "label": "Видеа", "url": "/videa/" },
+      { "label": "Видеа", "url": "/videa/", "feature": "videos" },
       { "label": "За нас", "url": "/za-nas/" },
       { "label": "Контакти", "url": "/kontakti/" }
     ]

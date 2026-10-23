@@ -33,6 +33,12 @@ function projectGroupBySlugMap() {
 }
 
 module.exports = function (eleventyConfig) {
+  // Keep src/videa + videos.json; publish when site.features.videos is true.
+  const site = require("./src/_data/site.js")();
+  if (!site.features?.videos) {
+    eleventyConfig.ignores.add("src/videa/**");
+  }
+
   eleventyConfig.addPassthroughCopy({ "src/assets": "assets" });
   eleventyConfig.addPassthroughCopy({ "src/favicon.png": "favicon.png" });
 

@@ -31,7 +31,9 @@
           <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/za-nas/' | url }}">За нас</a></li>
           <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/proekti/' | url }}">Проекти</a></li>
           <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/blog/' | url }}">Блог</a></li>
+          {% if site.features.videos %}
           <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/videa/' | url }}">Видеа</a></li>
+          {% endif %}
           <li><a class="text-[15px] text-white/50 no-underline transition hover:text-brand" href="{{ '/kontakti/' | url }}">Контакти</a></li>
         </ul>
       </div>

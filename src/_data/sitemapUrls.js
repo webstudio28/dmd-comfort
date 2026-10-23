@@ -11,6 +11,8 @@ module.exports = function () {
   const projectGroups = require("./projectGroups")();
   const blog = readJson("blog.json");
   const videos = readJson("videos.json");
+  const site = require("./site")();
+  const videosEnabled = Boolean(site.features?.videos);
   const urls = [
     "/",
     "/za-nas/",
@@ -18,8 +20,9 @@ module.exports = function () {
     "/uslugi/",
     "/proekti/",
     "/blog/",
-    "/videa/",
   ];
+
+  if (videosEnabled) urls.push("/videa/");
 
   for (const s of services) {
     urls.push(s.href || `/uslugi/${s.slug}/`);
@@ -37,8 +40,10 @@ module.exports = function () {
     urls.push(`/blog/${a.slug}/`);
   }
 
-  for (const v of videos) {
-    urls.push(`/videa/${v.slug}/`);
+  if (videosEnabled) {
+    for (const v of videos) {
+      urls.push(`/videa/${v.slug}/`);
+    }
   }
 
   return [...new Set(urls)];

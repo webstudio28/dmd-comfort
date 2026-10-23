@@ -38,37 +38,41 @@ function resolveChildrenFrom(services, type) {
   return [];
 }
 
-function resolveNavHeader(services, header) {
+function resolveNavHeader(services, header, features) {
   if (!Array.isArray(header)) return [];
-  return header.map((item) => {
-    const { childrenFrom, ...rest } = item;
-    const out = { ...rest };
+  return header
+    .filter((item) => !item.feature || features?.[item.feature])
+    .map((item) => {
+      const { childrenFrom, feature, ...rest } = item;
+      const out = { ...rest };
 
-    if (Array.isArray(item.children) && item.children.length) {
-      out.children = item.children;
+      if (Array.isArray(item.children) && item.children.length) {
+        out.children = item.children;
+        return out;
+      }
+
+      if (childrenFrom) {
+        out.children = resolveChildrenFrom(services, childrenFrom);
+        return out;
+      }
+
       return out;
-    }
-
-    if (childrenFrom) {
-      out.children = resolveChildrenFrom(services, childrenFrom);
-      return out;
-    }
-
-    return out;
-  });
+    });
 }
 
 // Function export so Eleventy re-reads config on every build
 module.exports = function () {
   const config = loadJson("site.config.json") || {};
   const services = loadJson("services.json") || [];
+  const features = { videos: false, ...(config.features || {}) };
 
   return {
     ...config,
+    features,
     currentYear: new Date().getFullYear(),
     nav: {
       ...config.nav,
-      header: resolveNavHeader(services, config.nav?.header || []),
+      header: resolveNavHeader(services, config.nav?.header || [], features),
     },
   };
 };
