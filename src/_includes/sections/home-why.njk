@@ -1,4 +1,4 @@
-<section class="section-pad overflow-x-clip bg-[#e8e8e8]">
+<section class="section-pad overflow-x-clip bg-[#e8e8e8] home-mobile-center">
   <div class="container-site">
     <div class="mb-10 reveal md:mb-12">
       <div class="eyebrow">Защо да изберете нас</div>
@@ -19,7 +19,7 @@
       {% for item in home.why %}
         <article class="relative min-h-[225px] overflow-hidden rounded-xl bg-gradient-to-br from-white to-[#f0f0f0] p-6 shadow-card transition md:min-h-[270px] lg:hover:-translate-y-1 lg:hover:shadow-lift">
           <span class="absolute right-3 top-1 font-display text-6xl font-black text-ink/10">0{{ loop.index }}</span>
-          <span class="relative mb-6 grid h-14 w-14 place-items-center rounded-xl bg-[#ececec] text-brand" aria-hidden="true">
+          <span class="relative mb-6 mx-auto grid h-14 w-14 place-items-center rounded-xl bg-[#ececec] text-brand md:mx-0" aria-hidden="true">
             {% if item.icon == "approach" %}
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M16 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2M11.5 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM20 8v6M23 11h-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
             {% elif item.icon == "quality" %}

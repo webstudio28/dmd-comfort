@@ -197,7 +197,7 @@
 
   .eyebrow::before {
     content: "";
-    @apply h-px w-6 bg-brand;
+    @apply hidden h-px w-6 bg-brand md:block;
   }
 
   .section-title {
@@ -206,6 +206,23 @@
 
   .section-copy {
     @apply max-w-xl text-lg leading-relaxed text-ink-muted;
+  }
+
+  /* Home page: center section copy / eyebrows / CTAs on mobile only */
+  .home-mobile-center {
+    @apply text-center md:text-left;
+  }
+
+  .home-mobile-center .eyebrow {
+    @apply justify-center md:justify-start;
+  }
+
+  .home-mobile-center .section-copy {
+    @apply mx-auto md:mx-0;
+  }
+
+  .home-mobile-center .home-mobile-cta {
+    @apply justify-center md:justify-start;
   }
 
   .btn {
