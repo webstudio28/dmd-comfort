@@ -133,7 +133,7 @@ eleventyComputed:
 {% if service.copy.features.length %}
 <section class="trim-section {{ band.next() }}" aria-labelledby="trim-benefit-title">
   <div class="container-site">
-    <h2 class="trim-heading" id="trim-benefit-title">{{ service.copy.featuresTitle or ("Защо да изберете " + service.pageName + "?") }}</h2>
+    <h2 class="trim-heading" id="trim-benefit-title">{{ service.copy.featuresTitle }}</h2>
     {% if service.copy.featuresLead %}<p class="trim-copy">{{ service.copy.featuresLead }}</p>{% endif %}
   </div>
   <div class="trim-quality-list trim-card-rail" data-drag-scroll data-card-count="{{ service.copy.features.length }}" tabindex="0" role="region" aria-label="Предимства — плъзнете хоризонтално">

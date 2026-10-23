@@ -27,6 +27,27 @@ function projectsForLabel(slug, pageName) {
   return pageName;
 }
 
+/** Menu-style phrase for spoken UI (“Защо да изберете … от нас?”). */
+function naturalServicePhrase(title) {
+  if (!title) return "";
+  if (/^(PVC|ПВЦ)\b/u.test(title)) return title;
+  return title.replace(/^./u, (ch) => ch.toLocaleLowerCase("bg-BG"));
+}
+
+function whyChooseTitle(copy, title, slug) {
+  if (copy?.featuresTitle) return copy.featuresTitle;
+  // Short menu labels that need a clearer spoken phrase
+  const spoken = {
+    "razshirenie-na-magazin": "разширение на магазин",
+    "razshirenie-na-ofis": "разширение на офис",
+    "usvoyavane-na-terasi": "усвояване на тераси",
+    "pregradni-steni": "преградни стени",
+    "portalni-vrati": "портални врати",
+  };
+  const phrase = spoken[slug] || naturalServicePhrase(title);
+  return `Защо да изберете ${phrase} от нас?`;
+}
+
 /** Keep menu identities separate from the approved, keyword-led page content. */
 module.exports = function () {
   const services = JSON.parse(fs.readFileSync(path.join(__dirname, "services.json"), "utf8"));
@@ -90,7 +111,11 @@ module.exports = function () {
       const pageName = pageNameFor(service.slug);
       return {
         ...service,
-        copy,
+        copy: {
+          ...copy,
+          // Keep explicit overrides; otherwise build a natural spoken heading.
+          featuresTitle: whyChooseTitle(copy, service.title, service.slug),
+        },
         pageName,
         projectsFor: projectsForLabel(service.slug, pageName),
         parentTitle: parent ? pageNameFor(parent.slug) : "",
