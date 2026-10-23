@@ -659,26 +659,6 @@
     "featured": false
   },
   {
-    "slug": "vazhni",
-    "title": "Важни",
-    "location": "Пловдивска област",
-    "objectType": "Обект",
-    "shortDescription": "Важни — реализиран обект на ДМД Комфорт в Пловдивска област.",
-    "description": "Проектът „Важни“ е част от обектите на ДМД Комфорт в Пловдивска област. Снимките показват изпълнението на място. Детайлите се уточняват при оглед — според отвора, изложението и желания завършек.",
-    "serviceSlugs": [],
-    "images": [
-      "/assets/images/projects/vazhni/IMG_20210519_154052.webp",
-      "/assets/images/projects/vazhni/IMG_20210311_150254.webp",
-      "/assets/images/projects/vazhni/IMG_20210313_081937.webp",
-      "/assets/images/projects/vazhni/IMG_20210519_132533.webp",
-      "/assets/images/projects/vazhni/IMG_20210519_132544.webp",
-      "/assets/images/projects/vazhni/IMG_20210519_154107.webp",
-      "/assets/images/projects/vazhni/IMG_20210519_154135.webp",
-      "/assets/images/projects/vazhni/IMG_20210910_080534.webp"
-    ],
-    "featured": false
-  },
-  {
     "slug": "vrati-za-banya-obrashtane-s-pervazi",
     "title": "Врати за баня, Обръщане с первази",
     "location": "Пловдивска област",
@@ -742,23 +722,6 @@
       "/assets/images/projects/vrati-s-pervazi/IMG_20250409_191502.webp",
       "/assets/images/projects/vrati-s-pervazi/IMG_20250514_141856.webp",
       "/assets/images/projects/vrati-s-pervazi/IMG_20250514_170109.webp"
-    ],
-    "featured": false
-  },
-  {
-    "slug": "vremenni",
-    "title": "Временни",
-    "location": "Пловдивска област",
-    "objectType": "Обект",
-    "shortDescription": "Временни — реализиран обект на ДМД Комфорт в Пловдивска област.",
-    "description": "Проектът „Временни“ е част от обектите на ДМД Комфорт в Пловдивска област. Снимките показват изпълнението на място. Детайлите се уточняват при оглед — според отвора, изложението и желания завършек.",
-    "serviceSlugs": [],
-    "images": [
-      "/assets/images/projects/vremenni/IMG_20210618_112432.webp",
-      "/assets/images/projects/vremenni/IMG_20210311_150251.webp",
-      "/assets/images/projects/vremenni/IMG_20210311_150254.webp",
-      "/assets/images/projects/vremenni/IMG_20210406_181554.webp",
-      "/assets/images/projects/vremenni/IMG_20210913_105015.webp"
     ],
     "featured": false
   },
@@ -1069,38 +1032,6 @@
       "/assets/images/projects/kuhni/IMG_20260314_163554.webp",
       "/assets/images/projects/kuhni/IMG_20260314_163605.webp",
       "/assets/images/projects/kuhni/IMG_20260314_163616.webp"
-    ],
-    "featured": false
-  },
-  {
-    "slug": "laysni-za-lepene",
-    "title": "Лайсни за лепене",
-    "location": "Пловдивска област",
-    "objectType": "Обект",
-    "shortDescription": "Лайсни за лепене — обръщане с PVC первази в Пловдивска област. Реализиран обект на ДМД Комфорт.",
-    "description": "Проектът „Лайсни за лепене“ е изпълнен от ДМД Комфорт в Пловдивска област. Обектът включва обръщане с PVC первази. Изпълнението минава през оглед, замер и монтаж според конкретния отвор. Ако планирате обръщане с PVC первази в Пловдивска област, тук виждате реален обект на ДМД Комфорт: система, съобразена със сградата, и подреден завършек около рамките.",
-    "serviceSlugs": [
-      "obrashtane-s-pvc-pervazi"
-    ],
-    "images": [
-      "/assets/images/projects/laysni-za-lepene/IMG_20251202_142110.webp",
-      "/assets/images/projects/laysni-za-lepene/IMG_20251202_142103.webp",
-      "/assets/images/projects/laysni-za-lepene/IMG_20251202_142107.webp",
-      "/assets/images/projects/laysni-za-lepene/IMG_20251202_142108.webp"
-    ],
-    "featured": false
-  },
-  {
-    "slug": "lyubimi",
-    "title": "Любими",
-    "location": "Пловдивска област",
-    "objectType": "Обект",
-    "shortDescription": "Любими — реализиран обект на ДМД Комфорт в Пловдивска област.",
-    "description": "Проектът „Любими“ е част от обектите на ДМД Комфорт в Пловдивска област. Снимките показват изпълнението на място. Детайлите се уточняват при оглед — според отвора, изложението и желания завършек.",
-    "serviceSlugs": [],
-    "images": [
-      "/assets/images/projects/lyubimi/IMG_20201202_083359.webp",
-      "/assets/images/projects/lyubimi/IMG_20221102_103311.webp"
     ],
     "featured": false
   },
@@ -3515,24 +3446,6 @@
     "featured": false
   },
   {
-    "slug": "profili-katalog",
-    "title": "Профили, каталог",
-    "location": "Пловдивска област",
-    "objectType": "Обект",
-    "shortDescription": "Профили, каталог — реализиран обект на ДМД Комфорт в Пловдивска област.",
-    "description": "Проектът „Профили, каталог“ е част от обектите на ДМД Комфорт в Пловдивска област. Снимките показват изпълнението на място. Детайлите се уточняват при оглед — според отвора, изложението и желания завършек.",
-    "serviceSlugs": [],
-    "images": [
-      "/assets/images/projects/profili-katalog/IMG_20240311_154554.webp",
-      "/assets/images/projects/profili-katalog/IMG_20240311_154558.webp",
-      "/assets/images/projects/profili-katalog/IMG_20240311_154627.webp",
-      "/assets/images/projects/profili-katalog/IMG_20240311_154641.webp",
-      "/assets/images/projects/profili-katalog/IMG_20240311_154724.webp",
-      "/assets/images/projects/profili-katalog/IMG_20240311_154741.webp"
-    ],
-    "featured": false
-  },
-  {
     "slug": "puskane-na-niva-i-ravnina-za-golemi-obekti",
     "title": "Пускане на нива и равнина за големи обекти",
     "location": "Пловдивска област",
@@ -3545,24 +3458,6 @@
       "/assets/images/projects/puskane-na-niva-i-ravnina-za-golemi-obekti/IMG_20260513_090004.webp",
       "/assets/images/projects/puskane-na-niva-i-ravnina-za-golemi-obekti/IMG_20260513_125958.webp",
       "/assets/images/projects/puskane-na-niva-i-ravnina-za-golemi-obekti/IMG_20260513_130002.webp"
-    ],
-    "featured": false
-  },
-  {
-    "slug": "razlika-mezhdu-plazgashti-komarnitsi",
-    "title": "Разлика между плъзгащи комарници",
-    "location": "Пловдивска област",
-    "objectType": "Обект",
-    "shortDescription": "Разлика между плъзгащи комарници — реализиран обект на ДМД Комфорт в Пловдивска област.",
-    "description": "Проектът „Разлика между плъзгащи комарници“ е част от обектите на ДМД Комфорт в Пловдивска област. Снимките показват изпълнението на място. Детайлите се уточняват при оглед — според отвора, изложението и желания завършек.",
-    "serviceSlugs": [],
-    "images": [
-      "/assets/images/projects/razlika-mezhdu-plazgashti-komarnitsi/IMG_20260915_095302.webp",
-      "/assets/images/projects/razlika-mezhdu-plazgashti-komarnitsi/IMG_20260915_095308.webp",
-      "/assets/images/projects/razlika-mezhdu-plazgashti-komarnitsi/IMG_20260915_095344.webp",
-      "/assets/images/projects/razlika-mezhdu-plazgashti-komarnitsi/IMG_20260915_095414.webp",
-      "/assets/images/projects/razlika-mezhdu-plazgashti-komarnitsi/IMG_20260915_095807.webp",
-      "/assets/images/projects/razlika-mezhdu-plazgashti-komarnitsi/IMG_20260915_095810.webp"
     ],
     "featured": false
   },
@@ -4062,37 +3957,6 @@
       "/assets/images/projects/topmontazh-2/IMG_20260424_154935.webp",
       "/assets/images/projects/topmontazh-2/IMG_20260424_155015.webp",
       "/assets/images/projects/topmontazh-2/IMG_20260424_155027.webp"
-    ],
-    "featured": false
-  },
-  {
-    "slug": "usileni-panti",
-    "title": "Усилени панти",
-    "location": "Пловдивска област",
-    "objectType": "Обект",
-    "shortDescription": "Усилени панти — реализиран обект на ДМД Комфорт в Пловдивска област.",
-    "description": "Проектът „Усилени панти“ е част от обектите на ДМД Комфорт в Пловдивска област. Снимките показват изпълнението на място. Детайлите се уточняват при оглед — според отвора, изложението и желания завършек.",
-    "serviceSlugs": [],
-    "images": [
-      "/assets/images/projects/usileni-panti/IMG_20260325_102815.webp",
-      "/assets/images/projects/usileni-panti/IMG_20260325_102900.webp"
-    ],
-    "featured": false
-  },
-  {
-    "slug": "formuli",
-    "title": "Формули",
-    "location": "Пловдивска област",
-    "objectType": "Обект",
-    "shortDescription": "Формули — реализиран обект на ДМД Комфорт в Пловдивска област.",
-    "description": "Проектът „Формули“ е част от обектите на ДМД Комфорт в Пловдивска област. Снимките показват изпълнението на място. Детайлите се уточняват при оглед — според отвора, изложението и желания завършек.",
-    "serviceSlugs": [],
-    "images": [
-      "/assets/images/projects/formuli/IMG_20210313_081937.webp",
-      "/assets/images/projects/formuli/IMG_20210311_150251.webp",
-      "/assets/images/projects/formuli/IMG_20221102_103311.webp",
-      "/assets/images/projects/formuli/IMG_20240311_092014.webp",
-      "/assets/images/projects/formuli/IMG_20251217_131731.webp"
     ],
     "featured": false
   },

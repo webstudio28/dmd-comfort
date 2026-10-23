@@ -262,6 +262,28 @@ eleventyComputed:
 </section>
 {% endif %}
 
+{% if service.copy.extras and service.copy.extras.length %}
+<section class="trim-section trim-extras-section {{ band.next() }}" id="dopalnitelni-uslugi" aria-labelledby="trim-extras-title">
+  <div class="container-site trim-extras-layout">
+    <header class="trim-extras-intro">
+      <h2 class="trim-heading" id="trim-extras-title">{{ service.copy.extrasTitle or "Допълнителни услуги" }}</h2>
+      {% if service.copy.extrasLead %}<p class="trim-extras-lead">{{ service.copy.extrasLead }}</p>{% endif %}
+    </header>
+    <ol class="trim-extras-spine">
+      {% for item in service.copy.extras %}
+      <li>
+        <span class="trim-extras-index" aria-hidden="true">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
+        <div class="trim-extras-body">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+{% endif %}
+
 <section class="trim-offer-banner {{ band.next() }}" aria-labelledby="trim-quote-title">
   <div class="container-site trim-offer-banner-inner">
     <div class="trim-offer-banner-copy">

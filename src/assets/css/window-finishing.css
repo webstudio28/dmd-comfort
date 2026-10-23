@@ -176,6 +176,94 @@
 .trim-situation + .trim-situation { border-left: 1px solid #d9e2da; padding-left: 32px; }
 .trim-situation h3, .trim-material h3 { font-size: 27px; font-weight: 700; line-height: 1.15; margin: 22px 0 14px; }
 .trim-situation p, .trim-material p { color: var(--trim-muted); font-size: 16px; line-height: 1.75; }
+
+/* Additional services — spine ladder (unique to this block) */
+.trim-extras-section .trim-extras-layout {
+  display: grid;
+  gap: 36px;
+}
+.trim-extras-lead {
+  margin: 14px 0 0;
+  max-width: 28rem;
+  color: var(--trim-muted);
+  font-size: 17px;
+  line-height: 1.7;
+}
+.trim-extras-spine {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+.trim-extras-spine::before {
+  content: "";
+  position: absolute;
+  left: 1.15rem;
+  top: 0.55rem;
+  bottom: 0.55rem;
+  width: 2px;
+  background: linear-gradient(180deg, #057230 0%, #b7d4c0 55%, #d9e2da 100%);
+}
+.trim-extras-spine > li {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr);
+  gap: 18px;
+  padding: 0 0 36px;
+}
+.trim-extras-spine > li:last-child { padding-bottom: 0; }
+.trim-extras-index {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  background: #edf4ee;
+  border: 2px solid #057230;
+  color: #057230;
+  font-family: "Sofia Sans Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+.trim-extras-body {
+  padding-top: 0.35rem;
+  min-width: 0;
+}
+.trim-extras-body h3 {
+  margin: 0 0 10px;
+  font-size: clamp(1.45rem, 2.2vw, 1.9rem);
+  font-weight: 800;
+  line-height: 1.15;
+  color: #1a1d1f;
+}
+.trim-extras-body p {
+  margin: 0;
+  max-width: 38rem;
+  color: var(--trim-muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+@media (min-width: 901px) {
+  .trim-extras-section .trim-extras-layout {
+    grid-template-columns: minmax(15rem, 0.42fr) minmax(0, 1fr);
+    column-gap: 64px;
+    align-items: start;
+  }
+  .trim-extras-intro {
+    position: sticky;
+    top: 6rem;
+  }
+  .trim-extras-spine > li {
+    gap: 28px;
+    padding-bottom: 44px;
+  }
+  .trim-extras-spine::before { left: 1.15rem; }
+}
 .trim-service-banner {
   border-block: 0;
   padding: 40px 0;

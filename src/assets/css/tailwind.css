@@ -255,6 +255,15 @@
     @apply cursor-grabbing;
   }
 
+  .about-team-shot {
+    aspect-ratio: 3 / 4;
+    background: #edf1ed;
+  }
+
+  .about-team-shot img {
+    @apply block h-full w-full;
+  }
+
   .h-scroll-drag > * {
     @apply w-[min(82vw,320px)] shrink-0 md:w-[min(28vw,340px)];
   }
