@@ -1,0 +1,33 @@
+---
+layout: base.njk
+permalink: /blagodarim/
+title: Благодарим ви
+description: Получихме запитването ви. Екипът на ДМД Комфорт ще се свърже с вас скоро.
+eleventyExcludeFromCollections: true
+noindex: true
+pageImage: /assets/images/og-default.jpg
+pageImageWidth: 1200
+pageImageHeight: 630
+pageImageAlt: ДМД Комфорт — благодарим за запитването
+---
+{% from "macros/page-banner.njk" import pageBanner %}
+
+{% call pageBanner() %}
+  <div class="eyebrow text-brand before:bg-brand">Запитване</div>
+  <h1 class="mt-3 max-w-3xl font-display text-[clamp(2.5rem,5vw,3.75rem)] font-black leading-none">Благодарим ви!</h1>
+  <p class="mt-4 max-w-2xl text-lg leading-relaxed text-white/70">Получихме запитването. Ще се свържем с вас скоро на посочения телефон.</p>
+{% endcall %}
+
+<section class="section-pad bg-white">
+  <div class="container-site max-w-2xl text-center">
+    <span class="mx-auto mb-6 grid h-16 w-16 place-items-center rounded-full bg-brand text-white" aria-hidden="true">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+    <h2 class="font-display text-3xl font-extrabold text-ink">Запитването е изпратено</h2>
+    <p class="mt-3 text-lg leading-relaxed text-ink-muted">Обикновено отговаряме в рамките на работния ден. Ако е спешно, обадете се директно.</p>
+    <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <a class="btn btn-primary" href="{{ site.contact.phoneHref }}">Обадете се: {{ site.contact.phone }}</a>
+      <a class="btn btn-outline" href="{{ '/' | url }}">Към началото</a>
+    </div>
+  </div>
+</section>

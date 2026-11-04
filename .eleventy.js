@@ -90,6 +90,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets", {
     filter: (src) => !skipAsset(src),
   });
+  eleventyConfig.addPassthroughCopy({ "src/inquiry.php": "inquiry.php" });
   eleventyConfig.addPassthroughCopy({ "src/favicon.png": "favicon.png" });
   eleventyConfig.addPassthroughCopy({ "src/favicon-32.png": "favicon-32.png" });
   eleventyConfig.addPassthroughCopy({ "src/apple-touch-icon.png": "apple-touch-icon.png" });

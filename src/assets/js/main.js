@@ -354,13 +354,25 @@
     }
   });
 
-  document.getElementById("inquiryForm")?.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const content = document.getElementById("formContent");
-    const success = document.getElementById("formSuccess");
-    if (content) content.classList.add("hidden");
-    if (success) success.classList.remove("hidden");
+  document.querySelectorAll("form[action*='inquiry.php']").forEach((form) => {
+    form.addEventListener("submit", () => {
+      const btn = form.querySelector("[data-inquiry-submit]");
+      if (!btn || btn.disabled) return;
+      btn.disabled = true;
+      btn.setAttribute("aria-busy", "true");
+      const original = btn.textContent;
+      btn.dataset.label = original || "";
+      btn.textContent = "Изпращане…";
+    });
   });
+
+  if (new URLSearchParams(window.location.search).get("error") === "1") {
+    const errorEl = document.querySelector("[data-form-error]");
+    if (errorEl) {
+      errorEl.classList.remove("hidden");
+      errorEl.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
 
   const revealObserver = new IntersectionObserver(
     (entries) => {

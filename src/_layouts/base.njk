@@ -7,6 +7,7 @@
   {% set pageTitle = title or site.seo.defaultTitle %}
   <title>{{ pageTitle }}{% if title %} | {{ site.brand.name }}{% endif %}</title>
   <meta name="description" content="{{ description or site.seo.defaultDescription }}" />
+  {% if noindex %}<meta name="robots" content="noindex, follow" />{% endif %}
   <link rel="canonical" href="{{ site.seo.siteUrl }}{{ page.url | url }}" />
   <link rel="icon" href="{{ '/favicon-32.png' | url }}" type="image/png" sizes="32x32" />
   <link rel="icon" href="{{ '/favicon.png' | url }}" type="image/png" sizes="48x48" />

@@ -8,15 +8,21 @@
       <div class="eyebrow">{{ inquiryEyebrow or 'Безплатен оглед' }}</div>
       <h2 id="modalTitle" class="mt-2 pr-10 font-display text-[2rem] font-extrabold leading-tight">Разкажете ни за вашия обект</h2>
       <p class="mt-2 text-ink-muted leading-relaxed">{{ inquiryDescription or 'Оставете контакт и ще се свържем с вас!' }}</p>
-      <form id="inquiryForm" class="mt-6 min-w-0">
+      <form id="inquiryForm" class="relative mt-6 min-w-0" action="{{ '/inquiry.php' | url }}" method="post">
+        <input type="hidden" name="source" value="modal" />
+        <input type="hidden" name="page" value="{{ page.url }}" />
+        <div class="pointer-events-none absolute left-[-10000px] top-auto h-px w-px overflow-hidden opacity-0" aria-hidden="true">
+          <label for="company">Company</label>
+          <input id="company" name="company" type="text" tabindex="-1" autocomplete="off" />
+        </div>
         <div class="grid min-w-0 gap-3.5 sm:grid-cols-2">
           <div class="flex min-w-0 flex-col gap-1.5">
             <label class="font-display text-[13px] font-bold uppercase tracking-wide" for="name">Име</label>
-            <input class="w-full min-w-0 max-w-full rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="name" name="name" required placeholder="Вашето име" />
+            <input class="w-full min-w-0 max-w-full rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="name" name="name" required placeholder="Вашето име" autocomplete="name" />
           </div>
           <div class="flex min-w-0 flex-col gap-1.5">
             <label class="font-display text-[13px] font-bold uppercase tracking-wide" for="phone">Телефон</label>
-            <input class="w-full min-w-0 max-w-full rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="phone" name="phone" type="tel" required placeholder="08..." />
+            <input class="w-full min-w-0 max-w-full rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="phone" name="phone" type="tel" required placeholder="08..." autocomplete="tel" />
           </div>
           <div class="flex min-w-0 flex-col gap-1.5 sm:col-span-2">
             <label class="font-display text-[13px] font-bold uppercase tracking-wide" id="interest-label" for="interest-trigger">Интересувам се от</label>
@@ -56,15 +62,8 @@
             <textarea class="w-full min-w-0 max-w-full rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 text-[15px] outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" id="message" name="message" rows="3" placeholder="{{ inquiryPlaceholder or 'Тип обект, приблизителен брой прозорци...' }}"></textarea>
           </div>
         </div>
-        <button class="btn btn-primary mt-4 w-full" type="submit">Изпрати запитване</button>
+        <button class="btn btn-primary mt-4 w-full" type="submit" data-inquiry-submit>Изпрати запитване</button>
       </form>
-    </div>
-    <div class="hidden py-8 text-center" id="formSuccess">
-      <span class="mx-auto mb-4 grid h-16 w-16 place-items-center rounded-full bg-brand text-white">
-        <svg width="32" height="32" viewBox="0 0 24 24" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </span>
-      <h2 class="font-display text-3xl font-extrabold">Благодарим ви!</h2>
-      <p class="mt-2 text-ink-muted">Получихме запитването ви. Ще се свържем с вас скоро.</p>
     </div>
   </div>
 </div>
