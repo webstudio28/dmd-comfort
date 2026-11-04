@@ -7,9 +7,35 @@ declare(strict_types=1);
 
 header('X-Content-Type-Options: nosniff');
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-  header('Location: /kontakti/', true, 303);
+function wants_json(): bool {
+  $accept = $_SERVER['HTTP_ACCEPT'] ?? '';
+  return strpos($accept, 'application/json') !== false
+    || (($_POST['ajax'] ?? '') === '1');
+}
+
+function respond_ok(): void {
+  if (wants_json()) {
+    header('Content-Type: application/json; charset=UTF-8');
+    echo '{"ok":true,"redirect":"/blagodarim/"}';
+    exit;
+  }
+  header('Location: /blagodarim/', true, 303);
   exit;
+}
+
+function respond_error(string $redirect = '/kontakti/?error=1'): void {
+  if (wants_json()) {
+    header('Content-Type: application/json; charset=UTF-8');
+    http_response_code(400);
+    echo '{"ok":false}';
+    exit;
+  }
+  header('Location: ' . $redirect, true, 303);
+  exit;
+}
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+  respond_error('/kontakti/');
 }
 
 function field(string $key): string {
@@ -17,8 +43,7 @@ function field(string $key): string {
   if (!is_string($value)) {
     return '';
   }
-  $value = trim(str_replace(["\r", "\n"], ' ', $value));
-  return $value;
+  return trim(str_replace(["\r", "\n"], ' ', $value));
 }
 
 function multiline(string $key): string {
@@ -31,8 +56,7 @@ function multiline(string $key): string {
 
 // Honeypot — bots fill this; humans never see it.
 if (field('company') !== '') {
-  header('Location: /blagodarim/', true, 303);
-  exit;
+  respond_ok();
 }
 
 $name = field('name');
@@ -43,8 +67,7 @@ $source = field('source');
 $page = field('page');
 
 if ($name === '' || $phone === '' || mb_strlen($name) > 120 || mb_strlen($phone) > 40) {
-  header('Location: /kontakti/?error=1', true, 303);
-  exit;
+  respond_error();
 }
 
 if (mb_strlen($interest) > 160) {
@@ -100,9 +123,7 @@ $sent = @mail(
 );
 
 if (!$sent) {
-  header('Location: /kontakti/?error=1', true, 303);
-  exit;
+  respond_error();
 }
 
-header('Location: /blagodarim/', true, 303);
-exit;
+respond_ok();

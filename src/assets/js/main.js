@@ -354,20 +354,59 @@
     }
   });
 
+  function resetInquiryButton(form) {
+    const btn = form.querySelector("[data-inquiry-submit]");
+    if (!btn) return;
+    btn.disabled = false;
+    btn.removeAttribute("aria-busy");
+    if (btn.dataset.label) btn.textContent = btn.dataset.label;
+  }
+
   document.querySelectorAll("form[action*='inquiry.php']").forEach((form) => {
-    form.addEventListener("submit", () => {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
       const btn = form.querySelector("[data-inquiry-submit]");
-      if (!btn || btn.disabled) return;
-      btn.disabled = true;
-      btn.setAttribute("aria-busy", "true");
-      const original = btn.textContent;
-      btn.dataset.label = original || "";
-      btn.textContent = "Изпращане…";
+      const errorEl = form.querySelector("[data-form-error]");
+      if (errorEl) errorEl.classList.add("hidden");
+      if (btn) {
+        if (btn.disabled) return;
+        btn.disabled = true;
+        btn.setAttribute("aria-busy", "true");
+        btn.dataset.label = btn.textContent || "";
+        btn.textContent = "Изпращане…";
+      }
+
+      const body = new FormData(form);
+      body.set("ajax", "1");
+
+      try {
+        const res = await fetch(form.action, {
+          method: "POST",
+          body,
+          headers: { Accept: "application/json" },
+          credentials: "same-origin",
+        });
+        let data = null;
+        try {
+          data = await res.json();
+        } catch (_) {
+          data = null;
+        }
+        if (res.ok && data && data.ok) {
+          window.location.assign(data.redirect || "/blagodarim/");
+          return;
+        }
+        if (errorEl) errorEl.classList.remove("hidden");
+        resetInquiryButton(form);
+      } catch (_) {
+        // Fallback: classic POST + server redirect
+        form.submit();
+      }
     });
   });
 
   if (new URLSearchParams(window.location.search).get("error") === "1") {
-    const errorEl = document.querySelector("[data-form-error]");
+    const errorEl = document.querySelector("#contactForm [data-form-error], [data-form-error]");
     if (errorEl) {
       errorEl.classList.remove("hidden");
       errorEl.scrollIntoView({ behavior: "smooth", block: "center" });

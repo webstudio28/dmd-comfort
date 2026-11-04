@@ -9,6 +9,7 @@
   <meta name="description" content="{{ description or site.seo.defaultDescription }}" />
   {% if noindex %}<meta name="robots" content="noindex, follow" />{% endif %}
   <link rel="canonical" href="{{ site.seo.siteUrl }}{{ page.url | url }}" />
+  <link rel="describedby" href="{{ site.seo.siteUrl }}/llms.txt" />
   <link rel="icon" href="{{ '/favicon-32.png' | url }}" type="image/png" sizes="32x32" />
   <link rel="icon" href="{{ '/favicon.png' | url }}" type="image/png" sizes="48x48" />
   <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | url }}" sizes="180x180" />
@@ -47,6 +48,6 @@
   {% include "footer.njk" %}
   {% include "modal.njk" %}
   {% include "schema-organization.njk" %}
-  <script src="{{ '/assets/js/main.js' | url }}" defer></script>
+  <script src="{{ '/assets/js/main.js' | url }}?v={{ buildDate }}" defer></script>
 </body>
 </html>
