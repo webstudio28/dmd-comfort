@@ -91,6 +91,7 @@ module.exports = function (eleventyConfig) {
     filter: (src) => !skipAsset(src),
   });
   eleventyConfig.addPassthroughCopy({ "src/inquiry.php": "inquiry.php" });
+  eleventyConfig.addPassthroughCopy({ "src/private": "private" });
   eleventyConfig.addPassthroughCopy({ "src/favicon.png": "favicon.png" });
   eleventyConfig.addPassthroughCopy({ "src/favicon-32.png": "favicon-32.png" });
   eleventyConfig.addPassthroughCopy({ "src/apple-touch-icon.png": "apple-touch-icon.png" });

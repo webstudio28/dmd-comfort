@@ -26,14 +26,27 @@ layout: false
 
   # Renamed project: Неозаглавен -> Смесени изпълнения
   RewriteRule ^proekti/neozaglaven/?$ /proekti/smeseni-izpalneniya/ [L,R=301]
+
+  # Block public access to form logs
+  RewriteRule ^private(/|$) - [F,L]
 </IfModule>
 
-# Caching
+# Extra lock on private logs (Apache/LiteSpeed)
+<IfModule mod_authz_core.c>
+  <DirectoryMatch ".*/private">
+    Require all denied
+  </DirectoryMatch>
+</IfModule>
+
+# Caching + charset for plain text
 <IfModule mod_headers.c>
   <FilesMatch "\.(html)$">
     Header set Cache-Control "public, max-age=0, must-revalidate"
   </FilesMatch>
   <FilesMatch "\.(css|js|webp|jpg|jpeg|png|gif|svg|woff2)$">
     Header set Cache-Control "public, max-age=604800"
+  </FilesMatch>
+  <FilesMatch "(llms|robots)\.txt$">
+    Header set Content-Type "text/plain; charset=utf-8"
   </FilesMatch>
 </IfModule>

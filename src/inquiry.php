@@ -34,6 +34,16 @@ function respond_error(string $redirect = '/kontakti/?error=1'): void {
   exit;
 }
 
+function inquiry_log(string $line): void {
+  $dir = __DIR__ . '/private';
+  if (!is_dir($dir)) {
+    @mkdir($dir, 0750, true);
+  }
+  $file = $dir . '/inquiry-log.txt';
+  $stamp = date('Y-m-d H:i:s');
+  @file_put_contents($file, '[' . $stamp . '] ' . $line . "\n", FILE_APPEND | LOCK_EX);
+}
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
   respond_error('/kontakti/');
 }
@@ -56,6 +66,7 @@ function multiline(string $key): string {
 
 // Honeypot — bots fill this; humans never see it.
 if (field('company') !== '') {
+  inquiry_log('honeypot blocked ip=' . ($_SERVER['REMOTE_ADDR'] ?? '-'));
   respond_ok();
 }
 
@@ -67,6 +78,7 @@ $source = field('source');
 $page = field('page');
 
 if ($name === '' || $phone === '' || mb_strlen($name) > 120 || mb_strlen($phone) > 40) {
+  inquiry_log('validation failed name/phone ip=' . ($_SERVER['REMOTE_ADDR'] ?? '-'));
   respond_error();
 }
 
@@ -120,6 +132,16 @@ $sent = @mail(
   $body,
   implode("\r\n", $headers),
   '-f' . $from
+);
+
+inquiry_log(
+  ($sent ? 'mail() OK' : 'mail() FAIL')
+  . ' to=' . $to
+  . ' name=' . $name
+  . ' phone=' . $phone
+  . ' source=' . ($source !== '' ? $source : '-')
+  . ' page=' . ($page !== '' ? $page : '-')
+  . ' ip=' . ($_SERVER['REMOTE_ADDR'] ?? '-')
 );
 
 if (!$sent) {
