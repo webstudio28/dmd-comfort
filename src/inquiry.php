@@ -65,7 +65,8 @@ function multiline(string $key): string {
 }
 
 // Honeypot — bots fill this; humans never see it.
-if (field('company') !== '') {
+// Avoid names like "company" / "email" — browsers autofill them.
+if (field('website_url_hp') !== '') {
   inquiry_log('honeypot blocked ip=' . ($_SERVER['REMOTE_ADDR'] ?? '-'));
   respond_ok();
 }
