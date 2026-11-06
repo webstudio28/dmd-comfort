@@ -1026,27 +1026,6 @@
     "featured": false
   },
   {
-    "slug": "kuhni",
-    "title": "Кухни",
-    "location": "Пловдивска област",
-    "objectType": "Обект",
-    "shortDescription": "Реализиран обект на ДМД Комфорт в Пловдивска област.",
-    "description": "Проектът „Кухни“ е част от обектите на ДМД Комфорт в Пловдивска област. Снимките показват изпълнението на място. Детайлите се уточняват при оглед - според отвора, изложението и желания завършек.",
-    "serviceSlugs": [],
-    "images": [
-      "/assets/images/projects/kuhni/IMG_20260309_210321.webp",
-      "/assets/images/projects/kuhni/IMG_20260313_080502.webp",
-      "/assets/images/projects/kuhni/IMG_20260313_080525.webp",
-      "/assets/images/projects/kuhni/IMG_20260314_163459.webp",
-      "/assets/images/projects/kuhni/IMG_20260314_163520.webp",
-      "/assets/images/projects/kuhni/IMG_20260314_163547.webp",
-      "/assets/images/projects/kuhni/IMG_20260314_163554.webp",
-      "/assets/images/projects/kuhni/IMG_20260314_163605.webp",
-      "/assets/images/projects/kuhni/IMG_20260314_163616.webp"
-    ],
-    "featured": false
-  },
-  {
     "slug": "mebeli-za-vanshni-usloviya",
     "title": "Мебели за външни условия",
     "location": "Пловдивска област",

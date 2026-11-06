@@ -27,6 +27,9 @@ layout: false
   # Renamed project: Неозаглавен -> Смесени изпълнения
   RewriteRule ^proekti/neozaglaven/?$ /proekti/smeseni-izpalneniya/ [L,R=301]
 
+  # Removed project: Кухни -> projects index
+  RewriteRule ^proekti/kuhni/?$ /proekti/ [L,R=301]
+
   # Block public access to form logs
   RewriteRule ^private(/|$) - [F,L]
 </IfModule>
