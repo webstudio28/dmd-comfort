@@ -30,7 +30,8 @@
 
   body.menu-open,
   body.modal-open,
-  body.lightbox-open {
+  body.lightbox-open,
+  body.promo-open {
     @apply overflow-hidden;
   }
 }
@@ -206,6 +207,10 @@
 
   .section-copy {
     @apply max-w-xl text-lg leading-relaxed text-ink-muted;
+  }
+
+  .discount-label {
+    @apply pointer-events-none z-[2] inline-block origin-center -rotate-6 bg-red-600 font-display font-black leading-none tracking-tight text-white shadow-[0_8px_18px_rgba(220,38,38,0.4)];
   }
 
   /* Home page: center section copy / eyebrows / CTAs on mobile only */
@@ -657,4 +662,41 @@
   .reveal {
     @apply translate-y-0 opacity-100;
   }
+}
+
+.discount-label-card,
+.discount-label-hero,
+.discount-label-inline {
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.discount-label-card,
+.discount-label-hero {
+  position: absolute;
+}
+
+.discount-label-card {
+  right: 0.625rem;
+  top: 0.625rem;
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.55rem;
+  font-size: 12px;
+}
+
+.discount-label-hero {
+  left: 1rem;
+  top: 1rem;
+  border-radius: 0.75rem;
+  padding: 0.4rem 0.7rem;
+  font-size: clamp(0.95rem, 1.7vw, 1.2rem);
+}
+
+.discount-label-inline {
+  position: relative;
+  margin-right: 0.75rem;
+  border-radius: 0.75rem;
+  padding: 0.4rem 0.7rem;
+  vertical-align: middle;
+  font-size: clamp(0.95rem, 1.8vw, 1.2rem);
 }

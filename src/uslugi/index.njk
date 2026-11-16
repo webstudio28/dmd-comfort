@@ -11,6 +11,7 @@ pageImageAlt: Услуги на ДМД Комфорт - дограма, врат
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}
 {% from "macros/service-image.njk" import serviceImage %}
+{% from "macros/discount-label.njk" import discountLabel %}
 
 {% call pageBanner() %}
   <div class="eyebrow text-brand before:bg-brand">Каталог услуги</div>
@@ -29,6 +30,7 @@ pageImageAlt: Услуги на ДМД Комфорт - дограма, врат
       <article class="card reveal flex flex-col">
         <div class="relative m-3 aspect-[4/3] overflow-hidden rounded-lg bg-brand-mist">
           {{ serviceImage(s, "h-full w-full") }}
+          {{ discountLabel("card") }}
         </div>
         <div class="flex flex-1 flex-col border-t border-ink/10 px-5 pb-6 pt-4">
           <h2 class="mb-2 font-display text-[22px] font-extrabold">{{ s.title }}</h2>

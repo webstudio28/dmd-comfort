@@ -22,6 +22,7 @@ eleventyComputed:
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}
 {% from "macros/include-icon.njk" import includeIcon %}
 {% from "macros/faq-schema.njk" import faqSchema %}
+{% from "macros/discount-label.njk" import discountLabel %}
 {% macro arrow() %}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endmacro %}
 {% macro check() %}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endmacro %}
 {% macro faqItem(faq) %}
@@ -35,7 +36,7 @@ eleventyComputed:
   {% for item in items %}
   <li class="trim-service-link-slide">
     <a class="trim-service-card-link" href="{{ item.url | url }}" draggable="false">
-      {% if item.image and not item.imageMissing %}<img src="{{ item.image | url }}" alt="{{ item.imageAlt or item.title }}" width="{{ item.imageWidth or 640 }}" height="{{ item.imageHeight or 480 }}"{% if item.imageFit == "contain" %} style="object-fit: contain; background: #edf1ed"{% endif %} loading="lazy" decoding="async" draggable="false" />{% endif %}
+      {% if item.image and not item.imageMissing %}<span class="trim-service-card-media"><img src="{{ item.image | url }}" alt="{{ item.imageAlt or item.title }}" width="{{ item.imageWidth or 640 }}" height="{{ item.imageHeight or 480 }}"{% if item.imageFit == "contain" %} style="object-fit: contain; background: #edf1ed"{% endif %} loading="lazy" decoding="async" draggable="false" />{{ discountLabel("card") }}</span>{% endif %}
       <div class="trim-service-card-body">
         <h3>{{ item.title }}</h3>
         <p>{{ item.summary or item.text }}</p>
@@ -50,7 +51,7 @@ eleventyComputed:
 {% call pageBanner() %}
   <div class="grid items-end gap-8{% if service.image and not service.imageMissing %} lg:grid-cols-2 lg:items-center{% endif %}">
     <div>
-      <h1 class="font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-black leading-none" id="trim-title">{{ service.copy.h1 }}</h1>
+      <h1 class="font-display text-[clamp(2.25rem,4.5vw,3.5rem)] font-black leading-none" id="trim-title">{% if not service.image or service.imageMissing %}{{ discountLabel("inline") }}{% endif %}{{ service.copy.h1 }}</h1>
       <p class="mt-4 text-lg leading-relaxed text-white/70{% if service.image and not service.imageMissing %} max-w-xl{% endif %}">{{ service.copy.heroLead or service.copy.description }}</p>
       <div class="mt-6 flex flex-wrap items-center gap-5">
         <button class="btn btn-primary open-inquiry" type="button">Поискайте оферта {{ arrow() }}</button>
@@ -67,6 +68,7 @@ eleventyComputed:
     {% if service.image and not service.imageMissing %}
     <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-lift">
       <img class="aspect-[4/3] w-full object-cover" src="{{ service.image | url }}" alt="{{ service.imageAlt or service.title }}" width="{{ service.imageWidth or 1536 }}" height="{{ service.imageHeight or 1024 }}"{% if service.imageFit == "contain" %} style="object-fit: contain"{% endif %} fetchpriority="high" decoding="async" />
+      {{ discountLabel("hero") }}
       <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" aria-hidden="true"></div>
     </div>
     {% endif %}

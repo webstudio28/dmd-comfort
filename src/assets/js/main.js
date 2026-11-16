@@ -328,6 +328,74 @@
     else stepLightbox(-1);
   });
 
+  const blackFriday = document.getElementById("blackFridayBanner");
+  const blackFridayBackdrop = blackFriday?.querySelector("[data-bf-backdrop]");
+  const blackFridayCard = blackFriday?.querySelector("[data-bf-card]");
+  const blackFridayKey = "dmd-black-friday-seen";
+
+  function blackFridayDay() {
+    const now = new Date();
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const day = String(now.getDate()).padStart(2, "0");
+    return `${now.getFullYear()}-${month}-${day}`;
+  }
+
+  function blackFridaySeenToday() {
+    try {
+      return localStorage.getItem(blackFridayKey) === blackFridayDay();
+    } catch {
+      return false;
+    }
+  }
+
+  function markBlackFridaySeen() {
+    try {
+      localStorage.setItem(blackFridayKey, blackFridayDay());
+    } catch {
+      /* Private mode: still show the banner. */
+    }
+  }
+
+  function closeBlackFriday() {
+    if (!blackFriday || blackFriday.classList.contains("invisible")) return;
+    blackFriday.classList.add("invisible", "pointer-events-none");
+    blackFriday.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("promo-open");
+    blackFridayBackdrop?.classList.add("opacity-0");
+    blackFridayBackdrop?.classList.remove("opacity-100");
+    blackFridayCard?.classList.add("opacity-0", "translate-y-3");
+    blackFridayCard?.classList.remove("opacity-100", "translate-y-0");
+  }
+
+  function openBlackFriday() {
+    if (!blackFriday) return;
+    blackFriday.classList.remove("invisible", "pointer-events-none");
+    blackFriday.setAttribute("aria-hidden", "false");
+    document.body.classList.add("promo-open");
+    blackFridayBackdrop?.classList.remove("opacity-0");
+    blackFridayBackdrop?.classList.add("opacity-100");
+    blackFridayCard?.classList.remove("opacity-0", "translate-y-3");
+    blackFridayCard?.classList.add("opacity-100", "translate-y-0");
+  }
+
+  if (blackFriday) {
+    const frequency = blackFriday.dataset.frequency || "every-load";
+    const showEveryLoad = frequency !== "daily";
+    if (showEveryLoad || !blackFridaySeenToday()) {
+      window.setTimeout(() => {
+        openBlackFriday();
+        if (!showEveryLoad) markBlackFridaySeen();
+      }, 500);
+    }
+    blackFriday.querySelectorAll("[data-close-bf]").forEach((el) => {
+      el.addEventListener("click", closeBlackFriday);
+    });
+    blackFriday.querySelector("[data-bf-inquiry]")?.addEventListener("click", () => {
+      closeBlackFriday();
+      openModal();
+    });
+  }
+
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       if (isLightboxOpen()) {
@@ -338,6 +406,10 @@
       if (openSelect) {
         closeCustomSelect(getCustomSelectParts(openSelect));
         openSelect.querySelector(".custom-select-trigger")?.focus();
+        return;
+      }
+      if (blackFriday && !blackFriday.classList.contains("invisible")) {
+        closeBlackFriday();
         return;
       }
       closeMenu();

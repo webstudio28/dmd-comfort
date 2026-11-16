@@ -7,7 +7,9 @@
 .service-detail .trim-service-rail > .trim-service-link-slide { padding: 0; display: flex; }
 .service-detail .trim-service-link-slide::after { content: none; }
 .trim-service-card-link { display: flex; flex: 1; flex-direction: column; min-width: 0; color: inherit; text-decoration: none; }
-.trim-service-card-link > img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; pointer-events: none; }
+.trim-service-card-media { position: relative; display: block; }
+.trim-service-card-link > img,
+.trim-service-card-media > img { width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; pointer-events: none; }
 .trim-service-card-body { display: flex; flex: 1; flex-direction: column; padding: 32px 28px 26px; }
 .trim-service-card-action { display: inline-flex; align-items: center; gap: 10px; margin-top: auto; padding-top: 24px; color: #057230; font-size: 16px; font-weight: 600; }
 .trim-service-card-action svg { flex-shrink: 0; }

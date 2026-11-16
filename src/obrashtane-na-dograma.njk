@@ -13,6 +13,7 @@ pageImageHeight: 1024
 {% from "macros/page-banner.njk" import pageBanner %}
 {% from "macros/include-icon.njk" import includeIcon %}
 {% from "macros/breadcrumbs.njk" import breadcrumbs %}
+{% from "macros/discount-label.njk" import discountLabel %}
 {% macro arrow() %}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endmacro %}
 {% macro check() %}<svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>{% endmacro %}
 
@@ -33,6 +34,7 @@ pageImageHeight: 1024
     </div>
     <div class="relative overflow-hidden rounded-2xl border border-white/10 shadow-lift">
       <img class="aspect-[4/3] w-full object-cover" src="{{ pageImage | url }}" alt="Илюстрация на бял прозорец с PVC профили по вътрешните страници на отвора" width="1536" height="1024" fetchpriority="high" decoding="async" />
+      {{ discountLabel("hero") }}
       <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/35 to-transparent" aria-hidden="true"></div>
     </div>
   </div>
