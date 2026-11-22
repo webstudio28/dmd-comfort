@@ -40,7 +40,8 @@ jobs:
         with:
           protocol: ${{ secrets.CPANEL_PROTOCOL || 'ftp' }}
           port: ${{ secrets.CPANEL_PORT || 21 }}
-          server: ${{ secrets.CPANEL_HOST }}
+          # Domains point at s4. The CPANEL_HOST secret logs into s10, so uploads never reached the live files.
+          server: s4.max1.bg
           username: ${{ secrets.CPANEL_USER }}
           password: ${{ secrets.CPANEL_PASS }}
           local-dir: _site/
