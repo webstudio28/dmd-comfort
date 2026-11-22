@@ -68,9 +68,10 @@ pageImageAlt: ДМД Комфорт - контакти и заявка за ог
           <input id="contact-website_url_hp" name="website_url_hp" type="text" value="" tabindex="-1" autocomplete="new-password" />
         </div>
         <input class="rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" name="name" placeholder="Име" required autocomplete="name" />
+        <input class="rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" name="email" type="email" placeholder="Имейл" required autocomplete="email" />
         <input class="rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" name="phone" type="tel" placeholder="Телефон" required autocomplete="tel" />
         <input type="hidden" name="interest" value="" />
-        <textarea class="rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" name="message" rows="4" placeholder="Кратко описание на обекта"></textarea>
+        <textarea class="rounded-lg border border-ink/15 bg-brand-mist px-3.5 py-3 outline-none focus:border-brand focus:ring-4 focus:ring-brand/10" name="message" rows="4" placeholder="Кратко описание на обекта" required></textarea>
         <button class="btn btn-primary" type="submit" data-inquiry-submit>Изпрати</button>
         <p class="hidden text-sm font-medium text-red-700" data-form-error>Нещо се обърка при изпращането. Обадете се на {{ site.contact.phone }} или пишете на {{ site.contact.email }}.</p>
       </form>

@@ -72,14 +72,27 @@ if (field('website_url_hp') !== '') {
 }
 
 $name = field('name');
+$email = field('email');
 $phone = field('phone');
 $interest = field('interest');
 $message = multiline('message');
 $source = field('source');
 $page = field('page');
+$isContactForm = $source === 'kontakti';
 
 if ($name === '' || $phone === '' || mb_strlen($name) > 120 || mb_strlen($phone) > 40) {
   inquiry_log('validation failed name/phone ip=' . ($_SERVER['REMOTE_ADDR'] ?? '-'));
+  respond_error();
+}
+
+$emailValid = $email !== '' && mb_strlen($email) <= 160 && filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
+if ($email !== '' && !$emailValid) {
+  inquiry_log('validation failed email ip=' . ($_SERVER['REMOTE_ADDR'] ?? '-'));
+  respond_error();
+}
+
+if ($isContactForm && (!$emailValid || $message === '')) {
+  inquiry_log('validation failed contact email/message ip=' . ($_SERVER['REMOTE_ADDR'] ?? '-'));
   respond_error();
 }
 
@@ -104,6 +117,7 @@ $lines = [
   'Ново запитване от dmdkomfort.bg',
   '',
   'Име: ' . $name,
+  'Имейл: ' . ($emailValid ? $email : '—'),
   'Телефон: ' . $phone,
   'Интерес: ' . ($interest !== '' ? $interest : '—'),
   'Съобщение:',
@@ -123,7 +137,7 @@ $headers = [
   'Content-Type: text/plain; charset=UTF-8',
   'Content-Transfer-Encoding: 8bit',
   'From: DMD Komfort <' . $from . '>',
-  'Reply-To: ' . $from,
+  'Reply-To: ' . ($emailValid ? $email : $from),
   'X-Mailer: DMD-Comfort-Site',
 ];
 
@@ -139,6 +153,7 @@ inquiry_log(
   ($sent ? 'mail() OK' : 'mail() FAIL')
   . ' to=' . $to
   . ' name=' . $name
+  . ' email=' . ($emailValid ? $email : '-')
   . ' phone=' . $phone
   . ' source=' . ($source !== '' ? $source : '-')
   . ' page=' . ($page !== '' ? $page : '-')
