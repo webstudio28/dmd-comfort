@@ -86,13 +86,13 @@ if ($name === '' || $phone === '' || mb_strlen($name) > 120 || mb_strlen($phone)
 }
 
 $emailValid = $email !== '' && mb_strlen($email) <= 160 && filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
-if ($email !== '' && !$emailValid) {
+if (!$emailValid) {
   inquiry_log('validation failed email ip=' . ($_SERVER['REMOTE_ADDR'] ?? '-'));
   respond_error();
 }
 
-if ($isContactForm && (!$emailValid || $message === '')) {
-  inquiry_log('validation failed contact email/message ip=' . ($_SERVER['REMOTE_ADDR'] ?? '-'));
+if ($isContactForm && $message === '') {
+  inquiry_log('validation failed contact message ip=' . ($_SERVER['REMOTE_ADDR'] ?? '-'));
   respond_error();
 }
 
