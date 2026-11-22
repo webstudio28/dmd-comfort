@@ -23,7 +23,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:opsz,wght@8..144,400;8..144,500;8..144,600&family=Sofia+Sans+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | url }}?v={{ assetVersion }}" />
   {% if pageStyles %}<link rel="stylesheet" href="{{ pageStyles | url }}" />{% endif %}
   {% set ogImageRaw = pageImage if pageImage else site.seo.defaultOgImage %}
   {% set ogImageUrl = ogImageRaw if (ogImageRaw and '://' in ogImageRaw) else (site.seo.siteUrl + (ogImageRaw | url)) %}
@@ -56,6 +56,6 @@
   {% include "modal.njk" %}
   {% include "black-friday-banner.njk" %}
   {% include "schema-organization.njk" %}
-  <script src="{{ '/assets/js/main.js' | url }}?v={{ buildDate }}" defer></script>
+  <script src="{{ '/assets/js/main.js' | url }}?v={{ assetVersion }}" defer></script>
 </body>
 </html>

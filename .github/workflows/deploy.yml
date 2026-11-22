@@ -36,7 +36,7 @@ jobs:
           fi
 
       - name: Deploy to cPanel
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        uses: SamKirkland/FTP-Deploy-Action@v4.4.0
         with:
           protocol: ${{ secrets.CPANEL_PROTOCOL || 'ftp' }}
           port: ${{ secrets.CPANEL_PORT || 21 }}
@@ -46,3 +46,17 @@ jobs:
           local-dir: _site/
           server-dir: ${{ secrets.CPANEL_SERVER_DIR || 'dmd-comfort/' }}
           dangerous-clean-slate: false
+          log-level: verbose
+
+      - name: Purge LiteSpeed cache and confirm the live form
+        run: |
+          curl -fsS -o /dev/null "https://dmdkomfort.bg/__purge-lscache" || true
+          for i in 1 2 3 4 5 6; do
+            if curl -fsS "https://dmdkomfort.bg/kontakti/?deploy=${GITHUB_SHA}" | grep -q 'name="email"'; then
+              echo "Live contact form includes the email field."
+              exit 0
+            fi
+            sleep 10
+          done
+          echo "Live site is still serving the contact form without an email field." >&2
+          exit 1

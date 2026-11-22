@@ -44,7 +44,7 @@ layout: false
 # Caching + charset for plain text
 <IfModule mod_headers.c>
   <FilesMatch "\.(html)$">
-    Header set Cache-Control "public, max-age=0, must-revalidate"
+    Header set Cache-Control "no-cache, must-revalidate"
   </FilesMatch>
   <FilesMatch "\.(css|js|webp|jpg|jpeg|png|gif|svg|woff2)$">
     Header set Cache-Control "public, max-age=604800"
@@ -52,4 +52,16 @@ layout: false
   <FilesMatch "(llms|robots)\.txt$">
     Header set Content-Type "text/plain; charset=utf-8"
   </FilesMatch>
+</IfModule>
+
+<Files ".ftp-deploy-sync-state.json">
+  Require all denied
+</Files>
+
+# LiteSpeed keeps serving the previous HTML after FTP upload unless this cache is purged.
+<IfModule LiteSpeed>
+  RewriteEngine On
+  RewriteRule ^__purge-lscache/?$ - [E=cache-purge:*,R=204,L]
+  RewriteCond %{REQUEST_URI} !\.(css|js|mjs|webp|jpe?g|png|gif|svg|ico|woff2)$ [NC]
+  RewriteRule .* - [E=Cache-Control:no-cache]
 </IfModule>

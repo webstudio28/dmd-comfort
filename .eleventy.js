@@ -128,6 +128,9 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("buildDate", () =>
     new Date().toISOString().slice(0, 10),
   );
+  eleventyConfig.addGlobalData("assetVersion", () =>
+    new Date().toISOString().replace(/\D/g, "").slice(0, 14),
+  );
 
   function youtubeId(url) {
     if (!url) return "";
